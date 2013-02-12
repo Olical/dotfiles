@@ -50,7 +50,6 @@ au BufNewFile,BufRead *.webapp set filetype=json
 set backspace=indent,eol,start
 
 " Improve completion.
-filetype plugin on
 set ofu=syntaxcomplete#Complete
 set completeopt=longest,menuone
 
