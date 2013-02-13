@@ -1,6 +1,5 @@
 #!/bin/bash
 
-vim +BundleUpdate +qall
 pushd ~
 rm -rf ycm_build
 mkdir ycm_build
