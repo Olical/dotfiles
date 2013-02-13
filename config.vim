@@ -1,5 +1,8 @@
 " To activate, add the following to ~/.vimrc
 " source $HOME/.vim/config.vim
+"
+" Add this before you include the config to enable light mode.
+" let g:light_editor=1
 
 " Make vim more useful. Just fixes quite a few compatibility issues.
 set nocompatible
@@ -16,7 +19,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 
-"if g:editor_type != 'light'
+if !exists('g:light_editor')
 	Bundle 'Raimondi/delimitMate'
 	Bundle 'Valloric/YouCompleteMe'
 	Bundle 'ciaranm/detectindent'
@@ -72,7 +75,7 @@ Bundle 'altercation/vim-colors-solarized'
 	let g:indent_guides_auto_colors=0
 	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
 	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=green
-"endif
+endif
 
 " Enable some syntax settings that had to be disabled for Vundle.
 filetype plugin indent on
