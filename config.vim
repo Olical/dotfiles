@@ -13,7 +13,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 
-if !exists("g:light_editor")
+"if g:editor_type != 'light'
 	Bundle 'Raimondi/delimitMate'
 	Bundle 'Valloric/YouCompleteMe'
 	Bundle 'ciaranm/detectindent'
@@ -66,7 +66,7 @@ if !exists("g:light_editor")
 	let g:indent_guides_auto_colors=0
 	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
 	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=green
-endif
+"endif
 
 " Enable some syntax settings that had to be disabled for Vundle.
 filetype plugin indent on
