@@ -88,7 +88,7 @@ nmap <silent> <leader>i :DetectIndent<CR>
 nmap <silent> <leader>t :TagbarToggle<CR>
 
 " Move NERDTree to the current files location.
-nmap <silent> <leader>r :NERDTreeFind<cr>
+nmap <silent> <leader>r :NERDTreeFind<CR>
 
 " Open NERDTree on command line startup.
 let g:nerdtree_tabs_open_on_console_startup=1
