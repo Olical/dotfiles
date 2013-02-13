@@ -10,26 +10,63 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Specify all bundles.
-Bundle 'Raimondi/delimitMate'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'ciaranm/detectindent'
 Bundle 'gmarik/vundle'
-Bundle 'groenewege/vim-less'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'helino/vim-json'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'juvenn/mustache.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'othree/html5.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'skammer/vim-css-color'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
+Bundle 'altercation/vim-colors-solarized'
+
+if !exists("g:light_editor")
+	Bundle 'Raimondi/delimitMate'
+	Bundle 'Valloric/YouCompleteMe'
+	Bundle 'ciaranm/detectindent'
+	Bundle 'groenewege/vim-less'
+	Bundle 'hail2u/vim-css3-syntax'
+	Bundle 'helino/vim-json'
+	Bundle 'jistr/vim-nerdtree-tabs'
+	Bundle 'juvenn/mustache.vim'
+	Bundle 'kien/ctrlp.vim'
+	Bundle 'majutsushi/tagbar'
+	Bundle 'nathanaelkane/vim-indent-guides'
+	Bundle 'othree/html5.vim'
+	Bundle 'scrooloose/nerdcommenter'
+	Bundle 'scrooloose/nerdtree'
+	Bundle 'scrooloose/syntastic'
+	Bundle 'skammer/vim-css-color'
+	Bundle 'tpope/vim-fugitive'
+	Bundle 'tpope/vim-markdown'
+	
+	" Configure syntastic.
+	let g:syntastic_mode_map={ 'mode': 'active',
+		\ 'active_filetypes': [],
+		\ 'passive_filetypes': ['html', 'cpp'] }
+	let g:syntastic_check_on_open=1
+	let g:syntastic_enable_highlighting=0
+	
+	" Set the status line.
+	" It's just the default one with the fugitive git branch.
+	set statusline=%<%f\ %{fugitive#statusline()}\ %=%{SyntasticStatuslineFlag()}\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+	
+	" Shows the errors window. (e)
+	nmap <silent> <leader>e :Errors<CR>
+	
+	" Indentation shortcuts. (ri and i)
+	nmap <silent> <leader>ri :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>
+	nmap <silent> <leader>i :DetectIndent<CR>
+	autocmd BufReadPost * :DetectIndent
+	
+	" Tagbar commands. (t)
+	nmap <silent> <leader>t :TagbarToggle<CR>
+	
+	" Move NERDTree to the current files location.
+	nmap <silent> <leader>r :NERDTreeFind<CR>
+	
+	" Open NERDTree on command line startup.
+	let g:nerdtree_tabs_open_on_console_startup=1
+	
+	" Display the indentation.
+	let g:indent_guides_enable_on_vim_startup=1
+	let g:indent_guides_auto_colors=0
+	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
+	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=green
+endif
 
 " Enable some syntax settings that had to be disabled for Vundle.
 filetype plugin indent on
@@ -54,17 +91,6 @@ set backspace=indent,eol,start
 set ofu=syntaxcomplete#Complete
 set completeopt=longest,menuone
 
-" Configure syntastic.
-let g:syntastic_mode_map={ 'mode': 'active',
-	\ 'active_filetypes': [],
-	\ 'passive_filetypes': ['html', 'cpp'] }
-let g:syntastic_check_on_open=1
-let g:syntastic_enable_highlighting=0
-
-" Set the status line.
-" It's just the default one with the fugitive git branch.
-set statusline=%<%f\ %{fugitive#statusline()}\ %=%{SyntasticStatuslineFlag()}\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-
 " Stop hyphens being regarded as a word separator.
 set iskeyword+=-
 
@@ -77,33 +103,10 @@ let mapleader=','
 " Clears the search. (m)
 nmap <silent> <leader>m :nohlsearch<CR>
 
-" Shows the errors window. (e)
-nmap <silent> <leader>e :Errors<CR>
-
-" Indentation shortcuts. (ri and i)
-nmap <silent> <leader>ri :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>
-nmap <silent> <leader>i :DetectIndent<CR>
-
-" Tagbar commands. (t)
-nmap <silent> <leader>t :TagbarToggle<CR>
-
-" Move NERDTree to the current files location.
-nmap <silent> <leader>r :NERDTreeFind<CR>
-
-" Open NERDTree on command line startup.
-let g:nerdtree_tabs_open_on_console_startup=1
-
 " Enable better indentation.
 set autoindent smartindent
 set smarttab
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
-autocmd BufReadPost * :DetectIndent
-
-" Display the indentation.
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=green
 
 " Add a line in the 81st column.
 set colorcolumn=81
