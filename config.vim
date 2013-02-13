@@ -4,6 +4,9 @@
 " Make vim more useful. Just fixes quite a few compatibility issues.
 set nocompatible
 
+" Change the leader to something a bit easier to hit.
+let mapleader=','
+
 " Load Vundle. Manages all of the bundles.
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -58,6 +61,9 @@ Bundle 'altercation/vim-colors-solarized'
 	" Move NERDTree to the current files location.
 	nmap <silent> <leader>r :NERDTreeFind<CR>
 	
+	" Use CtrlP to search tags. (p)
+	nmap <silent> <leader>p :CtrlPTag<CR>
+	
 	" Open NERDTree on command line startup.
 	let g:nerdtree_tabs_open_on_console_startup=1
 	
@@ -97,11 +103,12 @@ set iskeyword+=-
 " Increase the history length.
 set history=1000
 
-" Change the leader to something a bit easier to hit.
-let mapleader=','
-
 " Clears the search. (m)
 nmap <silent> <leader>m :nohlsearch<CR>
+
+" Rebuild the ctags. (F8)
+set tags+=.tags
+map <F8> :!/usr/bin/ctags -R --python-kinds=-i --exclude=.git -f ./.tags .<CR><CR>
 
 " Enable better indentation.
 set autoindent smartindent
