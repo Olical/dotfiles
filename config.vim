@@ -117,7 +117,7 @@ nmap <silent> <leader>m :nohlsearch<CR>
 " Rebuild the ctags. (F5/F6[JS])
 set tags+=.tags
 map <F5> :!/usr/bin/ctags -Rf ./.tags --python-kinds=-i --exclude=.git -L .srclist<CR><CR>
-map <F6> :!jsctags -f ./.tags ./src<CR><CR>
+map <F6> :!jsctags -f ./.tags `cat .srclist`<CR><CR>
 
 " Add a line in the 81st column.
 set colorcolumn=81
