@@ -111,7 +111,7 @@ nmap <silent> <leader>m :nohlsearch<CR>
 
 " Rebuild the ctags. (F8)
 set tags+=.tags
-map <F5> :!/usr/bin/ctags -R --python-kinds=-i --exclude=.git -f ./.tags .<CR><CR>
+map <F5> :!/usr/bin/ctags -Rwf ./.tags --python-kinds=-i --exclude=.git .<CR><CR>
 
 " Enable better indentation.
 set autoindent smartindent
