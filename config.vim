@@ -109,9 +109,10 @@ set history=1000
 " Clears the search. (m)
 nmap <silent> <leader>m :nohlsearch<CR>
 
-" Rebuild the ctags. (F5)
+" Rebuild the ctags. (F5/F6[JS])
 set tags+=.tags
-map <F5> :!/usr/bin/ctags -Rf ./.tags --extra=+q --python-kinds=-i --exclude=.git -L .srclist<CR><CR>
+map <F5> :!/usr/bin/ctags -Rf ./.tags --python-kinds=-i --exclude=.git -L .srclist<CR><CR>
+map <F6> :!jsctags -f ./.tags ./src<CR><CR>
 
 " Enable better indentation.
 set autoindent smartindent
