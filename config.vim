@@ -10,6 +10,11 @@ set nocompatible
 " Change the leader to something a bit easier to hit.
 let mapleader=','
 
+" Enable better indentation.
+set autoindent smartindent
+set smarttab
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+
 " Load Vundle. Manages all of the bundles.
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -113,11 +118,6 @@ nmap <silent> <leader>m :nohlsearch<CR>
 set tags+=.tags
 map <F5> :!/usr/bin/ctags -Rf ./.tags --python-kinds=-i --exclude=.git -L .srclist<CR><CR>
 map <F6> :!jsctags -f ./.tags ./src<CR><CR>
-
-" Enable better indentation.
-set autoindent smartindent
-set smarttab
-set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
 " Add a line in the 81st column.
 set colorcolumn=81
