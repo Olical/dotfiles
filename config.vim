@@ -25,6 +25,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 
 if !exists('g:light_editor')
+	Bundle 'Lokaltog/vim-powerline'
 	Bundle 'Raimondi/delimitMate'
 	Bundle 'Valloric/YouCompleteMe'
 	Bundle 'ciaranm/detectindent'
@@ -52,10 +53,6 @@ if !exists('g:light_editor')
 		\ 'passive_filetypes': ['html', 'cpp'] }
 	let g:syntastic_check_on_open=1
 	let g:syntastic_enable_highlighting=0
-	
-	" Set the status line.
-	" It's just the default one with the fugitive git branch.
-	set statusline=%<%f\ %{fugitive#statusline()}\ %=%{SyntasticStatuslineFlag()}\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 	
 	" Shows the errors window. (e)
 	nmap <silent> <leader>e :Errors<CR>
