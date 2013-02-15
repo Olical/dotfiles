@@ -37,6 +37,7 @@ if !exists('g:light_editor')
 	Bundle 'majutsushi/tagbar'
 	Bundle 'nathanaelkane/vim-indent-guides'
 	Bundle 'othree/html5.vim'
+	Bundle 'pangloss/vim-javascript'
 	Bundle 'scrooloose/nerdcommenter'
 	Bundle 'scrooloose/nerdtree'
 	Bundle 'scrooloose/syntastic'
