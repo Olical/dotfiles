@@ -31,6 +31,7 @@ if !exists('g:light_editor')
 	Bundle 'groenewege/vim-less'
 	Bundle 'hail2u/vim-css3-syntax'
 	Bundle 'helino/vim-json'
+	Bundle 'jelera/vim-javascript-syntax'
 	Bundle 'jistr/vim-nerdtree-tabs'
 	Bundle 'juvenn/mustache.vim'
 	Bundle 'kien/ctrlp.vim'
@@ -108,6 +109,9 @@ set completeopt=longest,menuone
 
 " Stop hyphens being regarded as a word separator.
 set iskeyword+=-
+
+" Disabled code folding. It can be weird sometimes.
+set nofoldenable
 
 " Increase the history length.
 set history=1000
