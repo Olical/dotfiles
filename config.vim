@@ -27,7 +27,6 @@ Bundle 'altercation/vim-colors-solarized'
 if !exists('g:light_editor')
 	Bundle 'Lokaltog/vim-powerline'
 	Bundle 'Raimondi/delimitMate'
-	Bundle 'Valloric/YouCompleteMe'
 	Bundle 'ciaranm/detectindent'
 	Bundle 'ehynds/vim-javascript'
 	Bundle 'groenewege/vim-less'
