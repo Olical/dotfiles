@@ -37,6 +37,7 @@ if !exists('g:light_editor')
 	Bundle 'juvenn/mustache.vim'
 	Bundle 'kien/ctrlp.vim'
 	Bundle 'majutsushi/tagbar'
+	Bundle 'mileszs/ack.vim'
 	Bundle 'nathanaelkane/vim-indent-guides'
 	Bundle 'othree/html5.vim'
 	Bundle 'scrooloose/nerdcommenter'
@@ -64,14 +65,11 @@ if !exists('g:light_editor')
 	" Tagbar commands. (t)
 	nmap <silent> <leader>t :TagbarToggle<CR>
 	
-	" Move NERDTree to the current files location.
-	nmap <silent> <leader>r :NERDTreeFind<CR>
+	" Toggle the NERDTree pane. (n)
+	nmap <silent> <leader>n :NERDTreeTabsToggle<CR>
 	
 	" Use CtrlP to search tags. (p)
 	nmap <silent> <leader>p :CtrlPTag<CR>
-	
-	" Open NERDTree on command line startup.
-	let g:nerdtree_tabs_open_on_console_startup=1
 	
 	" Display the indentation.
 	let g:indent_guides_enable_on_vim_startup=1
