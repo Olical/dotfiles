@@ -27,7 +27,6 @@ Bundle 'altercation/vim-colors-solarized'
 if !exists('g:light_editor')
 	Bundle 'Lokaltog/vim-powerline'
 	Bundle 'Raimondi/delimitMate'
-	Bundle 'ciaranm/detectindent'
 	Bundle 'ehynds/vim-javascript'
 	Bundle 'groenewege/vim-less'
 	Bundle 'hail2u/vim-css3-syntax'
@@ -56,11 +55,6 @@ if !exists('g:light_editor')
 	
 	" Shows the errors window. (e)
 	nmap <silent> <leader>e :Errors<CR>
-	
-	" Indentation shortcuts. (ri and i)
-	nmap <silent> <leader>ri :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>
-	nmap <silent> <leader>i :DetectIndent<CR>
-	autocmd BufReadPost * :DetectIndent
 	
 	" Tagbar commands. (t)
 	nmap <silent> <leader>t :TagbarToggle<CR>
