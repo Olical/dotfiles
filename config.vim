@@ -47,6 +47,7 @@ if !exists('g:light_editor')
 	Bundle 'skammer/vim-css-color'
 	Bundle 'tpope/vim-fugitive'
 	Bundle 'tpope/vim-markdown'
+	Bundle 'tpope/vim-unimpaired'
 	
 	" Configure syntastic.
 	let g:syntastic_mode_map={ 'mode': 'active',
