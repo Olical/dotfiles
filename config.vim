@@ -25,6 +25,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 
 if !exists('g:light_editor')
+	Bundle 'Lokaltog/vim-easymotion'
 	Bundle 'Lokaltog/vim-powerline'
 	Bundle 'Raimondi/delimitMate'
 	Bundle 'Valloric/YouCompleteMe'
