@@ -78,6 +78,7 @@ endif
 
 " Improve the colours.
 syntax on
+set t_Co=256
 colorscheme desert
 
 hi clear SpellBad
