@@ -15,21 +15,19 @@ set autoindent smartindent
 set smarttab
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
-" Load Vundle. Manages all of the bundles.
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Specify all bundles.
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
-
 if !exists('g:light_editor')
+	" Load Vundle. Manages all of the bundles.
+	filetype off
+	set rtp+=~/.vim/bundle/vundle/
+	call vundle#rc()
+	
+	" Specify all bundles.
 	Bundle 'Lokaltog/vim-easymotion'
 	Bundle 'Lokaltog/vim-powerline'
 	Bundle 'Raimondi/delimitMate'
 	Bundle 'Valloric/YouCompleteMe'
 	Bundle 'ehynds/vim-javascript'
+	Bundle 'gmarik/vundle'
 	Bundle 'groenewege/vim-less'
 	Bundle 'hail2u/vim-css3-syntax'
 	Bundle 'helino/vim-json'
@@ -48,6 +46,9 @@ if !exists('g:light_editor')
 	Bundle 'tpope/vim-fugitive'
 	Bundle 'tpope/vim-markdown'
 	Bundle 'tpope/vim-unimpaired'
+	
+	" Enable some syntax settings that had to be disabled for Vundle.
+	filetype plugin indent on
 	
 	" Configure syntastic.
 	let g:syntastic_mode_map={ 'mode': 'active',
@@ -71,19 +72,23 @@ if !exists('g:light_editor')
 	" Display the indentation.
 	let g:indent_guides_enable_on_vim_startup=1
 	let g:indent_guides_auto_colors=0
-	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
-	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=green
+	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=darkgrey
+	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=grey
 endif
-
-" Enable some syntax settings that had to be disabled for Vundle.
-filetype plugin indent on
 
 " Improve the colours.
 syntax on
-set background=dark
-se t_Co=16
-let g:solarized_termcolors=16
-colorscheme solarized
+colorscheme desert
+
+hi clear SpellBad
+hi clear SpellCap
+hi clear SpellLocal
+hi clear SpellRare
+
+hi SpellBad cterm=underline
+hi SpellCap cterm=underline
+hi SpellLocal cterm=underline
+hi SpellRare cterm=underline
 
 " Enable the mouse in the terminal.
 set mouse=a
@@ -143,6 +148,9 @@ set list
 
 " Highlight searches.
 set hlsearch
+
+" Highlight the current line.
+set cursorline
 
 " Ignore case of searches.
 set ignorecase
