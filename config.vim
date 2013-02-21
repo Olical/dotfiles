@@ -73,19 +73,18 @@ if !exists('g:light_editor')
 	" Display the indentation.
 	let g:indent_guides_enable_on_vim_startup=1
 	let g:indent_guides_auto_colors=0
-	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermfg=white ctermbg=234
-	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=white ctermbg=236
+	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermfg=white ctermbg=235
+	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=white ctermbg=237
 endif
 
 " Improve the colours.
 syntax on
 set background=dark
 set t_Co=256
-colorscheme desert
+colorscheme molokai
 
-hi CursorLine cterm=NONE ctermbg=233
-hi CursorLineNR cterm=bold ctermfg=white ctermbg=22
-hi LineNr cterm=NONE ctermfg=grey ctermbg=233
+hi CursorLineNR cterm=bold ctermfg=white ctermbg=239
+hi LineNr cterm=NONE ctermfg=grey ctermbg=232
 hi ColorColumn ctermbg=52
 hi SpecialKey ctermfg=white
 
