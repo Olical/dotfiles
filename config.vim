@@ -88,6 +88,9 @@ hi CursorLineNR cterm=bold ctermfg=white ctermbg=darkgreen
 
 hi SpecialKey ctermfg=white
 
+highlight ExtraWhitespace ctermbg=red
+match ExtraWhitespace /\s\+$/
+
 hi clear SpellBad
 hi clear SpellCap
 hi clear SpellLocal
