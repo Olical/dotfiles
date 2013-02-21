@@ -86,6 +86,8 @@ colorscheme desert
 hi CursorLine cterm=NONE
 hi CursorLineNR cterm=bold ctermfg=white ctermbg=darkgreen
 
+hi SpecialKey ctermfg=white
+
 hi clear SpellBad
 hi clear SpellCap
 hi clear SpellLocal
