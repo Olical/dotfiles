@@ -73,8 +73,8 @@ if !exists('g:light_editor')
 	" Display the indentation.
 	let g:indent_guides_enable_on_vim_startup=1
 	let g:indent_guides_auto_colors=0
-	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermfg=black ctermbg=darkgrey
-	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=black ctermbg=grey
+	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermfg=white ctermbg=234
+	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=white ctermbg=236
 endif
 
 " Improve the colours.
@@ -83,12 +83,13 @@ set background=dark
 set t_Co=256
 colorscheme desert
 
-hi CursorLine cterm=NONE
-hi CursorLineNR cterm=bold ctermfg=white ctermbg=darkgreen
-
+hi CursorLine cterm=NONE ctermbg=233
+hi CursorLineNR cterm=bold ctermfg=white ctermbg=22
+hi LineNr cterm=NONE ctermfg=grey ctermbg=233
+hi ColorColumn ctermbg=52
 hi SpecialKey ctermfg=white
 
-highlight ExtraWhitespace ctermbg=red
+highlight ExtraWhitespace ctermfg=white ctermbg=1
 match ExtraWhitespace /\s\+$/
 
 hi clear SpellBad
