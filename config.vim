@@ -79,8 +79,12 @@ endif
 
 " Improve the colours.
 syntax on
+set background=dark
 set t_Co=256
 colorscheme desert
+
+hi CursorLine cterm=NONE
+hi CursorLineNR cterm=bold ctermfg=white ctermbg=darkgreen
 
 hi clear SpellBad
 hi clear SpellCap
