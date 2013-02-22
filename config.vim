@@ -131,6 +131,9 @@ set tags+=.tags
 map <F5> :!/usr/bin/ctags -Rf ./.tags --python-kinds=-i --exclude=.git -L .srclist<CR><CR>
 map <F6> :!jsctags -f ./.tags `cat .srclist`<CR><CR>
 
+" Remove all comments. (q)
+nmap <silent> <leader>q :%s/\/\*\_.\{-}\*\///g<CR> :%s/\([ \t]\)\/\/.*/\1/<CR>
+
 " Add a line in the 81st column.
 set colorcolumn=81
 
