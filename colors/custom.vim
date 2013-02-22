@@ -41,5 +41,22 @@ hi DiffChange ctermbg=18
 hi DiffDelete ctermbg=52
 hi DiffText ctermbg=57
 
-" Syntax time!
+" Generic syntax.
 hi Error ctermbg=52
+hi String ctermfg=40
+hi Comment ctermfg=244
+hi Special ctermfg=39
+hi Function ctermfg=3
+hi Identifier ctermfg=89
+hi Statement ctermfg=208
+hi Constant ctermfg=37
+
+" JavaScript specific.
+hi javaScriptParens ctermfg=255
+hi javaScriptBraces ctermfg=255
+
+" VimL specific.
+hi vimIsCommand ctermfg=39
+
+" Python specific.
+hi pythonClass ctermfg=39
