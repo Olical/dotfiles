@@ -26,21 +26,16 @@ if !exists('g:light_editor')
 	Bundle 'Lokaltog/vim-powerline'
 	Bundle 'Raimondi/delimitMate'
 	Bundle 'Valloric/YouCompleteMe'
-	Bundle 'ehynds/vim-javascript'
 	Bundle 'gerw/vim-HiLinkTrace'
 	Bundle 'gmarik/vundle'
 	Bundle 'groenewege/vim-less'
-	Bundle 'hail2u/vim-css3-syntax'
 	Bundle 'helino/vim-json'
-	Bundle 'jelera/vim-javascript-syntax'
 	Bundle 'jistr/vim-nerdtree-tabs'
 	Bundle 'juvenn/mustache.vim'
 	Bundle 'kien/ctrlp.vim'
 	Bundle 'majutsushi/tagbar'
 	Bundle 'mileszs/ack.vim'
 	Bundle 'nathanaelkane/vim-indent-guides'
-	Bundle 'othree/html5.vim'
-	Bundle 'pfdevilliers/Pretty-Vim-Python'
 	Bundle 'scrooloose/nerdcommenter'
 	Bundle 'scrooloose/nerdtree'
 	Bundle 'scrooloose/syntastic'
@@ -69,37 +64,13 @@ if !exists('g:light_editor')
 	
 	" Use CtrlP to search tags. (p)
 	nmap <silent> <leader>p :CtrlPTag<CR>
-	
-	" Display the indentation.
-	let g:indent_guides_enable_on_vim_startup=1
-	let g:indent_guides_auto_colors=0
-	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermfg=white ctermbg=235
-	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=white ctermbg=237
 endif
 
 " Improve the colours.
 syntax on
 set background=dark
 set t_Co=256
-colorscheme molokai
-
-hi CursorLineNR cterm=bold ctermfg=white ctermbg=239
-hi LineNr cterm=NONE ctermfg=grey ctermbg=232
-hi ColorColumn ctermbg=52
-hi SpecialKey ctermfg=white
-
-highlight ExtraWhitespace ctermfg=white ctermbg=1
-match ExtraWhitespace /\s\+$/
-
-hi clear SpellBad
-hi clear SpellCap
-hi clear SpellLocal
-hi clear SpellRare
-
-hi SpellBad cterm=underline
-hi SpellCap cterm=underline
-hi SpellLocal cterm=underline
-hi SpellRare cterm=underline
+colorscheme custom
 
 " Enable the mouse in the terminal.
 set mouse=a
