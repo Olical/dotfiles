@@ -15,7 +15,7 @@ hi clear SpellRare
 
 hi SpellBad cterm=underline
 hi SpellCap cterm=underline
-hi SpellLocal cterm=bold
+hi SpellLocal cterm=underline
 hi SpellRare cterm=underline
 
 " Vertical rule.
