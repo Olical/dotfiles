@@ -12,7 +12,7 @@ hi clear SpellRare
 
 hi SpellBad cterm=underline
 hi SpellCap cterm=underline
-hi SpellLocal cterm=underline
+hi SpellLocal cterm=bold
 hi SpellRare cterm=underline
 
 " Vertical rule.
@@ -29,3 +29,17 @@ hi CursorLineNR ctermfg=white ctermbg=237
 
 " Current line.
 hi CursorLine cterm=NONE ctermbg=233
+
+" Diffs.
+hi clear DiffAdd
+hi clear DiffChange
+hi clear DiffDelete
+hi clear DiffText
+
+hi DiffAdd ctermbg=22
+hi DiffChange ctermbg=18
+hi DiffDelete ctermbg=52
+hi DiffText ctermbg=57
+
+" Syntax time!
+hi Error ctermbg=52
