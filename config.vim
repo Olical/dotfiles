@@ -30,6 +30,7 @@ if !exists('g:light_editor')
 	Bundle 'gmarik/vundle'
 	Bundle 'groenewege/vim-less'
 	Bundle 'helino/vim-json'
+	Bundle 'jelera/vim-javascript-syntax'
 	Bundle 'jistr/vim-nerdtree-tabs'
 	Bundle 'juvenn/mustache.vim'
 	Bundle 'kien/ctrlp.vim'
