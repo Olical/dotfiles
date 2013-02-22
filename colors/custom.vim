@@ -18,6 +18,9 @@ hi SpellCap cterm=underline
 hi SpellLocal cterm=underline
 hi SpellRare cterm=underline
 
+" Popup menu.
+hi Pmenu ctermbg=17 ctermfg=white
+
 " Vertical rule.
 hi ColorColumn ctermbg=52
 
