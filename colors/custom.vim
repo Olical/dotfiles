@@ -19,7 +19,8 @@ hi SpellLocal cterm=underline
 hi SpellRare cterm=underline
 
 " Popup menu.
-hi Pmenu ctermbg=17 ctermfg=white
+hi Pmenu ctermbg=17 ctermfg=255
+hi PmenuSel ctermbg=27 ctermfg=white
 
 " Vertical rule.
 hi ColorColumn ctermbg=52
