@@ -26,6 +26,7 @@ if !exists('g:light_editor')
 	Bundle 'Lokaltog/vim-powerline'
 	Bundle 'Raimondi/delimitMate'
 	Bundle 'Valloric/YouCompleteMe'
+	Bundle 'airblade/vim-gitgutter'
 	Bundle 'gerw/vim-HiLinkTrace'
 	Bundle 'gmarik/vundle'
 	Bundle 'groenewege/vim-less'
