@@ -37,6 +37,7 @@ if !exists('g:light_editor')
 	Bundle 'majutsushi/tagbar'
 	Bundle 'mileszs/ack.vim'
 	Bundle 'nathanaelkane/vim-indent-guides'
+	Bundle 'pangloss/vim-javascript'
 	Bundle 'pfdevilliers/Pretty-Vim-Python'
 	Bundle 'scrooloose/nerdcommenter'
 	Bundle 'scrooloose/nerdtree'
