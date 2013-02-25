@@ -30,8 +30,9 @@ hi SpecialKey ctermfg=white
 hi ExtraWhitespace ctermfg=white ctermbg=1
 mat ExtraWhitespace /\s\+$/
 
-" Line numbers.
+" Line numbers and the gutter.
 hi LineNr ctermfg=grey ctermbg=233
+hi SignColumn ctermbg=0
 hi CursorLineNR ctermfg=white ctermbg=237
 
 " Current line.
