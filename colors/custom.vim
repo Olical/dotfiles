@@ -57,6 +57,7 @@ hi Function ctermfg=3
 hi Identifier ctermfg=89
 hi Statement ctermfg=208
 hi Constant ctermfg=37
+hi Title ctermfg=136
 hi Normal ctermfg=white
 
 " JavaScript specific.
