@@ -43,6 +43,7 @@ if !exists('g:light_editor')
 	Bundle 'scrooloose/nerdcommenter'
 	Bundle 'scrooloose/nerdtree'
 	Bundle 'scrooloose/syntastic'
+	Bundle 'sjl/gundo.vim'
 	Bundle 'tpope/vim-fugitive'
 	Bundle 'tpope/vim-markdown'
 	Bundle 'tpope/vim-unimpaired'
@@ -62,6 +63,9 @@ if !exists('g:light_editor')
 	
 	" Tagbar commands. (t)
 	nmap <silent> <leader>t :TagbarToggle<CR>
+
+	" Gundo commands. (u)
+	nmap <silent> <leader>u :GundoToggle<CR>
 	
 	" Toggle the NERDTree pane. (n)
 	nmap <silent> <leader>n :NERDTreeTabsToggle<CR>
