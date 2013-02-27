@@ -34,7 +34,6 @@ if !exists('g:light_editor')
 	Bundle 'jistr/vim-nerdtree-tabs'
 	Bundle 'juvenn/mustache.vim'
 	Bundle 'kien/ctrlp.vim'
-	Bundle 'majutsushi/tagbar'
 	Bundle 'mileszs/ack.vim'
 	Bundle 'nathanaelkane/vim-indent-guides'
 	Bundle 'pangloss/vim-javascript'
@@ -61,9 +60,6 @@ if !exists('g:light_editor')
 	" Shows the errors window. (e)
 	nmap <silent> <leader>e :Errors<CR>
 	
-	" Tagbar commands. (t)
-	nmap <silent> <leader>t :TagbarToggle<CR>
-
 	" Gundo commands. (u)
 	nmap <silent> <leader>u :GundoToggle<CR>
 	
