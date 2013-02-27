@@ -22,13 +22,13 @@ if !exists('g:light_editor')
 	call vundle#rc()
 	
 	" Specify all bundles.
+	Bundle 'gmarik/vundle'
 	Bundle 'Lokaltog/vim-easymotion'
 	Bundle 'Lokaltog/vim-powerline'
 	Bundle 'Raimondi/delimitMate'
 	Bundle 'Valloric/YouCompleteMe'
 	Bundle 'airblade/vim-gitgutter'
 	Bundle 'gerw/vim-HiLinkTrace'
-	Bundle 'gmarik/vundle'
 	Bundle 'groenewege/vim-less'
 	Bundle 'helino/vim-json'
 	Bundle 'jistr/vim-nerdtree-tabs'
