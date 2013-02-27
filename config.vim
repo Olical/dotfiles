@@ -84,9 +84,6 @@ set background=dark
 set t_Co=256
 colorscheme custom
 
-" Enable the mouse in the terminal.
-set mouse=a
-
 " Add more syntax highlighting mappings.
 au BufNewFile,BufRead *.webapp set filetype=json
 
