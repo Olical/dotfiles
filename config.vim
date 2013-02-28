@@ -4,7 +4,8 @@
 " Add this before you include the config to enable light mode.
 " let g:light_editor=1
 
-" Make vim more useful. Just fixes quite a few compatibility issues.
+" Make vim more useful. I think this drops vi compatibility.
+" This allows vim to do a lot more and stray from it's roots.
 set nocompatible
 
 " Change the leader to something a bit easier to hit.
