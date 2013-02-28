@@ -91,6 +91,9 @@ set backspace=indent,eol,start
 set ofu=syntaxcomplete#Complete
 set completeopt=longest,menuone
 
+" Make <C-A> and <C-X> increment and decrement all numbers as decimals.
+set nrformats=
+
 " Stop hyphens being regarded as a word separator.
 set iskeyword+=-
 
