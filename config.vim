@@ -24,6 +24,7 @@ if !exists('g:light_editor')
 	
 	" Specify all bundles.
 	Bundle 'gmarik/vundle'
+	Bundle 'kchmck/vim-coffee-script'
 	Bundle 'Lokaltog/vim-easymotion'
 	Bundle 'Lokaltog/vim-powerline'
 	Bundle 'Raimondi/delimitMate'
