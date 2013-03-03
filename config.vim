@@ -134,7 +134,7 @@ set number
 set nolist
 
 " Show invisible characters.
-set listchars=tab:▸\ ,trail:·
+set listchars=tab:▸\ ,trail:∑
 set list
 
 " Highlight searches.
