@@ -38,6 +38,7 @@ if !exists('g:light_editor')
 	Bundle 'gerw/vim-HiLinkTrace'
 	Bundle 'jistr/vim-nerdtree-tabs'
 	Bundle 'juvenn/mustache.vim'
+	Bundle 'vim-scripts/matchit.zip'
 	Bundle 'kien/ctrlp.vim'
 	Bundle 'mileszs/ack.vim'
 	Bundle 'nathanaelkane/vim-indent-guides'
