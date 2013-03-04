@@ -91,6 +91,7 @@ set backspace=indent,eol,start
 " Improve completion.
 set ofu=syntaxcomplete#Complete
 set completeopt=longest,menuone
+set wildmode=longest,list
 
 " Make <C-A> and <C-X> increment and decrement all numbers as decimals.
 set nrformats=
