@@ -47,6 +47,8 @@ if !exists('g:light_editor')
 	Bundle 'tpope/vim-commentary'
 	Bundle 'tpope/vim-fugitive'
 	Bundle 'tpope/vim-markdown'
+	Bundle 'tpope/vim-repeat'
+	Bundle 'tpope/vim-speeddating'
 	Bundle 'tpope/vim-surround'
 	Bundle 'tpope/vim-unimpaired'
 	
