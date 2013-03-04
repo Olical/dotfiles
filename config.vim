@@ -47,6 +47,7 @@ if !exists('g:light_editor')
 	Bundle 'tpope/vim-commentary'
 	Bundle 'tpope/vim-fugitive'
 	Bundle 'tpope/vim-markdown'
+	Bundle 'tpope/vim-surround'
 	Bundle 'tpope/vim-unimpaired'
 	
 	" Enable some syntax settings that had to be disabled for Vundle.
