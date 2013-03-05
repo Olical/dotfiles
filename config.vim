@@ -45,6 +45,7 @@ if !exists('g:light_editor')
 	Bundle 'scrooloose/nerdtree'
 	Bundle 'scrooloose/syntastic'
 	Bundle 'sjl/gundo.vim'
+	Bundle 'jeetsukumaran/vim-buffergator'
 	Bundle 'tpope/vim-commentary'
 	Bundle 'tpope/vim-fugitive'
 	Bundle 'tpope/vim-markdown'
