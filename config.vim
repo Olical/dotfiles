@@ -9,7 +9,9 @@
 set nocompatible
 
 " Change the leader to something a bit easier to hit.
+" Then remaps the reverse find command.
 let mapleader=','
+noremap \ ,
 
 " Enable better indentation.
 set autoindent smartindent
