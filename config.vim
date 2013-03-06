@@ -67,6 +67,7 @@ if !exists('g:light_editor')
 	
 	" Configure localvimrc.
 	let g:localvimrc_ask=0
+	let g:localvimrc_sandbox=0
 	
 	" Shows the errors window. (e)
 	nmap <silent> <leader>e :Errors<CR>
