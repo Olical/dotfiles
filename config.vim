@@ -48,6 +48,7 @@ if !exists('g:light_editor')
 	Bundle 'scrooloose/syntastic'
 	Bundle 'sjl/gundo.vim'
 	Bundle 'jeetsukumaran/vim-buffergator'
+	Bundle 'embear/vim-localvimrc'
 	Bundle 'tpope/vim-commentary'
 	Bundle 'tpope/vim-fugitive'
 	Bundle 'tpope/vim-markdown'
@@ -65,6 +66,13 @@ if !exists('g:light_editor')
 		\ 'passive_filetypes': ['html', 'cpp'] }
 	let g:syntastic_check_on_open=1
 	let g:syntastic_enable_highlighting=0
+	
+	" Configure localvimrc.
+	let g:localvimrc_ask=0
+	let g:localvimrc_sandbox=0
+	
+	" Ack commands.
+	nmap <leader>a :Ack! "<cword>\s*\("<CR>
 	
 	" Shows the errors window. (e)
 	nmap <silent> <leader>e :Errors<CR>
