@@ -40,7 +40,6 @@ if !exists('g:light_editor')
 	Bundle 'gerw/vim-HiLinkTrace'
 	Bundle 'jistr/vim-nerdtree-tabs'
 	Bundle 'juvenn/mustache.vim'
-	Bundle 'vim-scripts/matchit.zip'
 	Bundle 'kien/ctrlp.vim'
 	Bundle 'mileszs/ack.vim'
 	Bundle 'nathanaelkane/vim-indent-guides'
@@ -107,6 +106,9 @@ set backspace=indent,eol,start
 set ofu=syntaxcomplete#Complete
 set completeopt=longest,menuone
 set wildmode=longest,list
+
+" Enable the matchit plugin.
+runtime macros/matchit.vim
 
 " Make <C-A> and <C-X> increment and decrement all numbers as decimals.
 set nrformats=
