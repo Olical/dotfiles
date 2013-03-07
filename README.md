@@ -26,6 +26,35 @@ You can also add this line *before* the previous one if you want a lighter edito
 let g:light_editor=1
 ```
 
+## Local dot files.
+
+There are a number of files you can add to your current directory to configure things on a per project basis. They are generally picked up by their respective bundles.
+
+### .lvimrc
+
+A local `.vimrc` file for project specific mappings and configuration.
+
+```viml
+set path+=src/**
+set suffixesadd+=.js
+nmap <leader>a :Ag! "<cword>\s*\(" src<CR>
+```
+
+### .srclist
+
+A list of files or globs to inspected when building the tags index with either ctags (F5) or jsctags (F6). The generated tags are stored in `.tags`.
+
+```viml
+src/js/**/*.js
+../someDependency/src/js/**/*.js
+```
+
+### .jshintrc (etc)
+
+This is just a local JSHint configuration, it's not really specific to Vim, it's just the linter. Works well with Syntastic though.
+
+*You may want to ignore the above files in your global `.gitignore`.*
+
 ## Enjoy.
 
 I hope you find this helpful in your Vim adventures. As always: Star, fork and raise issues if you feel like it. Anything helps.
