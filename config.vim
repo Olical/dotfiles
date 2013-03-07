@@ -41,7 +41,7 @@ if !exists('g:light_editor')
 	Bundle 'jistr/vim-nerdtree-tabs'
 	Bundle 'juvenn/mustache.vim'
 	Bundle 'kien/ctrlp.vim'
-	Bundle 'mileszs/ack.vim'
+	Bundle 'rking/ag.vim'
 	Bundle 'nathanaelkane/vim-indent-guides'
 	Bundle 'scrooloose/nerdtree'
 	Bundle 'scrooloose/syntastic'
