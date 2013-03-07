@@ -1,3 +1,5 @@
+# .vim
+
 This is my personal Vim setup. It uses my own colour scheme, key bindings and bundle configuration. I use [Vundle](https://github.com/gmarik/vundle) to manage all of my bundles, you need to fetch that as a submodule.
 
 You can sync all of the bundles by executing `./sync-bundles.sh`. This will remove the old, update the current and install any new bundles.
