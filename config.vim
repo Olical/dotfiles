@@ -70,8 +70,8 @@ if !exists('g:light_editor')
 	let g:localvimrc_ask=0
 	let g:localvimrc_sandbox=0
 	
-	" Ack commands.
-	nmap <leader>a :Ack! "<cword>\s*\("<CR>
+	" Ag commands.
+	nmap <leader>a :Ag! "<cword>\s*\("<CR>
 	
 	" Shows the errors window. (e)
 	nmap <silent> <leader>e :Errors<CR>
