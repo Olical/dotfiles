@@ -118,7 +118,7 @@ set iskeyword+=-
 " Disabled code folding. It can be weird sometimes.
 set nofoldenable
 
-" Increase the history length.
+" Increase the command line history length.
 set history=1000
 
 " Clears the search. (m)
