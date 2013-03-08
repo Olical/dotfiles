@@ -64,7 +64,6 @@ if !exists('g:light_editor')
 		\ 'active_filetypes': [],
 		\ 'passive_filetypes': ['html', 'cpp'] }
 	let g:syntastic_check_on_open=1
-	let g:syntastic_enable_highlighting=0
 	
 	" Configure localvimrc.
 	let g:localvimrc_ask=0
