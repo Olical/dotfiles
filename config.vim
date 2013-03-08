@@ -85,7 +85,7 @@ if !exists('g:light_editor')
 	nmap <silent> <leader>p :CtrlPTag<CR>
 	
 	" Make CtrlP use ag.
-	let g:ctrlp_user_command = 'ag --nogroup --nobreak --noheading --nocolor -g "" %s'
+	let g:ctrlp_user_command = 'ag --nocolor -g "" %s'
 	
 	" Enable indent guides on boot and allow colorschemes to style them.
 	let g:indent_guides_enable_on_vim_startup=1
