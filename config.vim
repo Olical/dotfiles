@@ -29,6 +29,7 @@ if !exists('g:light_editor')
 	Bundle 'kchmck/vim-coffee-script'
 	Bundle 'helino/vim-json'
 	Bundle 'groenewege/vim-less'
+	Bundle 'vim-scripts/django.vim'
 	Bundle 'pangloss/vim-javascript'
 	Bundle 'othree/vim-javascript-syntax'
 	Bundle 'pfdevilliers/Pretty-Vim-Python'
