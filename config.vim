@@ -155,6 +155,9 @@ set nolist
 set listchars=tab:▸\ ,trail:·
 set list
 
+" Improve screen clearing by using the background colour.
+set t_ut=
+
 " Highlight searches.
 set hlsearch
 
