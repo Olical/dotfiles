@@ -1,4 +1,4 @@
 #!/bin/bash
 
-vim +BundleClean +BundleUpdate +BundleInstall +qall
+vim +BundleClean! +BundleInstall! +qall
 echo "All synced!"
