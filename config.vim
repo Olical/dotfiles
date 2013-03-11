@@ -108,6 +108,9 @@ colorscheme custom
 " Add more syntax highlighting mappings.
 au BufNewFile,BufRead *.webapp set filetype=json
 
+" Change indentation for certain file types.
+autocmd FileType python setlocal expandtab
+
 " Improve the backspace key.
 set backspace=indent,eol,start
 
