@@ -39,6 +39,7 @@ if !exists('g:light_editor')
 	Bundle 'Valloric/YouCompleteMe'
 	Bundle 'airblade/vim-gitgutter'
 	Bundle 'gerw/vim-HiLinkTrace'
+	Bundle 'mattn/zencoding-vim'
 	Bundle 'jistr/vim-nerdtree-tabs'
 	Bundle 'juvenn/mustache.vim'
 	Bundle 'kien/ctrlp.vim'
@@ -69,6 +70,11 @@ if !exists('g:light_editor')
 	" Configure localvimrc.
 	let g:localvimrc_ask=0
 	let g:localvimrc_sandbox=0
+	
+	" Configure zencoding.
+	let g:user_zen_settings = {
+	\	'indentation': '	'
+	\}
 	
 	" Ag commands.
 	nmap <leader>a :Ag! "<cword>\s*\("<CR>
