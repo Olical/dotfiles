@@ -189,8 +189,9 @@ set smartcase
 " Set the default encoding to UTF-8.
 set enc=utf-8
 
-" Configure the spelling language.
+" Configure the spelling language and file.
 set spelllang=en_gb
+set spellfile=$HOME/.vim/spell/en.utf-8.add
 set spell
 
 " Disable error bells.
