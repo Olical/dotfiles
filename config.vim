@@ -136,7 +136,7 @@ nmap <silent> <leader>m :nohlsearch<CR>
 
 " Rebuild the tags. (F5/F6[JS])
 set tags+=.tags
-map <F5> :!/usr/bin/ctags -Rf ./.tags --python-kinds=-i --exclude=.git -L .srclist<CR><CR>
+map <F5> :!ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`<CR><CR>
 map <F6> :!jsctags -f ./.tags `cat .srclist`<CR><CR>
 
 " Add a line in the 81st column.
