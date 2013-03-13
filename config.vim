@@ -20,7 +20,7 @@ set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
 if !exists('g:light_editor')
 	" Include all of the bundle configuration.
-	source bundles.vim
+	source $HOME/.vim/bundles.vim
 endif
 
 " Improve the colours.
@@ -61,6 +61,7 @@ set history=1000
 " Clears the search. (m)
 nmap <silent> <leader>m :nohlsearch<CR>
 
+" Rebuild the tags. (F5/F6[JS])
 " Rebuild the tags. (F5/F6[JS])
 set tags+=.tags
 map <F5> :!ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`<CR><CR>
