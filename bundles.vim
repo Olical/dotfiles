@@ -5,6 +5,8 @@ call vundle#rc()
 
 " Specify all bundles.
 Bundle 'gmarik/vundle'
+
+" Language specific.
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'helino/vim-json'
 Bundle 'groenewege/vim-less'
@@ -12,15 +14,17 @@ Bundle 'vim-scripts/django.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'othree/vim-javascript-syntax'
 Bundle 'pfdevilliers/Pretty-Vim-Python'
+Bundle 'juvenn/mustache.vim'
+Bundle 'mattn/zencoding-vim'
+
+" General.
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'gerw/vim-HiLinkTrace'
-Bundle 'mattn/zencoding-vim'
 Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'juvenn/mustache.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -29,6 +33,14 @@ Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'embear/vim-localvimrc'
+
+" Text objects.
+Bundle 'kana/vim-textobj-user'
+Bundle 'kana/vim-textobj-datetime'
+Bundle 'kana/vim-textobj-lastpat'
+Bundle 'mattn/vim-textobj-url'
+
+" Tim Pope stuff.
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
