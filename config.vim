@@ -50,6 +50,7 @@ if !exists('g:light_editor')
 	Bundle 'sjl/gundo.vim'
 	Bundle 'jeetsukumaran/vim-buffergator'
 	Bundle 'embear/vim-localvimrc'
+	Bundle 'tpope/vim-abolish'
 	Bundle 'tpope/vim-commentary'
 	Bundle 'tpope/vim-fugitive'
 	Bundle 'tpope/vim-markdown'
