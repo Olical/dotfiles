@@ -62,11 +62,10 @@ set history=1000
 " Clears the search. (m)
 nmap <silent> <leader>m :nohlsearch<CR>
 
-" Rebuild the tags. (F5/F6[JS])
-" Rebuild the tags. (F5/F6[JS])
+" Rebuild the tags. (F5)
 set tags+=.tags
 map <F5> :!ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`<CR><CR>
-map <F6> :!jsctags -f ./.tags `cat .srclist`<CR><CR>
+autocmd FileType javascript map <buffer> <F5> :!jsctags -f ./.tags `cat .srclist`<CR><CR>
 
 " Add a line in the 81st column.
 set colorcolumn=81
