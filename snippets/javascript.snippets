@@ -22,6 +22,43 @@ else
 endsnippet
 
 
+snippet for "Basic for loop."
+for (var ${1:index} = 0; $1 < ${2:target}.length; $1 += 1)
+{
+	${0:content}
+}
+endsnippet
+
+
+snippet each "Object loop."
+for (var ${1:key} in ${2:target})
+{
+	if ($2.hasOwnProperty($1))
+	{
+		${0:content}
+	}
+}
+endsnippet
+
+
+snippet log "Log to the console."
+console.log('${0:message}');
+endsnippet
+
+
+snippet switch "Switch statement."
+switch (${1:subject})
+{
+	case ${2:value}:
+		${0:content}
+		break;
+
+	default:
+		break;
+}
+endsnippet
+
+
 snippet fu "Anonymous function."
 function (${1:arguments})
 {
