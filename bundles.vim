@@ -71,7 +71,7 @@ let g:user_zen_settings = {
 
 " Configure Ultisnips.
 let g:UltiSnipsExpandTrigger = '<c-j>'
-let g:UltiSnipsSnippetDirectories = ['snippets']
+let g:UltiSnipsSnippetDirectories = ['snippets', '.snippets']
 
 " Ag commands.
 nmap <leader>a :Ag! "<cword>\s*\("<CR>
