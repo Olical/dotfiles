@@ -1,4 +1,4 @@
-snippet if
+snippet if "If statement."
 if (${1:condition})
 {
 	${0:content}
@@ -6,32 +6,40 @@ if (${1:condition})
 endsnippet
 
 
-snippet el
-else (${1:condition})
+snippet elif "Else if statement."
+else if (${1:condition})
 {
 	${0:content}
 }
 endsnippet
 
 
-snippet fu
-function ()
+snippet el "Else statment."
+else
 {
 	${0:content}
 }
 endsnippet
 
 
-snippet fun
-function ${1:name}
+snippet fu "Anonymous function."
+function (${1:arguments})
 {
 	${0:content}
 }
 endsnippet
 
 
-snippet fun:
-${1:name}: function ()
+snippet fun "Normal function."
+function ${1:name}(${2:arguments})
+{
+	${0:content}
+}
+endsnippet
+
+
+snippet fun: "Member function."
+${1:name}: function (${2:arguments})
 {
 	${0:content}
 }
