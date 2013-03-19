@@ -33,6 +33,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'embear/vim-localvimrc'
+Bundle 'SirVer/ultisnips'
 
 " Text objects.
 Bundle 'kana/vim-textobj-user'
@@ -67,6 +68,10 @@ let g:localvimrc_sandbox=0
 let g:user_zen_settings = {
 \	'indentation': '	'
 \}
+
+" Configure Ultisnips.
+let g:UltiSnipsExpandTrigger = '<c-j>'
+let g:UltiSnipsSnippetDirectories = ['snippets']
 
 " Ag commands.
 nmap <leader>a :Ag! "<cword>\s*\("<CR>
