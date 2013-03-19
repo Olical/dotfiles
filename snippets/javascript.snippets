@@ -46,6 +46,14 @@ for (var ${1:key} in ${2:target})
 endsnippet
 
 
+snippet filter "Filters an array."
+${1:target}.filter(function (${2:item})
+{
+	return ${0:condition};
+});
+endsnippet
+
+
 snippet log "Log to the console."
 console.log('${0:message}');
 endsnippet
