@@ -73,11 +73,6 @@ set colorcolumn=81
 " Show the file name in the window title bar.
 set title
 
-" Remove backup and swap.
-set nobackup
-set noswapfile
-set nowritebackup
-
 " Disable the arrow keys in normal mode.
 map <up> <nop>
 map <down> <nop>
