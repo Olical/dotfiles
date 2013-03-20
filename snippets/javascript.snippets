@@ -22,7 +22,7 @@ else
 endsnippet
 
 
-snippet tern "Ternary operator."
+snippet tern "Ternary operator." w
 ${1:condition} ? ${2:true} : ${3:false}$0
 endsnippet
 
@@ -110,4 +110,33 @@ endsnippet
 
 snippet v "Define a variable."
 var ${1:name} = ${0:content};
+endsnippet
+
+
+snippet type "Check the type of a value." w
+typeof ${1:subject} === '${2:type}'$0
+endsnippet
+
+
+snippet try "Try statement."
+try
+{
+	${0:content}
+}
+endsnippet
+
+
+snippet cat "Catch statement."
+catch (${1:exception})
+{
+	${0:content}
+}
+endsnippet
+
+
+snippet fin "Finally statement."
+finally
+{
+	${0:content}
+}
 endsnippet

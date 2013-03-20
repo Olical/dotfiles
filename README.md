@@ -4,13 +4,15 @@ This is my personal Vim setup. It uses my own colour scheme, key bindings and bu
 
 You can sync all of the bundles by executing `./sync-bundles.sh`. This will remove the old, update the current and install any new bundles.
 
-I also use [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) for improved auto-completion. Once the bundle is downloaded you will have to run `./compile-ycm.sh` to build it's binary counter part.
+I also use [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) for improved auto-completion. Once the bundle is downloaded you will have to run `./compile-ycm.sh` to build it's binary counterpart.
 
 ## What you can use this repository for.
 
 I actually don't recommend downloading and using this as is. A Vim configuration is pretty personal and you should build your own with your keys mapped exactly how you want. You should probably start your own version of this repository in the same style and add the bundles, colour schemes and settings *you* want.
 
 It's a great learning experience and by far the best way to learn how to use Vim. Trust me, it's worth it. I don't think I could go back to any other editor now. It is just too efficient.
+
+I'd also highly recommend reading [Practical Vim](http://pragprog.com/book/dnvim/practical-vim) by [Drew Neil](http://drewneil.com/) if you are looking to broaden your knowledge. It was a pleasure to read and I've learnt a huge amount from it.
 
 ## Linking files.
 
@@ -42,7 +44,7 @@ nmap <leader>a :Ag! "<cword>\s*\(" src<CR>
 
 ### .srclist
 
-A list of files or globs to inspected when building the tags index with either ctags (F5) or jsctags (F6). The generated tags are stored in `.tags`.
+A list of files or globs to inspected when building the tags index with either ctags or jsctags. The generated tags are stored in `.tags`. You can invoke the tag program with the `F5` key. If you are in a JavaScript file, it will use jsctags, if you are in any other file it will use the normal ctags program.
 
 ```viml
 src/js/**/*.js
