@@ -76,6 +76,7 @@ set title
 " Remove backup and swap.
 set nobackup
 set noswapfile
+set nowritebackup
 
 " Disable the arrow keys in normal mode.
 map <up> <nop>
