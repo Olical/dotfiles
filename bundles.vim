@@ -16,6 +16,7 @@ Bundle 'othree/vim-javascript-syntax'
 Bundle 'pfdevilliers/Pretty-Vim-Python'
 Bundle 'juvenn/mustache.vim'
 Bundle 'mattn/zencoding-vim'
+Bundle 'tpope/vim-markdown'
 
 " General.
 Bundle 'Lokaltog/vim-easymotion'
@@ -34,22 +35,19 @@ Bundle 'sjl/gundo.vim'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'embear/vim-localvimrc'
 Bundle 'SirVer/ultisnips'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-speeddating'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
 
 " Text objects.
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-datetime'
 Bundle 'kana/vim-textobj-lastpat'
 Bundle 'mattn/vim-textobj-url'
-
-" Tim Pope stuff.
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-speeddating'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
 
 " Enable some syntax settings that had to be disabled for Vundle.
 filetype plugin indent on
