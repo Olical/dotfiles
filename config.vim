@@ -24,9 +24,9 @@ if !exists('g:light_editor')
 endif
 
 " Improve the colours.
+set t_Co=256
 syntax on
 set background=dark
-set t_Co=256
 colorscheme custom
 
 " Add more syntax highlighting mappings.
