@@ -29,13 +29,6 @@ syntax on
 set background=dark
 colorscheme custom
 
-" Add more syntax highlighting mappings.
-au BufNewFile,BufRead *.webapp set filetype=json
-au BufNewFile,BufRead *.html set filetype=html
-
-" Change indentation for certain file types.
-autocmd FileType python setlocal expandtab
-
 " Improve the backspace key.
 set backspace=indent,eol,start
 
@@ -65,7 +58,6 @@ nmap <silent> <leader>m :nohlsearch<CR>
 " Rebuild the tags. (F5)
 set tags+=.tags
 map <F5> :!ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`<CR><CR>
-autocmd FileType javascript map <buffer> <F5> :!jsctags -f ./.tags `cat .srclist`<CR><CR>
 
 " Add a line in the 81st column.
 set colorcolumn=81
