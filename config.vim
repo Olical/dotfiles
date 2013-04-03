@@ -63,6 +63,9 @@ set history=1000
 " Clears the search. (m)
 nmap <silent> <leader>m :nohlsearch<CR>
 
+" Corrects the spelling under the cursor with the first suggestion.
+nmap <leader>z 1z=
+
 " Rebuild the tags. (F5)
 set tags+=.tags
 map <F5> :!ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`<CR><CR>
