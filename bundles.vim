@@ -36,6 +36,7 @@ Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'embear/vim-localvimrc'
 Bundle 'SirVer/ultisnips'
 Bundle 'nelstrom/vim-qargs'
+Bundle 'wikitopian/hardmode'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
@@ -87,6 +88,9 @@ nmap <silent> <leader>n :NERDTreeTabsToggle<CR>
 
 " Use CtrlP to search tags. (p)
 nmap <silent> <leader>p :CtrlPTag<CR>
+
+" Toggle hard mode.
+nmap <leader>h :call ToggleHardMode()<CR>
 
 " Enable indent guides on boot and allow colorschemes to style them.
 let g:indent_guides_enable_on_vim_startup=1
