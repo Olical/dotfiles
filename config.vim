@@ -126,6 +126,16 @@ set nostartofline
 " Always show status line.
 set laststatus=2
 
+" Improve the speed for updating the status line when leaving insert mode.
+if ! has('gui_running')
+	set ttimeoutlen=10
+	augroup FastEscape
+		autocmd!
+		au InsertEnter * set timeoutlen=0
+		au InsertLeave * set timeoutlen=1000
+	augroup END
+endif
+
 " Show the cursor position.
 set ruler
 
