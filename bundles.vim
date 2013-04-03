@@ -91,7 +91,7 @@ nmap <silent> <leader>p :CtrlPTag<CR>
 
 " Toggle hard mode, also enable it by default.
 nmap <leader>h :call ToggleHardMode()<CR>
-autocmd VimEnter * silent! call HardMode()
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " Enable indent guides on boot and allow colorschemes to style them.
 let g:indent_guides_enable_on_vim_startup=1
