@@ -92,6 +92,10 @@ set list
 " Improve screen clearing by using the background colour.
 set t_ut=
 
+" Configure code folding.
+set foldmethod=indent
+set foldenable
+
 " Highlight searches.
 set hlsearch
 
