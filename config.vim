@@ -76,12 +76,6 @@ set colorcolumn=81
 " Show the file name in the window title bar.
 set title
 
-" Disable the arrow keys in normal mode.
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-
 " Enable line numbers.
 set number
 
