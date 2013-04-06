@@ -90,8 +90,7 @@ set list
 set t_ut=
 
 " Configure code folding.
-set foldmethod=indent
-set foldenable
+set foldmethod=manual
 
 " Highlight searches.
 set hlsearch
