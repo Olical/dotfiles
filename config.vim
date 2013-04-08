@@ -35,6 +35,20 @@ set backspace=indent,eol,start
 " Enable the matchit plugin.
 runtime macros/matchit.vim
 
+" Enable virtualenv.
+if has("python") && !empty($VIRTUAL_ENV)
+python << EOF
+import os
+import sys
+a = os.environ['VIRTUAL_ENV'] + '/bin/activate_this.py'
+execfile(a, dict(__file__ = a))
+if 'PYTHONPATH' not in os.environ:
+	os.environ['PYTHONPATH'] = ''
+	os.environ['PYTHONPATH'] += ":"+os.getcwd()
+	os.environ['PYTHONPATH'] += ":".join(sys.path)
+EOF
+endif
+
 " Make <C-A> and <C-X> increment and decrement all numbers as decimals.
 set nrformats=
 
