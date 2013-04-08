@@ -16,6 +16,7 @@ Bundle 'othree/vim-javascript-syntax'
 Bundle 'pfdevilliers/Pretty-Vim-Python'
 Bundle 'juvenn/mustache.vim'
 Bundle 'mattn/zencoding-vim'
+Bundle 'marijnh/tern'
 Bundle 'tpope/vim-markdown'
 
 " General.
@@ -59,6 +60,9 @@ let g:syntastic_mode_map={ 'mode': 'active',
 	\ 'active_filetypes': [],
 	\ 'passive_filetypes': ['html', 'cpp'] }
 let g:syntastic_check_on_open=1
+
+" Enable Tern.
+source ~/.vim/bundle/tern/vim/tern.vim
 
 " Configure localvimrc.
 let g:localvimrc_ask=0
