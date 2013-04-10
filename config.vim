@@ -71,6 +71,9 @@ nmap <leader>z 1z=
 set tags+=.tags
 map <F5> :!ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`<CR><CR>
 
+" Connect to screen. (F6)
+map <F6> :!screen -rd<CR><CR>
+
 " Add a line in the 81st column.
 set colorcolumn=81
 
