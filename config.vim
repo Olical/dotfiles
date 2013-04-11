@@ -67,6 +67,9 @@ nmap <silent> <leader>m :nohlsearch<CR>
 " Corrects the spelling under the cursor with the first suggestion.
 nmap <leader>z 1z=
 
+" Shows the amount of matches for the previous search. (/)
+nmap <leader>/ :%s///gn<CR>
+
 " Rebuild the tags. (F5)
 set tags+=.tags
 map <F5> :!ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`<CR><CR>
