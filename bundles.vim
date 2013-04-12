@@ -65,7 +65,7 @@ let g:syntastic_check_on_open=1
 source ~/.vim/bundle/tern/vim/tern.vim
 
 " Configure YouCompleteMe.
-let g:ycm_cache_omnifunc = 0
+au VimEnter * let g:ycm_cache_omnifunc=0
 
 " Configure localvimrc.
 let g:localvimrc_ask=0
