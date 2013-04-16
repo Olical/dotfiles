@@ -8,6 +8,36 @@ snippet fun "Function"
 endsnippet
 
 
+snippet for "For"
+{% for $1 in $2 %}
+	$0
+{% endfor %}
+endsnippet
+
+
+snippet if "If"
+{% if $1 %}
+	$0
+{% endif %}
+endsnippet
+
+
+snippet else "Else"
+{% else %}
+	$0
+endsnippet
+
+
+snippet load "Load"
+{% load $1 %}$0
+endsnippet
+
+
+snippet com "Comment"
+{# $1 #}$0
+endsnippet
+
+
 snippet blo "Block"
 {% block $1 %}$0{% endblock %}
 endsnippet
