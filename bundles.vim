@@ -37,6 +37,7 @@ Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'embear/vim-localvimrc'
 Bundle 'SirVer/ultisnips'
 Bundle 'nelstrom/vim-qargs'
+Bundle 'myusuf3/numbers.vim'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
@@ -77,6 +78,9 @@ let g:localvimrc_sandbox=0
 let g:user_zen_settings = {
 \	'indentation': '	'
 \}
+
+" Configure numbers.
+nnoremap <leader>l :NumbersToggle<CR>
 
 " Configure Ultisnips.
 let g:UltiSnipsExpandTrigger = '<c-j>'
