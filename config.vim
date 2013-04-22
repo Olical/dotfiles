@@ -72,7 +72,7 @@ nmap <leader>/ :%s///gn<CR>
 
 " Rebuild the tags. (F5)
 set tags+=.tags
-command! GenerateTags call system('ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`')
+command! GenerateTags call system('ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`') | echo
 nmap <F5> :GenerateTags<CR>
 
 " Connect to screen. (F6)
