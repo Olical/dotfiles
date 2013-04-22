@@ -1,8 +1,8 @@
 # .vim
 
-This is my personal Vim setup. It uses my own colour scheme, key bindings and bundle configuration. I use [Vundle](https://github.com/gmarik/vundle) to manage all of my bundles, you need to fetch that as a submodule.
+This is my personal Vim setup. It uses my own colour scheme, key bindings and bundle configuration. I use [Vundle](https://github.com/gmarik/vundle) to manage all of my bundles.
 
-You can sync all of the bundles by executing `./sync-bundles.sh`. This will remove the old, update the current and install any new bundles.
+You can sync all of the bundles by executing `./sync-bundles.sh`. This will remove the old, update the current and install any new bundles. It will also download Vundle if you haven't cloned it into `bundle/vundle` already.
 
 I also use [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) for improved auto-completion. Once the bundle is downloaded you will have to run `./compile-ycm.sh` to build it's binary counterpart.
 
