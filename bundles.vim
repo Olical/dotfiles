@@ -91,6 +91,9 @@ let g:UltiSnipsSnippetDirectories = ['.snippets', 'snippets']
 " Ag commands.
 nmap <leader>a :Ag! "<cword>\s*\("<CR>
 
+" Rename a JavaScript variable with Tern. (r)
+nmap <leader>r :TernRename<CR>
+
 " Shows the errors window. (e)
 nmap <silent> <leader>e :Errors<CR>
 
