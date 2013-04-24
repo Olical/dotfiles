@@ -95,6 +95,9 @@ nmap <leader>a :Ag! "<cword>\s*\("<CR>
 " Rename a JavaScript variable with Tern. (r)
 nmap <leader>r :TernRename<CR>
 
+" Jump to JavaScript definition with tern. (j)
+nmap <leader>j :TernDef<CR>
+
 " Shows the errors window. (e)
 nmap <silent> <leader>e :Errors<CR>
 
