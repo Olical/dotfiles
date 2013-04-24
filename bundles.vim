@@ -86,12 +86,12 @@ let g:user_zen_settings = {
 " Configure EasyMotion.
 let g:EasyMotion_leader_key = '<Space>'
 
-" Configure numbers.
-nnoremap <leader>l :NumbersToggle<CR>
-
 " Configure Ultisnips.
 let g:UltiSnipsExpandTrigger = '<c-j>'
 let g:UltiSnipsSnippetDirectories = ['.snippets', 'snippets']
+
+" Toggle numbers bundle. (l)
+nnoremap <leader>l :NumbersToggle<CR>
 
 " Ag commands.
 nmap <leader>a :Ag! "<cword>\s*\("<CR>
