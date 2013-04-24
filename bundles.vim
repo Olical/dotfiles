@@ -20,6 +20,7 @@ Bundle 'marijnh/tern'
 Bundle 'tpope/vim-markdown'
 
 " General.
+Bundle 'mhinz/vim-startify'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Bundle 'Raimondi/delimitMate'
