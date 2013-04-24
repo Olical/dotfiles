@@ -27,6 +27,9 @@ colorscheme custom
 " Improve the backspace key.
 set backspace=indent,eol,start
 
+" Improve session saving.
+set sessionoptions=blank,curdir,folds,help,resize,tabpages,winpos,winsize
+
 " Enable the matchit plugin.
 runtime macros/matchit.vim
 
