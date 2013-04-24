@@ -6,18 +6,21 @@ call vundle#rc()
 " Specify all bundles.
 Bundle 'gmarik/vundle'
 
-" Language specific.
+" Syntax and language improvements.
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'helino/vim-json'
+Bundle 'groenewege/vim-less'
 Bundle 'vim-scripts/django.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'othree/vim-javascript-syntax'
 Bundle 'pfdevilliers/Pretty-Vim-Python'
-Bundle 'mattn/zencoding-vim'
-Bundle 'marijnh/tern'
+Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-markdown'
 
 " General.
 Bundle 'mhinz/vim-startify'
+Bundle 'mattn/zencoding-vim'
+Bundle 'marijnh/tern'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Bundle 'Raimondi/delimitMate'
