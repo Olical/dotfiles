@@ -58,7 +58,6 @@ let g:syntastic_check_on_open=1
 source ~/.vim/bundle/tern/vim/tern.vim
 
 " Configure YouCompleteMe.
-au VimEnter * let g:ycm_cache_omnifunc=0
 let g:ycm_add_preview_to_completeopt=0
 set completeopt-=preview
 
