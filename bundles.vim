@@ -7,14 +7,11 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Language specific.
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'helino/vim-json'
-Bundle 'groenewege/vim-less'
 Bundle 'vim-scripts/django.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'othree/vim-javascript-syntax'
 Bundle 'pfdevilliers/Pretty-Vim-Python'
-Bundle 'juvenn/mustache.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'marijnh/tern'
 Bundle 'tpope/vim-markdown'
@@ -48,12 +45,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-eunuch'
 
-" Text objects.
-Bundle 'kana/vim-textobj-user'
-Bundle 'kana/vim-textobj-datetime'
-Bundle 'kana/vim-textobj-lastpat'
-Bundle 'mattn/vim-textobj-url'
-
 " Enable some syntax settings that had to be disabled for Vundle.
 filetype plugin indent on
 
@@ -68,9 +59,6 @@ source ~/.vim/bundle/tern/vim/tern.vim
 
 " Configure YouCompleteMe.
 au VimEnter * let g:ycm_cache_omnifunc=0
-let g:ycm_filetype_blacklist = {
-	\ 'gitcommit': 1
-	\}
 let g:ycm_add_preview_to_completeopt=0
 set completeopt-=preview
 
