@@ -83,6 +83,9 @@ let g:user_zen_settings = {
 \	'indentation': '	'
 \}
 
+" Configure EasyMotion.
+let g:EasyMotion_leader_key = '<Space>'
+
 " Configure numbers.
 nnoremap <leader>l :NumbersToggle<CR>
 
