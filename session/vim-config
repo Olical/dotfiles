@@ -8,10 +8,9 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 config.vim
-badd +0 bundles.vim
+badd +1 config.vim
+badd +1 bundles.vim
 silent! argdel *
-set lines=58 columns=238
 edit config.vim
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -22,8 +21,7 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 118 + 119) / 238)
-exe 'vert 2resize ' . ((&columns * 119 + 119) / 238)
+wincmd =
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -59,8 +57,7 @@ normal! zt
 1
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 118 + 119) / 238)
-exe 'vert 2resize ' . ((&columns * 119 + 119) / 238)
+wincmd =
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

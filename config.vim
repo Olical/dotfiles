@@ -28,7 +28,7 @@ colorscheme custom
 set backspace=indent,eol,start
 
 " Improve session saving.
-set sessionoptions=blank,curdir,folds,help,resize,tabpages,winpos,winsize
+set sessionoptions=blank,curdir,folds,help,tabpages,winpos
 
 " Enable the matchit plugin.
 runtime macros/matchit.vim
