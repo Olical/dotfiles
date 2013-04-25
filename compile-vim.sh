@@ -15,6 +15,7 @@ else
 	cd vim
 	make clean
 	hg pull
+	hg update
 fi
 
 ./configure --with-features=huge --enable-pythoninterp --enable-rubyinterp && make
