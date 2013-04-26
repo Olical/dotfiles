@@ -4,6 +4,10 @@
 " Add this before you include the config to enable light mode.
 " let g:light_editor=1
 
+" Add better UTF-8 support.
+scriptencoding utf-8
+set encoding=utf-8
+
 " Make vim more useful. I think this drops vi compatibility.
 " This allows vim to do a lot more and stray from it's roots.
 set nocompatible
