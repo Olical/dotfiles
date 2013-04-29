@@ -13,6 +13,7 @@ fi
 function update_modules {
 	echo -e "\t$1..."
 	pushd ./bundle/$1
+	npm install
 	npm update
 	popd
 }
