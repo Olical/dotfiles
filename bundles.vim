@@ -48,6 +48,14 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-eunuch'
 
+" Text objects.
+Bundle 'kana/vim-textobj-user'
+Bundle 'kana/vim-textobj-entire'
+Bundle 'kana/vim-textobj-indent'
+Bundle 'kana/vim-textobj-datetime'
+Bundle 'glts/vim-textobj-comment'
+Bundle 'mattn/vim-textobj-url'
+
 " Enable some syntax settings that had to be disabled for Vundle.
 filetype plugin indent on
 
