@@ -10,6 +10,15 @@ else
 	echo "Vundle found."
 fi
 
+function update_modules {
+	echo -e "\t$1..."
+	pushd ./bundle/$1
+	npm update
+	popd
+}
+
 echo "Removing, updating and installing bundles..."
 vim +BundleClean! +BundleInstall! +qall
+echo "Updating NPM modules..."
+update_modules tern_for_vim
 echo "All synced!"
