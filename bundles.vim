@@ -20,7 +20,7 @@ Bundle 'tpope/vim-markdown'
 " General.
 Bundle 'mhinz/vim-startify'
 Bundle 'mattn/zencoding-vim'
-Bundle 'marijnh/tern'
+Bundle 'marijnh/tern_for_vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Bundle 'Raimondi/delimitMate'
@@ -64,9 +64,6 @@ let g:syntastic_mode_map={ 'mode': 'active',
 	\ 'active_filetypes': [],
 	\ 'passive_filetypes': ['html', 'cpp'] }
 let g:syntastic_check_on_open=1
-
-" Enable Tern.
-source ~/.vim/bundle/tern/vim/tern.vim
 
 " Configure YouCompleteMe.
 let g:ycm_add_preview_to_completeopt=0
