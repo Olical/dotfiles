@@ -60,6 +60,9 @@ set iskeyword+=-
 " Disabled code folding. It can be weird sometimes.
 set nofoldenable
 
+" Enable the tab complete menu.
+set wildmenu
+
 " Increase the command line history length.
 set history=1000
 
