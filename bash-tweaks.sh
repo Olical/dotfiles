@@ -8,6 +8,4 @@ export TERM=xterm-256color
 
 alias ls="ls --color=always"
 
-set -o vi
-
 echo $'\e[00;31mDON\'T PANIC\e[00m'
