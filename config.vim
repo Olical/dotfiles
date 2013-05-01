@@ -66,8 +66,8 @@ set wildmenu
 " Increase the command line history length.
 set history=1000
 
-" Clears the search. (m)
-nmap <silent> <leader>m :nohlsearch<CR>
+" Clears the search. (c)
+nmap <silent> <leader>c :nohlsearch<CR>
 
 " Corrects the spelling under the cursor with the first suggestion.
 nmap <leader>z 1z=
