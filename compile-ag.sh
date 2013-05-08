@@ -17,4 +17,4 @@ else
 	git pull
 fi
 
-./build.sh
+apt-get install automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev && ./build.sh
