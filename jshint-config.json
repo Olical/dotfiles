@@ -1,4 +1,11 @@
 {
+	"predef": {
+		"define": true,
+		"suite": true,
+		"test": true,
+		"assert": true,
+		"setup": true
+	},
 	"bitwise": true,
 	"camelcase": true,
 	"curly": true,
