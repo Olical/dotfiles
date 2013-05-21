@@ -110,7 +110,7 @@ nmap <silent> <leader>n :NERDTreeTabsToggle<CR>
 " Use CtrlP to search tags. (p)
 nmap <silent> <leader>p :CtrlPTag<CR>
 
-" Make CtrlP use the native find method. Way faster.
+" Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " Enable indent guides on boot and allow colorschemes to style them.
