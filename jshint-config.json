@@ -4,7 +4,9 @@
 		"suite": true,
 		"test": true,
 		"assert": true,
-		"setup": true
+		"setup": true,
+		"btoa": true,
+		"sinon": true
 	},
 	"bitwise": true,
 	"camelcase": true,
