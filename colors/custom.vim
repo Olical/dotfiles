@@ -44,10 +44,16 @@ hi clear DiffChange
 hi clear DiffDelete
 hi clear DiffText
 
+hi clear diffAdded
+hi clear diffRemoved
+
 hi DiffAdd ctermbg=22
 hi DiffChange ctermbg=18
 hi DiffDelete ctermbg=52
 hi DiffText ctermbg=57
+
+hi diffAdded ctermfg=green
+hi diffRemoved ctermfg=red
 
 " Generic syntax.
 hi Error ctermbg=52
