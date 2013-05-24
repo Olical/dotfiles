@@ -29,5 +29,6 @@
 	"trailing": true,
 	"maxerr": 120,
 	"debug": true,
-	"devel": true
+	"devel": true,
+	"strict": true
 }
