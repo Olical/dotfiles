@@ -39,6 +39,7 @@ Bundle 'embear/vim-localvimrc'
 Bundle 'SirVer/ultisnips'
 Bundle 'nelstrom/vim-qargs'
 Bundle 'myusuf3/numbers.vim'
+Bundle 'AndrewRadev/switch.vim'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
@@ -86,8 +87,18 @@ let g:EasyMotion_leader_key = '<Space>'
 let g:UltiSnipsExpandTrigger = '<c-j>'
 let g:UltiSnipsSnippetDirectories = ['.snippets', 'snippets']
 
+" Configure switch custom definitions.
+let g:switch_custom_definitions =
+\[
+\	['on', 'off'],
+\	['0', '1']
+\]
+
 " Toggle numbers bundle. (l)
 nnoremap <leader>l :NumbersToggle<CR>
+
+" Switch commands.
+nmap <leader>s :Switch<CR>
 
 " Ag commands.
 nmap <leader>a :Ag! "<cword>\s*\("<CR>
