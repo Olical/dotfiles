@@ -17,6 +17,13 @@ set autoindent smartindent
 set smarttab
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
+" Fix the caps lock horror in normal mode.
+for c in range(char2nr('A'), char2nr('Z'))
+	execute 'lnoremap ' . nr2char(c+32) . ' ' . nr2char(c)
+	execute 'lnoremap ' . nr2char(c) . ' ' . nr2char(c+32)
+endfor
+autocmd InsertLeave * set iminsert=0
+
 if !exists('g:light_editor')
 	" Include all of the bundle configuration.
 	source $HOME/.vim/bundles.vim
