@@ -90,9 +90,6 @@ set tags+=.tags
 command! GenerateTags call system('ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`') | echo
 nmap <F5> :GenerateTags<CR>
 
-" Connect to screen. (F6)
-nmap <F6> :!screen -R<CR><CR>
-
 " Add a line in the 81st column.
 set colorcolumn=81
 
