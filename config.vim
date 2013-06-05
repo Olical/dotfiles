@@ -90,6 +90,10 @@ set tags+=.tags
 command! GenerateTags call system('ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`') | echo
 nmap <F5> :GenerateTags<CR>
 
+" Make the mouse wheel scroll better.
+nmap <Up> <C-Y>
+nmap <Down> <C-E>
+
 " Add a line in the 81st column.
 set colorcolumn=81
 
