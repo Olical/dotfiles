@@ -2,4 +2,4 @@
 
 sudo apt-get install python-dev
 cd ./bundle/YouCompleteMe/
-./install.sh
+./install.sh --clang-completer
