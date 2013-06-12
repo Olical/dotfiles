@@ -68,6 +68,7 @@ let g:syntastic_check_on_open=1
 
 " Configure YouCompleteMe.
 let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
 
 " Configure localvimrc.
