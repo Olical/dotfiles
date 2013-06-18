@@ -86,7 +86,7 @@ nmap <leader>z 1z=
 nmap <leader>/ :%s///gn<CR>
 
 " Used to put braces and the like on different lines, then move the cursor back.
-imap <NL> <CR><CR><Esc>kA<Tab>
+imap <C-c> <CR><CR><Esc>kA<Tab>
 
 " Rebuild the tags. (F5)
 set tags+=.tags
