@@ -85,6 +85,9 @@ nmap <leader>z 1z=
 " Shows the amount of matches for the previous search. (/)
 nmap <leader>/ :%s///gn<CR>
 
+" Used to put braces and the like on different lines, then move the cursor back.
+imap <C-c> <CR><CR><Esc>kA<Tab>
+
 " Rebuild the tags. (F5)
 set tags+=.tags
 command! GenerateTags call system('ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`') | echo
