@@ -85,8 +85,11 @@ nmap <leader>z 1z=
 " Shows the amount of matches for the previous search. (/)
 nmap <leader>/ :%s///gn<CR>
 
+" Opens the split in a new tab. Kind like "distraction free" mode. (f)
+nmap <leader>f :tab sp<CR>
+
 " Used to put braces and the like on different lines, then move the cursor back.
-imap <C-c> <CR><CR><Esc>kA<Tab>
+imap <C-c> <CR><Esc>O
 
 " Rebuild the tags. (F5)
 set tags+=.tags
