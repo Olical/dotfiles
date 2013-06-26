@@ -22,7 +22,6 @@ Bundle 'mhinz/vim-startify'
 Bundle 'mattn/zencoding-vim'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Bundle 'Raimondi/delimitMate'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'airblade/vim-gitgutter'
