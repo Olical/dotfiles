@@ -7,6 +7,12 @@ if exists('g:indent_guides_auto_colors')
 	au VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=white ctermbg=236
 endif
 
+" Make spelling problems easier to read.
+hi SpellBad ctermfg=white
+hi SpellCap ctermfg=black
+hi SpellLocal ctermfg=black
+hi SpellRare ctermfg=black
+
 " Whitespace.
 hi SpecialKey ctermfg=white
 hi ExtraWhitespace ctermfg=white ctermbg=1
