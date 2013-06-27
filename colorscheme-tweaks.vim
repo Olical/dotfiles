@@ -8,7 +8,7 @@ if exists('g:indent_guides_auto_colors')
 endif
 
 " Make spelling problems easier to read.
-hi SpellBad ctermfg=white
+hi SpellBad ctermfg=black
 hi SpellCap ctermfg=black
 hi SpellLocal ctermfg=black
 hi SpellRare ctermfg=black
