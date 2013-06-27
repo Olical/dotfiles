@@ -33,7 +33,13 @@ endif
 set t_Co=256
 syntax on
 set background=dark
-colorscheme custom
+
+try
+	colorscheme distinguished
+	source $HOME/.vim/colorscheme-tweaks.vim
+catch /^Vim\%((\a\+)\)\=:E185/
+	" NO COLOUR FOR YOU
+endtry
 
 " Improve the backspace key.
 set backspace=indent,eol,start
@@ -100,9 +106,6 @@ nmap <F5> :GenerateTags<CR>
 nmap <Up> <C-Y>
 nmap <Down> <C-E>
 
-" Add a line in the 81st column.
-set colorcolumn=81
-
 " Show the file name in the window title bar.
 set title
 
@@ -124,9 +127,6 @@ set foldmethod=manual
 
 " Highlight searches.
 set hlsearch
-
-" Highlight the current line.
-set cursorline
 
 " Ignore case of searches.
 set ignorecase
