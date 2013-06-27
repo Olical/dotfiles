@@ -92,7 +92,10 @@ let g:UltiSnipsSnippetDirectories = ['.snippets', 'snippets']
 let g:switch_custom_definitions =
 \[
 \	['on', 'off'],
-\	['0', '1']
+\	['0', '1'],
+\	['before', 'after'],
+\	['visible', 'hidden'],
+\	['block', 'none']
 \]
 
 " Toggle numbers bundle. (l)
