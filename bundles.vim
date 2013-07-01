@@ -132,3 +132,22 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 nmap <silent> <leader>i :IndentGuidesToggle<CR>
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
+
+" Status line fun...
+" File name, modification status and read only flag.
+set statusline=%t\ %r\ %m
+
+" Shift all other content over to the right.
+set statusline+=%=
+
+" Linting status.
+set statusline+=%{SyntasticStatuslineFlag()}\ 
+
+" Current git branch.
+set statusline+=[Git:\ %{fugitive#head()}]\ 
+
+" CURRENT/TOTAL lines.
+set statusline+=%4l/%L\ 
+
+" Percentage through the file.
+set statusline+=%P
