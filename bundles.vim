@@ -135,7 +135,7 @@ let g:indent_guides_auto_colors=0
 
 " Status line fun...
 " File name, modification status and read only flag.
-set statusline=%t\ %r\ %m
+set statusline=%.30F\ %r\ %m
 
 " Shift all other content over to the right.
 set statusline+=%=
