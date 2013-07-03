@@ -134,8 +134,11 @@ let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
 
 " Status line fun...
-" File name, modification status and read only flag.
-set statusline=%.40F\ %r\ %m
+" File name. Displays the full file name with a truncated path to the left for context.
+set statusline=%.10{expand('%:p:h')}/%t\ 
+
+" Read only and modified flags.
+set statusline+=%r\ %m
 
 " Shift all other content over to the right.
 set statusline+=%=
