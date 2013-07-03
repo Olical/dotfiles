@@ -30,9 +30,7 @@ if !exists('g:light_editor')
 endif
 
 " Improve the colours.
-set t_Co=256
 syntax on
-set background=dark
 
 try
 	colorscheme distinguished
