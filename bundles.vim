@@ -135,7 +135,7 @@ let g:indent_guides_auto_colors=0
 
 " Status line fun...
 " File name. Displays the full file name with a truncated path to the left for context.
-set statusline=%.10{expand('%:p:h')}/%t\ 
+set statusline=%.20{expand('%:p:h')}/%t\ 
 
 " Read only and modified flags.
 set statusline+=%r\ %m
