@@ -1,15 +1,15 @@
 snippet if "If statement."
-if (${1:condition})
+if (${1})
 {
-	${0:content}
+	${0}
 }
 endsnippet
 
 
 snippet elif "Else if statement."
-else if (${1:condition})
+else if (${1})
 {
-	${0:content}
+	${0}
 }
 endsnippet
 
@@ -17,53 +17,53 @@ endsnippet
 snippet el "Else statment."
 else
 {
-	${0:content}
+	${0}
 }
 endsnippet
 
 
 snippet tern "Ternary operator." w
-${1:condition} ? ${2:true} : ${3:false}$0
+${1} ? ${2} : ${3}$0
 endsnippet
 
 
 snippet for "Basic for loop."
-for (var ${1:index} = 0; $1 < ${2:target}.length; $1 += 1)
+for (var ${1:i} = 0; $1 < ${2}.length; $1 += 1)
 {
-	${0:content}
+	${0}
 }
 endsnippet
 
 
 snippet each "Object loop."
-for (${1:key} in ${2:target})
+for (${1:key} in ${2})
 {
 	if ($2.hasOwnProperty($1))
 	{
-		${0:content}
+		${0}
 	}
 }
 endsnippet
 
 
 snippet filter "Filters an array."
-${1:target}.filter(function (${2:item})
+${1}.filter(function (${2:item})
 {
-	return ${0:condition};
+	return ${0};
 });
 endsnippet
 
 
 snippet log "Log to the console."
-console.log(${0:message});
+console.log(${0});
 endsnippet
 
 
 snippet switch "Switch statement."
-switch (${1:subject})
+switch (${1})
 {
-	case ${2:value}:
-		${0:content}
+	case ${2}:
+		${0}
 		break;
 
 	default:
@@ -73,25 +73,25 @@ endsnippet
 
 
 snippet fu "Anonymous function."
-function (${1:arguments})
+function (${1})
 {
-	${0:content}
+	${0}
 }
 endsnippet
 
 
 snippet fun "Normal function."
-function ${1:name}(${2:arguments})
+function ${1}(${2})
 {
-	${0:content}
+	${0}
 }
 endsnippet
 
 
 snippet fun: "Member function."
-${1:name}: function (${2:arguments})
+${1}: function (${2})
 {
-	${0:content}
+	${0}
 }
 endsnippet
 
@@ -104,32 +104,32 @@ endsnippet
 
 
 snippet r "Return statement."
-return ${0:value};
+return ${0};
 endsnippet
 
 
 snippet v "Define a variable."
-var ${1:name} = ${0:content};
+var ${1} = ${0};
 endsnippet
 
 
 snippet type "Check the type of a value." w
-typeof ${1:subject} === '${2:type}'$0
+typeof ${1} === '${2}'$0
 endsnippet
 
 
 snippet try "Try statement."
 try
 {
-	${0:content}
+	${0}
 }
 endsnippet
 
 
 snippet cat "Catch statement."
-catch (${1:exception})
+catch (${1})
 {
-	${0:content}
+	${0}
 }
 endsnippet
 
@@ -137,6 +137,6 @@ endsnippet
 snippet fin "Finally statement."
 finally
 {
-	${0:content}
+	${0}
 }
 endsnippet
