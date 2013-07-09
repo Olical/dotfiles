@@ -1,1 +1,0 @@
-set formatoptions=tcroqn2
