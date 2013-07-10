@@ -8,10 +8,15 @@ if exists('g:indent_guides_auto_colors')
 endif
 
 " Make spelling problems easier to read.
-hi SpellBad ctermfg=black
-hi SpellCap ctermfg=black
-hi SpellLocal ctermfg=black
-hi SpellRare ctermfg=black
+hi clear SpellBad
+hi clear SpellCap
+hi clear SpellLocal
+hi clear SpellRare
+
+hi SpellBad cterm=underline
+hi SpellCap cterm=underline
+hi SpellLocal cterm=underline
+hi SpellRare cterm=underline
 
 " Whitespace.
 hi SpecialKey ctermfg=white
