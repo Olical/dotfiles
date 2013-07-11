@@ -30,5 +30,6 @@
 	"maxerr": 120,
 	"debug": true,
 	"devel": true,
-	"strict": true
+	"strict": true,
+	"browser": true
 }
