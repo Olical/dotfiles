@@ -89,6 +89,9 @@ nmap <leader>z 1z=
 " Shows the amount of matches for the previous search. (/)
 nmap <leader>/ :%s///gn<CR>
 
+" Strips the trailing white space from the file.
+nmap <leader>w :%s/\s\+$//e<CR>
+
 " Opens the split in a new tab. Kind like "distraction free" mode. (f)
 nmap <leader>f :tab sp<CR>
 
