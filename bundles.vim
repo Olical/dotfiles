@@ -38,7 +38,6 @@ Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'embear/vim-localvimrc'
 Bundle 'SirVer/ultisnips'
 Bundle 'nelstrom/vim-qargs'
-Bundle 'myusuf3/numbers.vim'
 Bundle 'AndrewRadev/switch.vim'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-commentary'
@@ -97,9 +96,6 @@ let g:switch_custom_definitions =
 \	['visible', 'hidden'],
 \	['block', 'none']
 \]
-
-" Toggle numbers bundle. (l)
-nnoremap <leader>l :NumbersToggle<CR>
 
 " Switch commands.
 nmap <leader>s :Switch<CR>
