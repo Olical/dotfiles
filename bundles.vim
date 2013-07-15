@@ -94,7 +94,8 @@ let g:switch_custom_definitions =
 \	['0', '1'],
 \	['before', 'after'],
 \	['visible', 'hidden'],
-\	['block', 'none']
+\	['block', 'none'],
+\	['!important', '/*!important*/']
 \]
 
 " Switch commands.
