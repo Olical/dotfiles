@@ -18,7 +18,6 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-markdown'
 
 " General.
-Bundle 'mhinz/vim-startify'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'mattn/zencoding-vim'
 Bundle 'marijnh/tern_for_vim'

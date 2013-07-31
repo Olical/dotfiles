@@ -42,9 +42,6 @@ endtry
 " Improve the backspace key.
 set backspace=indent,eol,start
 
-" Improve session saving.
-set sessionoptions=blank,curdir,folds,help,tabpages,winpos
-
 " Disable the swap files.
 set noswapfile
 
