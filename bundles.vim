@@ -126,6 +126,9 @@ nmap <silent> <leader>n :NERDTreeTabsToggle<CR>
 " Use CtrlP to search tags. (p)
 nmap <silent> <leader>p :CtrlPTag<CR>
 
+" Make CtrlP replace the Startify buffer.
+let g:ctrlp_reuse_window = 'startify'
+
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
