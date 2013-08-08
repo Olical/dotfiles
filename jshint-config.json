@@ -31,5 +31,6 @@
 	"debug": true,
 	"devel": true,
 	"strict": false,
-	"browser": true
+	"browser": true,
+	"node": true
 }
