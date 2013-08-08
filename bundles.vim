@@ -20,7 +20,7 @@ Bundle 'tpope/vim-markdown'
 " General.
 Bundle 'mhinz/vim-startify'
 Bundle 'Lokaltog/vim-distinguished'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Raimondi/delimitMate'
