@@ -76,10 +76,10 @@ let g:localvimrc_ask=0
 let g:localvimrc_sandbox=0
 
 " Configure zencoding.
-let g:user_zen_settings = {
+let g:user_emmet_settings = {
 \	'indentation': '	'
 \}
-let g:user_zen_leader_key = '<c-h>'
+let g:user_emmet_leader_key = '<c-h>'
 
 " Configure EasyMotion.
 let g:EasyMotion_leader_key = '<Space>'
