@@ -7,7 +7,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Syntax and language improvements.
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'helino/vim-json'
 Bundle 'groenewege/vim-less'
 Bundle 'vim-scripts/django.vim'
