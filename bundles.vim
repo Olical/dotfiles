@@ -92,6 +92,7 @@ let g:switch_custom_definitions =
 \[
 \	['on', 'off'],
 \	['0', '1'],
+\	['yes', 'no'],
 \	['before', 'after'],
 \	['visible', 'hidden'],
 \	['block', 'none'],
