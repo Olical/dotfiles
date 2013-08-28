@@ -95,6 +95,10 @@ nmap <leader>w :%s/\s\+$//e<CR>
 " Opens the split in a new tab. Kind like "distraction free" mode. (f)
 nmap <leader>f :tab sp<CR>
 
+" Sends the current document to the current directory's "in" file. To be used
+" with ii IRC client. (iw)
+nmap <leader>iw :.w >> ./in \| 1,$d<CR>
+
 " Used to put braces and the like on different lines, then move the cursor back.
 imap <C-c> <CR><Esc>O
 
