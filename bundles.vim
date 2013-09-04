@@ -18,6 +18,7 @@ Bundle 'tpope/vim-markdown'
 
 " General.
 Bundle 'mhinz/vim-startify'
+Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'mattn/emmet-vim'
 Bundle 'marijnh/tern_for_vim'
@@ -88,6 +89,9 @@ let g:EasyMotion_leader_key = '<Space>'
 let g:UltiSnipsExpandTrigger = '<c-j>'
 let g:UltiSnipsSnippetDirectories = ['.snippets', 'snippets']
 
+" Configure airline.
+let g:airline#extensions#tabline#enabled = 1
+
 " Configure switch custom definitions.
 let g:switch_custom_definitions =
 \[
@@ -137,25 +141,3 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 nmap <silent> <leader>i :IndentGuidesToggle<CR>
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
-
-" Status line fun...
-" File name. Displays the full file name with a truncated path to the left for context.
-set statusline=%.20{expand('%:p:h')}/%t\ 
-
-" Read only and modified flags.
-set statusline+=%r\ %m
-
-" Shift all other content over to the right.
-set statusline+=%=
-
-" Linting status.
-set statusline+=%{SyntasticStatuslineFlag()}\ 
-
-" Current git branch.
-set statusline+=[Git:\ %{fugitive#head()}]\ 
-
-" CURRENT/TOTAL lines.
-set statusline+=%4l/%L\ 
-
-" Percentage through the file.
-set statusline+=%P
