@@ -91,6 +91,8 @@ let g:UltiSnipsSnippetDirectories = ['.snippets', 'snippets']
 
 " Configure airline.
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 
 " Configure switch custom definitions.
 let g:switch_custom_definitions =
