@@ -16,10 +16,6 @@ Bundle 'pfdevilliers/Pretty-Vim-Python'
 Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-markdown'
 
-" Embedded shell.
-Bundle 'Shougo/vimproc.vim'
-Bundle 'Shougo/vimshell.vim'
-
 " General.
 Bundle 'mhinz/vim-startify'
 Bundle 'bling/vim-airline'
@@ -136,9 +132,6 @@ nmap <silent> <leader>n :NERDTreeTabsToggle<CR>
 
 " Use CtrlP to search tags. (p)
 nmap <silent> <leader>p :CtrlPTag<CR>
-
-" Open up vimshell.
-nmap <silent> <leader>h :VimShell<CR>
 
 " Make CtrlP replace the Startify buffer.
 let g:ctrlp_reuse_window = 'startify'

@@ -32,8 +32,6 @@ function compile_module {
 
 echo "Removing, updating and installing bundles..."
 vim +BundleClean! +BundleInstall! +qall
-echo "Compiling modules..."
-compile_module vimproc.vim make_unix.mak
 echo "Updating NPM modules..."
 update_modules tern_for_vim
 echo "All synced!"
