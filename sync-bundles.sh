@@ -18,8 +18,22 @@ function update_modules {
 	popd
 }
 
+function compile_module {
+	echo -e "\t$1..."
+	pushd ./bundle/$1
+	if [[ -n $2 ]]
+	then
+		make -f $2
+	else
+		make
+	fi
+	popd
+}
+
 echo "Removing, updating and installing bundles..."
 vim +BundleClean! +BundleInstall! +qall
+echo "Compiling modules..."
+compile_module vimproc.vim make_unix.mak
 echo "Updating NPM modules..."
 update_modules tern_for_vim
 echo "All synced!"

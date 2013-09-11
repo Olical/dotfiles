@@ -16,6 +16,10 @@ Bundle 'pfdevilliers/Pretty-Vim-Python'
 Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-markdown'
 
+" Embedded shell.
+Bundle 'Shougo/vimproc.vim'
+Bundle 'Shougo/vimshell.vim'
+
 " General.
 Bundle 'mhinz/vim-startify'
 Bundle 'bling/vim-airline'
