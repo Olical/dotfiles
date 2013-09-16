@@ -117,11 +117,6 @@ set title
 " Enable line numbers.
 set number
 
-" Improve line breaking.
-set wrap
-set linebreak
-set nolist
-
 " Show invisible characters.
 set listchars=tab:▸\ ,trail:·
 set list
