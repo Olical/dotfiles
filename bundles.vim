@@ -78,7 +78,7 @@ let g:localvimrc_sandbox=0
 let g:user_emmet_settings = {
 \	'indentation': '	'
 \}
-let g:user_emmet_leader_key = '<c-h>'
+let g:user_emmet_leader_key = '<C-k>'
 
 " Configure EasyMotion.
 let g:EasyMotion_leader_key = '<Space>'
