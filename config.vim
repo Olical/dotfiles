@@ -17,15 +17,8 @@ set autoindent smartindent
 set smarttab
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
-" Fix the caps lock horror in normal mode.
-for c in range(char2nr('A'), char2nr('Z'))
-	execute 'lnoremap ' . nr2char(c+32) . ' ' . nr2char(c)
-	execute 'lnoremap ' . nr2char(c) . ' ' . nr2char(c+32)
-endfor
-autocmd InsertLeave * set iminsert=0
-
+" Include all of the bundle configuration.
 if !exists('g:light_editor')
-	" Include all of the bundle configuration.
 	source $HOME/.vim/bundles.vim
 endif
 
@@ -41,9 +34,6 @@ endtry
 
 " Improve the backspace key.
 set backspace=indent,eol,start
-
-" Improve session saving.
-set sessionoptions=blank,curdir,folds,help,tabpages,winpos
 
 " Disable the swap files.
 set noswapfile
@@ -67,9 +57,6 @@ endif
 
 " Make <C-A> and <C-X> increment and decrement all numbers as decimals.
 set nrformats=
-
-" Stop hyphens being regarded as a word separator.
-set iskeyword+=-
 
 " Disabled code folding. It can be weird sometimes.
 set nofoldenable
@@ -95,10 +82,6 @@ nmap <leader>w :%s/\s\+$//e<CR>
 " Opens the split in a new tab. Kind like "distraction free" mode. (f)
 nmap <leader>f :tab sp<CR>
 
-" Sends the current document to the current directory's "in" file. To be used
-" with ii IRC client. (iw)
-nmap <leader>iw :.w >> ./in \| 1,$d<CR>
-
 " Used to put braces and the like on different lines, then move the cursor back.
 imap <C-c> <CR><Esc>O
 
@@ -106,10 +89,6 @@ imap <C-c> <CR><Esc>O
 set tags+=.tags
 command! GenerateTags call system('ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`') | echo
 nmap <F5> :GenerateTags<CR>
-
-" Make the mouse wheel scroll better.
-nmap <Up> <C-Y>
-nmap <Down> <C-E>
 
 " Show the file name in the window title bar.
 set title
@@ -124,20 +103,17 @@ set list
 " Improve screen clearing by using the background colour.
 set t_ut=
 
-" Configure code folding.
-set foldmethod=manual
-
 " Highlight searches.
 set hlsearch
 
 " Ignore case of searches.
 set ignorecase
 
-" Highlight dynamically as pattern is typed.
-set incsearch
-
 " If the search contains an upper-case character, become case sensitive.
 set smartcase
+
+" Highlight dynamically as pattern is typed.
+set incsearch
 
 " Set the default encoding to UTF-8.
 set enc=utf-8
@@ -166,9 +142,6 @@ if ! has('gui_running')
 		au InsertLeave * set timeoutlen=1000
 	augroup END
 endif
-
-" Show the cursor position.
-set ruler
 
 " Don't show the intro message when starting vim.
 set shortmess=atI

@@ -84,7 +84,7 @@ let g:user_emmet_leader_key = '<C-k>'
 let g:EasyMotion_leader_key = '<Space>'
 
 " Configure Ultisnips.
-let g:UltiSnipsExpandTrigger = '<c-j>'
+let g:UltiSnipsExpandTrigger = '<C-j>'
 let g:UltiSnipsSnippetDirectories = ['.snippets', 'snippets']
 
 " Configure airline.
