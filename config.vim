@@ -118,6 +118,8 @@ set title
 set number
 
 " Improve line breaking.
+set wrap
+set linebreak
 set nolist
 
 " Show invisible characters.
