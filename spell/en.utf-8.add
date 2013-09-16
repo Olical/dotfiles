@@ -36,3 +36,4 @@ CommonJS
 EventEmitter
 MVC
 linters
+namespaced
