@@ -111,7 +111,7 @@ nnoremap <leader>l :NumbersToggle<CR>
 nmap <leader>s :Switch<CR>
 
 " Ag commands.
-nmap <leader>a :Ag! "<cword>\s*\("<CR>
+nmap <leader>a :Ag! "<cword>"<CR>
 
 " Rename a JavaScript variable with Tern. (r)
 nmap <leader>r :TernRename<CR>
