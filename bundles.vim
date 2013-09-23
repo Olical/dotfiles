@@ -126,7 +126,7 @@ nmap <silent> <leader>e :Errors<CR>
 nmap <silent> <leader>u :GundoToggle<CR>
 
 " Toggle the NERDTree pane. (n)
-nmap <silent> <leader>n :NERDTreeTabsToggle<CR>
+nmap <silent> <leader>n :NERDTreeToggle<CR>
 
 " Use CtrlP to search tags. (p)
 nmap <silent> <leader>p :CtrlPTag<CR>
