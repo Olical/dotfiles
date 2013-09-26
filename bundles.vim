@@ -15,6 +15,7 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pfdevilliers/Pretty-Vim-Python'
 Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-markdown'
+Bundle 'wting/rust.vim'
 
 " General.
 Bundle 'mhinz/vim-startify'
