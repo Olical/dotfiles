@@ -18,7 +18,6 @@ Bundle 'tpope/vim-markdown'
 Bundle 'wting/rust.vim'
 
 " General.
-Bundle 'mhinz/vim-startify'
 Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'mattn/emmet-vim'
@@ -28,7 +27,6 @@ Bundle 'malkomalko/projections.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'gerw/vim-HiLinkTrace'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -76,7 +74,7 @@ set completeopt-=preview
 let g:localvimrc_ask=0
 let g:localvimrc_sandbox=0
 
-" Configure zencoding.
+" Configure emmet.
 let g:user_emmet_settings = {
 \	'indentation': '	'
 \}
@@ -95,8 +93,7 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 
 " Configure switch custom definitions.
-let g:switch_custom_definitions =
-\[
+let g:switch_custom_definitions = [
 \	['on', 'off'],
 \	['0', '1'],
 \	['yes', 'no'],
@@ -115,12 +112,6 @@ nmap <leader>s :Switch<CR>
 " Ag commands.
 nmap <leader>a :Ag! "<cword>"<CR>
 
-" Rename a JavaScript variable with Tern. (r)
-nmap <leader>r :TernRename<CR>
-
-" Jump to JavaScript definition with tern. (j)
-nmap <leader>j :TernDef<CR>
-
 " Shows the errors window. (e)
 nmap <silent> <leader>e :Errors<CR>
 
@@ -132,9 +123,6 @@ nmap <silent> <leader>n :NERDTreeToggle<CR>
 
 " Use CtrlP to search tags. (p)
 nmap <silent> <leader>p :CtrlPTag<CR>
-
-" Make CtrlP replace the Startify buffer.
-let g:ctrlp_reuse_window = 'startify'
 
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
