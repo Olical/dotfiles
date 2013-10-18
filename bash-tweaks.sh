@@ -6,4 +6,9 @@ alias ls="ls --color=always"
 alias less="less -R"
 alias ag="ag --color"
 
+function agv()
+{
+	vim "+Ag $@"
+}
+
 echo $'\e[00;31mDON\'T PANIC\e[00m'
