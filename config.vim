@@ -82,9 +82,6 @@ nmap <leader>w :%s/\s\+$//e<CR>
 " Opens the split in a new tab. Kind like "distraction free" mode. (f)
 nmap <leader>f :tab sp<CR>
 
-" Used to put braces and the like on different lines, then move the cursor back.
-imap <C-c> <CR><Esc>O
-
 " Rebuild the tags. (F5)
 set tags+=.tags
 command! GenerateTags call system('ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`') | echo

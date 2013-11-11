@@ -75,25 +75,28 @@ let g:localvimrc_ask=0
 let g:localvimrc_sandbox=0
 
 " Configure emmet.
-let g:user_emmet_settings = {
+let g:user_emmet_settings={
 \	'indentation': '	'
 \}
-let g:user_emmet_leader_key = '<C-k>'
+let g:user_emmet_leader_key='<C-k>'
 
 " Configure EasyMotion.
-let g:EasyMotion_leader_key = '<Space>'
+let g:EasyMotion_leader_key='<Space>'
 
 " Configure Ultisnips.
-let g:UltiSnipsExpandTrigger = '<C-j>'
-let g:UltiSnipsSnippetDirectories = ['.snippets', 'snippets']
+let g:UltiSnipsExpandTrigger='<C-j>'
+let g:UltiSnipsSnippetDirectories=['.snippets', 'snippets']
 
 " Configure airline.
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled=1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
+" Configure delimitMate
+let delimitMate_expand_cr=1
+
 " Configure switch custom definitions.
-let g:switch_custom_definitions = [
+let g:switch_custom_definitions=[
 \	['on', 'off'],
 \	['0', '1'],
 \	['yes', 'no'],
@@ -125,7 +128,7 @@ nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <silent> <leader>p :CtrlPTag<CR>
 
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 
 " Enable indent guides on boot and allow colorschemes to style them.
 nmap <silent> <leader>i :IndentGuidesToggle<CR>
