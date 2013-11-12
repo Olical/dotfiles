@@ -14,7 +14,6 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'pfdevilliers/Pretty-Vim-Python'
 Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-markdown'
-Bundle 'wting/rust.vim'
 
 " General.
 Bundle 'bling/vim-airline'
