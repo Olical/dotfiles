@@ -9,7 +9,7 @@ Bundle 'gmarik/vundle'
 " Syntax and language improvements.
 Bundle 'groenewege/vim-less'
 Bundle 'helino/vim-json'
-Bundle 'juvenn/mustache.vim'
+Bundle 'mustache/vim-mode'
 Bundle 'pangloss/vim-javascript'
 Bundle 'pfdevilliers/Pretty-Vim-Python'
 Bundle 'tpope/vim-markdown'
