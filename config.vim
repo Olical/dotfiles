@@ -43,7 +43,7 @@ set noswapfile
 runtime macros/matchit.vim
 
 " Enable virtualenv.
-if has("python") && !empty($VIRTUAL_ENV)
+if has('python') && !empty($VIRTUAL_ENV)
 python << EOF
 import os
 import sys
