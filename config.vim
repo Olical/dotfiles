@@ -16,6 +16,7 @@ set nocompatible
 set autoindent smartindent
 set smarttab
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+let g:html_indent_inctags='html,body,head,tbody'
 
 " Include all of the bundle configuration.
 if !exists('g:light_editor')
