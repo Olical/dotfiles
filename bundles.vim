@@ -48,6 +48,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-fireplace'
 
 " Text objects.
 Bundle 'kana/vim-textobj-user'
