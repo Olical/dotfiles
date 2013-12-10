@@ -17,6 +17,7 @@ Bundle 'vim-scripts/django.vim'
 
 " General.
 Bundle 'AndrewRadev/switch.vim'
+Bundle 'tommcdo/vim-exchange'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'PeterRincker/vim-argumentative'
