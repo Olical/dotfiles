@@ -78,6 +78,12 @@ set completeopt-=preview
 let g:localvimrc_ask=0
 let g:localvimrc_sandbox=0
 
+" Enable rainbow parenthasis everywhere.
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
 " Configure emmet.
 let g:user_emmet_settings={
 \	'indentation': '	'
