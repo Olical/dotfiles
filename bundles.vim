@@ -16,6 +16,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'vim-scripts/django.vim'
 
 " General.
+Bundle 'ciaranm/detectindent'
 Bundle 'AndrewRadev/switch.vim'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'Lokaltog/vim-distinguished'
@@ -131,9 +132,6 @@ nmap <silent> <leader>e :Errors<CR>
 " Gundo commands. (u)
 nmap <silent> <leader>u :GundoToggle<CR>
 
-" Toggle the NERDTree pane. (n)
-nmap <silent> <leader>n :NERDTreeToggle<CR>
-
 " Use CtrlP to search tags. (p)
 nmap <silent> <leader>p :CtrlPTag<CR>
 
@@ -144,3 +142,7 @@ let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 nmap <silent> <leader>i :IndentGuidesToggle<CR>
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
+
+" Enable indentation detection.
+let g:detectindent_preferred_indent=4
+autocmd BufReadPost * :DetectIndent
