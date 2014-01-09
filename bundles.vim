@@ -23,17 +23,13 @@ Bundle 'Lokaltog/vim-distinguished'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'PeterRincker/vim-argumentative'
 Bundle 'Raimondi/delimitMate'
-Bundle 'SirVer/ultisnips'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'mhinz/vim-signify'
-Bundle 'arecarn/crunch'
 Bundle 'bling/vim-airline'
 Bundle 'embear/vim-localvimrc'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'justinmk/vim-sneak'
 Bundle 'kien/ctrlp.vim'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'malkomalko/projections.vim'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'myusuf3/numbers.vim'
@@ -79,12 +75,6 @@ set completeopt-=preview
 let g:localvimrc_ask=0
 let g:localvimrc_sandbox=0
 
-" Enable rainbow parenthasis everywhere.
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
 " Configure emmet.
 let g:user_emmet_settings={
 \	'indentation': '	'
@@ -93,10 +83,6 @@ let g:user_emmet_leader_key='<C-k>'
 
 " Configure EasyMotion.
 let g:EasyMotion_leader_key='<Space>'
-
-" Configure Ultisnips.
-let g:UltiSnipsExpandTrigger='<C-j>'
-let g:UltiSnipsSnippetDirectories=['.snippets', 'snippets']
 
 " Configure airline.
 let g:airline#extensions#tabline#enabled=1
@@ -131,9 +117,6 @@ nmap <silent> <leader>e :Errors<CR>
 
 " Gundo commands. (u)
 nmap <silent> <leader>u :GundoToggle<CR>
-
-" Use CtrlP to search tags. (p)
-nmap <silent> <leader>p :CtrlPTag<CR>
 
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
