@@ -6,4 +6,5 @@ function fish_prompt
 end
 
 set -x EDITOR vim
+set -x TERM xterm-256color
 set -x LSCOLORS ExGxBxDxCxEgEdxbxgxcxd
