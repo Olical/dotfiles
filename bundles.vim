@@ -14,6 +14,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'pfdevilliers/Pretty-Vim-Python'
 Bundle 'tpope/vim-markdown'
 Bundle 'vim-scripts/django.vim'
+Bundle 'dag/vim-fish'
 
 " General.
 Bundle 'ciaranm/detectindent'
