@@ -141,6 +141,9 @@ if ! has('gui_running')
 	augroup END
 endif
 
+" Default netrw to tree view.
+let g:netrw_liststyle=3
+
 " Don't show the intro message when starting vim.
 set shortmess=atI
 
