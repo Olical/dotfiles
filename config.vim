@@ -101,6 +101,9 @@ set list
 " Improve screen clearing by using the background colour.
 set t_ut=
 
+" Enable mouse support.
+set mouse=a
+
 " Highlight searches.
 set hlsearch
 
