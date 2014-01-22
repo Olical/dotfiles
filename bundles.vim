@@ -19,7 +19,6 @@ Bundle 'dag/vim-fish'
 " General.
 Bundle 'ciaranm/detectindent'
 Bundle 'AndrewRadev/switch.vim'
-Bundle 'tommcdo/vim-exchange'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'PeterRincker/vim-argumentative'
