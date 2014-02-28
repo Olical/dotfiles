@@ -1,6 +1,6 @@
 # .vim
 
-This is my personal Vim setup. It uses my own colour scheme, key bindings and bundle configuration. I use [Vundle](https://github.com/gmarik/vundle) to manage all of my bundles.
+This is my personal Vim setup. It uses a customised colour scheme, key bindings and bundle configuration. I use [Vundle](https://github.com/gmarik/vundle) to manage all of my bundles.
 
 You can sync all of the bundles by executing `./sync-bundles.sh`. This will remove the old, update the current and install any new bundles. It will also download Vundle if you haven't cloned it into `bundle/vundle` already.
 
