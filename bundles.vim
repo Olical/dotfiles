@@ -69,6 +69,9 @@ let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
 
+" And Eclim, which is hooked into YCM.
+let g:EclimCompletionMethod = 'omnifunc'
+
 " Configure localvimrc.
 let g:localvimrc_ask=0
 let g:localvimrc_sandbox=0

@@ -4,3 +4,5 @@
 /bundle
 /session
 /builds
+/eclim
+/plugin/eclim.vim
