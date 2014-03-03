@@ -111,7 +111,7 @@ nnoremap <leader>l :NumbersToggle<CR>
 nmap <leader>s :Switch<CR>
 
 " Ag commands.
-nmap <leader>a :Ag! "<cword>"<CR>
+nmap <leader>a :AgFromSearch!<CR>
 
 " Shows the errors window. (e)
 nmap <silent> <leader>e :Errors<CR>
