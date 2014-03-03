@@ -18,6 +18,9 @@ set smarttab
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 let g:html_indent_inctags='html,body,head,tbody'
 
+" More minimal sessions.
+set sessionoptions-=options
+
 " Include all of the bundle configuration.
 if !exists('g:light_editor')
 	source $HOME/.vim/bundles.vim
