@@ -25,7 +25,6 @@
 	"regexp": false,
 	"undef": true,
 	"unused": true,
-	"string": true,
 	"trailing": true,
 	"maxerr": 120,
 	"debug": true,
