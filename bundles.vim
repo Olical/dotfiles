@@ -123,9 +123,8 @@ nmap <silent> <leader>u :GundoToggle<CR>
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 
-" Hook CtrlP into the C matcher extension and raise the file limit to UNLIMITED.
+" Hook CtrlP into the C matcher extension.
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-let g:ctrlp_max_files = 0
 
 " Enable indent guides on boot and allow colorschemes to style them.
 nmap <silent> <leader>i :IndentGuidesToggle<CR>
