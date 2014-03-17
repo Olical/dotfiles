@@ -21,6 +21,10 @@ let g:html_indent_inctags='html,body,head,tbody'
 " More minimal sessions.
 set sessionoptions-=options
 
+" Quick session bindings.
+nmap <F7> :mksession! .quicksave.vim<CR>
+nmap <F8> :source .quicksave.vim<CR>
+
 " Include all of the bundle configuration.
 if !exists('g:light_editor')
 	source $HOME/.vim/bundles.vim
