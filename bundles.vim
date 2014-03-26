@@ -47,7 +47,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-projectile'
-Bundle 'tpope/vim-jdaddy'
 
 " Text objects.
 Bundle 'kana/vim-textobj-user'
