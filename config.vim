@@ -21,6 +21,12 @@ let g:html_indent_inctags='html,body,head,tbody'
 " More minimal sessions.
 set sessionoptions-=options
 
+" Persistent undo.
+set undofile
+set undodir=~/.vim/undo
+set undolevels=1000
+set undoreload=10000
+
 " Quick session bindings.
 nmap <F7> :mksession! .quicksave.vim<CR>
 nmap <F8> :source .quicksave.vim<CR>
