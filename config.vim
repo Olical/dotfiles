@@ -147,6 +147,14 @@ augroup GUIBell
 	autocmd GUIEnter * set visualbell t_vb=
 augroup END
 
+" Improve the speed for updating the status line when leaving insert mode.
+set ttimeoutlen=10
+augroup FastEscape
+	autocmd!
+	au InsertEnter * set timeoutlen=0
+	au InsertLeave * set timeoutlen=1000
+augroup END
+
 " Don't reset cursor to start of line when moving around.
 set nostartofline
 
