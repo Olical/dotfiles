@@ -142,7 +142,10 @@ set spell
 
 " Disable error bells.
 set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
+augroup GUIBell
+	autocmd!
+	autocmd GUIEnter * set visualbell t_vb=
+augroup END
 
 " Don't reset cursor to start of line when moving around.
 set nostartofline
