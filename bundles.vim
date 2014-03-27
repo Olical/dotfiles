@@ -106,7 +106,7 @@ let g:switch_custom_definitions=[
 \]
 
 " Toggle numbers bundle. (l)
-nnoremap <leader>l :NumbersToggle<CR>
+nmap <leader>l :NumbersToggle<CR>
 
 " Switch commands.
 nmap <leader>s :Switch<CR>
@@ -119,6 +119,9 @@ nmap <silent> <leader>e :Errors<CR>
 
 " Gundo commands. (u)
 nmap <silent> <leader>u :GundoToggle<CR>
+
+" Rename a JavaScript variable using tern.
+nmap <leader>r :TernRename<CR>
 
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command='ag %s -l --nocolor -g ""'

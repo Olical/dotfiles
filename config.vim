@@ -96,9 +96,6 @@ nmap <leader>w :%s/\s\+$//e<CR>
 " Opens the split in a new tab. Kind like "distraction free" mode. (f)
 nmap <leader>f :tab sp<CR>
 
-" Rename a JavaScript variable using tern.
-nmap <leader>r :TernRename<CR>
-
 " Rebuild the tags. (F5)
 set tags+=.tags
 command! GenerateTags call system('ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`') | echo
