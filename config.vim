@@ -1,6 +1,6 @@
 " To activate, add the following to ~/.vimrc
 " source $HOME/.vim/config.vim
-"
+
 " Add this before you include the config to enable light mode.
 " let g:light_editor=1
 
@@ -101,6 +101,9 @@ set tags+=.tags
 command! GenerateTags call system('ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`') | echo
 nmap <F5> :GenerateTags<CR>
 
+" Alternate escape binding.
+imap jk <ESC>
+
 " Show the file name in the window title bar.
 set title
 
@@ -146,16 +149,6 @@ set nostartofline
 
 " Always show status line.
 set laststatus=2
-
-" Improve the speed for updating the status line when leaving insert mode.
-if ! has('gui_running')
-	set ttimeoutlen=10
-	augroup FastEscape
-		autocmd!
-		au InsertEnter * set timeoutlen=0
-		au InsertLeave * set timeoutlen=1000
-	augroup END
-endif
 
 " Don't show the intro message when starting vim.
 set shortmess=atI
