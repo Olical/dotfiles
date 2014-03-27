@@ -102,7 +102,7 @@ command! GenerateTags call system('ctags -Rf ./.tags --python-kinds=-i --exclude
 nmap <F5> :GenerateTags<CR>
 
 " Alternate escape binding.
-imap jk <ESC>
+noremap! jk <ESC>
 
 " Show the file name in the window title bar.
 set title
