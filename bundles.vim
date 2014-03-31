@@ -94,6 +94,11 @@ let g:airline_right_sep=''
 
 " Configure promptline.
 let g:promptline_powerline_symbols=0
+let g:promptline_preset = {
+	\'a' : [ promptline#slices#user() ],
+	\'b' : [ promptline#slices#vcs_branch() ],
+	\'c' : [ promptline#slices#cwd() ],
+	\'warn' : [ promptline#slices#last_exit_code() ]}
 
 " Configure delimitMate
 let delimitMate_expand_cr=1
