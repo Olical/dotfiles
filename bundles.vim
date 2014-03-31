@@ -26,6 +26,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'mhinz/vim-signify'
 Bundle 'bling/vim-airline'
+Bundle 'edkolev/promptline.vim'
 Bundle 'embear/vim-localvimrc'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'kien/ctrlp.vim'
@@ -90,6 +91,9 @@ let g:EasyMotion_leader_key='<Space>'
 let g:airline#extensions#tabline#enabled=1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+
+" Configure promptline.
+let g:promptline_powerline_symbols=0
 
 " Configure delimitMate
 let delimitMate_expand_cr=1
