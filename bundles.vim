@@ -7,14 +7,9 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Syntax and language improvements.
-Bundle 'groenewege/vim-less'
 Bundle 'helino/vim-json'
-Bundle 'mustache/vim-mode'
 Bundle 'pangloss/vim-javascript'
-Bundle 'pfdevilliers/Pretty-Vim-Python'
 Bundle 'tpope/vim-markdown'
-Bundle 'vim-scripts/django.vim'
-Bundle 'dag/vim-fish'
 
 " General.
 Bundle 'ciaranm/detectindent'
@@ -28,11 +23,9 @@ Bundle 'mhinz/vim-signify'
 Bundle 'bling/vim-airline'
 Bundle 'edkolev/promptline.vim'
 Bundle 'embear/vim-localvimrc'
-Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'kien/ctrlp.vim'
 Bundle 'JazzCore/ctrlp-cmatcher'
 Bundle 'marijnh/tern_for_vim'
-Bundle 'mattn/emmet-vim'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'rking/ag.vim'
@@ -77,12 +70,6 @@ let g:EclimCompletionMethod = 'omnifunc'
 " Configure localvimrc.
 let g:localvimrc_ask=0
 let g:localvimrc_sandbox=0
-
-" Configure emmet.
-let g:user_emmet_settings={
-\	'indentation': '	'
-\}
-let g:user_emmet_leader_key='<C-k>'
 
 " Configure EasyMotion.
 let g:EasyMotion_leader_key='<Space>'
