@@ -19,7 +19,7 @@ set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 let g:html_indent_inctags='html,body,head,tbody'
 
 " More minimal sessions.
-set sessionoptions-=options
+set sessionoptions=blank,curdir,folds,help,tabpages,winsize
 
 " Persistent undo.
 set undofile
