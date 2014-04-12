@@ -43,6 +43,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-projectile'
 
+" Mine!
+Bundle 'Wolfy87/vim-enmasse'
+
 " Text objects.
 Bundle 'kana/vim-textobj-user'
 Bundle 'glts/vim-textobj-comment'
