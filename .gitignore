@@ -1,9 +1,4 @@
-/.netrwhist
 /spell/*.spl
 /spell/*.sug
 /bundle
-/session
-/builds
-/eclim
-/plugin/eclim.vim
 /undo
