@@ -119,6 +119,7 @@ set t_ut=
 
 " Enable mouse support.
 set mouse=a
+set ttymouse=xterm2
 
 " Highlight searches.
 set hlsearch
