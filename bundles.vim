@@ -87,7 +87,7 @@ let g:airline_right_sep=''
 let g:promptline_powerline_symbols=0
 let g:promptline_preset = {
 	\'a' : [ promptline#slices#user() ],
-	\'b' : [ promptline#slices#vcs_branch() ],
+	\'b' : [ promptline#slices#jobs(), promptline#slices#vcs_branch() ],
 	\'c' : [ promptline#slices#cwd() ],
 	\'warn' : [ promptline#slices#last_exit_code() ]}
 
