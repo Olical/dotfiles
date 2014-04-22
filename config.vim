@@ -33,17 +33,17 @@ nmap <F8> :source .quicksave.vim<CR>
 
 " Include all of the bundle configuration.
 if !exists('g:light_editor')
-	source $HOME/.vim/bundles.vim
+  source $HOME/.vim/bundles.vim
 endif
 
 " Improve the colours.
 syntax on
 
 try
-	colorscheme distinguished
-	source $HOME/.vim/colorscheme-tweaks.vim
+  colorscheme distinguished
+  source $HOME/.vim/colorscheme-tweaks.vim
 catch /^Vim\%((\a\+)\)\=:E185/
-	" NO COLOUR FOR YOU
+  " NO COLOUR FOR YOU
 endtry
 
 " Improve the backspace key.
@@ -58,14 +58,14 @@ runtime macros/matchit.vim
 " Enable virtualenv.
 if has('python') && !empty($VIRTUAL_ENV)
 python << EOF
-import os
-import sys
-a = os.environ['VIRTUAL_ENV'] + '/bin/activate_this.py'
-execfile(a, dict(__file__ = a))
-if 'PYTHONPATH' not in os.environ:
-	os.environ['PYTHONPATH'] = ''
-	os.environ['PYTHONPATH'] += ':' + os.getcwd()
-	os.environ['PYTHONPATH'] += ':'.join(sys.path)
+  import os
+  import sys
+  a = os.environ['VIRTUAL_ENV'] + '/bin/activate_this.py'
+  execfile(a, dict(__file__ = a))
+  if 'PYTHONPATH' not in os.environ:
+    os.environ['PYTHONPATH'] = ''
+    os.environ['PYTHONPATH'] += ':' + os.getcwd()
+    os.environ['PYTHONPATH'] += ':'.join(sys.path)
 EOF
 endif
 
@@ -144,16 +144,16 @@ set spell
 " Disable error bells.
 set noerrorbells visualbell t_vb=
 augroup GUIBell
-	autocmd!
-	autocmd GUIEnter * set visualbell t_vb=
+  autocmd!
+  autocmd GUIEnter * set visualbell t_vb=
 augroup END
 
 " Improve the speed for updating the status line when leaving insert mode.
 set ttimeoutlen=10
 augroup FastEscape
-	autocmd!
-	au InsertEnter * set timeoutlen=0
-	au InsertLeave * set timeoutlen=1000
+  autocmd!
+  au InsertEnter * set timeoutlen=0
+  au InsertLeave * set timeoutlen=1000
 augroup END
 
 " Don't reset cursor to start of line when moving around.
