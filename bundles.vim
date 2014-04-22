@@ -59,8 +59,8 @@ filetype plugin indent on
 
 " Configure syntastic.
 let g:syntastic_mode_map={ 'mode': 'active',
-	\ 'active_filetypes': [],
-	\ 'passive_filetypes': ['html', 'cpp'] }
+      \ 'active_filetypes': [],
+      \ 'passive_filetypes': ['html', 'cpp'] }
 let g:syntastic_check_on_open=1
 
 " Configure YouCompleteMe.
@@ -86,23 +86,23 @@ let g:airline_right_sep=''
 " Configure promptline.
 let g:promptline_powerline_symbols=0
 let g:promptline_preset = {
-	\'a' : [ promptline#slices#user() ],
-	\'b' : [ promptline#slices#jobs(), promptline#slices#vcs_branch() ],
-	\'c' : [ promptline#slices#cwd() ],
-	\'warn' : [ promptline#slices#last_exit_code() ]}
+      \'a' : [ promptline#slices#user() ],
+      \'b' : [ promptline#slices#jobs(), promptline#slices#vcs_branch() ],
+      \'c' : [ promptline#slices#cwd() ],
+      \'warn' : [ promptline#slices#last_exit_code() ]}
 
 " Configure delimitMate
 let delimitMate_expand_cr=1
 
 " Configure switch custom definitions.
 let g:switch_custom_definitions=[
-\	['on', 'off'],
-\	['0', '1'],
-\	['yes', 'no'],
-\	['before', 'after'],
-\	['visible', 'hidden'],
-\	['block', 'none'],
-\	['!important', '/*!important*/']
+  \['on', 'off'],
+  \['0', '1'],
+  \['yes', 'no'],
+  \['before', 'after'],
+  \['visible', 'hidden'],
+  \['block', 'none'],
+  \['!important', '/*!important*/']
 \]
 
 " Toggle numbers bundle. (l)
@@ -111,8 +111,27 @@ nmap <leader>l :NumbersToggle<CR>
 " Switch commands.
 nmap <leader>s :Switch<CR>
 
-" Ag commands.
-nmap <leader>a :AgFromSearch!<CR>
+" Ag motion mappings. (stolen from Steve Losh!)
+nnoremap <silent> <leader>a :set opfunc=<SID>AgMotion<CR>g@
+xnoremap <silent> <leader>a :<C-U>call <SID>AgMotion(visualmode())<CR>
+
+nnoremap <bs> :Ag! '\b<c-r><c-w>\b'<cr>
+xnoremap <silent> <bs> :<C-U>call <SID>AgMotion(visualmode())<CR>
+
+function! s:CopyMotionForType(type)
+  if a:type ==# 'v'
+    silent execute "normal! `<" . a:type . "`>y"
+  elseif a:type ==# 'char'
+    silent execute "normal! `[v`]y"
+  endif
+endfunction
+
+function! s:AgMotion(type) abort
+  let reg_save = @@
+  call s:CopyMotionForType(a:type)
+  execute "normal! :Ag! --literal " . shellescape(@@) . "\<cr>"
+  let @@ = reg_save
+endfunction
 
 " Shows the errors window. (e)
 nmap <silent> <leader>e :Errors<CR>
