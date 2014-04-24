@@ -9,8 +9,7 @@ Plugin 'gmarik/Vundle.vim'
 " Syntax and language improvements.
 Plugin 'helino/vim-json'
 Plugin 'tpope/vim-markdown'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'pangloss/vim-javascript'
 
 " General.
 Plugin 'ciaranm/detectindent'
