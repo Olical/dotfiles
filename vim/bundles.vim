@@ -59,10 +59,12 @@ Bundle 'mattn/vim-textobj-url'
 filetype plugin indent on
 
 " Configure syntastic.
-let g:syntastic_mode_map={ 'mode': 'active',
-      \ 'active_filetypes': [],
-      \ 'passive_filetypes': ['html', 'cpp'] }
 let g:syntastic_check_on_open=1
+let g:syntastic_mode_map={
+  \'mode': 'active',
+  \'active_filetypes': [],
+  \'passive_filetypes': ['html', 'cpp']
+\}
 
 " Configure YouCompleteMe.
 let g:ycm_add_preview_to_completeopt=0
@@ -87,10 +89,11 @@ let g:airline_right_sep=''
 " Configure promptline.
 let g:promptline_powerline_symbols=0
 let g:promptline_preset = {
-      \'a' : [ promptline#slices#user() ],
-      \'b' : [ promptline#slices#jobs(), promptline#slices#vcs_branch() ],
-      \'c' : [ promptline#slices#cwd() ],
-      \'warn' : [ promptline#slices#last_exit_code() ]}
+  \'a' : [ promptline#slices#user() ],
+  \'b' : [ promptline#slices#jobs(), promptline#slices#vcs_branch() ],
+  \'c' : [ promptline#slices#cwd() ],
+  \'warn' : [ promptline#slices#last_exit_code() ]
+\}
 
 " Configure delimitMate
 let delimitMate_expand_cr=1
@@ -147,7 +150,7 @@ nnoremap <leader>r :TernRename<CR>
 let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 
 " Hook CtrlP into the C matcher extension.
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+let g:ctrlp_match_func = {'match': 'matcher#cmatch'}
 
 " Enable indent guides on boot and allow colorschemes to style them.
 nnoremap <silent> <leader>i :IndentGuidesToggle<CR>
