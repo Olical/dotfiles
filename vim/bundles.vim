@@ -156,4 +156,8 @@ let g:indent_guides_auto_colors=0
 
 " Enable indentation detection.
 let g:detectindent_preferred_indent=4
-autocmd BufReadPost * :DetectIndent
+
+augroup DetectIndent
+  autocmd!
+  autocmd BufReadPost * :DetectIndent
+augroup END
