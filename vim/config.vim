@@ -28,9 +28,6 @@ set undoreload=10000
 nnoremap <F7> :mksession! .quicksave.vim<CR>
 nnoremap <F8> :source .quicksave.vim<CR>
 
-" Easy command input.
-nnoremap ; :
-
 " Include all of the bundle configuration.
 source $HOME/.vim/bundles.vim
 
