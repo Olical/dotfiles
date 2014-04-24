@@ -38,13 +38,8 @@ endif
 
 " Improve the colours.
 syntax on
-
-try
-  colorscheme distinguished
-  source $HOME/.vim/colorscheme-tweaks.vim
-catch /^Vim\%((\a\+)\)\=:E185/
-  " NO COLOUR FOR YOU
-endtry
+colorscheme distinguished
+source $HOME/.vim/colorscheme-tweaks.vim
 
 " Improve the backspace key.
 set backspace=indent,eol,start
