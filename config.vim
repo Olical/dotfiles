@@ -149,8 +149,8 @@ augroup END
 set ttimeoutlen=10
 augroup FastEscape
   autocmd!
-  au InsertEnter * set timeoutlen=0
-  au InsertLeave * set timeoutlen=1000
+  autocmd InsertEnter * set timeoutlen=0
+  autocmd InsertLeave * set timeoutlen=1000
 augroup END
 
 " Don't reset cursor to start of line when moving around.
