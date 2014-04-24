@@ -1,9 +1,6 @@
 " To activate, add the following to ~/.vimrc
 " source $HOME/.vim/config.vim
 
-" Add this before you include the config to enable light mode.
-" let g:light_editor=1
-
 " Add better UTF-8 support.
 scriptencoding utf-8
 set encoding=utf-8
@@ -32,9 +29,7 @@ nnoremap <F7> :mksession! .quicksave.vim<CR>
 nnoremap <F8> :source .quicksave.vim<CR>
 
 " Include all of the bundle configuration.
-if !exists('g:light_editor')
-  source $HOME/.vim/bundles.vim
-endif
+source $HOME/.vim/bundles.vim
 
 " Improve the colours.
 syntax on
