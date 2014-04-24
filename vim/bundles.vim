@@ -143,9 +143,6 @@ nnoremap <silent> <leader>e :Errors<CR>
 " Gundo commands. (u)
 nnoremap <silent> <leader>u :GundoToggle<CR>
 
-" Rename a JavaScript variable using tern.
-nnoremap <leader>r :TernRename<CR>
-
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 

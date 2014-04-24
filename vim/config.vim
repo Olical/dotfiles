@@ -71,6 +71,9 @@ set wildmenu
 " Increase the command line history length.
 set history=1000
 
+" Set the local leader.
+let maplocalleader = "|"
+
 " Clears the search. (c)
 nnoremap <silent> <leader>c/ :nohlsearch<CR>
 
