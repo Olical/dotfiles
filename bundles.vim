@@ -107,10 +107,10 @@ let g:switch_custom_definitions=[
 \]
 
 " Toggle numbers bundle. (l)
-nmap <leader>l :NumbersToggle<CR>
+nnoremap <leader>l :NumbersToggle<CR>
 
 " Switch commands.
-nmap <leader>s :Switch<CR>
+nnoremap <leader>s :Switch<CR>
 
 " Ag motion mappings. (stolen from Steve Losh!)
 nnoremap <silent> <leader>a :set opfunc=<SID>AgMotion<CR>g@
@@ -135,13 +135,13 @@ function! s:AgMotion(type) abort
 endfunction
 
 " Shows the errors window. (e)
-nmap <silent> <leader>e :Errors<CR>
+nnoremap <silent> <leader>e :Errors<CR>
 
 " Gundo commands. (u)
-nmap <silent> <leader>u :GundoToggle<CR>
+nnoremap <silent> <leader>u :GundoToggle<CR>
 
 " Rename a JavaScript variable using tern.
-nmap <leader>r :TernRename<CR>
+nnoremap <leader>r :TernRename<CR>
 
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
@@ -150,7 +150,7 @@ let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 " Enable indent guides on boot and allow colorschemes to style them.
-nmap <silent> <leader>i :IndentGuidesToggle<CR>
+nnoremap <silent> <leader>i :IndentGuidesToggle<CR>
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
 

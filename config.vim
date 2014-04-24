@@ -28,8 +28,8 @@ set undolevels=1000
 set undoreload=10000
 
 " Quick session bindings.
-nmap <F7> :mksession! .quicksave.vim<CR>
-nmap <F8> :source .quicksave.vim<CR>
+nnoremap <F7> :mksession! .quicksave.vim<CR>
+nnoremap <F8> :source .quicksave.vim<CR>
 
 " Include all of the bundle configuration.
 if !exists('g:light_editor')
@@ -82,27 +82,24 @@ set wildmenu
 set history=1000
 
 " Clears the search. (c)
-nmap <silent> <leader>c/ :nohlsearch<CR>
+nnoremap <silent> <leader>c/ :nohlsearch<CR>
 
 " Corrects the spelling under the cursor with the first suggestion.
-nmap <leader>z 1z=
+nnoremap <leader>z 1z=
 
 " Shows the amount of matches for the previous search. (/)
-nmap <leader>/ :%s///gn<CR>
+nnoremap <leader>/ :%s///gn<CR>
 
 " Strips the trailing white space from the file.
-nmap <leader>w :%s/\s\+$//e<CR>
+nnoremap <leader>w :%s/\s\+$//e<CR>
 
 " Opens the split in a new tab. Kind like "distraction free" mode. (f)
-nmap <leader>f :tab sp<CR>
+nnoremap <leader>f :tab sp<CR>
 
 " Rebuild the tags. (F5)
 set tags+=.tags
 command! GenerateTags call system('ctags -Rf ./.tags --python-kinds=-i --exclude=.git `cat .srclist`') | echo
-nmap <F5> :GenerateTags<CR>
-
-" Alternate escape binding.
-noremap! jk <ESC>
+nnoremap <F5> :GenerateTags<CR>
 
 " Show the file name in the window title bar.
 set title
