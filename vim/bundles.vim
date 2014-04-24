@@ -1,62 +1,63 @@
 " Load Vundle. Manages all of the bundles.
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Specify all bundles.
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Syntax and language improvements.
-Bundle 'helino/vim-json'
-Bundle 'tpope/vim-markdown'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'vim-scripts/JavaScript-Indent'
+Plugin 'helino/vim-json'
+Plugin 'tpope/vim-markdown'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'vim-scripts/JavaScript-Indent'
 
 " General.
-Bundle 'ciaranm/detectindent'
-Bundle 'AndrewRadev/switch.vim'
-Bundle 'Lokaltog/vim-distinguished'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'PeterRincker/vim-argumentative'
-Bundle 'Raimondi/delimitMate'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'mhinz/vim-signify'
-Bundle 'bling/vim-airline'
-Bundle 'edkolev/promptline.vim'
-Bundle 'embear/vim-localvimrc'
-Bundle 'kien/ctrlp.vim'
-Bundle 'JazzCore/ctrlp-cmatcher'
-Bundle 'marijnh/tern_for_vim'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'rking/ag.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'walm/jshint.vim'
-Bundle 'sjl/gundo.vim'
-Bundle 'bruno-/vim-vertical-move'
-Bundle 'vim-scripts/SyntaxRange'
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-vinegar'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-eunuch'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-projectile'
+Plugin 'ciaranm/detectindent'
+Plugin 'AndrewRadev/switch.vim'
+Plugin 'Lokaltog/vim-distinguished'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'PeterRincker/vim-argumentative'
+Plugin 'Raimondi/delimitMate'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'mhinz/vim-signify'
+Plugin 'bling/vim-airline'
+Plugin 'edkolev/promptline.vim'
+Plugin 'embear/vim-localvimrc'
+Plugin 'kien/ctrlp.vim'
+Plugin 'JazzCore/ctrlp-cmatcher'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'rking/ag.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'walm/jshint.vim'
+Plugin 'sjl/gundo.vim'
+Plugin 'bruno-/vim-vertical-move'
+Plugin 'vim-scripts/SyntaxRange'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-projectile'
 
 " Mine!
-Bundle 'Wolfy87/vim-enmasse'
+Plugin 'Wolfy87/vim-enmasse'
 
 " Text objects.
-Bundle 'kana/vim-textobj-user'
-Bundle 'glts/vim-textobj-comment'
-Bundle 'kana/vim-textobj-datetime'
-Bundle 'kana/vim-textobj-entire'
-Bundle 'kana/vim-textobj-indent'
-Bundle 'mattn/vim-textobj-url'
+Plugin 'kana/vim-textobj-user'
+Plugin 'glts/vim-textobj-comment'
+Plugin 'kana/vim-textobj-datetime'
+Plugin 'kana/vim-textobj-entire'
+Plugin 'kana/vim-textobj-indent'
+Plugin 'mattn/vim-textobj-url'
 
 " Enable some syntax settings that had to be disabled for Vundle.
+call vundle#end()
 filetype plugin indent on
 
 " Configure syntastic.

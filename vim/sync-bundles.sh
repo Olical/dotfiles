@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "Checking for Vundle..."
-if [ ! -f ~/.vim/bundle/vundle/README.md ];
+if [ ! -f ~/.vim/bundle/Vundle.vim/README.md ];
 then
 	echo "Vundle not found, installing..."
 	mkdir -p ~/.vim/bundle
-	git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+	git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
 else
 	echo "Vundle found."
 fi
