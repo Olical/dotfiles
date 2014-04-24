@@ -1,1 +1,0 @@
-au BufNewFile,BufRead *.screen set filetype=screen
