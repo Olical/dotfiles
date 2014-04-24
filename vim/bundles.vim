@@ -8,8 +8,9 @@ Bundle 'gmarik/vundle'
 
 " Syntax and language improvements.
 Bundle 'helino/vim-json'
-Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'vim-scripts/JavaScript-Indent'
 
 " General.
 Bundle 'ciaranm/detectindent'
