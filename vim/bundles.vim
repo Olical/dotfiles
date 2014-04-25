@@ -24,7 +24,6 @@ Plugin 'bling/vim-airline'
 Plugin 'edkolev/promptline.vim'
 Plugin 'embear/vim-localvimrc'
 Plugin 'kien/ctrlp.vim'
-Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -146,9 +145,6 @@ nnoremap <silent> <leader>u :GundoToggle<CR>
 
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
-
-" Hook CtrlP into the C matcher extension.
-let g:ctrlp_match_func = {'match': 'matcher#cmatch'}
 
 " Enable indent guides on boot and allow colorschemes to style them.
 nnoremap <silent> <leader>i :IndentGuidesToggle<CR>
