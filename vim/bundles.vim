@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'helino/vim-json'
 Plugin 'tpope/vim-markdown'
 Plugin 'pangloss/vim-javascript'
+Plugin 'derekwyatt/vim-scala'
 
 " General.
 Plugin 'ciaranm/detectindent'
