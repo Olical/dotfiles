@@ -34,6 +34,7 @@ Plugin 'walm/jshint.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'bruno-/vim-vertical-move'
 Plugin 'vim-scripts/SyntaxRange'
+Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-commentary'
@@ -71,6 +72,12 @@ let g:syntastic_mode_map={
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
+
+" Configure UltiSnips. (Binding ideas from Jack Fanklin)
+" https://github.com/jackfranklin/dotfiles/blob/f002a212cbceec07ec43f04b663f2085871bf6fb/vim/vimrc#L272-L276
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<s-c-j>"
 
 " And Eclim, which is hooked into YCM.
 let g:EclimCompletionMethod = 'omnifunc'
