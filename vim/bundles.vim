@@ -75,8 +75,8 @@ set completeopt-=preview
 
 " Configure UltiSnips. (Binding ideas from Jack Fanklin)
 " https://github.com/jackfranklin/dotfiles/blob/f002a212cbceec07ec43f04b663f2085871bf6fb/vim/vimrc#L272-L276
-let g:UltiSnipsExpandTrigger="<c-k>"
-let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<s-c-j>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir="~/.vim/snippets"
