@@ -73,8 +73,7 @@ let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
 
-" Configure UltiSnips. (Binding ideas from Jack Fanklin)
-" https://github.com/jackfranklin/dotfiles/blob/f002a212cbceec07ec43f04b663f2085871bf6fb/vim/vimrc#L272-L276
+" Configure UltiSnips.
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<s-c-j>"
