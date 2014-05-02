@@ -20,3 +20,19 @@ snippet iife "(function () {"
 	}());
 snippet re "var ... = require('...');"
 	var ${1} = require('${0}');
+snippet des "describe('...', function () {"
+	describe('${1}', function () {
+		${0}
+	});
+snippet it "it('...', function () {"
+	it('${1}', function () {
+		${0}
+	});
+snippet bef "beforeEach(function () {"
+	beforeEach(function () {
+		${0}
+	});
+snippet aft "afterEach(function () {"
+	afterEach(function () {
+		${0}
+	});
