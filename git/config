@@ -1,5 +1,6 @@
 [user]
 	name = Oliver Caldwell
+	email = olliec87@gmail.com
 [core]
 	editor = vim
 	excludesfile = ~/dotfiles/git/ignore
