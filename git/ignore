@@ -1,0 +1,7 @@
+.DS_Store
+.tern-project
+.tags
+.srclist
+.lvimrc
+.projections.json
+.quicksave.vim

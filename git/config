@@ -2,7 +2,7 @@
 	name = Oliver Caldwell
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/dotfiles/git/ignore
 [color]
 	ui = true
 [push]
