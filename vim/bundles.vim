@@ -13,6 +13,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'derekwyatt/vim-scala'
 
 " General.
+Plugin 'myusuf3/numbers.vim'
 Plugin 'ciaranm/detectindent'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'Lokaltog/vim-easymotion'
