@@ -99,6 +99,7 @@ set title
 
 " Enable line numbers.
 set number
+set relativenumber
 
 " Show invisible characters.
 set listchars=tab:▸\ ,trail:·

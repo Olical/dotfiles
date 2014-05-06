@@ -14,7 +14,6 @@ Plugin 'derekwyatt/vim-scala'
 
 " General.
 Plugin 'ciaranm/detectindent'
-Plugin 'AndrewRadev/switch.vim'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'PeterRincker/vim-argumentative'
@@ -26,15 +25,13 @@ Plugin 'edkolev/promptline.vim'
 Plugin 'embear/vim-localvimrc'
 Plugin 'kien/ctrlp.vim'
 Plugin 'marijnh/tern_for_vim'
-Plugin 'myusuf3/numbers.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'walm/jshint.vim'
 Plugin 'sjl/gundo.vim'
-Plugin 'bruno-/vim-vertical-move'
-Plugin 'vim-scripts/SyntaxRange'
 Plugin 'SirVer/ultisnips'
+Plugin 'sjl/splice.vim'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-commentary'
@@ -80,9 +77,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir="~/.vim/snippets"
 
-" And Eclim, which is hooked into YCM.
-let g:EclimCompletionMethod = 'omnifunc'
-
 " Configure localvimrc.
 let g:localvimrc_ask=0
 let g:localvimrc_sandbox=0
@@ -107,23 +101,6 @@ let g:promptline_preset = {
 " Configure delimitMate
 let delimitMate_expand_cr=1
 
-" Configure switch custom definitions.
-let g:switch_custom_definitions=[
-  \['on', 'off'],
-  \['0', '1'],
-  \['yes', 'no'],
-  \['before', 'after'],
-  \['visible', 'hidden'],
-  \['block', 'none'],
-  \['!important', '/*!important*/']
-\]
-
-" Toggle numbers bundle. (l)
-nnoremap <leader>l :NumbersToggle<CR>
-
-" Switch commands.
-nnoremap <leader>s :Switch<CR>
-
 " Ag motion mappings. (stolen from Steve Losh!)
 nnoremap <silent> <leader>a :set opfunc=<SID>AgMotion<CR>g@
 xnoremap <silent> <leader>a :<C-U>call <SID>AgMotion(visualmode())<CR>
@@ -145,9 +122,6 @@ function! s:AgMotion(type) abort
   execute "normal! :Ag! --literal " . shellescape(@@) . "\<cr>"
   let @@ = reg_save
 endfunction
-
-" Shows the errors window. (e)
-nnoremap <silent> <leader>e :Errors<CR>
 
 " Gundo commands. (u)
 nnoremap <silent> <leader>u :GundoToggle<CR>
