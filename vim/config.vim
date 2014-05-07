@@ -15,14 +15,14 @@ set smarttab
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 let g:html_indent_inctags='html,body,head,tbody'
 
-" More minimal sessions.
-set sessionoptions=blank,curdir,folds,help,tabpages,winsize
-
 " Persistent undo.
 set undofile
 set undodir=~/.vim/undo
 set undolevels=1000
 set undoreload=10000
+
+" More minimal sessions.
+set sessionoptions=blank,curdir,folds,help,tabpages,winsize
 
 " Quick session bindings.
 nnoremap <F7> :mksession! .quicksave.vim<CR>
@@ -123,9 +123,6 @@ set smartcase
 
 " Highlight dynamically as pattern is typed.
 set incsearch
-
-" Set the default encoding to UTF-8.
-set enc=utf-8
 
 " Configure the spelling language and file.
 set spelllang=en_gb
