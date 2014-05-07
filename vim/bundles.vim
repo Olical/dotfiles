@@ -63,7 +63,7 @@ let g:syntastic_check_on_open=1
 let g:syntastic_mode_map={
   \'mode': 'active',
   \'active_filetypes': [],
-  \'passive_filetypes': ['html', 'cpp', 'java']
+  \'passive_filetypes': ['html', 'cpp', 'java', 'scala']
 \}
 
 " Configure YouCompleteMe.
