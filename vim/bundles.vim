@@ -14,7 +14,6 @@ Plugin 'derekwyatt/vim-scala'
 
 " General.
 Plugin 'myusuf3/numbers.vim'
-Plugin 'ciaranm/detectindent'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'PeterRincker/vim-argumentative'
@@ -134,11 +133,3 @@ let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 nnoremap <silent> <leader>i :IndentGuidesToggle<CR>
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
-
-" Enable indentation detection.
-let g:detectindent_preferred_indent=4
-
-augroup DetectIndent
-  autocmd!
-  autocmd BufReadPost * :DetectIndent
-augroup END
