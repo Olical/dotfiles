@@ -1,6 +1,6 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-alias ls='ls -G'
+alias ls='ls --color'
 export LSCOLORS='ExGxBxDxCxEgEdxbxgxcxd'
 export EDITOR='vim'
 
