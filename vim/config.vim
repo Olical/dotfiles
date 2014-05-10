@@ -59,6 +59,10 @@ python << EOF
 EOF
 endif
 
+" More natural splitting.
+set splitbelow
+set splitright
+
 " Make <C-A> and <C-X> increment and decrement all numbers as decimals.
 set nrformats=
 
