@@ -5,3 +5,4 @@
 .lvimrc
 .projections.json
 .quicksave.vim
+*.orig
