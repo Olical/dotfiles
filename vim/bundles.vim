@@ -17,7 +17,6 @@ Plugin 'Wolfy87/vim-enmasse'
 
 " General.
 Plugin 'Lokaltog/vim-distinguished'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'PeterRincker/vim-argumentative'
 Plugin 'Raimondi/delimitMate'
 Plugin 'SirVer/ultisnips'
@@ -26,6 +25,7 @@ Plugin 'bling/vim-airline'
 Plugin 'edkolev/promptline.vim'
 Plugin 'embear/vim-localvimrc'
 Plugin 'junegunn/vader.vim'
+Plugin 'justinmk/vim-sneak'
 Plugin 'kien/ctrlp.vim'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'mhinz/vim-signify'
@@ -82,8 +82,8 @@ let g:UltiSnipsSnippetsDir="~/.vim/snippets"
 let g:localvimrc_ask=0
 let g:localvimrc_sandbox=0
 
-" Configure EasyMotion.
-let g:EasyMotion_leader_key='<Space>'
+" Configure sneak.
+let g:sneak#streak=1
 
 " Configure airline.
 let g:airline#extensions#tabline#enabled=1
