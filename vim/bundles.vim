@@ -27,6 +27,7 @@ Plugin 'embear/vim-localvimrc'
 Plugin 'junegunn/vader.vim'
 Plugin 'justinmk/vim-sneak'
 Plugin 'kien/ctrlp.vim'
+Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'myusuf3/numbers.vim'
@@ -134,3 +135,9 @@ let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 nnoremap <silent> <leader>i :IndentGuidesToggle<CR>
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
+
+" Enable rainbow parenthesis.
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
