@@ -11,6 +11,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'helino/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-markdown'
+Plugin 'mxw/vim-jsx'
 
 " Mine!
 Plugin 'Wolfy87/vim-enmasse'
