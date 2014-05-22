@@ -4,5 +4,6 @@
 .srclist
 .lvimrc
 .projections.json
+.jshintrc
 .quicksave.vim
 *.orig
