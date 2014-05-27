@@ -66,9 +66,4 @@ augroup GUIBell
 augroup END
 
 " Improve the speed for updating the status line when leaving insert mode.
-set ttimeoutlen=10
-augroup FastEscape
-  autocmd!
-  autocmd InsertEnter * set timeoutlen=0
-  autocmd InsertLeave * set timeoutlen=1000
-augroup END
+set ttimeoutlen=50

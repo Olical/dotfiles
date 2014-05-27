@@ -18,3 +18,6 @@ nnoremap <leader>f :tab sp<CR>
 
 " Rebuild the tags.
 nnoremap <F5> :GenerateTags<CR>
+
+" Fancy escape.
+inoremap jk <Esc>
