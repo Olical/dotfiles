@@ -6,4 +6,4 @@
 set nocompatible
 
 " Include all of the bundle configuration.
-source $HOME/.vim/plugins.vim
+source $HOME/.vim/bundles.vim
