@@ -86,10 +86,13 @@ Plugin 'kien/ctrlp.vim'
   let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 
 Plugin 'kien/rainbow_parentheses.vim'
-  au VimEnter * RainbowParenthesesToggle
-  au Syntax * RainbowParenthesesLoadRound
-  au Syntax * RainbowParenthesesLoadSquare
-  au Syntax * RainbowParenthesesLoadBraces
+  augroup RainbowParentheses
+    autocmd!
+    autocmd VimEnter * RainbowParenthesesToggle
+    autocmd Syntax * RainbowParenthesesLoadRound
+    autocmd Syntax * RainbowParenthesesLoadSquare
+    autocmd Syntax * RainbowParenthesesLoadBraces
+  augroup END
 
 Plugin 'nathanaelkane/vim-indent-guides'
   nnoremap <silent> <leader>i :IndentGuidesToggle<CR>
