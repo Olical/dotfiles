@@ -74,9 +74,9 @@ Plugin 'kien/rainbow_parentheses.vim'
   augroup RainbowParentheses
     autocmd!
     autocmd VimEnter * RainbowParenthesesToggle
-    autocmd Syntax * RainbowParenthesesLoadRound
-    autocmd Syntax * RainbowParenthesesLoadSquare
-    autocmd Syntax * RainbowParenthesesLoadBraces
+    autocmd Syntax clojure RainbowParenthesesLoadRound
+    autocmd Syntax clojure RainbowParenthesesLoadSquare
+    autocmd Syntax clojure RainbowParenthesesLoadBraces
   augroup END
 
 Plugin 'nathanaelkane/vim-indent-guides'
