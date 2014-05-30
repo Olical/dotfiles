@@ -13,14 +13,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-markdown'
 Plugin 'mxw/vim-jsx'
 
-" Text objects.
-Plugin 'kana/vim-textobj-user'
-Plugin 'glts/vim-textobj-comment'
-Plugin 'kana/vim-textobj-datetime'
-Plugin 'kana/vim-textobj-entire'
-Plugin 'kana/vim-textobj-indent'
-Plugin 'mattn/vim-textobj-url'
-
 " General.
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'PeterRincker/vim-argumentative'
@@ -76,8 +68,6 @@ Plugin 'edkolev/promptline.vim'
 Plugin 'embear/vim-localvimrc'
   let g:localvimrc_ask=0
   let g:localvimrc_sandbox=0
-
-Plugin 'junegunn/vader.vim'
 
 Plugin 'justinmk/vim-sneak'
   let g:sneak#streak=1
