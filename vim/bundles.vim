@@ -73,10 +73,10 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'kien/rainbow_parentheses.vim'
   augroup RainbowParentheses
     autocmd!
-    autocmd VimEnter * RainbowParenthesesToggle
-    autocmd Syntax clojure RainbowParenthesesLoadRound
-    autocmd Syntax clojure RainbowParenthesesLoadSquare
-    autocmd Syntax clojure RainbowParenthesesLoadBraces
+    autocmd VimEnter * RainbowParenthesesActivate
+    autocmd BufEnter * RainbowParenthesesLoadRound
+    autocmd BufEnter * RainbowParenthesesLoadSquare
+    autocmd BufEnter * RainbowParenthesesLoadBraces
   augroup END
 
 Plugin 'nathanaelkane/vim-indent-guides'
