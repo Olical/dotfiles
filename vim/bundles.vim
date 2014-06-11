@@ -20,6 +20,7 @@ Plugin 'Wolfy87/vim-enmasse'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-sexp'
+Plugin 'justinmk/vim-sneak'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'myusuf3/numbers.vim'
@@ -64,9 +65,6 @@ Plugin 'edkolev/promptline.vim'
 Plugin 'embear/vim-localvimrc'
   let g:localvimrc_ask=0
   let g:localvimrc_sandbox=0
-
-Plugin 'justinmk/vim-sneak'
-  let g:sneak#streak=1
 
 Plugin 'kien/ctrlp.vim'
   let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
