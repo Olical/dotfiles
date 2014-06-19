@@ -20,7 +20,6 @@ Plugin 'Wolfy87/vim-enmasse'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-sexp'
-Plugin 'justinmk/vim-sneak'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'myusuf3/numbers.vim'
@@ -37,6 +36,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-vinegar'
 Plugin 'walm/jshint.vim'
+
+Plugin 'justinmk/vim-sneak'
+  let g:sneak#streak = 1
 
 Plugin 'Raimondi/delimitMate'
   let delimitMate_expand_cr=1
