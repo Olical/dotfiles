@@ -3,33 +3,25 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Specify all bundles.
+" So Vundle can update itself.
 Plugin 'gmarik/Vundle.vim'
 
-" Syntax and language improvements.
-Plugin 'derekwyatt/vim-scala'
-Plugin 'helino/vim-json'
-Plugin 'pangloss/vim-javascript'
-Plugin 'tpope/vim-markdown'
-Plugin 'mxw/vim-jsx'
-
-" General.
+" Plugins without settings.
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'PeterRincker/vim-argumentative'
 Plugin 'Wolfy87/vim-enmasse'
-Plugin 'guns/vim-clojure-highlight'
-Plugin 'guns/vim-clojure-static'
-Plugin 'guns/vim-sexp'
+Plugin 'helino/vim-json'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'myusuf3/numbers.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-leiningen'
+Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
@@ -37,6 +29,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-vinegar'
 Plugin 'walm/jshint.vim'
 
+" Plugins with settings.
 Plugin 'justinmk/vim-sneak'
   let g:sneak#streak = 1
 
@@ -72,6 +65,7 @@ Plugin 'kien/ctrlp.vim'
   let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 
 Plugin 'kien/rainbow_parentheses.vim'
+  let g:rbpt_max = 21
   let g:rbpt_colorpairs = [
     \['blue', '#FF6000'],
     \['cyan', '#00FFFF'],
@@ -96,8 +90,6 @@ Plugin 'kien/rainbow_parentheses.vim'
     \['White', '#c0c0c0'],
   \]
 
-  let g:rbpt_max = 21
-
   augroup RainbowParentheses
     autocmd!
     autocmd VimEnter * RainbowParenthesesActivate
@@ -115,34 +107,12 @@ Plugin 'nathanaelkane/vim-indent-guides'
     autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=white ctermbg=236
   augroup END
 
-Plugin 'rking/ag.vim'
-  nnoremap <silent> <leader>a :set opfunc=<SID>AgMotion<CR>g@
-  xnoremap <silent> <leader>a :<C-U>call <SID>AgMotion(visualmode())<CR>
-
-  nnoremap <bs> :Ag! '\b<c-r><c-w>\b'<cr>
-  xnoremap <silent> <bs> :<C-U>call <SID>AgMotion(visualmode())<CR>
-
-  function! s:CopyMotionForType(type)
-    if a:type ==# 'v'
-      silent execute "normal! `<" . a:type . "`>y"
-    elseif a:type ==# 'char'
-      silent execute "normal! `[v`]y"
-    endif
-  endfunction
-
-  function! s:AgMotion(type) abort
-    let reg_save = @@
-    call s:CopyMotionForType(a:type)
-    execute "normal! :Ag! --literal " . shellescape(@@) . "\<cr>"
-    let @@ = reg_save
-  endfunction
-
 Plugin 'scrooloose/syntastic'
   let g:syntastic_check_on_open=1
   let g:syntastic_mode_map={
     \'mode': 'active',
     \'active_filetypes': [],
-    \'passive_filetypes': ['html', 'cpp', 'java', 'scala']
+    \'passive_filetypes': ['java']
   \}
 
 Plugin 'sjl/gundo.vim'
@@ -151,7 +121,6 @@ Plugin 'sjl/gundo.vim'
 " Enable some syntax settings that had to be disabled for Vundle.
 call vundle#end()
 filetype plugin indent on
-
 
 " Promptline config uses autoload which is only setup by this point.
 let g:promptline_preset = {
