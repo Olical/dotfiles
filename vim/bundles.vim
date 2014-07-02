@@ -112,7 +112,7 @@ Plugin 'scrooloose/syntastic'
   let g:syntastic_mode_map={
     \'mode': 'active',
     \'active_filetypes': [],
-    \'passive_filetypes': ['java']
+    \'passive_filetypes': ['html', 'java']
   \}
 
 Plugin 'sjl/gundo.vim'
