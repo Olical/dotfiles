@@ -18,3 +18,7 @@ nnoremap <leader>f :tab sp<CR>
 
 " Rebuild the tags.
 nnoremap <F5> :GenerateTags<CR>
+
+" Pull from either side of a git conflict.
+nnoremap <leader>gl :diffget LOCAL<CR>
+nnoremap <leader>gr :diffget REMOTE<CR>
