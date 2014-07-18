@@ -94,6 +94,7 @@ Plugin 'kien/rainbow_parentheses.vim'
     autocmd!
     autocmd VimEnter * RainbowParenthesesActivate
     autocmd BufEnter * RainbowParenthesesLoadRound
+    autocmd BufEnter * RainbowParenthesesLoadSquare
   augroup END
 
 Plugin 'nathanaelkane/vim-indent-guides'
