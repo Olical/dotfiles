@@ -66,4 +66,4 @@ augroup GUIBell
 augroup END
 
 " Improve the speed for updating the status line when leaving insert mode.
-set ttimeoutlen=50
+set timeoutlen=2000 ttimeoutlen=0
