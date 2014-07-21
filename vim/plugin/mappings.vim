@@ -22,6 +22,3 @@ nnoremap <F5> :GenerateTags<CR>
 " Pull from either side of a git conflict.
 nnoremap <leader>gl :diffget LOCAL<CR>
 nnoremap <leader>gr :diffget REMOTE<CR>
-
-" Use the jk roll to exit insert mode.
-inoremap jk <Esc>
