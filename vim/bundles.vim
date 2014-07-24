@@ -15,7 +15,6 @@ Plugin 'guns/vim-sexp'
 Plugin 'helino/vim-json'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'mhinz/vim-signify'
-Plugin 'myusuf3/numbers.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-abolish'
@@ -122,6 +121,9 @@ Plugin 'scrooloose/syntastic'
 
 Plugin 'sjl/gundo.vim'
   nnoremap <silent> <leader>u :GundoToggle<CR>
+
+Plugin 'myusuf3/numbers.vim'
+  nnoremap <leader>l :NumbersToggle<CR>
 
 " Enable some syntax settings that had to be disabled for Vundle.
 call vundle#end()
