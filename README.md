@@ -57,4 +57,11 @@ Add this to `~/.vimrc`.
 source $HOME/.vim/config.vim
 ```
 
+## Things you'll probably also want
+
+ * [autojump][] (package manager)
+ * [git-smart][] (`gem install git-smart`)
+
 [twitter]: https://twitter.com/OliverCaldwell
+[autojump]: https://github.com/joelthelion/autojump
+[git-smart]: https://github.com/geelen/git-smart
