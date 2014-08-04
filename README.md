@@ -57,6 +57,13 @@ Add this to `~/.vimrc`.
 source $HOME/.vim/config.vim
 ```
 
+Then compile [YouCompleteMe][].
+
+```bash
+cd .vim
+./compile/ycm.sh
+```
+
 ## Things you'll probably also want
 
  * [autojump][] (package manager)
@@ -65,3 +72,4 @@ source $HOME/.vim/config.vim
 [twitter]: https://twitter.com/OliverCaldwell
 [autojump]: https://github.com/joelthelion/autojump
 [git-smart]: https://github.com/geelen/git-smart
+[youcompleteme]: https://github.com/Valloric/YouCompleteMe
