@@ -67,6 +67,8 @@ Plugin 'embear/vim-localvimrc'
 
 Plugin 'kien/ctrlp.vim'
   let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
+  nnoremap <leader>ta :CtrlPTag<CR>
+  nnoremap <leader>tb :CtrlPBufTag<CR>
 
 Plugin 'kien/rainbow_parentheses.vim'
   let g:rbpt_max = 21

@@ -17,8 +17,12 @@ nnoremap <leader>w :%s/\s\+$//e<CR>
 nnoremap <leader>f :tab sp<CR>
 
 " Rebuild the tags.
-nnoremap <F5> :GenerateTags<CR>
+nnoremap <leader>tg :GenerateTags<CR>
 
 " Pull from either side of a git conflict.
 nnoremap <leader>gl :diffget LOCAL<CR>
 nnoremap <leader>gr :diffget REMOTE<CR>
+
+" Quick session bindings.
+nnoremap <leader>sw :mksession! .quicksave.vim<CR>
+nnoremap <leader>sr :source .quicksave.vim<CR>
