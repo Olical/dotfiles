@@ -7,3 +7,8 @@ set nocompatible
 
 " Include all of the bundle configuration.
 source $HOME/.vim/bundles.vim
+
+" Load all configuration modules.
+for f in split(glob('~/.vim/modules/*.vim'), '\n')
+  exe 'source' f
+endfor
