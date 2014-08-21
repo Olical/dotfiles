@@ -38,8 +38,8 @@ set relativenumber
 set listchars=tab:▸\ ,trail:·
 set list
 
-" Enable mouse support.
-set mouse=a
+" Enable mouse support for normal mode.
+set mouse=n
 set ttymouse=xterm2
 
 " Don't reset cursor to start of line when moving around.
