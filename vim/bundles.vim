@@ -8,7 +8,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugins without settings.
 Plugin 'Lokaltog/vim-distinguished'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'PeterRincker/vim-argumentative'
 Plugin 'Wolfy87/vim-enmasse'
 Plugin 'guns/vim-clojure-highlight'
@@ -36,6 +35,9 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'walm/jshint.vim'
 
 " Plugins with settings.
+Plugin 'Lokaltog/vim-easymotion'
+  map <space> <Plug>(easymotion-prefix)
+
 Plugin 'Raimondi/delimitMate'
   let delimitMate_expand_cr=1
 
