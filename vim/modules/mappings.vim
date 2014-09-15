@@ -2,7 +2,7 @@
 let maplocalleader = "|"
 
 " Clears the search.
-nnoremap <silent> <leader>c/ :nohlsearch<CR>
+nnoremap <silent> <leader>c/ :let @/ = ""<CR>
 
 " Deletes the hidden buffers.
 function DeleteHiddenBuffers()
