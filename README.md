@@ -64,6 +64,12 @@ cd .vim
 ./compile/ycm.sh
 ```
 
+### emacs
+
+```bash
+ln -s ~/dotfiles/emacs/emacs.el ~/.emacs
+```
+
 ## Things you'll probably also want
 
  * [autojump][] (package manager)
