@@ -1,9 +1,8 @@
 syntax on
 
 try
-  colorscheme molokai
-  let g:rehash256 = 1
-  let g:molokai_original = 1
+  colorscheme lucius
+  LuciusBlack
 catch
   " Nothing to see here.
 endtry

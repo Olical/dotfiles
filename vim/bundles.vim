@@ -6,6 +6,9 @@ call vundle#begin()
 " So Vundle can update itself.
 Plugin 'gmarik/Vundle.vim'
 
+" Colour scheme.
+Plugin 'jonathanfilip/vim-lucius'
+
 " Plugins without settings.
 Plugin 'PeterRincker/vim-argumentative'
 Plugin 'Wolfy87/vim-enmasse'
@@ -18,7 +21,6 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
-Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
@@ -60,7 +62,8 @@ Plugin 'bling/vim-airline'
 
 Plugin 'edkolev/promptline.vim'
   let g:promptline_powerline_symbols=0
-  " Rest of config at bottom so it has access to autoload.
+  let g:promptline_theme = 'airline'
+  let g:promptline_preset = 'clear'
 
 Plugin 'embear/vim-localvimrc'
   let g:localvimrc_ask=0
@@ -132,11 +135,3 @@ Plugin 'myusuf3/numbers.vim'
 " Enable some syntax settings that had to be disabled for Vundle.
 call vundle#end()
 filetype plugin indent on
-
-" Promptline config uses autoload which is only setup by this point.
-let g:promptline_preset = {
-  \'a' : [ promptline#slices#user() ],
-  \'b' : [ promptline#slices#jobs(), promptline#slices#vcs_branch() ],
-  \'c' : [ promptline#slices#cwd() ],
-  \'warn' : [ promptline#slices#last_exit_code() ]
-\}
