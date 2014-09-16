@@ -1,5 +1,12 @@
 syntax on
-colorscheme distinguished
+
+try
+  colorscheme molokai
+  let g:rehash256 = 1
+  let g:molokai_original = 1
+catch
+  " Nothing to see here.
+endtry
 
 " Improve screen clearing by using the background colour.
 set t_ut=

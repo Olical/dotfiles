@@ -7,7 +7,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins without settings.
-Plugin 'Lokaltog/vim-distinguished'
 Plugin 'PeterRincker/vim-argumentative'
 Plugin 'Wolfy87/vim-enmasse'
 Plugin 'guns/vim-clojure-highlight'
@@ -19,6 +18,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
+Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
