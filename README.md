@@ -66,8 +66,10 @@ cd .vim
 
 ### emacs
 
+Add this to `~/.emacs`.
+
 ```bash
-ln -s ~/dotfiles/emacs/emacs.el ~/.emacs
+(load "~/dotfiles/emacs/init.el")
 ```
 
 ## Things you'll probably also want
