@@ -4,7 +4,8 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(defvar packages '(evil))
+(defvar packages '(evil
+		   evil-tabs))
 
 (defun packages-installed-p ()
   (loop for p in packages
@@ -22,3 +23,7 @@
 
 (require 'evil)
 (evil-mode t)
+
+
+(require 'evil-tabs)
+(global-evil-tabs-mode t)
