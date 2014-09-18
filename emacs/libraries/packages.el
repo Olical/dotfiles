@@ -6,7 +6,9 @@
 
 (defvar packages '(zenburn-theme
 		   evil
-		   evil-tabs
+		   evil-nerd-commenter
+		   evil-jumper
+		   evil-surround
 		   linum-relative
 		   smart-mode-line
 		   ace-jump-mode))
@@ -32,8 +34,15 @@
 (evil-mode t)
 
 
-(require 'evil-tabs)
-(global-evil-tabs-mode t)
+(require 'evil-nerd-commenter)
+(evilnc-default-hotkeys)
+
+
+(require 'evil-jumper)
+
+
+(require 'evil-surround)
+(global-evil-surround-mode t)
 
 
 (require 'linum-relative)
