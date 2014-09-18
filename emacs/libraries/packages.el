@@ -8,6 +8,7 @@
 		   evil
 		   evil-tabs
 		   linum-relative
+		   smart-mode-line
 		   ace-jump-mode))
 
 (defun packages-installed-p ()
@@ -37,6 +38,11 @@
 
 (require 'linum-relative)
 (global-linum-mode t)
+
+
+(require 'smart-mode-line)
+(sml/setup)
+(sml/apply-theme 'respectful)
 
 
 (require 'ace-jump-mode)
