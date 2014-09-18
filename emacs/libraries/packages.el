@@ -5,10 +5,12 @@
 (package-initialize)
 
 (defvar packages '(zenburn-theme
+		   evil-leader
 		   evil
 		   evil-nerd-commenter
 		   evil-jumper
 		   evil-surround
+		   evil-matchit
 		   linum-relative
 		   smart-mode-line
 		   ace-jump-mode))
@@ -30,6 +32,10 @@
 (load-theme 'zenburn t)
 
 
+(require 'evil-leader)
+(global-evil-leader-mode)
+
+
 (require 'evil)
 (evil-mode t)
 
@@ -45,11 +51,16 @@
 (global-evil-surround-mode t)
 
 
+(require 'evil-matchit)
+(global-evil-matchit-mode t)
+
+
 (require 'linum-relative)
 (global-linum-mode t)
 
 
 (require 'smart-mode-line)
+(setq sml/no-confirm-load-theme t)
 (sml/setup)
 (sml/apply-theme 'respectful)
 
