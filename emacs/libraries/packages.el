@@ -4,7 +4,8 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(defvar packages '(evil
+(defvar packages '(zenburn-theme
+		   evil
 		   evil-tabs))
 
 (defun packages-installed-p ()
@@ -19,6 +20,9 @@
   (dolist (p packages)
     (when (not (package-installed-p p))
       (package-install p))))
+
+
+(load-theme 'zenburn t)
 
 
 (require 'evil)
