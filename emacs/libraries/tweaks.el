@@ -6,6 +6,3 @@
 
 (setq inhibit-splash-screen t)
 (setq make-backup-files nil)
-
-(require 'linum)
-(global-linum-mode t)

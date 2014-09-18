@@ -6,7 +6,9 @@
 
 (defvar packages '(zenburn-theme
 		   evil
-		   evil-tabs))
+		   evil-tabs
+		   linum-relative
+		   ace-jump-mode))
 
 (defun packages-installed-p ()
   (loop for p in packages
@@ -31,3 +33,11 @@
 
 (require 'evil-tabs)
 (global-evil-tabs-mode t)
+
+
+(require 'linum-relative)
+(global-linum-mode t)
+
+
+(require 'ace-jump-mode)
+(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
