@@ -13,7 +13,8 @@
 		   evil-matchit
 		   linum-relative
 		   smart-mode-line
-		   ace-jump-mode))
+		   ace-jump-mode
+		   helm))
 
 (defun packages-installed-p ()
   (loop for p in packages
@@ -28,42 +29,27 @@
     (when (not (package-installed-p p))
       (package-install p))))
 
-
 (load-theme 'zenburn t)
 
-
 (require 'evil-leader)
-(global-evil-leader-mode)
-
-
 (require 'evil)
-(evil-mode t)
-
-
 (require 'evil-nerd-commenter)
-(evilnc-default-hotkeys)
-
-
 (require 'evil-jumper)
-
-
 (require 'evil-surround)
-(global-evil-surround-mode t)
-
-
 (require 'evil-matchit)
+(require 'linum-relative)
+(require 'smart-mode-line)
+(require 'ace-jump-mode)
+(require 'helm-config)
+
+(global-evil-leader-mode)
+(evil-mode t)
+(evilnc-default-hotkeys)
+(global-evil-surround-mode t)
 (global-evil-matchit-mode t)
 
-
-(require 'linum-relative)
 (global-linum-mode t)
 
-
-(require 'smart-mode-line)
 (setq sml/no-confirm-load-theme t)
 (sml/setup)
 (sml/apply-theme 'respectful)
-
-
-(require 'ace-jump-mode)
-(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)

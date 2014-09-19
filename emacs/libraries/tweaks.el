@@ -6,7 +6,3 @@
 
 (setq inhibit-splash-screen t)
 (setq make-backup-files nil)
-
-(require 'dired-x)
-(define-key evil-normal-state-map (kbd "-") 'dired-jump)
-(define-key dired-mode-map (kbd "-") 'dired-up-directory)
