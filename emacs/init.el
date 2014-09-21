@@ -5,13 +5,25 @@
 (add-hook 'after-init-hook '(lambda ()
                               (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
                               (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-			      (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))))
+                              (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))))
 
+;; No splash screen.
 (setq inhibit-splash-screen t)
+
+;; No excess files.
 (setq make-backup-files nil)
+
+;; Start maximised.
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
+
+;; Always show line numbers.
 (global-linum-mode t)
+
+;; Show matching parenthesis.
 (show-paren-mode t)
+
+;; Use spaces, not tabs, and default to four.
+(setq-default tab-width 4 indent-tabs-mode nil)
 
 ;; Package definition.
 (setq el-get-sources
@@ -43,7 +55,14 @@
 
         (:name autopair
                :after (progn
-                        (autopair-global-mode)))))
+                        (autopair-global-mode)))
+
+        (:name helm
+               :after (progn
+                        (require 'helm-config)
+                        (global-set-key (kbd "C-c h") 'helm-mini)
+                        (helm-mode t))
+               :depends async)))
 
 (setq my:el-get-packages '(linum-relative
                            evil-jumper))
