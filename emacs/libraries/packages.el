@@ -5,7 +5,6 @@
 (package-initialize)
 
 (defvar packages '(zenburn-theme
-		   evil-leader
 		   evil
 		   evil-nerd-commenter
 		   evil-jumper
@@ -31,25 +30,26 @@
 
 (load-theme 'zenburn t)
 
-(require 'evil-leader)
-(require 'evil)
-(require 'evil-nerd-commenter)
 (require 'evil-jumper)
-(require 'evil-surround)
-(require 'evil-matchit)
-(require 'linum-relative)
-(require 'smart-mode-line)
 (require 'ace-jump-mode)
 (require 'helm-config)
 
-(global-evil-leader-mode)
-(evil-mode t)
-(evilnc-default-hotkeys)
-(global-evil-surround-mode t)
-(global-evil-matchit-mode t)
+(require 'evil)
+  (evil-mode t)
 
-(global-linum-mode t)
+(require 'evil-nerd-commenter)
+  (evilnc-default-hotkeys)
 
-(setq sml/no-confirm-load-theme t)
-(sml/setup)
-(sml/apply-theme 'respectful)
+(require 'evil-surround)
+  (global-evil-surround-mode t)
+
+(require 'evil-matchit)
+  (global-evil-matchit-mode t)
+
+(require 'linum-relative)
+  (global-linum-mode t)
+
+(require 'smart-mode-line)
+  (setq sml/no-confirm-load-theme t)
+  (sml/setup)
+  (sml/apply-theme 'respectful)

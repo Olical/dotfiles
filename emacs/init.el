@@ -1,6 +1,5 @@
 (defvar libraries '("packages"
-                    "tweaks"
-		    "mappings"))
+                    "tweaks"))
 
 (defvar init-path (or load-file-name (buffer-file-name)))
 (defvar current-directory
