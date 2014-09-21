@@ -62,10 +62,15 @@
                         (require 'helm-config)
                         (global-set-key (kbd "C-c h") 'helm-mini)
                         (helm-mode t))
-               :depends async)))
+               :depends async)
+
+        (:name projectile
+               :after (progn
+                        (projectile-global-mode)))))
 
 (setq my:el-get-packages '(linum-relative
-                           evil-jumper))
+                           evil-jumper
+                           magit))
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
