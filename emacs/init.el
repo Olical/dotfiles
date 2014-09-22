@@ -1,8 +1,7 @@
 (require 'cl)
-(require 'dired-x)
 (require 'whitespace)
 
-;; General tweaks.
+;; Remove clutter.
 (add-hook 'after-init-hook '(lambda ()
                               (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
                               (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
@@ -124,5 +123,6 @@
 
 (add-to-list 'el-get-recipe-path "~/dotfiles/emacs/el-get-recipes")
 
+;; Remove old and install new packages.
 (el-get-cleanup my:el-get-packages)
 (el-get 'sync my:el-get-packages)
