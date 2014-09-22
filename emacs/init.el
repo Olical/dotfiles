@@ -71,11 +71,15 @@
                :after (progn
                         (global-evil-surround-mode t)))
 
-        (:name smart-mode-line
+        (:name solarized-emacs
                :after (progn
-                        (setq sml/no-confirm-load-theme t)
-                        (sml/setup)
-                        (sml/apply-theme 'respectful)))
+                        (setq solarized-distinct-fringe-background t)
+                        (setq solarized-high-contrast-mode-line t)
+                        (load-theme 'solarized-dark t)))
+
+        (:name powerline
+               :after (progn
+                        (powerline-center-evil-theme)))
 
         (:name ace-jump-mode
                :after (progn
