@@ -1,5 +1,6 @@
 (require 'cl)
 (require 'dired-x)
+(require 'whitespace)
 
 ;; General tweaks.
 (add-hook 'after-init-hook '(lambda ()
@@ -24,6 +25,13 @@
 
 ;; Use spaces, not tabs, and default to four.
 (setq-default tab-width 4 indent-tabs-mode nil)
+
+;; Display all whitespace.
+(setq whitespace-style '(face
+                         tabs
+                         tab-mark
+                         trailing))
+(global-whitespace-mode)
 
 ;; Package definition.
 (setq el-get-sources
@@ -66,7 +74,29 @@
 
         (:name projectile
                :after (progn
-                        (projectile-global-mode)))))
+                        (projectile-global-mode)))
+
+        (:name rainbow-delimiters
+               :after (progn
+                        (global-rainbow-delimiters-mode)))
+
+        (:name company-mode
+               :after (progn
+                        (global-company-mode)
+                        (global-set-key (kbd "C-SPC") 'company-complete-common)))
+
+        (:name company-tern
+               :after (progn
+                        (add-to-list 'company-backends 'company-tern))
+               :depends company-mode)
+
+        (:name flycheck
+               :after (progn
+                        global-flycheck-mode))
+
+        (:name js2-mode
+               :after (progn
+                        (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))))))
 
 (setq my:el-get-packages '(linum-relative
                            evil-jumper
