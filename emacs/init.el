@@ -93,16 +93,19 @@
 
         (:name flycheck
                :after (progn
-                        global-flycheck-mode))
+                        (global-flycheck-mode)))
 
         (:name js2-mode
                :after (progn
-                        (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))))))
+                        (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))))
+
+        (:name company-tern
+               :after (progn
+                        (add-hook 'js2-mode-hook (lambda () (tern-mode t)))))))
 
 (setq my:el-get-packages '(linum-relative
                            evil-jumper
-                           magit
-                           company-tern))
+                           magit))
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
