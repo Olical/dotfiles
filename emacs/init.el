@@ -88,7 +88,7 @@
         (:name company-tern
                :after (progn
                         (add-to-list 'company-backends 'company-tern))
-               :depends company-mode)
+               :depends (company-mode tern))
 
         (:name flycheck
                :after (progn
