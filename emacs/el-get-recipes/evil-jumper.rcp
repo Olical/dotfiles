@@ -1,6 +1,5 @@
 (:name evil-jumper
        :description "Replaces the implementation of the jump list such that it mimics more closely with Vim's behavior"
-       :minimum-emacs-version "24"
        :type github
        :pkgname "bling/evil-jumper"
        :depends (evil))

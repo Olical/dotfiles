@@ -123,7 +123,12 @@
 
         (:name magit
                :after (progn
-                        (global-set-key (kbd "C-c g") 'magit-status)))))
+                        (global-set-key (kbd "C-c g") 'magit-status)))
+
+        (:name indent-guide
+               :after (progn
+                        (setq indent-guide-recursive t)
+                        (indent-guide-global-mode)))))
 
 (setq my:el-get-packages '(linum-relative
                            json-mode
