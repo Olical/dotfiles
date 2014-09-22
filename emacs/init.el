@@ -126,6 +126,7 @@
                         (global-set-key (kbd "C-c g") 'magit-status)))))
 
 (setq my:el-get-packages '(linum-relative
+                           json-mode
                            evil-jumper
                            dired+))
 
