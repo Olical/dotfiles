@@ -36,6 +36,10 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
+;; Font.
+(add-to-list 'default-frame-alist '(font . "terminus"))
+(set-face-attribute 'default t :font "terminus")
+
 ;; Package definition.
 (setq el-get-sources
       '((:name evil
