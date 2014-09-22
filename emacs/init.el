@@ -36,6 +36,8 @@
 ;; Package definition.
 (setq el-get-sources
       '((:name evil
+               :before (progn
+                         (setq evil-want-C-u-scroll t))
                :after (progn
                         (evil-mode t)))
 
