@@ -1,0 +1,6 @@
+(:name evil-jumper
+       :description "Motions and text objects for delimited arguments in Evil"
+       :minimum-emacs-version "24"
+       :type github
+       :pkgname "wcsmith/evil-args"
+       :depends (evil))
