@@ -105,7 +105,8 @@
 
 (setq my:el-get-packages '(linum-relative
                            evil-jumper
-                           magit))
+                           magit
+                           grunt))
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
