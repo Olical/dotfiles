@@ -48,9 +48,20 @@
                :after (progn
                         (evil-mode t)))
 
-        (:name color-theme-zenburn
+        (:name evil-args
                :after (progn
-                        (load-theme 'zenburn t)))
+                        ;; Bind evil-args text objects.
+                        (define-key evil-inner-text-objects-map "a" 'evil-inner-arg)
+                        (define-key evil-outer-text-objects-map "a" 'evil-outer-arg)
+
+                        ;; Bind evil-forward/backward-args.
+                        (define-key evil-normal-state-map "L" 'evil-forward-arg)
+                        (define-key evil-normal-state-map "H" 'evil-backward-arg)
+                        (define-key evil-motion-state-map "L" 'evil-forward-arg)
+                        (define-key evil-motion-state-map "H" 'evil-backward-arg)
+
+                        ;; Bind evil-jump-out-args.
+                        (define-key evil-normal-state-map "K" 'evil-jump-out-args)))
 
         (:name evil-nerd-commenter
                :after (progn
