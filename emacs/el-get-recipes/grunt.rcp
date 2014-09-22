@@ -1,6 +1,0 @@
-(:name grunt
-       :description "Provides a way to invoke grunt tasks without needing a separate shell or buffer management per task or project"
-       :type github
-       :pkgname "gempesaw/grunt.el"
-       :features grunt
-       :depends (dash))
