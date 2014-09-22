@@ -87,11 +87,6 @@
                         (global-company-mode)
                         (global-set-key (kbd "C-SPC") 'company-complete-common)))
 
-        (:name company-tern
-               :after (progn
-                        (add-to-list 'company-backends 'company-tern))
-               :depends (company-mode tern))
-
         (:name flycheck
                :after (progn
                         global-flycheck-mode))
@@ -102,7 +97,8 @@
 
 (setq my:el-get-packages '(linum-relative
                            evil-jumper
-                           magit))
+                           magit
+                           company-tern))
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
