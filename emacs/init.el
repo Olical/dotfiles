@@ -104,12 +104,15 @@
 
         (:name company-tern
                :after (progn
-                        (add-hook 'js2-mode-hook (lambda () (tern-mode t)))))))
+                        (add-hook 'js2-mode-hook (lambda () (tern-mode t)))))
+
+        (:name magit
+               :after (progn
+                        (global-set-key (kbd "C-c g") 'magit-status)))))
 
 (setq my:el-get-packages '(linum-relative
                            evil-jumper
-                           magit
-                           grunt))
+                           dired+))
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
