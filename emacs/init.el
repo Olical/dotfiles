@@ -94,7 +94,7 @@
                         (require 'helm-config)
                         (global-set-key (kbd "C-c h") 'helm-mini)
                         (helm-mode t))
-               :depends async)
+               :depends (async))
 
         (:name projectile
                :after (progn
@@ -128,7 +128,8 @@
 (setq my:el-get-packages '(linum-relative
                            json-mode
                            evil-jumper
-                           dired+))
+                           dired+
+                           helm-ag))
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
