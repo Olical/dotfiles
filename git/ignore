@@ -2,6 +2,7 @@
 .tern-project
 .tern-port
 \#*#
+\.#*
 .tags
 .srclist
 .lvimrc
