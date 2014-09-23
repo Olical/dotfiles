@@ -132,7 +132,13 @@
 
         (:name ag
                :after (progn
-                        (require 'ag)))))
+                        (require 'ag)))
+
+        (:name exec-path-from-shell
+               :after (progn
+                        (require 'exec-path-from-shell)
+                        (when (memq window-system '(mac ns))
+                          (exec-path-from-shell-initialize))))))
 
 (setq my:el-get-packages '(linum-relative
                            json-mode
