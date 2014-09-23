@@ -107,7 +107,7 @@
         (:name company-mode
                :after (progn
                         (global-company-mode)
-                        (global-set-key (kbd "C-SPC") 'company-complete-common)))
+                        (global-set-key (kbd "M-SPC") 'company-complete-common)))
 
         (:name flycheck
                :after (progn
