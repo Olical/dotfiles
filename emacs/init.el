@@ -41,7 +41,7 @@
 (set-face-attribute 'default t :font "terminus")
 
 ;; Package definition.
-(setq el-get-sources
+(defvar el-get-sources
       '((:name evil
                :before (progn
                          (setq evil-want-C-u-scroll t))
@@ -107,7 +107,7 @@
         (:name company-mode
                :after (progn
                         (global-company-mode)
-                        (global-set-key (kbd "M-SPC") 'company-complete-common)))
+                        (global-set-key (kbd "M-n") 'company-complete-common)))
 
         (:name flycheck
                :after (progn
@@ -138,9 +138,15 @@
                :after (progn
                         (require 'exec-path-from-shell)
                         (when (memq window-system '(mac ns))
-                          (exec-path-from-shell-initialize))))))
+                          (exec-path-from-shell-initialize))))
 
-(setq my:el-get-packages '(linum-relative
+        (:name yasnippet
+               :after (progn
+                        (require 'yasnippet)
+                        (setq yas-snippet-dirs '("~/dotfiles/emacs/snippets"))
+                        (yas-global-mode t)))))
+
+(defvar my:el-get-packages '(linum-relative
                            json-mode
                            evil-jumper
                            dired+))
