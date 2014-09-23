@@ -128,13 +128,16 @@
         (:name indent-guide
                :after (progn
                         (setq indent-guide-recursive t)
-                        (indent-guide-global-mode)))))
+                        (indent-guide-global-mode)))
+
+        (:name ag
+               :after (progn
+                        (require 'ag)))))
 
 (setq my:el-get-packages '(linum-relative
                            json-mode
                            evil-jumper
-                           dired+
-                           helm-ag))
+                           dired+))
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
