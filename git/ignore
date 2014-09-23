@@ -3,6 +3,7 @@
 .tern-port
 \#*#
 \.#*
+TAGS
 .tags
 .srclist
 .lvimrc
