@@ -153,7 +153,8 @@
 (defvar my:el-get-packages '(linum-relative
                            json-mode
                            evil-jumper
-                           dired+))
+                           dired+
+                           dtrt-indent))
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
