@@ -1,6 +1,10 @@
 (require 'cl)
 (require 'whitespace)
 
+;; Raise the GC threshold massively.
+;; My machine can handle it.
+(setq gc-cons-threshold 20000000)
+
 ;; Remove clutter.
 (add-hook 'after-init-hook '(lambda ()
                               (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
