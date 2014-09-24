@@ -57,10 +57,11 @@ Add this to `~/.vimrc`.
 source $HOME/.vim/config.vim
 ```
 
-Then compile [YouCompleteMe][].
+Then sync and compile [YouCompleteMe][].
 
 ```bash
 cd .vim
+./sync-bundles.sh
 ./compile/ycm.sh
 ```
 
