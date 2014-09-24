@@ -110,7 +110,7 @@
 
         (:name company-mode
                :after (progn
-                        (global-company-mode)
+                        (add-hook 'after-init-hook 'global-company-mode)
                         (global-set-key (kbd "M-n") 'company-complete-common)))
 
         (:name flycheck
