@@ -18,6 +18,12 @@ Add this to `~/.bashrc`.
 source ~/dotfiles/bash/config.sh
 ```
 
+You may want to set the terminal colours in `~/.bashrc` too.
+
+```bash
+export TERM=xterm-256color
+```
+
 ### ctags
 
 ```bash
