@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+#name : beforeEach
+# --
+beforeEach(function () {
+    $0
+});

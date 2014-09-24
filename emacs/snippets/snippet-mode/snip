@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+#name : snippet
+# --
+# -*- mode: snippet -*-
+#name : $1
+# --
+$0
