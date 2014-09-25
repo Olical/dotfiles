@@ -18,6 +18,12 @@ Add this to `~/.bashrc`.
 source ~/dotfiles/bash/config.sh
 ```
 
+You may want to set the terminal colours in `~/.bashrc` too.
+
+```bash
+export TERM=xterm-256color
+```
+
 ### ctags
 
 ```bash
@@ -57,10 +63,11 @@ Add this to `~/.vimrc`.
 source $HOME/.vim/config.vim
 ```
 
-Then compile [YouCompleteMe][].
+Then sync and compile [YouCompleteMe][].
 
 ```bash
 cd .vim
+./sync-bundles.sh
 ./compile/ycm.sh
 ```
 
