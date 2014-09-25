@@ -1,4 +1,11 @@
-(require 'cl)
+;;; dotfiles --- My personal Emacs configuration.
+
+;;; Commentary:
+
+;; This configuration was born from my Vim usage.  Opinions may vary.
+
+;;; Code:
+
 (require 'whitespace)
 
 ;; Raise the GC threshold massively.
@@ -36,7 +43,7 @@
                          trailing))
 (global-whitespace-mode)
 
-; Spell checking.
+;; Spell checking.
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
@@ -46,115 +53,109 @@
 
 ;; Package definition.
 (defvar el-get-sources
-      '((:name evil
-               :before (progn
-                         (setq evil-want-C-u-scroll t))
-               :after (progn
-                        (evil-mode t)))
+  '((:name evil
+           :before (progn
+                     (setq evil-want-C-u-scroll t))
+           :after (progn
+                    (evil-mode t)))
 
-        (:name evil-args
-               :after (progn
-                        ;; Bind evil-args text objects.
-                        (define-key evil-inner-text-objects-map "a" 'evil-inner-arg)
-                        (define-key evil-outer-text-objects-map "a" 'evil-outer-arg)
+    (:name evil-args
+           :after (progn
+                    ;; Bind evil-args text objects.
+                    (define-key evil-inner-text-objects-map "a" 'evil-inner-arg)
+                    (define-key evil-outer-text-objects-map "a" 'evil-outer-arg)
 
-                        ;; Bind evil-forward/backward-args.
-                        (define-key evil-normal-state-map "L" 'evil-forward-arg)
-                        (define-key evil-normal-state-map "H" 'evil-backward-arg)
-                        (define-key evil-motion-state-map "L" 'evil-forward-arg)
-                        (define-key evil-motion-state-map "H" 'evil-backward-arg)
+                    ;; Bind evil-forward/backward-args.
+                    (define-key evil-normal-state-map "L" 'evil-forward-arg)
+                    (define-key evil-normal-state-map "H" 'evil-backward-arg)
+                    (define-key evil-motion-state-map "L" 'evil-forward-arg)
+                    (define-key evil-motion-state-map "H" 'evil-backward-arg)
 
-                        ;; Bind evil-jump-out-args.
-                        (define-key evil-normal-state-map "K" 'evil-jump-out-args)))
+                    ;; Bind evil-jump-out-args.
+                    (define-key evil-normal-state-map "K" 'evil-jump-out-args)))
 
-        (:name evil-nerd-commenter
-               :after (progn
-                        (evilnc-default-hotkeys)))
+    (:name evil-nerd-commenter
+           :after (progn
+                    (evilnc-default-hotkeys)))
 
-        (:name evil-surround
-               :after (progn
-                        (global-evil-surround-mode t)))
+    (:name evil-surround
+           :after (progn
+                    (global-evil-surround-mode t)))
 
-        (:name solarized-emacs
-               :after (progn
-                        (setq solarized-distinct-fringe-background t)
-                        (setq solarized-high-contrast-mode-line t)
-                        (load-theme 'solarized-dark t)))
+    (:name solarized-emacs
+           :after (progn
+                    (setq solarized-distinct-fringe-background t)
+                    (setq solarized-high-contrast-mode-line t)
+                    (load-theme 'solarized-dark t)))
 
-        (:name powerline
-               :after (progn
-                        (powerline-center-evil-theme)))
+    (:name powerline
+           :after (progn
+                    (powerline-center-evil-theme)))
 
-        (:name ace-jump-mode
-               :after (progn
-                        (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)))
+    (:name ace-jump-mode
+           :after (progn
+                    (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)))
 
-        (:name autopair
-               :after (progn
-                        (autopair-global-mode)))
+    (:name autopair
+           :after (progn
+                    (autopair-global-mode)))
 
-        (:name helm
-               :after (progn
-                        (require 'helm-config)
-                        (global-set-key (kbd "C-c h") 'helm-mini)
-                        (helm-mode t))
-               :depends (async))
+    (:name helm
+           :after (progn
+                    (require 'helm-config)
+                    (global-set-key (kbd "C-c h") 'helm-mini)
+                    (helm-mode t))
+           :depends (async))
 
-        (:name projectile
-               :after (progn
-                        (projectile-global-mode)))
+    (:name projectile
+           :after (progn
+                    (projectile-global-mode)))
 
-        (:name rainbow-delimiters
-               :after (progn
-                        (global-rainbow-delimiters-mode)))
+    (:name rainbow-delimiters
+           :after (progn
+                    (global-rainbow-delimiters-mode)))
 
-        (:name company-mode
-               :after (progn
-                        (global-company-mode)
-                        (global-set-key (kbd "M-n") 'company-complete-common)))
+    (:name company-mode
+           :after (progn
+                    (global-company-mode)
+                    (global-set-key (kbd "M-n") 'company-complete-common)))
 
-        (:name flycheck
-               :after (progn
-                        (global-flycheck-mode)))
+    (:name flycheck
+           :after (progn
+                    (global-flycheck-mode)))
 
-        (:name js2-mode
-               :after (progn
-                        (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))))
+    (:name js2-mode
+           :after (progn
+                    (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))))
 
-        (:name company-tern
-               :after (progn
-                        (add-hook 'js2-mode-hook (lambda () (tern-mode t)))))
+    (:name company-tern
+           :after (progn
+                    (add-hook 'js2-mode-hook (lambda () (tern-mode t)))))
 
-        (:name magit
-               :after (progn
-                        (global-set-key (kbd "C-c g") 'magit-status)))
+    (:name magit
+           :after (progn
+                    (global-set-key (kbd "C-c g") 'magit-status)))
 
-        (:name indent-guide
-               :after (progn
-                        (setq indent-guide-recursive t)
-                        (indent-guide-global-mode)))
+    (:name indent-guide
+           :after (progn
+                    (setq indent-guide-recursive t)
+                    (indent-guide-global-mode)))
 
-        (:name ag
-               :after (progn
-                        (require 'ag)))
+    (:name ag
+           :after (progn
+                    (require 'ag)))
 
-        (:name exec-path-from-shell
-               :after (progn
-                        (require 'exec-path-from-shell)
-                        (when (memq window-system '(mac ns))
-                          (exec-path-from-shell-initialize))))
+    (:name exec-path-from-shell
+           :after (progn
+                    (require 'exec-path-from-shell)
+                    (when (memq window-system '(mac ns))
+                      (exec-path-from-shell-initialize))))
 
-        (:name yasnippet
-               :after (progn
-                        (require 'yasnippet)
-                        (setq yas-snippet-dirs '("~/dotfiles/emacs/snippets"))
-                        (yas-global-mode t)))))
-
-(defvar my:el-get-packages '(linum-relative
-                           json-mode
-                           evil-jumper
-                           dired+
-                           dtrt-indent))
+    (:name yasnippet
+           :after (progn
+                    (require 'yasnippet)
+                    (setq yas-snippet-dirs '("~/dotfiles/emacs/snippets"))
+                    (yas-global-mode t)))))
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
@@ -165,13 +166,19 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
-(setq my:el-get-packages
-      (append
-       my:el-get-packages
-       (loop for src in el-get-sources collect (el-get-source-name src))))
-
 (add-to-list 'el-get-recipe-path "~/dotfiles/emacs/el-get-recipes")
 
+(defvar my-packages
+  (append '(linum-relative
+            json-mode
+            evil-jumper
+            dired+
+            dtrt-indent)
+          (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
+
 ;; Remove old and install new packages.
-(el-get-cleanup my:el-get-packages)
-(el-get 'sync my:el-get-packages)
+(el-get-cleanup my-packages)
+(el-get 'sync my-packages)
+
+(provide 'init)
+;;; init.el ends here
