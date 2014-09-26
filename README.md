@@ -79,6 +79,8 @@ Add this to `~/.emacs`.
 (load "~/dotfiles/emacs/init.el")
 ```
 
+You'll also have to compile helm after el-get clones it with `make`.
+
 ## Things you'll probably also want
 
  * [autojump][] (package manager)
