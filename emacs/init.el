@@ -173,7 +173,9 @@
             json-mode
             evil-jumper
             dired+
-            dtrt-indent)
+            dtrt-indent
+            clojure-mode
+            cider)
           (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
 
 ;; Remove old and install new packages.
