@@ -83,6 +83,11 @@
            :after (progn
                     (global-evil-surround-mode t)))
 
+    (:name evil-paredit
+           :after (progn
+                    (add-hook 'clojure-mode-hook 'evil-paredit-mode)
+                    (add-hook 'emacs-lisp-mode-hook 'evil-paredit-mode)))
+
     (:name solarized-emacs
            :after (progn
                     (setq solarized-distinct-fringe-background t)
