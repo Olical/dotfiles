@@ -95,7 +95,8 @@
 
     (:name ace-jump-mode
            :after (progn
-                    (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)))
+                    (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode))
+           :depends (evil))
 
     (:name autopair
            :after (progn
@@ -179,9 +180,20 @@
             cider)
           (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
 
-;; Remove old and install new packages.
-(el-get-cleanup my-packages)
-(el-get 'sync my-packages)
+;; Package helpers.
+(defun dotfiles-sync ()
+  "Remove old and install new packages"
+  (interactive)
+  (el-get-cleanup my-packages)
+  (el-get 'sync my-packages))
+
+(defun dotfiles-update ()
+  "Updates EVERYTHING"
+  (interactive)
+  (el-get-update-all))
+
+;; Initialise packages.
+(el-get 'sync)
 
 (provide 'init)
 ;;; init.el ends here
