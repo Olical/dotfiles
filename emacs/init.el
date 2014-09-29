@@ -50,6 +50,7 @@
 ;; Font.
 (add-to-list 'default-frame-alist '(font . "terminus"))
 (set-face-attribute 'default t :font "terminus")
+(set-face-attribute 'default nil :height 100)
 
 ;; Package definition.
 (defvar el-get-sources
