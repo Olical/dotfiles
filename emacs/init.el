@@ -143,6 +143,11 @@
            :after (progn
                     (global-set-key (kbd "C-c g") 'magit-status)))
 
+    (:name magit-gitflow
+           :after (progn
+                    (require 'magit-gitflow)
+                    (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)))
+
     (:name indent-guide
            :after (progn
                     (setq indent-guide-recursive t)
