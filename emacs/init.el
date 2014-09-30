@@ -155,8 +155,7 @@
 
     (:name ag
            :after (progn
-                    (require 'ag))
-           :depends (dash s))
+                    (require 'ag)))
 
     (:name exec-path-from-shell
            :after (progn
