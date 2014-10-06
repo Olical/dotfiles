@@ -187,7 +187,8 @@
             dired+
             dtrt-indent
             clojure-mode
-            cider)
+            cider
+            cucumber)
           (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
 
 ;; Package helpers.
