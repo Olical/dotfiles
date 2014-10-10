@@ -27,9 +27,6 @@
 ;; Start maximised.
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 
-;; Always show line numbers.
-(global-linum-mode t)
-
 ;; Show matching parenthesis.
 (show-paren-mode t)
 
@@ -100,8 +97,11 @@
 
     (:name ace-jump-mode
            :after (progn
-                    (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode))
-           :depends (evil))
+                    (space-chord-define evil-normal-state-map "w" 'evil-ace-jump-word-mode)
+                    (space-chord-define evil-normal-state-map "f" 'evil-ace-jump-char-mode)
+                    (space-chord-define evil-normal-state-map "t" 'evil-ace-jump-char-to-mode)
+                    (space-chord-define evil-normal-state-map "j" 'evil-ace-jump-line-mode))
+           :depends (evil space-chord))
 
     (:name autopair
            :after (progn
@@ -167,7 +167,11 @@
            :after (progn
                     (require 'yasnippet)
                     (setq yas-snippet-dirs '("~/dotfiles/emacs/snippets"))
-                    (yas-global-mode t)))))
+                    (yas-global-mode t)))
+
+    (:name git-gutter
+           :after (progn
+                    (global-git-gutter-mode t)))))
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
@@ -181,8 +185,7 @@
 (add-to-list 'el-get-recipe-path "~/dotfiles/emacs/el-get-recipes")
 
 (defvar my-packages
-  (append '(linum-relative
-            json-mode
+  (append '(json-mode
             evil-jumper
             dired+
             dtrt-indent
