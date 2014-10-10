@@ -1,5 +1,0 @@
-(:name indent-guide
-       :description "Show vertical lines to guide indentation"
-       :type github
-       :pkgname "zk-phi/indent-guide"
-       :features indent-guide)

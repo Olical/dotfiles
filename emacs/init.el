@@ -5,7 +5,7 @@
 ;; This configuration was born from my Vim usage.  Opinions may vary.
 
 ;;; Code:
-
+(require 'package)
 (require 'whitespace)
 
 ;; Raise the GC threshold massively.
@@ -49,165 +49,146 @@
 (set-face-attribute 'default t :font "terminus")
 (set-face-attribute 'default nil :height 120)
 
-;; Package definition.
-(defvar el-get-sources
-  '((:name evil
-           :before (progn
-                     (setq evil-want-C-u-scroll t))
-           :after (progn
-                    (evil-mode t)))
+;; Main package list to fetch from melpa.
+(defvar dotfiles-packages
+  '(evil
+    evil-args
+    evil-nerd-commenter
+    evil-surround
+    evil-paredit
+    evil-numbers
+    solarized-theme
+    powerline
+    ace-jump-mode
+    autopair
+    helm
+    projectile
+    helm-projectile
+    rainbow-delimiters
+    company
+    company-tern
+    js2-mode
+    flycheck
+    magit
+    magit-gitflow
+    git-gutter
+    indent-guide
+    ag
+    json-mode
+    evil-jumper
+    dired+
+    dtrt-indent
+    clojure-mode
+    cider
+    feature-mode))
 
-    (:name evil-args
-           :after (progn
-                    ;; Bind evil-args text objects.
-                    (define-key evil-inner-text-objects-map "a" 'evil-inner-arg)
-                    (define-key evil-outer-text-objects-map "a" 'evil-outer-arg)
+;; Package manager configuration.
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+(package-initialize)
 
-                    ;; Bind evil-forward/backward-args.
-                    (define-key evil-normal-state-map "L" 'evil-forward-arg)
-                    (define-key evil-normal-state-map "H" 'evil-backward-arg)
-                    (define-key evil-motion-state-map "L" 'evil-forward-arg)
-                    (define-key evil-motion-state-map "H" 'evil-backward-arg)
-
-                    ;; Bind evil-jump-out-args.
-                    (define-key evil-normal-state-map "K" 'evil-jump-out-args)))
-
-    (:name evil-nerd-commenter
-           :after (progn
-                    (evilnc-default-hotkeys)))
-
-    (:name evil-surround
-           :after (progn
-                    (global-evil-surround-mode t)))
-
-    (:name evil-paredit
-           :after (progn
-                    (add-hook 'clojure-mode-hook 'evil-paredit-mode)
-                    (add-hook 'emacs-lisp-mode-hook 'evil-paredit-mode)))
-
-    (:name solarized-emacs
-           :after (progn
-                    (setq solarized-distinct-fringe-background t)
-                    (setq solarized-high-contrast-mode-line t)
-                    (load-theme 'solarized-dark t)))
-
-    (:name powerline
-           :after (progn
-                    (powerline-center-evil-theme)))
-
-    (:name ace-jump-mode
-           :after (progn
-                    (space-chord-define evil-normal-state-map "w" 'evil-ace-jump-word-mode)
-                    (space-chord-define evil-normal-state-map "f" 'evil-ace-jump-char-mode)
-                    (space-chord-define evil-normal-state-map "t" 'evil-ace-jump-char-to-mode)
-                    (space-chord-define evil-normal-state-map "j" 'evil-ace-jump-line-mode))
-           :depends (evil space-chord))
-
-    (:name autopair
-           :after (progn
-                    (autopair-global-mode)))
-
-    (:name helm
-           :after (progn
-                    (require 'helm-config)
-                    (global-set-key (kbd "C-c h") 'helm-mini)
-                    (helm-mode t))
-           :depends (async))
-
-    (:name projectile
-           :after (progn
-                    (projectile-global-mode)))
-
-    (:name rainbow-delimiters
-           :after (progn
-                    (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)))
-
-    (:name company-mode
-           :after (progn
-                    (global-company-mode)
-                    (global-set-key (kbd "M-n") 'company-complete-common)))
-
-    (:name flycheck
-           :after (progn
-                    (global-flycheck-mode)))
-
-    (:name js2-mode
-           :after (progn
-                    (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))))
-
-    (:name company-tern
-           :after (progn
-                    (add-hook 'js2-mode-hook (lambda () (tern-mode t)))))
-
-    (:name magit
-           :after (progn
-                    (global-set-key (kbd "C-c g") 'magit-status)))
-
-    (:name magit-gitflow
-           :after (progn
-                    (require 'magit-gitflow)
-                    (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)))
-
-    (:name indent-guide
-           :after (progn
-                    (setq indent-guide-recursive t)
-                    (indent-guide-global-mode)))
-
-    (:name ag
-           :after (progn
-                    (require 'ag)))
-
-    (:name exec-path-from-shell
-           :after (progn
-                    (require 'exec-path-from-shell)
-                    (when (memq window-system '(mac ns))
-                      (exec-path-from-shell-initialize))))
-
-    (:name yasnippet
-           :after (progn
-                    (require 'yasnippet)
-                    (setq yas-snippet-dirs '("~/dotfiles/emacs/snippets"))
-                    (yas-global-mode t)))
-
-    (:name git-gutter
-           :after (progn
-                    (global-git-gutter-mode t)))))
-
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-
-;; Package manager (el-get) setup.
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
-
-(add-to-list 'el-get-recipe-path "~/dotfiles/emacs/el-get-recipes")
-
-(defvar my-packages
-  (append '(json-mode
-            evil-jumper
-            dired+
-            dtrt-indent
-            clojure-mode
-            cider
-            cucumber)
-          (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
-
-;; Package helpers.
 (defun dotfiles-sync ()
-  "Remove old and install new packages"
+  "Install packages."
   (interactive)
-  (el-get-cleanup my-packages)
-  (el-get 'sync my-packages))
+  (package-refresh-contents)
+  (dolist (p dotfiles-packages)
+    (when (not (package-installed-p p))
+      (package-install p))))
 
-(defun dotfiles-update ()
-  "Updates EVERYTHING"
-  (interactive)
-  (el-get-update-all))
+;; A macro from milkbox.net to make load hooks easier.
+(defmacro after (mode &rest body)
+  "`eval-after-load' MODE evaluate BODY."
+  (declare (indent defun))
+  `(eval-after-load ,mode
+     '(progn ,@body)))
 
-;; Initialise packages.
-(el-get 'sync)
+;; Individual package configuration.
+(defvar evil-want-C-u-scroll t)
+(after `evil-autoloads
+  (evil-mode t))
+
+(after `evil-args-autoloads
+  ;; Bind evil-args text objects.
+  (define-key evil-inner-text-objects-map "a" 'evil-inner-arg)
+  (define-key evil-outer-text-objects-map "a" 'evil-outer-arg)
+
+  ;; Bind evil-forward/backward-args.
+  (define-key evil-normal-state-map "L" 'evil-forward-arg)
+  (define-key evil-normal-state-map "H" 'evil-backward-arg)
+  (define-key evil-motion-state-map "L" 'evil-forward-arg)
+  (define-key evil-motion-state-map "H" 'evil-backward-arg)
+
+  ;; Bind evil-jump-out-args.
+  (define-key evil-normal-state-map "K" 'evil-jump-out-args))
+
+(after `evil-nerd-commenter-autoloads
+  (evilnc-default-hotkeys))
+
+(after `evil-surround-autoloads
+  (global-evil-surround-mode t))
+
+(after `evil-paredit-autoloads
+  (add-hook 'clojure-mode-hook 'evil-paredit-mode)
+  (add-hook 'emacs-lisp-mode-hook 'evil-paredit-mode))
+
+(after `evil-numbers-autoloads
+  (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
+  (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt))
+
+(after `solarized-theme-autoloads
+  (defvar solarized-distinct-fringe-background t)
+  (defvar solarized-high-contrast-mode-line t)
+  (load-theme 'solarized-dark t))
+
+(after `powerline-autoloads
+  (powerline-center-evil-theme))
+
+(after `ace-jump-mode-autoloads
+  (define-key evil-normal-state-map (kbd "SPC") 'evil-ace-jump-word-mode)
+  (define-key evil-normal-state-map (kbd "M-SPC") 'evil-ace-jump-line-mode)
+  (define-key evil-normal-state-map (kbd "S-M-SPC") 'evil-ace-jump-char-mode))
+
+(after `autopair-autoloads
+  (autopair-global-mode))
+
+(after `helm-autoloads
+  (require 'helm-config)
+  (global-set-key (kbd "C-c h") 'helm-mini)
+  (helm-mode t))
+
+(after `projectile-autoloads
+  (projectile-global-mode))
+
+(after `rainbow-delimiters-autoloads
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
+
+(after `company-autoloads
+  (global-company-mode)
+  (global-set-key (kbd "M-n") 'company-complete-common))
+
+(after `flycheck-autoloads
+  (global-flycheck-mode))
+
+(after `js2-mode-autoloads
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)))
+
+(after `company-tern-autoloads
+  (add-hook 'js2-mode-hook (lambda () (tern-mode t))))
+
+(after `magit-autoloads
+  (global-set-key (kbd "C-c g") 'magit-status))
+
+(after `magit-gitflow-autoloads
+  (require 'magit-gitflow)
+  (add-hook 'magit-mode-hook 'turn-on-magit-gitflow))
+
+(after `indent-guide-autoloads
+  (setq indent-guide-recursive t)
+  (indent-guide-global-mode))
+
+(after `git-gutter-autoloads
+  (global-git-gutter-mode t))
 
 (provide 'init)
 ;;; init.el ends here

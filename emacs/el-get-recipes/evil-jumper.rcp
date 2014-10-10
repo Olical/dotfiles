@@ -1,5 +1,0 @@
-(:name evil-jumper
-       :description "Replaces the implementation of the jump list such that it mimics more closely with Vim's behavior"
-       :type github
-       :pkgname "bling/evil-jumper"
-       :depends (evil))

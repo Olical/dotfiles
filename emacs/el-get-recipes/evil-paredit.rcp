@@ -1,6 +1,0 @@
-(:name evil-paredit
-       :description "Evil extension to integrate nicely with paredit"
-       :type github
-       :pkgname "roman/evil-paredit"
-       :depends (evil paredit)
-       :features evil-paredit)

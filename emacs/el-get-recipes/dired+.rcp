@@ -1,5 +1,0 @@
-(:name dired+
-       :description "Extensions to Dired"
-       :type github
-       :pkgname "emacsmirror/dired-plus"
-       :features dired+)

@@ -1,5 +1,0 @@
-(:name evil-jumper
-       :description "Motions and text objects for delimited arguments in Evil"
-       :type github
-       :pkgname "wcsmith/evil-args"
-       :depends (evil))
