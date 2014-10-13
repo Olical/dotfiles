@@ -129,7 +129,9 @@
 
 (after `evil-paredit-autoloads
   (add-hook 'clojure-mode-hook 'evil-paredit-mode)
-  (add-hook 'emacs-lisp-mode-hook 'evil-paredit-mode))
+  (add-hook 'emacs-lisp-mode-hook 'evil-paredit-mode)
+  (add-hook 'clojure-mode-hook 'paredit-mode)
+  (add-hook 'emacs-lisp-mode-hook 'paredit-mode))
 
 (after `evil-numbers-autoloads
   (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
