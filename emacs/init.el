@@ -72,7 +72,6 @@
     magit
     magit-gitflow
     git-gutter
-    indent-guide
     ag
     json-mode
     evil-jumper
@@ -182,10 +181,6 @@
 (after `magit-gitflow-autoloads
   (require 'magit-gitflow)
   (add-hook 'magit-mode-hook 'turn-on-magit-gitflow))
-
-(after `indent-guide-autoloads
-  (setq indent-guide-recursive t)
-  (indent-guide-global-mode))
 
 (after `git-gutter-autoloads
   (global-git-gutter-mode t))
