@@ -79,7 +79,8 @@
     dtrt-indent
     clojure-mode
     cider
-    feature-mode))
+    feature-mode
+    exec-path-from-shell))
 
 ;; Package manager configuration.
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -186,6 +187,10 @@
 
 (after `git-gutter-autoloads
   (global-git-gutter-mode t))
+
+(after `exec-path-from-shell-autoloads
+  (when (memq window-system '(mac ns))
+    (exec-path-from-shell-initialize)))
 
 (provide 'init)
 ;;; init.el ends here
