@@ -49,6 +49,12 @@
 (set-face-attribute 'default t :font "terminus")
 (set-face-attribute 'default nil :height 120)
 
+;; HTML indentation correction.
+(add-hook 'html-mode-hook
+          (lambda ()
+            ;; Default indentation is usually 2 spaces, changing to 4.
+            (set (make-local-variable 'sgml-basic-offset) 4)))
+
 ;; Main package list to fetch from melpa.
 (defvar dotfiles-packages
   '(evil
