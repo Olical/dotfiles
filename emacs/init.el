@@ -97,10 +97,64 @@
 (defun dotfiles-sync ()
   "Install packages."
   (interactive)
+  (delete-obsolete-packages)
   (package-refresh-contents)
   (dolist (p dotfiles-packages)
     (when (not (package-installed-p p))
       (package-install p))))
+
+;; Package pruning tools.
+(defun flatten (mylist)
+  "Flatten MYLIST, taken from http://rosettacode.org/wiki/Flatten_a_list#Emacs_Lisp for sanity."
+  (cond
+   ((null mylist) nil)
+   ((atom mylist) (list mylist))
+   (t
+    (append (flatten (car mylist)) (flatten (cdr mylist))))))
+
+(defun filter (predicate subject)
+  "Use PREDICATE to filter SUBJECT and return the result."
+  (delq nil
+        (mapcar (lambda (x) (and (funcall predicate x) x)) subject)))
+
+(defun get-package-name (package)
+  "Fetch the symbol name of a PACKAGE."
+  (car package))
+
+(defun get-package-version (package)
+  "Return the version string for PACKAGE."
+  (package-version-join (aref (cdr package) 0)))
+
+(defun get-package-dependencies (package)
+  "Fetch the symbol list of PACKAGE dependencies."
+  (mapcar 'car (elt (cdr package) 1)))
+
+(defun get-packages-dependency-tree (packages)
+  "Recursively fetch all dependencies for PACKAGES and return a tree of lists."
+  (mapcar (lambda (package)
+            (list (get-package-name package)
+                  (get-packages-dependency-tree (get-package-dependencies package))))
+          (get-packages-as-alist packages)))
+
+(defun get-packages-as-alist (packages)
+  "Return the list of PACKAGES symbols as an alist, containing version and dependency information."
+  (filter (lambda (n) (car (member (car n) packages))) package-alist))
+
+(defun get-all-current-dependencies ()
+  "Return all dependencies for the current package list."
+  (delq nil (delete-dups (flatten (get-packages-dependency-tree dotfiles-packages)))))
+
+(defun get-all-obsolete-packages ()
+  "Return all packages in an alist which are not contained in the current dependency tree."
+  (filter (lambda (n) (not (member (car n) (get-all-current-dependencies)))) package-alist))
+
+(defun delete-obsolete-packages ()
+  "Delete all packages that are no longer referenced in my dependencies list or their dependencies."
+  (mapc (lambda (n)
+          (package-delete
+           (symbol-name (get-package-name n))
+           (get-package-version n)))
+        (get-all-obsolete-packages)))
 
 ;; A macro from milkbox.net to make load hooks easier.
 (defmacro after (mode &rest body)
