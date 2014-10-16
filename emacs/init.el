@@ -102,18 +102,6 @@
     (when (not (package-installed-p p))
       (package-install p))))
 
-;; A macro from milkbox.net to make load hooks easier.
-(defmacro after (mode &rest body)
-  "`eval-after-load' MODE evaluate BODY."
-  (declare (indent defun))
-  `(eval-after-load ,mode
-     '(progn ,@body)))
-
-;; Individual package configuration.
-(defvar evil-want-C-u-scroll t)
-(after `evil-autoloads
-  (evil-mode t))
-
 ;; Package pruning tools.
 (defun get-package-name (package)
   "Fetch the symbol name of a PACKAGE."
@@ -121,13 +109,13 @@
 
 (defun get-package-dependencies (package)
   "Fetch the symbol list of PACKAGE dependencies."
-  (elt (cdr package) 1))
+  (mapcar 'car (elt (cdr package) 1)))
 
 (defun get-packages-dependency-tree (packages)
   "Recursively fetch all dependencies for PACKAGES and return a tree of lists."
   (mapcar (lambda (package)
             (list (get-package-name package)
-                  (get-package-dependency-tree (get-package-dependencies package))))
+                  (get-packages-dependency-tree (get-package-dependencies package))))
           (get-packages-as-alist packages)))
 
 (defun get-packages-as-alist (packages)
@@ -144,7 +132,19 @@
    (t
     (append (flatten (car mylist)) (flatten (cdr mylist))))))
 
-(mapconcat 'symbol-name (flatten (get-packages-dependency-tree dotfiles-packages)) ", ")
+(get-packages-dependency-tree dotfiles-packages)
+
+;; A macro from milkbox.net to make load hooks easier.
+(defmacro after (mode &rest body)
+  "`eval-after-load' MODE evaluate BODY."
+  (declare (indent defun))
+  `(eval-after-load ,mode
+     '(progn ,@body)))
+
+;; Individual package configuration.
+(defvar evil-want-C-u-scroll t)
+(after `evil-autoloads
+  (evil-mode t))
 
 (after `evil-args-autoloads
   ;; Bind evil-args text objects.
