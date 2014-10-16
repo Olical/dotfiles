@@ -114,6 +114,38 @@
 (after `evil-autoloads
   (evil-mode t))
 
+;; Package pruning tools.
+(defun get-package-name (package)
+  "Fetch the symbol name of a PACKAGE."
+  (car package))
+
+(defun get-package-dependencies (package)
+  "Fetch the symbol list of PACKAGE dependencies."
+  (elt (cdr package) 1))
+
+(defun get-packages-dependency-tree (packages)
+  "Recursively fetch all dependencies for PACKAGES and return a tree of lists."
+  (mapcar (lambda (package)
+            (list (get-package-name package)
+                  (get-package-dependency-tree (get-package-dependencies package))))
+          (get-packages-as-alist packages)))
+
+(defun get-packages-as-alist (packages)
+  "Return the list of PACKAGES symbols as an alist, containing version and dependency information."
+  (delq nil
+        (mapcar (lambda (package)
+                  (and (car (member (car package) packages)) package)) package-alist)))
+
+(defun flatten (mylist)
+  "Flatten MYLIST, taken from http://rosettacode.org/wiki/Flatten_a_list#Emacs_Lisp for sanity."
+  (cond
+   ((null mylist) nil)
+   ((atom mylist) (list mylist))
+   (t
+    (append (flatten (car mylist)) (flatten (cdr mylist))))))
+
+(mapconcat 'symbol-name (flatten (get-packages-dependency-tree dotfiles-packages)) ", ")
+
 (after `evil-args-autoloads
   ;; Bind evil-args text objects.
   (define-key evil-inner-text-objects-map "a" 'evil-inner-arg)
