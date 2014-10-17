@@ -63,6 +63,9 @@
     evil-surround
     evil-paredit
     evil-numbers
+    evil-visualstar
+    evil-jumper
+    evil-leader
     solarized-theme
     powerline
     ace-jump-mode
@@ -80,7 +83,6 @@
     git-gutter
     ag
     json-mode
-    evil-jumper
     dired+
     dtrt-indent
     clojure-mode
@@ -197,6 +199,9 @@
 (after `evil-numbers-autoloads
   (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
   (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt))
+
+(after `evil-leader-autoloads
+  (global-evil-leader-mode))
 
 (after `solarized-theme-autoloads
   (defvar solarized-distinct-fringe-background t)
