@@ -100,7 +100,7 @@
 (defun dotfiles-sync ()
   "Install packages."
   (interactive)
-  (delete-obsolete-packages)
+  (prune-installed-packages dotfiles-packages)
   (package-refresh-contents)
   (dolist (p dotfiles-packages)
     (when (not (package-installed-p p))
@@ -143,21 +143,21 @@
   "Return the list of PACKAGES symbols as an alist, containing version and dependency information."
   (filter (lambda (n) (car (member (car n) packages))) package-alist))
 
-(defun get-all-current-dependencies ()
-  "Return all dependencies for the current package list."
-  (delq nil (delete-dups (flatten (get-packages-dependency-tree dotfiles-packages)))))
+(defun get-all-current-dependencies (packages)
+  "Return all packages found in PACKAGES with their dependencies recursively."
+  (delq nil (delete-dups (flatten (get-packages-dependency-tree packages)))))
 
-(defun get-all-obsolete-packages ()
-  "Return all packages in an alist which are not contained in the current dependency tree."
-  (filter (lambda (n) (not (member (car n) (get-all-current-dependencies)))) package-alist))
+(defun get-all-obsolete-packages (packages)
+  "Return all packages in an alist which are not contained in PACKAGES."
+  (filter (lambda (n) (not (member (car n) (get-all-current-dependencies packages)))) package-alist))
 
-(defun delete-obsolete-packages ()
-  "Delete all packages that are no longer referenced in my dependencies list or their dependencies."
+(defun prune-installed-packages (packages)
+  "Delete all packages not listed or depended on by anything in PACKAGES."
   (mapc (lambda (n)
           (package-delete
            (symbol-name (get-package-name n))
            (get-package-version n)))
-        (get-all-obsolete-packages)))
+        (get-all-obsolete-packages packages)))
 
 ;; A macro from milkbox.net to make load hooks easier.
 (defmacro after (mode &rest body)
