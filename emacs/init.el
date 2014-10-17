@@ -66,6 +66,7 @@
     evil-visualstar
     evil-jumper
     evil-leader
+    evil-search-highlight-persist
     solarized-theme
     powerline
     ace-jump-mode
@@ -201,7 +202,15 @@
   (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt))
 
 (after `evil-leader-autoloads
-  (global-evil-leader-mode))
+  (global-evil-leader-mode)
+  (evil-leader/set-key
+    "SPC" 'evil-search-highlight-persist-remove-all))
+
+(after `evil-visualstar-autoloads
+  (require 'evil-visualstar))
+
+(after `evil-search-highlight-persist-autoloads
+  (global-evil-search-highlight-persist t))
 
 (after `solarized-theme-autoloads
   (defvar solarized-distinct-fringe-background t)
