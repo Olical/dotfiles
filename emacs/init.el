@@ -55,6 +55,9 @@
             ;; Default indentation is usually 2 spaces, changing to 4.
             (set (make-local-variable 'sgml-basic-offset) 4)))
 
+;; ERC shenanigans.
+(erc-spelling-mode 1)
+
 ;; Main package list to fetch from melpa.
 (defvar dotfiles-packages
   '(evil
