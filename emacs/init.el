@@ -89,6 +89,7 @@
     clojure-mode
     cider
     feature-mode
+    smooth-scrolling
     exec-path-from-shell))
 
 ;; Package manager configuration.
@@ -261,6 +262,9 @@
 
 (after `git-gutter-autoloads
   (global-git-gutter-mode t))
+
+(after `smooth-scrolling-autoloads
+  (setq smooth-scroll-margin 3))
 
 (after `exec-path-from-shell-autoloads
   (when (memq window-system '(mac ns))
