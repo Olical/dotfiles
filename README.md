@@ -79,6 +79,7 @@ I use [spacemacs][] as a base and build atop of it with my own layer. Install an
 git clone --recursive http://github.com/syl20bnr/spacemacs ~/.emacs.d
 ln -s ~/dotfiles/emacs/Wolfy87 ~/.emacs.d/contrib/Wolfy87
 ln -s ~/dotfiles/emacs/spacemacs ~/.spacemacs
+echo "()" > ~/.emacs.d/projectile-bookmarks.eld
 ```
 
 The rest is automatic.
