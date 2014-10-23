@@ -73,19 +73,12 @@ cd .vim
 
 ### emacs
 
-I use [spacemacs][] as a base and build atop of it with my own layer.
+I use [spacemacs][] as a base and build atop of it with my own layer. Install and link everything with the lines below.
 
 ```bash
 git clone --recursive http://github.com/syl20bnr/spacemacs ~/.emacs.d
-ln -s ~/dotfiles/emacs ~/.emacs.d/contrib/dotfiles
-```
-
-Then apply my layer by adding this to your `~/.spacemacs`.
-
-```elisp
-(defvar dotspacemacs-configuration-layers '(dotfiles)
-  "List of contribution to load."
-)
+ln -s ~/dotfiles/emacs/Wolfy87 ~/.emacs.d/contrib/Wolfy87
+ln -s ~/dotfiles/emacs/spacemacs ~/.spacemacs
 ```
 
 The rest is automatic.

@@ -1,0 +1,30 @@
+;; -*- mode: emacs-lisp -*-
+;; This file is loaded by Spacemacs at startup.
+;; It must be stored in the home directory.
+
+;; Variables
+
+(defvar dotspacemacs-configuration-layers '(Wolfy87)
+  "List of contribution to load."
+)
+
+(defvar dotspacemacs-default-package-repository 'melpa-stable
+  "The default package repository used if no explicit repository has been
+specified with an installed package."
+)
+
+(defvar dotspacemacs-excluded-packages '()
+  "A list of packages and/or extensions that will not be install and loaded.")
+
+;; Functions
+
+(defun dotspacemacs/init ()
+  "User initialization for Spacemacs. This function is called at the very
+ startup."
+)
+
+(defun dotspacemacs/config ()
+  "This is were you can ultimately override default Spacemacs configuration.
+This function is called at the very end of Spacemacs initialization."
+  (load-theme 'solarized-dark t)
+)
