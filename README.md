@@ -73,13 +73,22 @@ cd .vim
 
 ### emacs
 
-Add this to `~/.emacs`.
+I use [spacemacs][] as a base and build atop of it with my own layer.
 
 ```bash
-(load "~/dotfiles/emacs/init.el")
+git clone --recursive http://github.com/syl20bnr/spacemacs ~/.emacs.d
+ln -s ~/dotfiles/emacs ~/.emacs.d/contrib/dotfiles
 ```
 
-You'll also have to compile helm after el-get clones it with `make`.
+Then apply my layer by adding this to your `~/.spacemacs`.
+
+```elisp
+(defvar dotspacemacs-configuration-layers '(dotfiles)
+  "List of contribution to load."
+)
+```
+
+The rest is automatic.
 
 ## Things you'll probably also want
 
@@ -90,3 +99,4 @@ You'll also have to compile helm after el-get clones it with `make`.
 [autojump]: https://github.com/joelthelion/autojump
 [git-smart]: https://github.com/geelen/git-smart
 [youcompleteme]: https://github.com/Valloric/YouCompleteMe
+[spacemacs]: https://github.com/syl20bnr/spacemacs
