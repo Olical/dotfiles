@@ -28,15 +28,17 @@
   (use-package evil-numbers
     :init
     (progn
-      (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
-      (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt))))
+      (evil-leader/set-key
+        "=" 'evil-numbers/inc-at-pt
+        "-" 'evil-numbers/dec-at-pt))))
 
 (defun Wolfy87/init-evil-search-highlight-persist ()
   (use-package evil-search-highlight-persist
     :init
     (progn
       (global-evil-search-highlight-persist t)
-      (evil-leader/set-key "cs" 'evil-search-highlight-persist-remove-all))))
+      (evil-leader/set-key
+        "cs" 'evil-search-highlight-persist-remove-all))))
 
 (defun Wolfy87/init-magit-gitflow ()
   (use-package magit-gitflow
