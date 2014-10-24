@@ -17,3 +17,6 @@
                          tab-mark
                          trailing))
 (global-whitespace-mode)
+
+;; Mode mappings.
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
