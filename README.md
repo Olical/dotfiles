@@ -73,13 +73,15 @@ cd .vim
 
 ### emacs
 
-Add this to `~/.emacs`.
+I use [spacemacs][] as a base and build atop of it with my own layer. Install and link everything with the lines below.
 
 ```bash
-(load "~/dotfiles/emacs/init.el")
+git clone --recursive http://github.com/syl20bnr/spacemacs ~/.emacs.d
+ln -s ~/dotfiles/emacs/spacemacs ~/.spacemacs
+echo "()" > ~/.emacs.d/projectile-bookmarks.eld
 ```
 
-You'll also have to compile helm after el-get clones it with `make`.
+The rest is automatic.
 
 ## Things you'll probably also want
 
@@ -90,3 +92,4 @@ You'll also have to compile helm after el-get clones it with `make`.
 [autojump]: https://github.com/joelthelion/autojump
 [git-smart]: https://github.com/geelen/git-smart
 [youcompleteme]: https://github.com/Valloric/YouCompleteMe
+[spacemacs]: https://github.com/syl20bnr/spacemacs
