@@ -18,5 +18,6 @@
                          trailing))
 (global-whitespace-mode)
 
-;; Mode mappings.
+;; Existing spacemacs core plugin configuration.
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(global-flycheck-mode)
