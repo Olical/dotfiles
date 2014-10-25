@@ -36,5 +36,4 @@ specified with an installed package."
 This function is called at the very end of Spacemacs initialization."
   (load-theme 'solarized-dark t)
   (global-flycheck-mode)
-  (global-evil-operator-comment-mode 0)
 )
