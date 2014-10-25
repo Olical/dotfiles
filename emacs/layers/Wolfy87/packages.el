@@ -1,7 +1,6 @@
 (defvar Wolfy87-packages
   '(
     evil-args
-    evil-nerd-commenter
     evil-numbers
     evil-search-highlight-persist
     magit-gitflow
@@ -24,12 +23,6 @@
 
       ;; Bind evil-jump-out-args.
       (define-key evil-normal-state-map "K" 'evil-jump-out-args))))
-
-(defun Wolfy87/init-evil-nerd-commenter ()
-  (use-package evil-nerd-commenter
-    :init
-    (progn
-      (evilnc-default-hotkeys))))
 
 (defun Wolfy87/init-evil-numbers ()
   (use-package evil-numbers
