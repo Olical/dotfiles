@@ -6,7 +6,6 @@
     evil-search-highlight-persist
     magit-gitflow
     smooth-scrolling
-    tern-auto-complete
     ))
 
 (defun Wolfy87/init-evil-args ()
@@ -61,10 +60,3 @@
       (setq scroll-margin 5
             scroll-conservatively 9999
             scroll-step 1))))
-
-(defun Wolfy87/init-tern-auto-complete ()
-  (use-package tern-auto-complete
-    :init
-    (progn
-      (tern-ac-setup)
-      (add-hook 'js2-mode-hook (lambda () (tern-mode t))))))
