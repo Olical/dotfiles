@@ -16,3 +16,6 @@
                          tab-mark
                          trailing))
 (global-whitespace-mode)
+
+;; Indentation for HTML should be four spaces.
+(setq sgml-basic-offset 4)
