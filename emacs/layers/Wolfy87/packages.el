@@ -3,7 +3,6 @@
     evil-args
     evil-numbers
     evil-search-highlight-persist
-    magit-gitflow
     smooth-scrolling
     ))
 
@@ -39,12 +38,6 @@
       (global-evil-search-highlight-persist t)
       (evil-leader/set-key
         "cs" 'evil-search-highlight-persist-remove-all))))
-
-(defun Wolfy87/init-magit-gitflow ()
-  (use-package magit-gitflow
-    :init
-    (progn
-      (add-hook 'magit-mode-hook 'turn-on-magit-gitflow))))
 
 (defun Wolfy87/init-smooth-scrolling ()
   (use-package smooth-scrolling
