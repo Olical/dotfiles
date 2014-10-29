@@ -5,7 +5,8 @@
 (setq-default dotspacemacs-fullscreen-at-startup t)
 
 (defun dotspacemacs/init ()
-  (defvar evil-want-C-u-scroll t))
+  (defvar evil-want-C-u-scroll t)
+  (set-default-font "Input Mono 12"))
 
 (defun dotspacemacs/config ()
   (load-theme 'solarized-dark t))
