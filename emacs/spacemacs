@@ -6,7 +6,7 @@
 
 (defun dotspacemacs/init ()
   (defvar evil-want-C-u-scroll t)
-  (set-default-font "Input Mono 12"))
+  (set-default-font "Input 12"))
 
 (defun dotspacemacs/config ()
   (load-theme 'solarized-dark t))
