@@ -1,13 +1,8 @@
 .DS_Store
 .tern-project
 .tern-port
-\#*#
-\.#*
-TAGS
 .tags
-.srclist
+.tagsources
 .lvimrc
 .projections.json
-.jshintrc
 .quicksave.vim
-*.orig
