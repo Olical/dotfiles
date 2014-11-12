@@ -1,17 +1,17 @@
 [user]
-	name = Oliver Caldwell
-	email = olliec87@gmail.com
+    name = Oliver Caldwell
+    email = olliec87@gmail.com
 [core]
-	editor = vim
-	excludesfile = ~/dotfiles/git/excludes.txt
+    editor = vim
+    excludesfile = ~/dotfiles/git/excludes.txt
 [color]
-	ui = true
+    ui = true
 [push]
-	default = simple
+    default = simple
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+    tool = vimdiff
+    conflictstyle = diff3
 [mergetool]
-	prompt = false
+    prompt = false

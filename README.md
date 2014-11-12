@@ -9,4 +9,4 @@ Need:
 
 Add ftdetect for {}.tmux.conf, {}.gitconfig
 
-`tools/` should contain update and install scripts.
+tools/install.sh will link and source files where required.
