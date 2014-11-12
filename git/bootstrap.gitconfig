@@ -3,7 +3,7 @@
 	email = olliec87@gmail.com
 [core]
 	editor = vim
-	excludesfile = ~/dotfiles/git/ignore
+	excludesfile = ~/dotfiles/git/excludes.txt
 [color]
 	ui = true
 [push]
