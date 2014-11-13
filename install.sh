@@ -2,5 +2,7 @@
 
 for script in $(ls */install.sh)
 do
-    $script
+    ./$script
 done
+
+./update.sh
