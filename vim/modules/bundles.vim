@@ -10,8 +10,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " List all plugins for NeoBundle to manage.
 " Configuration goes in the appropriate ~/.vim/modules/bundles/*.vim file.
 NeoBundle 'Keithbsmiley/tmux.vim'
-NeoBundle 'tpope/vim-sensible'
 NeoBundle 'Lokaltog/vim-distinguished'
+NeoBundle 'tpope/vim-sensible'
 
 " Finish NeoBundle configuration.
 call neobundle#end()
