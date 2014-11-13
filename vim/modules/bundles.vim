@@ -3,22 +3,24 @@
 if !1 | finish | endif
 
 " Load NeoBundle commands and star the package list.
-set runtimepath+=~/.vim/bundle/neobundle.vim/
+set runtimepath +=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " List all plugins for NeoBundle to manage.
 " Configuration goes in the appropriate ~/.vim/modules/bundles/*.vim file.
 NeoBundle 'Keithbsmiley/tmux.vim'
+NeoBundle 'tpope/vim-sensible'
+NeoBundle 'Lokaltog/vim-distinguished'
 
 " Finish NeoBundle configuration.
 call neobundle#end()
 filetype plugin indent on
-NeoBundleCheck
 
 " Load bundle configuration files for currently sourced bundles.
 for f in split(glob('~/.vim/modules/bundles/*.vim'), '\n')
-  if neobundle#is_sourced(fnamemodify(f, ':t:r'))
+  let bundle = fnamemodify(f, ':t:r')
+  if neobundle#is_installed(bundle) && neobundle#is_sourced(bundle)
     execute 'source' f
   endif
 endfor
