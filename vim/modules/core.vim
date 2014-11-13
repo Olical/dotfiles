@@ -33,3 +33,13 @@ set smartcase
 
 " Make session files minimal.
 set sessionoptions=blank,curdir,folds,help,tabpages,winsize
+
+" Make spelling problems easier to read.
+highlight clear SpellBad
+highlight clear SpellCap
+highlight clear SpellLocal
+highlight clear SpellRare
+highlight SpellBad cterm=underline
+highlight SpellCap cterm=underline
+highlight SpellLocal cterm=underline
+highlight SpellRare cterm=underline
