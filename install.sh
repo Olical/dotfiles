@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-# TODO Find all install.sh files and execute them with logging.
-# TODO Show dependencies. Die if any essentials are missing.
+for script in $(ls */install.sh)
+do
+    $script
+done
