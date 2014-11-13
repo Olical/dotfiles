@@ -2,4 +2,5 @@
 
 ln -s ~/dotfiles/vim ~/.vim
 echo "source $HOME/.vim/bootstrap.vim" >> ~/.vimrc
-git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
+mkdir ~/.vim/bundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim

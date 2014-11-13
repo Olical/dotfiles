@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-vim +PluginClean! +PluginInstall! +qall
+vim +NeoBundleClean! +NeoBundleInstall! +qall

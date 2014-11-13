@@ -1,1 +1,0 @@
-Add ftdetect for {}.tmux.conf, {}.gitconfig
