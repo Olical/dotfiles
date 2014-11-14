@@ -2,6 +2,13 @@
 set number
 set relativenumber
 
+" Use fource spaces as indentation.
+" This is just a default, filetypes may override.
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
 " Enable invisible characters.
 set list
 
@@ -23,9 +30,6 @@ set spelllang=en_gb
 set spellfile=$HOME/.vim/spell/en.utf-8.add
 set spell
 
-" Hilight searches.
-set hlsearch
-
 " Make search case insensitive, but become sensitive if an upper case
 " character is used.
 set ignorecase
@@ -33,13 +37,3 @@ set smartcase
 
 " Make session files minimal.
 set sessionoptions=blank,curdir,folds,help,tabpages,winsize
-
-" Make spelling problems easier to read.
-highlight clear SpellBad
-highlight clear SpellCap
-highlight clear SpellLocal
-highlight clear SpellRare
-highlight SpellBad cterm=underline
-highlight SpellCap cterm=underline
-highlight SpellLocal cterm=underline
-highlight SpellRare cterm=underline
