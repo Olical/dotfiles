@@ -4,4 +4,5 @@
 
 NeoBundle 'Keithbsmiley/tmux.vim'
 NeoBundle 'Lokaltog/vim-distinguished'
+NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-sensible'
