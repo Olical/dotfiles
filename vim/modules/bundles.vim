@@ -7,9 +7,8 @@ set runtimepath +=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Load all plugins for NeoBundle to manage.
-" Configuration goes in the appropriate ~/.vim/modules/bundles/*.vim file.
-source ~/.vim/modules/bundles/list.vim
+" Load bundle list for NeoBundle to manage.
+source ~/.vim/bundles.vim
 
 " Finish NeoBundle configuration.
 call neobundle#end()
