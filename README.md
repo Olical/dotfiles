@@ -18,6 +18,10 @@ Once the install is complete you'll want to configure a few of the Vim modules. 
 
 Now everything should be installed and running, just execute `update.sh` if you want to synchronise the Vim bundles.
 
+## Getting started
+
+Clone to `~/dotfiles`. Make sure you have the dependencies listed above (especially Vim and git!) then enter the newly cloned repository and execute `./install.sh`. That's it.
+
 ## Layout
 
 Every directory contains configuration for a different tool. They each hold an `install.sh` file which links files into `~/...` and an optional `update.sh` file which can fetch updates for dependencies, for example. The entry point for each module is called `boostrap.*` where `*` could be `vim`, `tmux.conf` or `gitconfig` for example.
