@@ -1,1 +1,1 @@
-nnoremap <leader>l :NumbersToggle<CR>
+nnoremap <leader>tn :NumbersToggle<CR>

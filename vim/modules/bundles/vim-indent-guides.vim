@@ -1,4 +1,4 @@
-nnoremap <silent> <leader>i :IndentGuidesToggle<CR>
+nnoremap <silent> <leader>ti :IndentGuidesToggle<CR>
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
 
