@@ -17,3 +17,8 @@ Will probably also want:
 
  * JSHint
  * autojump
+
+To do:
+
+ * Make tmux and Vim play nice.
+ * Make this file great.
