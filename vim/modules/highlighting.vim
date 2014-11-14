@@ -1,4 +1,4 @@
-" Hilight searches.
+" Highlight searches.
 set hlsearch
 
 function! s:after_colorscheme()
