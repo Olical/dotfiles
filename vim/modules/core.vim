@@ -25,3 +25,6 @@ set mouse=n
 
 " Make session files minimal.
 set sessionoptions=blank,curdir,folds,help,tabpages,winsize
+
+" Stop completion engines popping windows up.
+set completeopt-=preview
