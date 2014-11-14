@@ -1,95 +1,32 @@
 # dotfiles
 
-These are my personal dotfiles with the majority of the configuration around Vim. Feel free to base your own dotfiles on these, in fact, I encourage it. Using these settings blindly probably isn't a good idea though, it's set up exactly how I want things, not how you want them.
+These are my tools that I use heavily every day, I implore you to steal anything that isn't nailed down (so, everything) and to use it to your own advantage. If you want to get in touch about anything in here, please do so through GitHub (@Wolfy87) or [@OliverCaldwell][]. Just to show how much I want to you take things from here wholesale, I've added [the unlicence][].
 
-If you do wish to try any of this out though, all you have to do is source or symlink the config file from each directory. This varies depending on the tool. JSHint requires a symlink, but you can source with bash or Vim, for example.
+I have two scripts, `install.sh` and `update.sh`, which perform an initial setup and update things like my Vim bundles respectively. For the install to work you will need at least Vim and git installed. After that you may install these optional dependencies.
 
-Please contact me through [twitter][] or some other medium, such as signal fires, if you have a question. I hope you find this useful!
+ * tmux
+ * git-smart
+ * ag
+ * autojump
+ * JSHint
 
-## Installation (for my own benefit mainly)
+Once the install is complete you'll want to configure a few of the Vim modules. They can be found within `vim/bundles`.
 
-All of these instructions assume the repository has been cloned into your home directory under the name `dotfiles`.
+ * `install.sh` in `YouCompleteMe`
+ * `npm install` in `tern_for_vim`
+ * `make` in `vimproc`
 
-### bash
+Now everything should be installed and running, just execute `update.sh` if you want to synchronise the Vim bundles.
 
-Add this to `~/.bashrc`.
+## Getting started
 
-```bash
-source ~/dotfiles/bash/config.sh
-```
+Clone to `~/dotfiles`. Make sure you have the dependencies listed above (especially Vim and git!) then enter the newly cloned repository and execute `./install.sh`. That's it.
 
-You may want to set the terminal colours in `~/.bashrc` too.
+## Layout
 
-```bash
-export TERM=xterm-256color
-```
+Every directory contains configuration for a different tool. They each hold an `install.sh` file which links files into `~/...` and an optional `update.sh` file which can fetch updates for dependencies, for example. The entry point for each module is called `boostrap.*` where `*` could be `vim`, `tmux.conf` or `gitconfig` for example.
 
-### ctags
+Within Vim, bundles are added to `vim/bundles.vim` and the configuration for each bundle is added to `vim/modules/bundles/{NAME}.vim`. So if you wanted to configure `tmux.vim`, you'd add your configuration to `vim/modules/bundles/timux.vim.vim` (yes, with the double `.vim`). Any other configuration goes into the various `vim/modules/*.vim` files, if one doesn't fit the bill then another one may be created. All of these files are loaded automatically.
 
-```bash
-ln -s ~/dotfiles/ctags/config ~/.ctags
-```
-
-### git
-
-Add this to `~/.gitconfig`.
-
-```gitconfig
-[include]
-    path = ~/dotfiles/git/config
-```
-
-### jshint
-
-```bash
-ln -s ~/dotfiles/jshint/config.json ~/.jshintrc
-```
-
-### tmux
-
-Add this to `~/.tmux.conf`.
-
-```
-source-file $HOME/dotfiles/tmux/config.conf
-```
-
-You can add ignore rules to `~/dotfiles/git/ignore`.
-
-### vim
-
-Add this to `~/.vimrc`.
-
-```vim
-source $HOME/.vim/config.vim
-```
-
-Then sync and compile [YouCompleteMe][].
-
-```bash
-cd .vim
-./sync-bundles.sh
-./compile/ycm.sh
-```
-
-### emacs
-
-I use [spacemacs][] as a base and build atop of it with my own layer. Install and link everything with the lines below.
-
-```bash
-git clone --recursive http://github.com/syl20bnr/spacemacs ~/.emacs.d
-ln -s ~/dotfiles/emacs/spacemacs ~/.spacemacs
-echo "()" > ~/.emacs.d/projectile-bookmarks.eld
-```
-
-The rest is automatic.
-
-## Things you'll probably also want
-
- * [autojump][] (package manager)
- * [git-smart][] (`gem install git-smart`)
-
-[twitter]: https://twitter.com/OliverCaldwell
-[autojump]: https://github.com/joelthelion/autojump
-[git-smart]: https://github.com/geelen/git-smart
-[youcompleteme]: https://github.com/Valloric/YouCompleteMe
-[spacemacs]: https://github.com/syl20bnr/spacemacs
+[@OliverCaldwell]: https://twitter.com/OliverCaldwell
+[the unlicence]: http://unlicense.org/

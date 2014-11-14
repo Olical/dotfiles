@@ -2,7 +2,10 @@
 let maplocalleader = "|"
 
 " Clears the search.
-nnoremap <silent> <leader>c/ :let @/ = ""<CR>
+nnoremap <silent> <leader>/d :let @/ = ""<CR>
+
+" Shows the amount of matches for the previous search.
+nnoremap <leader>/c :%s///gn<CR>
 
 " Deletes the hidden buffers.
 function DeleteHiddenBuffers()
@@ -13,22 +16,16 @@ function DeleteHiddenBuffers()
     endfor
 endfunction
 
-nnoremap <silent> <leader>cb :call DeleteHiddenBuffers()<CR>
+nnoremap <silent> <leader>bd :call DeleteHiddenBuffers()<CR>
 
 " Corrects the spelling under the cursor with the first suggestion.
 nnoremap <leader>z 1z=
 
-" Shows the amount of matches for the previous search.
-nnoremap <leader>/ :%s///gn<CR>
-
-" Strips the trailing white space from the file.
-nnoremap <leader>w :%s/\s\+$//e<CR>
+" Trim the trailing white space from the file.
+nnoremap <leader>ft :%s/\s\+$//e<CR>
 
 " Opens the split in a new tab. Kind like "distraction free" mode.
-nnoremap <leader>f :tab sp<CR>
-
-" Rebuild the tags.
-nnoremap <leader>tg :GenerateTags<CR>
+nnoremap <leader>wf :tab sp<CR>
 
 " Pull from either side of a git conflict.
 nnoremap <leader>gl :diffget LOCAL<CR>
