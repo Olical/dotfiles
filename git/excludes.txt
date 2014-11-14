@@ -6,3 +6,4 @@
 .lvimrc
 .projections.json
 .quicksave.vim
+*.swp
