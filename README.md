@@ -33,6 +33,7 @@ Within Vim, bundles are added to `vim/bundles.vim` and the configuration for eac
 All of the combinations below should be preceded by the leader key, every other binding is default to Vim.
 
 Leader: `\`
+
 Local leader: `|`
 
  * `bd` - Delete hidden buffers
