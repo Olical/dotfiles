@@ -10,18 +10,18 @@ nnoremap <leader>uy :<C-u>Unite -buffer-name=yank history/yank<cr>
 nnoremap <leader>ub :<C-u>Unite -buffer-name=buffer buffer<cr>
 
 function! s:unite_settings()
-    imap <buffer> <C-j> <Plug>(unite_select_next_line)
-    imap <buffer> <C-k> <Plug>(unite_select_previous_line)
+  imap <buffer> <C-j> <Plug>(unite_select_next_line)
+  imap <buffer> <C-k> <Plug>(unite_select_previous_line)
 endfunction
 
 augroup unite_settings
-    autocmd!
-    autocmd FileType unite call s:unite_settings()
+  autocmd!
+  autocmd FileType unite call s:unite_settings()
 augroup END
 
 " From: http://stackoverflow.com/a/17387785/455137
 if executable('ag')
-    let g:unite_source_grep_command = 'ag'
-    let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-    let g:unite_source_grep_recursive_opt = ''
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
 endif
