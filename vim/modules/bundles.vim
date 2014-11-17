@@ -14,10 +14,30 @@ execute 'source' Dot('bundles.vim')
 call neobundle#end()
 filetype plugin indent on
 
-" Load bundle configuration files for currently sourced bundles.
-for f in split(glob(Dot('modules/bundles/*.vim')), '\n')
-  let bundle = fnamemodify(f, ':t:r')
-  if neobundle#is_installed(bundle) && neobundle#is_sourced(bundle)
-    execute 'source' f
+" Load bundle configuration files for currently sourced bundles. If the bundle
+" isn't installed at all then warn the user, it probably means a bundle was
+" removed but it's configuration was not.
+function! s:configure_bundle(file)
+  let bundle = fnamemodify(a:file, ':t:r')
+  let required = s:is_required(bundle)
+  let installed = neobundle#is_installed(bundle)
+  let sourced = neobundle#is_sourced(bundle)
+
+  if installed && sourced
+    execute 'source' a:file
+  elseif !installed && !required
+    echoerr "Configuration for unknown bundle at" a:file
   endif
+endfunction
+
+" Check if the bundle is referenced in the bundle declaration list, but isn't
+" currently installed.
+function! s:is_required(bundle)
+  let not_installed = neobundle#get_not_installed_bundle_names()
+  return index(not_installed, a:bundle) >= 0
+endfunction
+
+" Process all present bundle configuration files.
+for file in split(glob(Dot('modules/bundles/*.vim')), '\n')
+  call s:configure_bundle(file)
 endfor
