@@ -6,8 +6,8 @@ nnoremap <leader>ul :<C-u>Unite -buffer-name=files -start-insert file<cr>
 nnoremap <leader>ur :<C-u>Unite -buffer-name=mru -start-insert file_mru<cr>
 nnoremap <leader>uo :<C-u>Unite -buffer-name=outline -start-insert outline<cr>
 nnoremap <leader>ug :<C-u>Unite -buffer-name=grep -start-insert grep:.<cr>
-nnoremap <leader>uy :<C-u>Unite -buffer-name=yank history/yank<cr>
-nnoremap <leader>ub :<C-u>Unite -buffer-name=buffer buffer<cr>
+nnoremap <leader>uy :<C-u>Unite -buffer-name=yank -start-insert history/yank<cr>
+nnoremap <leader>ub :<C-u>Unite -buffer-name=buffer -start-insert buffer<cr>
 
 function! s:unite_settings()
   imap <buffer> <C-j> <Plug>(unite_select_next_line)
