@@ -1,4 +1,4 @@
 .netrwhist
 undo/
 spell/
-autoloads/plug.vim
+autoload/plug.vim
