@@ -2,5 +2,5 @@
 
 ln -s ~/dotfiles/vim ~/.vim
 echo "source $HOME/.vim/bootstrap.vim" >> ~/.vimrc
-mkdir ~/.vim/bundle/ ~/.vim/undo/
-git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+mkdir ~/.vim/undo/ ~/.vim/spell ~/.vim/autoloads
+curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

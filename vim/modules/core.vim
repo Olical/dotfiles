@@ -3,7 +3,7 @@ set number
 set relativenumber
 
 " Backspace is managed by vim-sensible, but I need it here too because some
-" bundles depend on it during start up.
+" plugins depend on it during start up.
 set backspace=indent,eol,start
 
 " Use fource spaces as indentation.
