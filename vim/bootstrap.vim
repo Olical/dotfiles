@@ -7,6 +7,6 @@ function! Dot(path)
 endfunction
 
 " Load all configuration modules.
-for f in split(glob(Dot('/modules/*.vim')), '\n')
-  execute 'source' f
+for file in split(glob(Dot('modules/*.vim')), '\n')
+  execute 'source' file
 endfor
