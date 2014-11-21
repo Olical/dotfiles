@@ -22,7 +22,7 @@ nnoremap <silent> <leader>bd :call DeleteHiddenBuffers()<CR>
 nnoremap <leader>z 1z=
 
 " Trim the trailing white space from the file.
-nnoremap <leader>ft :%s/\s\+$//e<CR>
+nnoremap <leader>cw :%s/\s\+$//e<CR>
 
 " Opens the split in a new tab. Kind like "distraction free" mode.
 nnoremap <leader>wf :tab sp<CR>
