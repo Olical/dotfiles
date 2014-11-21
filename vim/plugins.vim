@@ -7,9 +7,6 @@ Plug 'Lokaltog/vim-distinguished'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Raimondi/delimitMate'
-Plug 'Shougo/neomru.vim'
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'Wolfy87/vim-enmasse'
 Plug 'bling/vim-airline'
