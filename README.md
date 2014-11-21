@@ -23,5 +23,9 @@ Every directory contains configuration for a different tool. They each hold an `
 
 Within Vim, plugins are added to `vim/plugins.vim` and the configuration for each plugin is added to `vim/modules/plugins/{NAME}.vim`. So if you wanted to configure `tmux.vim`, you'd add your configuration to `vim/modules/plugins/timux.vim.vim` (yes, with the double `.vim`). Any other configuration goes into the various `vim/modules/*.vim` files, if one doesn't fit the bill then another one may be created. All of these files are loaded automatically.
 
+## Vim key bindings
+
+Execute `\\` to run `~/.vim/mappings.sh` which shows all current leader bindings. This acts as documentation for my mappings.
+
 [@OliverCaldwell]: https://twitter.com/OliverCaldwell
 [the unlicence]: http://unlicense.org/
