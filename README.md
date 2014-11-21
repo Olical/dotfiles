@@ -9,6 +9,7 @@ I have two scripts, `install.sh` and `update.sh`, which perform an initial setup
  * ag
  * autojump
  * JSHint
+ * fzf
 
 Now everything should be installed and running, just execute `update.sh` if you want to synchronise the Vim plugins.
 
