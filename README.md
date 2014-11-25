@@ -2,7 +2,7 @@
 
 These are my tools that I use heavily every day, I implore you to steal anything that isn't nailed down (so, everything) and to use it to your own advantage. If you want to get in touch about anything in here, please do so through GitHub (@Wolfy87) or [@OliverCaldwell][]. Just to show how much I want to you take things from here wholesale, I've added [the unlicence][].
 
-I have two scripts, `install.sh` and `update.sh`, which perform an initial setup and update things like my Vim plugins respectively. For the install to work you will need at least Vim and git installed. After that you may install these optional dependencies.
+I have two scripts, `install.sh` and `update.sh`, which perform an initial setup and update things like my Vim plugins respectively. For the install to work you will need at least Vim and git installed. After that you may install these dependencies.
 
  * tmux
  * git-smart
@@ -10,6 +10,8 @@ I have two scripts, `install.sh` and `update.sh`, which perform an initial setup
  * autojump
  * JSHint
  * fzf
+ * cmake for *YouCompleteMe* compilation
+ * node for `npm install` in *tern_for_vim*
 
 Now everything should be installed and running, just execute `update.sh` if you want to synchronise the Vim plugins.
 
