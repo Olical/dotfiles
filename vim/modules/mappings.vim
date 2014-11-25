@@ -16,7 +16,7 @@ endfunction
 nnoremap <leader>/c :call <SID>count_search_results()<CR>
 
 " Deletes the hidden buffers.
-function s:delete_hidden_buffers()
+function! s:delete_hidden_buffers()
   let tpbl=[]
   call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
   for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
@@ -28,10 +28,10 @@ nnoremap <silent> <leader>bd :call <SID>delete_hidden_buffers()<CR>
 
 " Corrects the spelling under the cursor with the first suggestion.
 function! s:correct_to_first_spelling_suggestion()
-  1z=
+  normal 1z=
 endfunction
 
-nnoremap <leader>z :call <SID>correct_to_first_spelling_suggestion()<CR>
+nnoremap <silent> <leader>z :call <SID>correct_to_first_spelling_suggestion()<CR>
 
 " Trim the trailing white space from the file.
 function! s:trim_trailing_whitespace()
