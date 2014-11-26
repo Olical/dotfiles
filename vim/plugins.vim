@@ -14,7 +14,7 @@ Plug 'embear/vim-localvimrc'
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'helino/vim-json', { 'for': 'json' }
-Plug 'junegunn/fzf', { 'on': 'FZF' }
+Plug 'junegunn/fzf'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 Plug 'mhinz/vim-signify'
