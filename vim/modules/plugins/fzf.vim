@@ -20,4 +20,4 @@ function! s:buf_fzf()
   \})
 endfunction
 
-nnoremap <silent> <Leader>bf :call <SID>buf_fzf()<CR>
+nnoremap <silent> <leader>bf :call <SID>buf_fzf()<CR>
