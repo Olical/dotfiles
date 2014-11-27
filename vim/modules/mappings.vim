@@ -13,7 +13,7 @@ function! s:count_search_results()
   %s///gn
 endfunction
 
-nnoremap <leader>/c :call <SID>count_search_results()<CR>
+nnoremap <silent> <leader>/c :call <SID>count_search_results()<CR>
 
 " Deletes the hidden buffers.
 function! s:delete_hidden_buffers()
@@ -38,18 +38,18 @@ function! s:trim_trailing_whitespace()
   %s/\s\+$//e
 endfunction
 
-nnoremap <leader>cw :call <SID>trim_trailing_whitespace()<CR>
+nnoremap <silent> <leader>cw :call <SID>trim_trailing_whitespace()<CR>
 
 " Opens the split in a new tab. Kind like "distraction free" mode.
-nnoremap <leader>wf :tab sp<CR>
+nnoremap <silent> <leader>wf :tab sp<CR>
 
 " Pull from either side of a git conflict.
-nnoremap <leader>gl :diffget LOCAL<CR>
-nnoremap <leader>gr :diffget REMOTE<CR>
+nnoremap <silent> <leader>gl :diffget LOCAL<CR>
+nnoremap <silent> <leader>gr :diffget REMOTE<CR>
 
 " Quick session bindings.
-nnoremap <leader>sw :mksession! .quicksave.vim<CR>
-nnoremap <leader>sr :source .quicksave.vim<CR>
+nnoremap <silent> <leader>sw :mksession! .quicksave.vim<CR>
+nnoremap <silent> <leader>sr :source .quicksave.vim<CR>
 
 " Print out the current mappings.
 function! s:show_mappings()
@@ -57,4 +57,4 @@ function! s:show_mappings()
   exec '!' . path
 endfunction
 
-nnoremap <leader><leader> :call <SID>show_mappings()<CR>
+nnoremap <silent> <leader><leader> :call <SID>show_mappings()<CR>

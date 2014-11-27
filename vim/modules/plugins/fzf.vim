@@ -1,4 +1,4 @@
-nnoremap <leader>f :FZF<CR>
+nnoremap <silent> <leader>f :FZF<CR>
 
 function! s:buf_list()
   redir => ls
@@ -20,4 +20,4 @@ function! s:buf_fzf()
   \})
 endfunction
 
-nnoremap <Leader>bf :call <SID>buf_fzf()<CR>
+nnoremap <silent> <Leader>bf :call <SID>buf_fzf()<CR>

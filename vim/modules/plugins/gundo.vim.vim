@@ -1,1 +1,1 @@
-nnoremap <leader>tu :GundoToggle<CR>
+nnoremap <silent> <leader>tu :GundoToggle<CR>

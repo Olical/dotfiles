@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-ag "map <leader>" ~/.vim --ignore mappings.sh --nogroup --nocolor | cut -d' ' -f2-
+ag "map <silent> <leader>" ~/.vim --ignore mappings.sh --nogroup --nocolor | cut -d' ' -f3-
