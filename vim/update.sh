@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-vim +PlugUpgrade +PlugClean! +PlugUpdate +qa
+vim +"PlugSnapshot $HOME/dotfiles/vim/revert.sh" +PlugUpgrade +PlugClean! +PlugUpdate +qa

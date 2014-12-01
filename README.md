@@ -15,6 +15,10 @@ I have two scripts, `install.sh` and `update.sh`, which perform an initial setup
 
 Now everything should be installed and running, just execute `update.sh` if you want to synchronise the Vim plugins.
 
+## Reverting Vim plugin updates
+
+Before the Vim plugins are updated a script is generated to revert the changes. So if anything goes wrong, execute `dotfiles/vim/revert.sh` to roll back to before you updated. This functionality is only possible because [vim-plug][] is awesome.
+
 ## Getting started
 
 Clone to `~/dotfiles`. Make sure you have the dependencies listed above (especially Vim and git!) then enter the newly cloned repository and execute `./install.sh`. That's it.
@@ -31,3 +35,4 @@ Execute `\\` to run `~/.vim/mappings.sh` which shows all current leader bindings
 
 [@OliverCaldwell]: https://twitter.com/OliverCaldwell
 [the unlicence]: http://unlicense.org/
+[vim-plug]: https://github.com/junegunn/vim-plug
