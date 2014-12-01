@@ -1,6 +1,5 @@
 " Enable relative line numbers.
 set number
-set relativenumber
 
 " Backspace is managed by vim-sensible, but I need it here too because some
 " plugins depend on it during start up.

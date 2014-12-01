@@ -18,7 +18,6 @@ Plug 'junegunn/fzf'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 Plug 'mhinz/vim-signify'
-Plug 'myusuf3/numbers.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
