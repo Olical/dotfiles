@@ -38,3 +38,5 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 Plug 'walm/jshint.vim', { 'on': 'JSHint' }
+Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
