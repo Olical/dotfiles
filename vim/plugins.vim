@@ -9,6 +9,7 @@ Plug 'PeterRincker/vim-argumentative'
 Plug 'Raimondi/delimitMate'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Wolfy87/vim-enmasse', { 'on': 'EnMasse' }
+Plug 'Wolfy87/vim-expand', { 'on': 'Expand' }
 Plug 'bling/vim-airline'
 Plug 'embear/vim-localvimrc'
 Plug 'guns/vim-clojure-highlight'
