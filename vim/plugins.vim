@@ -10,13 +10,13 @@ Plug 'Raimondi/delimitMate'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Wolfy87/vim-enmasse', { 'on': 'EnMasse' }
 Plug 'Wolfy87/vim-expand', { 'on': 'Expand' }
+Plug 'amdt/vim-niji'
 Plug 'bling/vim-airline'
 Plug 'embear/vim-localvimrc'
 Plug 'guns/vim-clojure-highlight'
 Plug 'guns/vim-clojure-static'
 Plug 'helino/vim-json'
 Plug 'junegunn/fzf'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
