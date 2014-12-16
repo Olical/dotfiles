@@ -47,10 +47,6 @@ nnoremap <silent> <leader>wf :tab sp<CR>
 nnoremap <silent> <leader>gl :diffget LOCAL<CR>
 nnoremap <silent> <leader>gr :diffget REMOTE<CR>
 
-" Quick session bindings.
-nnoremap <silent> <leader>sw :mksession! .quicksave.vim<CR>
-nnoremap <silent> <leader>sr :source .quicksave.vim<CR>
-
 " Print out the current mappings.
 function! s:show_mappings()
   let path = Dot('mappings.sh')
