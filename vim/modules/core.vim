@@ -15,5 +15,5 @@ set splitright
 " Set a default indent, but vim-sleuth should adjust it.
 set shiftwidth=4
 
-" Enable mouse in normal mode. Great for resizing windows.
-set mouse=n
+" Enable mouse. Great for resizing windows and keeping co-workers sane.
+set mouse=a
