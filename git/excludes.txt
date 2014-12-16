@@ -7,3 +7,4 @@
 .projections.json
 .quicksave.vim
 *.swp
+*.orig
