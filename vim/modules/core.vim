@@ -5,13 +5,6 @@ set number
 " plugins depend on it during start up.
 set backspace=indent,eol,start
 
-" Use four spaces as indentation.
-" This is just a default, filetypes may override.
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-
 " Enable invisible characters.
 set list
 
