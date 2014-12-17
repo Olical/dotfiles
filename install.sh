@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
 
+if [ ! -f .installed ]
+then
+    touch .installed
+fi
+
 for script in $(ls */install.sh)
 do
-    ./$script
-done
+    base=$(dirname $script)
 
-./update.sh
+    if ! grep -q $base .installed 
+    then
+        echo $base >> .installed
+        ./$script
+    fi
+done
