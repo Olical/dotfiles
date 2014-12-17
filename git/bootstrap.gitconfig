@@ -11,5 +11,7 @@
 [diff]
     tool = vimdiff
 [merge]
-    tool = vimdiff
-    conflictstyle = diff3
+    tool = splice
+[mergetool "splice"]
+    cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
+    trustExitCode = true

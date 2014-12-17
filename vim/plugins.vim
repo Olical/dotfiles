@@ -24,6 +24,7 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+Plug 'sjl/splice.vim', { 'on' : 'SpliceInit' }
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
