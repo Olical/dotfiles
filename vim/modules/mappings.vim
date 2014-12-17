@@ -43,10 +43,6 @@ nnoremap <silent> <leader>cw :call <SID>trim_trailing_whitespace()<CR>
 " Opens the split in a new tab. Kind like "distraction free" mode.
 nnoremap <silent> <leader>wf :tab sp<CR>
 
-" Pull from either side of a git conflict.
-nnoremap <silent> <leader>gl :diffget LOCAL<CR>
-nnoremap <silent> <leader>gr :diffget REMOTE<CR>
-
 " Print out the current mappings.
 function! s:show_mappings()
   let path = Dot('mappings.sh')
