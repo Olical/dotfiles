@@ -41,7 +41,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
-Plug 'walm/jshint.vim', { 'on': 'JSHint' }
+Plug 'walm/jshint.vim', { 'for': 'javascript' }
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
