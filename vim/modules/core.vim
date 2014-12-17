@@ -17,3 +17,6 @@ set shiftwidth=4
 
 " Enable mouse. Great for resizing windows and keeping co-workers sane.
 set mouse=a
+
+" Disable swap files.
+set noswapfile

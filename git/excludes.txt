@@ -3,5 +3,3 @@
 .tern-port
 .lvimrc
 .projections.json
-*.swp
-*.orig
