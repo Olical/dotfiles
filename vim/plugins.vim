@@ -15,6 +15,7 @@ Plug 'bling/vim-airline'
 Plug 'embear/vim-localvimrc'
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/vim-asterisk'
 Plug 'helino/vim-json', { 'for': 'json' }
 Plug 'janko-m/vim-test'
@@ -27,6 +28,7 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
