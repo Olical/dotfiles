@@ -15,9 +15,11 @@ Plug 'bling/vim-airline'
 Plug 'embear/vim-localvimrc'
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'haya14busa/vim-asterisk'
 Plug 'helino/vim-json', { 'for': 'json' }
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf'
+Plug 'junegunn/vim-easy-align'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
