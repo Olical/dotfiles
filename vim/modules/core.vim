@@ -20,3 +20,6 @@ set mouse=a
 
 " Disable swap files.
 set noswapfile
+
+" Disable the completion preview window.
+set completeopt-=preview
