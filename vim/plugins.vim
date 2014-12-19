@@ -7,7 +7,7 @@ Plug 'Lokaltog/vim-distinguished'
 Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-prefix)' }
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Raimondi/delimitMate'
-Plug 'Shougo/neocomplete.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'Wolfy87/vim-enmasse', { 'on': 'EnMasse' }
 Plug 'Wolfy87/vim-expand', { 'on': 'Expand' }
 Plug 'amdt/vim-niji', { 'for': ['clojure', 'javascript'] }
