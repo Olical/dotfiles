@@ -1,15 +1,13 @@
 # dotfiles
 
-These are my tools that I use heavily every day, I implore you to steal anything that isn't nailed down (so, everything) and to use it to your own advantage. If you want to get in touch about anything in here, please do so through GitHub (@Wolfy87) or [@OliverCaldwell][]. Just to show how much I want to you take things from here wholesale, I've added [the unlicence][].
+These are my tools that I use heavily every day, I implore you to steal anything that isn't nailed down (so, everything) and to use it to your own advantage. If you want to get in touch about anything in here, please do so through GitHub ([Wolfy87][]) or [@OliverCaldwell][] on twitter. Just to show how much I want to you take things from here wholesale, I've added [the unlicence][].
 
-I have two scripts, `install.sh` and `update.sh`, which perform an initial setup and update things like my Vim plugins respectively. For the install to work you will need at least Vim and git installed. Make sure you have a heavy Vim install with things like Python and Lua support, especially Lua for [neocomplete][]. After that you may install these dependencies.
+I have two scripts, `install.sh` and `update.sh`, which perform an initial setup and update things like my Vim plugins respectively. For the install to work you will need at least Vim and git installed. Make sure you have a heavy Vim install with things like Python support. After that you may install these dependencies that play nicely with my Vim tooling.
 
  * tmux
  * git-smart
  * ag
- * autojump
  * JSHint
- * fzf
  * node for `npm install` in *tern_for_vim*
 
 Now everything should be installed and running, just execute `update.sh` if you want to synchronise the Vim plugins.
@@ -32,7 +30,7 @@ Within Vim, plugins are added to `vim/plugins.vim` and the configuration for eac
 
 Execute `\\` to run `~/.vim/mappings.sh` which shows all current leader bindings. This acts as documentation for my mappings.
 
+[Wolfy87]: https://github.com/Wolfy87
 [@OliverCaldwell]: https://twitter.com/OliverCaldwell
 [the unlicence]: http://unlicense.org/
 [vim-plug]: https://github.com/junegunn/vim-plug
-[neocomplete]: https://github.com/Shougo/neocomplete.vim
