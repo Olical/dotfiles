@@ -20,7 +20,6 @@ Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/vim-asterisk'
 Plug 'helino/vim-json', { 'for': 'json' }
-Plug 'janko-m/vim-test'
 Plug 'junegunn/vim-easy-align'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 Plug 'mhinz/vim-signify'
@@ -45,7 +44,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'vim-scripts/brainfuck-syntax'
 Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 Plug 'walm/jshint.vim', { 'for': 'javascript' }
 Plug 'xolox/vim-easytags'
