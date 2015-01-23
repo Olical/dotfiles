@@ -1,9 +1,9 @@
-" Enable relative line numbers.
-set number
-
 " Backspace is managed by vim-sensible, but I need it here too because some
 " plugins depend on it during start up.
 set backspace=indent,eol,start
+
+" Enable line numbers.
+set number
 
 " Enable invisible characters.
 set list
@@ -13,7 +13,7 @@ set splitbelow
 set splitright
 
 " Set a default indent, but vim-sleuth should adjust it.
-set shiftwidth=4
+set tabstop=4
 
 " Enable mouse. Great for resizing windows and keeping co-workers sane.
 set mouse=a
