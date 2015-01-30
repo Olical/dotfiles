@@ -54,3 +54,6 @@ function! s:show_mappings()
 endfunction
 
 nnoremap <silent> <leader><leader> :call <SID>show_mappings()<CR>
+
+" Easy escape.
+inoremap jk <esc>
