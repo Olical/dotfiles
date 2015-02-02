@@ -3,3 +3,4 @@
 .tern-port
 .lvimrc
 .projections.json
+.quicksave.vim

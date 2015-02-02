@@ -23,3 +23,6 @@ set noswapfile
 
 " Disable the completion preview window.
 set completeopt-=preview
+
+" Make session files minimal.
+set sessionoptions=blank,curdir,folds,help,tabpages,winsize

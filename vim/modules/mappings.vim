@@ -57,3 +57,7 @@ nnoremap <silent> <leader><leader> :call <SID>show_mappings()<CR>
 
 " Easy escape.
 inoremap jk <esc>
+
+" Quick session bindings.
+nnoremap <silent> <leader>sw :mksession! .quicksave.vim<CR>
+nnoremap <silent> <leader>sr :source .quicksave.vim<CR>
