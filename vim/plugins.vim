@@ -11,6 +11,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'Valloric/YouCompleteMe'
 Plug 'Wolfy87/vim-enmasse', { 'on': 'EnMasse' }
 Plug 'Wolfy87/vim-expand', { 'on': 'Expand' }
+Plug 'aklt/plantuml-syntax'
 Plug 'amdt/vim-niji', { 'for': ['clojure', 'javascript'] }
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
