@@ -3,7 +3,7 @@
     email = olliec87@gmail.com
 [core]
     editor = vim
-    excludesfile = ~/dotfiles/git/excludes.txt
+    excludesfile = ~/.gitexcludes
 [color]
     ui = true
 [push]
@@ -15,3 +15,5 @@
     conflictstyle = diff3
 [mergetool]
     keepbackup = false
+[include]
+    path = ~/.gitconfig_local
