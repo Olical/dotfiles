@@ -1,6 +1,6 @@
 # dotfiles
 
-These are my tools that I use heavily every day, I implore you to steal anything that isn't nailed down (so, everything) and to use it to your own advantage. If you want to get in touch about anything in here, please do so through GitHub ([Wolfy87][]) or [@OliverCaldwell][] on twitter. Just to show how much I want to you take things from here wholesale, I've added [the unlicence][].
+This is the configuration for the tools that I use every day, I implore you to steal anything that isn't nailed down (so, everything) and to use it to your own advantage. If you want to get in touch about anything in here, please do so through GitHub ([Wolfy87][]) or [@OliverCaldwell][] on twitter. I've included [the unlicence][] with this repository to assure you that everything here is in the public domain, as is all of my future open source work.
 
 Most of my configuration is installed with [stow][] via symlinks. Some of my configuration attempts to load `*_local` files to override my global settings.
 
