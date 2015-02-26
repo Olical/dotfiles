@@ -50,6 +50,7 @@ plugins=(git)
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$HOME/.cask/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
