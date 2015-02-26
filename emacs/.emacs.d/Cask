@@ -1,3 +1,6 @@
 (source melpa)
 
-(depends-on "pallet")
+(depends-on "cask")
+(depends-on "magit")
+(depends-on "helm")
+(depends-on "projectile")
