@@ -2,7 +2,7 @@
 
 This is the configuration for the tools that I use every day, I implore you to steal anything that isn't nailed down (so, everything) and to use it to your own advantage. If you want to get in touch about anything in here, please do so through GitHub ([Wolfy87][]) or [@OliverCaldwell][] on twitter. I've included [the unlicence][] with this repository to assure you that everything here is in the public domain, as is all of my future open source work.
 
-Most of my configuration is installed with [stow][] via symlinks. Some of my configuration attempts to load `*_local` files to override my global settings.
+Most of my configuration is installed with [stow][] via symlinks. Some of my configuration attempts to load `*_local` files to override my global settings. You'll also have to fetch [oh-my-zsh][] and [pallet][] for zsh and emacs respectively.
 
 ## Setting up Vim
 
@@ -37,3 +37,5 @@ Execute `\\` to run `~/.vim/mappings.sh` which shows all current leader bindings
 [the unlicence]: http://unlicense.org/
 [vim-plug]: https://github.com/junegunn/vim-plug
 [stow]: http://www.gnu.org/software/stow/
+[oh-my-zsh]: http://ohmyz.sh/
+[pallet]: https://github.com/rdallasgray/pallet
