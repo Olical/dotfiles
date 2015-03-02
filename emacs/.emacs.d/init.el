@@ -1,2 +1,2 @@
-(require 'cask "~/.cask/cask.el")
+(require 'cask "~/.emacs.d/cask-repo/cask.el")
 (cask-initialize)
