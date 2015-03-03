@@ -22,3 +22,8 @@
 ;; Package definitions from here on in.
 (bundle monokai-theme
         (load-theme 'monokai t))
+
+(bundle flycheck
+        (add-hook 'after-init-hook #'global-flycheck-mode))
+
+(bundle magit)

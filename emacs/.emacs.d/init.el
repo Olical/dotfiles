@@ -5,3 +5,4 @@
 
 (load-config "packages.el")
 (load-config "ui.el")
+(load-config "editing.el")
