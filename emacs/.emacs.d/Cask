@@ -1,2 +1,0 @@
-(source gnu)
-(source melpa)
