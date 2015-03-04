@@ -27,3 +27,12 @@
         (add-hook 'after-init-hook #'global-flycheck-mode))
 
 (bundle magit)
+
+(bundle projectile
+        (projectile-global-mode))
+
+(bundle helm
+        (global-set-key (kbd "M-x") 'helm-M-x))
+
+(bundle ace-jump-mode
+        (define-key global-map (kbd "C-c SPC") 'ace-jump-mode))
