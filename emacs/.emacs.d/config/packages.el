@@ -36,3 +36,17 @@
 
 (bundle ace-jump-mode
         (define-key global-map (kbd "C-c SPC") 'ace-jump-mode))
+
+(bundle js2-mode)
+
+(bundle auto-complete)
+
+(bundle exec-path-from-shell
+        (when (memq window-system '(mac ns))
+          (exec-path-from-shell-initialize)))
+
+(bundle tern)
+
+(bundle tern-auto-complete)
+
+(bundle dired+)
