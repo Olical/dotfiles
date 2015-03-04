@@ -3,6 +3,6 @@
   file."
   (load-file (expand-file-name file "~/.emacs.d/config")))
 
-(load-config "packages.el")
 (load-config "ui.el")
 (load-config "editing.el")
+(load-config "packages.el")
