@@ -1,4 +1,6 @@
 el-get/
+elpa/
 auto-save-list/
 backups/
 eshell/
+projectile-bookmarks.eld
