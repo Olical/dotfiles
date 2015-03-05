@@ -60,4 +60,5 @@
 (bundle dtrt-indent)
 
 (bundle smartparens
-        (smartparens-global-mode))
+        (smartparens-global-mode t)
+        (require 'smartparens-config))
