@@ -41,6 +41,11 @@
 (bundle js2-mode
         (add-hook 'js-mode-hook 'js2-mode))
 
+(bundle js-doc
+        :url "git@github.com:mooz/js-doc.git"
+        :depends js2-mode
+        :features js-doc)
+
 (bundle auto-complete)
 
 (bundle tern
