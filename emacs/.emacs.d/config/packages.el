@@ -58,3 +58,6 @@
 (bundle dired+)
 
 (bundle dtrt-indent)
+
+(bundle smartparens
+        (smartparens-global-mode))
