@@ -11,8 +11,8 @@
 (defmacro bundle (name &rest content)
   "Passthrough for el-get-bundle that records the package name in dotfiles-packages."
   `(progn
-    (add-to-list 'dotfiles-packages ',name)
-    (el-get-bundle ,name ,@content)))
+     (add-to-list 'dotfiles-packages ',name)
+     (el-get-bundle ,name ,@content)))
 
 (defun dotfiles-sync ()
   "Removes all packages not specified with the bundle macro and updates what's left."
@@ -26,14 +26,12 @@
 (bundle flycheck
         (add-hook 'after-init-hook #'global-flycheck-mode))
 
-(bundle magit
-        (global-set-key (kbd "C-x g") 'magit-status))
+(bundle magit)
 
 (bundle projectile
         (projectile-global-mode))
 
-(bundle helm
-        (global-set-key (kbd "M-x") 'helm-M-x))
+(bundle helm)
 
 (bundle ace-jump-mode)
 
@@ -64,23 +62,13 @@
         (require 'smartparens-config))
 
 (bundle evil
-        (evil-mode t)
-
-        ;; change mode-line color by evil state
-        (lexical-let ((default-color (cons (face-background 'mode-line)
-                                           (face-foreground 'mode-line))))
-          (add-hook 'post-command-hook
-                    (lambda ()
-                      (let ((color (cond ((minibufferp) default-color)
-                                         ((evil-insert-state-p) '("#e80000" . "#ffffff"))
-                                         ((evil-emacs-state-p)  '("#444488" . "#ffffff"))
-                                         ((buffer-modified-p)   '("#006fa0" . "#ffffff"))
-                                         (t default-color))))
-                        (set-face-background 'mode-line (car color))
-                        (set-face-foreground 'mode-line (cdr color)))))))
+        (evil-mode t))
 
 (bundle evil-leader
-        (global-evil-leader-mode))
+        (global-evil-leader-mode)
+        (evil-leader/set-key
+          "g" 'magit-status
+          "h" 'helm-M-x))
 
 (bundle evil-matchit
         (global-evil-matchit-mode t))
