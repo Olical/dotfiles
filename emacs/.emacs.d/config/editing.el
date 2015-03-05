@@ -9,5 +9,7 @@
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
 
 ;; Enable selling.
-(autoload 'flyspell-mode "flyspell" t)
-(setq ispell-program-name "/usr/local/bin/aspell")
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(setq-default ispell-program-name "aspell")
+(setq ispell-dictionary "british")
