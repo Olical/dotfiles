@@ -37,16 +37,24 @@
 (bundle ace-jump-mode
         (define-key global-map (kbd "C-c SPC") 'ace-jump-mode))
 
-(bundle js2-mode)
+(bundle js2-mode
+        (add-hook 'js-mode-hook 'js2-mode))
 
 (bundle auto-complete)
+
+(bundle tern
+        (require 'tern-auto-complete)
+        (tern-ac-setup)
+        (add-hook 'js2-mode-hook 'tern-mode))
 
 (bundle exec-path-from-shell
         (when (memq window-system '(mac ns))
           (exec-path-from-shell-initialize)))
 
-(bundle tern)
-
-(bundle tern-auto-complete)
+(bundle perspective
+        (persp-mode)
+        (require 'persp-projectile))
 
 (bundle dired+)
+
+(bundle dtrt-indent)
