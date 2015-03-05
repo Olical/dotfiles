@@ -1,6 +1,7 @@
 ;; El-Get manages my packages.
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'el-get)
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 
 ;; This is the list of required packages that should be kept when performing
 ;; el-get-cleanup. The names provided to the bundle macro are added
@@ -31,7 +32,8 @@
 (bundle projectile
         (projectile-global-mode))
 
-(bundle helm)
+(bundle helm
+        (global-set-key (kbd "M-x") 'helm-M-x))
 
 (bundle ace-jump-mode)
 
@@ -83,12 +85,12 @@
 (bundle evil-surround
         (global-evil-surround-mode t))
 
-(bundle bling/evil-visualstar
-        :depends evil
-        :features evil-visualstar
+(bundle evil-visualstar
         (global-evil-visualstar-mode))
 
-(bundle bling/evil-jumper
-        :depends evil
-        :features evil-jumper
+(bundle evil-jumper
         (global-evil-jumper-mode))
+
+(bundle evil-escape
+        (setq-default evil-escape-key-sequence "jk")
+        (evil-escape-mode))

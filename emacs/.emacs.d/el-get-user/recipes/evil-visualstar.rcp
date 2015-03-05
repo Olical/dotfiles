@@ -1,0 +1,5 @@
+(:name evil-visualstar
+       :depends evil
+       :features evil-visualstar
+       :type github
+       :pkgname "bling/evil-visualstar")

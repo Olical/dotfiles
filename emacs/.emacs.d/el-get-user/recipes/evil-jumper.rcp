@@ -1,0 +1,5 @@
+(:name evil-jumper
+       :depends evil
+       :features evil-jumper
+       :type github
+       :pkgname "bling/evil-jumper")

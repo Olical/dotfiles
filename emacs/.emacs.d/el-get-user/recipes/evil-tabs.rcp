@@ -1,0 +1,5 @@
+(:name evil-tabs
+       :depends (evil elscreen)
+       :features evil-tabs
+       :type github
+       :pkgname "krisajenkins/evil-tabs")

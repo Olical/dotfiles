@@ -1,0 +1,5 @@
+(:name evil-escape
+       :depends evil
+       :features evil-escape
+       :type github
+       :pkgname "syl20bnr/evil-escape")
