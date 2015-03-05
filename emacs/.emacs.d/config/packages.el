@@ -35,8 +35,7 @@
 (bundle helm
         (global-set-key (kbd "M-x") 'helm-M-x))
 
-(bundle ace-jump-mode
-        (define-key global-map (kbd "C-c SPC") 'ace-jump-mode))
+(bundle ace-jump-mode)
 
 (bundle js2-mode
         (add-hook 'js-mode-hook 'js2-mode))
@@ -63,3 +62,80 @@
 (bundle smartparens
         (smartparens-global-mode t)
         (require 'smartparens-config))
+
+(bundle evil
+        (evil-mode t)
+
+        ;; change mode-line color by evil state
+        (lexical-let ((default-color (cons (face-background 'mode-line)
+                                           (face-foreground 'mode-line))))
+          (add-hook 'post-command-hook
+                    (lambda ()
+                      (let ((color (cond ((minibufferp) default-color)
+                                         ((evil-insert-state-p) '("#e80000" . "#ffffff"))
+                                         ((evil-emacs-state-p)  '("#444488" . "#ffffff"))
+                                         ((buffer-modified-p)   '("#006fa0" . "#ffffff"))
+                                         (t default-color))))
+                        (set-face-background 'mode-line (car color))
+                        (set-face-foreground 'mode-line (cdr color)))))))
+
+(bundle evil-visualstar
+        :url "git@github.com:bling/evil-visualstar.git"
+        :depends evil
+        :features evil-visualstar
+        (global-evil-visualstar-mode))
+
+(bundle evil-jumper
+        :url "git@github.com:bling/evil-jumper.git"
+        :depends evil
+        :features evil-jumper
+        (global-evil-jumper-mode))
+
+(bundle evil-args
+        :url "git@github.com:wcsmith/evil-args.git"
+        :depends evil
+        :features evil-args
+
+        ;; bind evil-args text objects
+        (define-key evil-inner-text-objects-map "a" 'evil-inner-arg)
+        (define-key evil-outer-text-objects-map "a" 'evil-outer-arg)
+
+        ;; bind evil-forward/backward-args
+        (define-key evil-normal-state-map "L" 'evil-forward-arg)
+        (define-key evil-normal-state-map "H" 'evil-backward-arg)
+        (define-key evil-motion-state-map "L" 'evil-forward-arg)
+        (define-key evil-motion-state-map "H" 'evil-backward-arg)
+
+        ;; bind evil-jump-out-args
+        (define-key evil-normal-state-map "K" 'evil-jump-out-args))
+
+(bundle evil-matchit
+        :url "git@github.com:redguardtoo/evil-matchit.git"
+        :depends evil
+        :features evil-matchit
+        (global-evil-matchit-mode t))
+
+(bundle evil-nerd-commenter
+        :url "git@github.com:redguardtoo/evil-nerd-commenter.git"
+        :depends evil
+        :features evil-nerd-commenter
+        (evilnc-default-hotkeys))
+
+(bundle evil-leader
+        :url "git@github.com:cofi/evil-leader.git"
+        :depends evil
+        :featurs evil-leader
+        (global-evil-leader-mode))
+
+(bundle evil-numbers
+        :url "git@github.com:cofi/evil-numbers.git"
+        :depends evil
+        :features evil-numbers
+        (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
+        (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt))
+
+(bundle evil-surround
+        :url "git@github.com:timcharper/evil-surround.git"
+        :depends evil
+        :features evil-surround
+        (global-evil-surround-mode t))
