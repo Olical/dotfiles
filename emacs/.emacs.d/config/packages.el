@@ -26,7 +26,8 @@
 (bundle flycheck
         (add-hook 'after-init-hook #'global-flycheck-mode))
 
-(bundle magit)
+(bundle magit
+        (global-set-key (kbd "C-x g") 'magit-status))
 
 (bundle projectile
         (projectile-global-mode))
