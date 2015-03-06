@@ -39,7 +39,8 @@
 (bundle js2-mode
         (add-hook 'js-mode-hook 'js2-mode))
 
-(bundle auto-complete)
+(bundle auto-complete
+        (ac-config-default))
 
 (bundle tern
         (require 'tern-auto-complete)
@@ -55,8 +56,6 @@
         (require 'persp-projectile))
 
 (bundle dired+)
-
-(bundle dtrt-indent)
 
 (bundle smartparens
         (smartparens-global-mode t)
