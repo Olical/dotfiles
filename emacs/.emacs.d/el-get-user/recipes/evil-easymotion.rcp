@@ -1,0 +1,4 @@
+(:name evil-easymotion
+       :type github
+       :pkgname "PythonNut/evil-easymotion"
+       :depends (evil ace-jump-mode noflet cl-lib))

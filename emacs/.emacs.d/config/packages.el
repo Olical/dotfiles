@@ -27,15 +27,14 @@
 (bundle flycheck
         (add-hook 'after-init-hook #'global-flycheck-mode))
 
-(bundle magit)
+(bundle magit
+        (global-set-key (kbd "C-x g") 'magit-status))
 
 (bundle projectile
         (projectile-global-mode))
 
 (bundle helm
         (global-set-key (kbd "M-x") 'helm-M-x))
-
-(bundle ace-jump-mode)
 
 (bundle js2-mode
         (add-hook 'js-mode-hook 'js2-mode))
@@ -66,12 +65,6 @@
 (bundle evil
         (evil-mode t))
 
-(bundle evil-leader
-        (global-evil-leader-mode)
-        (evil-leader/set-key
-          "g" 'magit-status
-          "h" 'helm-M-x))
-
 (bundle evil-matchit
         (global-evil-matchit-mode t))
 
@@ -94,3 +87,6 @@
 (bundle evil-escape
         (setq-default evil-escape-key-sequence "jk")
         (evil-escape-mode))
+
+(bundle evil-easymotion
+        (evilem-default-keybindings "SPC"))
