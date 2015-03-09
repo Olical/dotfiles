@@ -39,14 +39,6 @@
 (bundle js2-mode
         (add-hook 'js-mode-hook 'js2-mode))
 
-(bundle auto-complete
-        (ac-config-default))
-
-(bundle tern
-        (require 'tern-auto-complete)
-        (tern-ac-setup)
-        (add-hook 'js2-mode-hook 'tern-mode))
-
 (bundle exec-path-from-shell
         (when (memq window-system '(mac ns))
           (exec-path-from-shell-initialize)))
@@ -55,13 +47,15 @@
         (persp-mode)
         (require 'persp-projectile))
 
-(bundle dired+)
+(bundle dired-plus)
 
 (bundle smartparens
         (smartparens-global-mode t)
         (require 'smartparens-config))
 
 (bundle evil
+        :type github
+        :pkgname "emacsmirror/evil"
         (evil-mode t))
 
 (bundle evil-matchit
@@ -89,3 +83,11 @@
 
 (bundle evil-easymotion
         (evilem-default-keybindings "SPC"))
+
+(bundle company-mode
+        (add-hook 'after-init-hook 'global-company-mode))
+
+(bundle company-tern)
+
+(bundle tern
+        (add-hook 'js2-mode-hook 'tern-mode))
