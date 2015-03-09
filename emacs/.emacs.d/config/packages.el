@@ -36,6 +36,8 @@
 (bundle helm
         (global-set-key (kbd "M-x") 'helm-M-x))
 
+(bundle helm-ag)
+
 (bundle js2-mode
         (add-hook 'js-mode-hook 'js2-mode))
 
