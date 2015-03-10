@@ -12,4 +12,4 @@
 
 ;; Remove tooltips. Again, OSX fails with them.
 ;; Ugh, Apple.
-(tooltip-mode nil)
+(setq tooltip-use-echo-area t)
