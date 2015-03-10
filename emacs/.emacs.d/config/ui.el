@@ -9,3 +9,7 @@
 
 ;; Don't use the awful OSX full screen.
 (setq ns-use-native-fullscreen nil)
+
+;; Remove tooltips. Again, OSX fails with them.
+;; Ugh, Apple.
+(tooltip-mode nil)
