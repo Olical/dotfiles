@@ -1,5 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
+EDITOR=vim
 ZSH_THEME="clean"
 DISABLE_AUTO_TITLE="true"
 plugins=(git)
