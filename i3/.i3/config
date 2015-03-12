@@ -167,10 +167,11 @@ bar {
     status_command i3status -c ~/.i3/i3status.conf
 }
 
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5% #decrease sound volume
-bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle # mute sound
+# Start background processes.
+exec --no-startup-id wicd-client --tray
+exec --no-startup-id redshift-gtk
+exec --no-startup-id pa-applet
+
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -181,10 +182,6 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-
-# Start background processes.
-exec --no-startup-id wicd-client --tray
-exec --no-startup-id redshift-gtk
 
 # Lock
 bindsym $mod+p exec --no-startup-id i3lock -c 000000
