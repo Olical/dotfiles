@@ -170,3 +170,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # Start background processes.
 exec --no-startup-id wicd-client --tray
 exec --no-startup-id redshift-gtk
+
+# Lock
+bindsym $mod+p exec --no-startup-id i3lock -c 000000
+bindsym $mod+Shift+p exec --no-startup-id i3lock -c 000000 && echo mem > /sys/power/state
