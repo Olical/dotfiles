@@ -171,6 +171,7 @@ bar {
 exec --no-startup-id wicd-client --tray
 exec --no-startup-id redshift-gtk
 exec --no-startup-id pa-applet
+exec --no-startup-id parcellite
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
