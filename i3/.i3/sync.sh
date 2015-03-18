@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-yaourt -S parcellite wicd wicd-gtk redshift pa-applet-git feh imagemagick playerctl
-
 BGS=~/.i3/backgrounds
 
 if [ -d $BGS ]; then
