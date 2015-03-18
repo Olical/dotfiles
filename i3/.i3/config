@@ -173,6 +173,9 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id pa-applet
 exec --no-startup-id parcellite
 
+# Background image
+exec --no-startup-id feh --bg-center ~/.i3/backgrounds/arch.png
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
@@ -184,5 +187,5 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Lock
-bindsym $mod+p exec --no-startup-id i3lock -c 000000
-bindsym $mod+Shift+p exec --no-startup-id i3lock -c 000000 && systemctl suspend
+bindsym $mod+p exec --no-startup-id ~/.i3/locker.sh
+bindsym $mod+Shift+p exec --no-startup-id ~/.i3/locker.sh && systemctl suspend
