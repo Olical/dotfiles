@@ -174,7 +174,7 @@ exec --no-startup-id pa-applet
 exec --no-startup-id parcellite
 
 # Background image
-exec --no-startup-id feh --bg-center ~/.i3/backgrounds/arch.png
+exec --no-startup-id feh --bg-center ~/.i3/backgrounds/desktop.png
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness

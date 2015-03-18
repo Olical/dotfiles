@@ -10,8 +10,5 @@ fi
 
 mkdir $BGS
 
-curl http://p1.pichost.me/i/17/1400301.png -o $BGS/arch.png
-
-curl http://subtlepatterns.com/patterns/dark_embroidery.zip -o $BGS/dark_embroidery.zip
-cd $BGS
-unzip dark_embroidery.zip
+curl http://oli.me.uk/wp-content/uploads/2015/03/very-angular.png -o $BGS/desktop.png
+curl http://oli.me.uk/wp-content/uploads/2015/03/dark-sharp-edges.png -o $BGS/lock.png
