@@ -151,7 +151,7 @@ bindsym $mod+r mode "resize"
 bar {
     colors {
         # Whole color settings
-        background #000000
+        background #242424
         statusline #ffffff
         separator  #666666
 
