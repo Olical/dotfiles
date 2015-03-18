@@ -177,6 +177,9 @@ exec --no-startup-id compton --config ~/.i3/compton.conf -b
 # Background image
 exec --no-startup-id feh --bg-center ~/.i3/backgrounds/desktop.png
 
+# No title bars. Doesn't play well with compton and MOAR SPACE!
+new_window pixel
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
