@@ -18,6 +18,12 @@ man() {
     man "$@"
 }
 
+# Stop all running containers.
+alias dockerstop='docker kill $(docker ps -q)'
+
+# Delete all docker images
+alias dockernuke='docker rmi -f $(docker images -q)'
+
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
