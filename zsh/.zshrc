@@ -18,8 +18,8 @@ man() {
     man "$@"
 }
 
-# Stop all running containers.
-alias dockerstop='docker kill $(docker ps -q)'
+# Kill all running containers.
+alias dockerkill='docker kill $(docker ps -q)'
 
 # Delete all docker images
 alias dockernuke='docker rmi -f $(docker images -q)'
