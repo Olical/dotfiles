@@ -173,6 +173,7 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id pa-applet
 exec --no-startup-id parcellite
 exec --no-startup-id compton --config ~/.i3/compton.conf -b
+exec --no-startup-id thunar --daemon
 
 # Background image
 exec --no-startup-id feh --bg-center ~/.i3/backgrounds/desktop.png
