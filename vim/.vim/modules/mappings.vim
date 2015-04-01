@@ -59,5 +59,5 @@ nnoremap <silent> <leader><leader> :call <SID>show_mappings()<CR>
 inoremap jk <esc>
 
 " Quick session bindings.
-nnoremap <silent> <leader>sw :mksession! .quicksave.vim<CR>
-nnoremap <silent> <leader>sr :source .quicksave.vim<CR>
+nnoremap <silent> <leader>sw :mksession! .quicksave.vim<CR>:echo "Session saved."<CR>
+nnoremap <silent> <leader>sr :source .quicksave.vim<CR>:echo "Session loaded."<CR>
