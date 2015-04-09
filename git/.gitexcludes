@@ -4,3 +4,4 @@
 .lvimrc
 .projections.json
 .quicksave.vim
+.build.sh
