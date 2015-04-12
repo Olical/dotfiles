@@ -1,5 +1,5 @@
 [global]
-    font = Monospace 8
+    font = DejaVu Sans Mono 8
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -73,7 +73,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing windowmanager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 0
+    transparency = 15
     
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
@@ -142,13 +142,13 @@
     browser = /usr/bin/firefox -new-tab
 
     # Align icons left/right/off
-    icon_position = off
+    icon_position = right
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_folders = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
 
 [frame]
-    width = 3
+    width = 1
     color = "#aaaaaa"
 
 [shortcuts]
