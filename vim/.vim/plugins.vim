@@ -12,7 +12,6 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'Wolfy87/vim-enmasse', { 'on': 'EnMasse' }
 Plug 'Wolfy87/vim-expand', { 'on': 'Expand' }
 Plug 'aklt/plantuml-syntax'
-Plug 'raymond-w-ko/vim-niji', { 'for': ['clojure', 'javascript'] }
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'embear/vim-localvimrc'
@@ -26,6 +25,7 @@ Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'raymond-w-ko/vim-niji', { 'for': ['clojure', 'javascript'] }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
