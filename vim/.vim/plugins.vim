@@ -5,7 +5,7 @@
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'Keithbsmiley/tmux.vim'
 Plug 'Lokaltog/vim-distinguished'
-Plug 'Lokaltog/vim-easymotion', { 'on': '<Plug>(easymotion-prefix)' }
+Plug 'Lokaltog/vim-easymotion'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Raimondi/delimitMate'
 Plug 'Valloric/YouCompleteMe'
@@ -21,11 +21,11 @@ Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/vim-asterisk'
 Plug 'helino/vim-json', { 'for': 'json' }
+Plug 'jelera/vim-javascript-syntax'
 Plug 'junegunn/vim-easy-align'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'raymond-w-ko/vim-niji', { 'for': ['clojure', 'javascript'] }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/syntastic'
