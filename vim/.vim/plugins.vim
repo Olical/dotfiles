@@ -16,6 +16,7 @@ Plug 'andreimaxim/vim-io'
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'embear/vim-localvimrc'
+Plug 'facebook/vim-flow'
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'haya14busa/incsearch.vim'
