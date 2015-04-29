@@ -48,5 +48,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'vim-scripts/JavaScript-Indent'
 Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 Plug 'walm/jshint.vim', { 'on': 'JSHint' }
