@@ -27,7 +27,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'raymond-w-ko/vim-niji', { 'for': ['clojure', 'javascript'] }
+Plug 'raymond-w-ko/vim-niji', { 'for': ['clojure'] }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }

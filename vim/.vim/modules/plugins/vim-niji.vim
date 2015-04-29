@@ -1,1 +1,1 @@
-let g:niji_matching_filetypes = ['clojure', 'javascript']
+let g:niji_matching_filetypes = ['clojure']
