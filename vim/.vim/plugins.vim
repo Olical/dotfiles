@@ -16,6 +16,7 @@ Plug 'aklt/plantuml-syntax'
 Plug 'andreimaxim/vim-io'
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'derekwyatt/vim-scala'
 Plug 'embear/vim-localvimrc'
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
