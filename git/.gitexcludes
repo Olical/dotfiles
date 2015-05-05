@@ -5,3 +5,4 @@
 .projections.json
 .quicksave.vim
 .build.sh
+.nrepl-history
