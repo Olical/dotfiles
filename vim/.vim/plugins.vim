@@ -31,6 +31,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'raymond-w-ko/vim-niji', { 'for': ['clojure'] }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/syntastic'
+Plug 'sevko/vim-nand2tetris-syntax'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-abolish'
