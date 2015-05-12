@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR="vim"
-export BROWSER="firefox"
+export BROWSER="firefox-developer"
 
 ZSH_THEME="clean"
 DISABLE_AUTO_TITLE="true"
