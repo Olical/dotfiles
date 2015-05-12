@@ -23,6 +23,9 @@ set mouse=a
 " Disable swap files.
 set noswapfile
 
+" Write files as they are, don't mess with line endings etc.
+set binary
+
 " Disable the completion preview window.
 set completeopt-=preview
 
