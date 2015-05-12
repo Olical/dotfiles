@@ -3,10 +3,7 @@ gvim
 ttf-dejavu
 gnome-themes-standard
 git
-i3-wm
-i3lock
-i3status
-dmenu
+i3
 compton
 xfce4-terminal
 firefox-developer
