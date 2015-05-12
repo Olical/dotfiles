@@ -4,12 +4,11 @@ ttf-dejavu
 gnome-themes-standard
 git
 i3-wm
-i3lock-wrapper
+i3lock
 i3status
 dmenu
 compton
 xfce4-terminal
-xfce4-screenshooter
 firefox-developer
 networkmanager
 gnome-keyring
