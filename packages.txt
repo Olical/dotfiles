@@ -20,3 +20,4 @@ i3session-git
 tmux
 zsh
 xclip
+terminus-font
