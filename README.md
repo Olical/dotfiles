@@ -6,6 +6,8 @@ My configuration can be installed via symlinks with [stow][] (`stow-all.sh` will
 
 Package names (that are correct for Arch Linux at least) can be found in `packages.txt`. A lot of the packages can only be found on the AUR, so you'll want to install these with something like [yaourt][]. Install everything with `yaourt --needed -S $(cat packages)`. You'll need the wiki for the [inifinality font patches][infinality] installation.
 
+Follow the normal Arch guides for installation of the OS, X11 and other such fluff. These dotfiles assume an already working X11 environment, it's the layer on top of the machine, not the machine itself.
+
 [Wolfy87]: https://github.com/Wolfy87
 [@OliverCaldwell]: https://twitter.com/OliverCaldwell
 [the unlicence]: http://unlicense.org/
