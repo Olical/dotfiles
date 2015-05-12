@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-i3lock -i ~/.i3/backgrounds/lock.png --tiling && sleep 1
+i3lock-wrapper -l && sleep 1
