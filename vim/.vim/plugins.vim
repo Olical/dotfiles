@@ -20,6 +20,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'embear/vim-localvimrc'
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/vim-asterisk'
 Plug 'helino/vim-json', { 'for': 'json' }
@@ -51,5 +52,4 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/JavaScript-Indent'
-Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 Plug 'walm/jshint.vim', { 'on': 'JSHint' }
