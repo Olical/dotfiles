@@ -47,6 +47,7 @@ Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-ragtag', { 'for': ['html', 'xml'] }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
