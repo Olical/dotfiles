@@ -33,7 +33,7 @@ Plug 'raymond-w-ko/vim-niji'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic'
 Plug 'sevko/vim-nand2tetris-syntax'
-Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+Plug 'sjl/gundo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-classpath'
