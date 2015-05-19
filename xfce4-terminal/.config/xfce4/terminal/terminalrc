@@ -17,5 +17,5 @@ MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 TitleMode=TERMINAL_TITLE_HIDE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
-FontName=Terminus 14
+FontName=Terminus 12
 
