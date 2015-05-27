@@ -4,7 +4,7 @@ export BROWSER="firefox-developer"
 
 ZSH_THEME="clean"
 DISABLE_AUTO_TITLE="true"
-plugins=(git)
+plugins=(archlinux docker git git-flow lein mvn npm sudo systemd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -25,29 +25,6 @@ alias dockerkill='docker kill $(docker ps -q)'
 
 # Delete all docker images and containers.
 alias dockernuke='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'
-
-# Git short cuts.
-alias ga='git add'
-alias gbi='git bisect'
-alias gb='git branch'
-alias gc='git commit'
-alias gch='git checkout'
-alias gcl='git clone'
-alias gd='git diff'
-alias gf='git fetch'
-alias gg='git grep'
-alias gi='git init'
-alias gl='git log'
-alias gm='git merge'
-alias gmv='git mv'
-alias gpl='git pull'
-alias gpu='git push'
-alias gr='git rebase'
-alias gres='git reset'
-alias grm='git rm'
-alias gs='git status'
-alias gsh='git show'
-alias gt='git tag'
 
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
