@@ -26,6 +26,9 @@ alias dockerkill='docker kill $(docker ps -q)'
 # Delete all docker images and containers.
 alias dockernuke='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'
 
+# Quick git status.
+alias gs='gst -sb'
+
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
