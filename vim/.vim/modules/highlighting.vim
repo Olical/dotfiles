@@ -1,9 +1,8 @@
 " Highlight searches.
 set hlsearch
 
-" Cross hair.
+" Highlight the current line.
 set cursorline
-set cursorcolumn
 
 function! s:after_colorscheme()
   " Make spelling problems easier to read.
