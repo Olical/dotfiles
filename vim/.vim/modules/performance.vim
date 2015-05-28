@@ -4,6 +4,3 @@ set ttyfast
 
 " Stops macros rendering every step.
 set lazyredraw
-
-" Stop Vim dying if there's massively long lines.
-set synmaxcol=128
