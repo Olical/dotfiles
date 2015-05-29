@@ -9,7 +9,7 @@ plugins=(archlinux docker git git-flow lein mvn npm sudo systemd)
 source $ZSH/oh-my-zsh.sh
 
 # Add ~/bin and ~/npm/bin to the path.
-PATH=("$HOME/bin" "$HOME/npm/bin" $PATH)
+path=("$HOME/bin" "$HOME/npm/bin" $path)
 export PATH
 
 # Adds highlighting to man pages.
