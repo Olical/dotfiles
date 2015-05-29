@@ -8,6 +8,10 @@ plugins=(archlinux docker git git-flow lein mvn npm sudo systemd)
 
 source $ZSH/oh-my-zsh.sh
 
+# Add ~/bin and ~/npm/bin to the path.
+PATH=("$HOME/bin" "$HOME/npm/bin" $PATH)
+export PATH
+
 # Adds highlighting to man pages.
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
