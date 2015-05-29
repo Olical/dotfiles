@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-yaourt -Syua && cd ~/dotfiles && git pull && ~/.vim/sync.sh
+yaourt -Syu && yaourt -Syua --noconfirm && cd ~/dotfiles && git pull && ~/.vim/sync.sh
