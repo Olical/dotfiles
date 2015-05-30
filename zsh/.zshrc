@@ -4,13 +4,26 @@ export BROWSER="firefox-developer"
 
 ZSH_THEME="clean"
 DISABLE_AUTO_TITLE="true"
-plugins=(archlinux docker git git-flow lein mvn npm sudo systemd)
+plugins=(
+    archlinux
+    docker
+    git
+    git-flow
+    lein
+    mvn
+    npm
+    sudo
+    systemd
+)
 
 source $ZSH/oh-my-zsh.sh
 
 # Add ~/bin and ~/npm/bin to the path.
-path=("$HOME/bin" "$HOME/npm/bin" $path)
-export PATH
+path=(
+    $HOME/bin
+    $HOME/npm/bin
+    $path
+)
 
 # Adds highlighting to man pages.
 man() {
