@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
-yaourt -Syu && yaourt -Syua --noconfirm && cd ~/dotfiles && git pull && ~/.vim/sync.sh
+yaourt -Syu
+yaourt -Syua --noconfirm
+npm update -g
+
+cd ~/dotfiles
+
+git pull
+~/.vim/sync.sh
