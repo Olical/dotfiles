@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-yaourt -Syu
 yaourt -Syua --noconfirm
 npm update -g
 
