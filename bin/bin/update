@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+set -e
+
+cd ~/dotfiles && git pull
+
 yaourt -Syua --noconfirm
 npm update -g
 
-cd ~/dotfiles
-
-git pull
-~/.vim/sync.sh
+./vim/.vim/sync.sh
