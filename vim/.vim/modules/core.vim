@@ -16,6 +16,7 @@ set splitright
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set expandtab
 
 " Enable mouse. Great for resizing windows and keeping co-workers sane.
 set mouse=a
