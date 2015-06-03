@@ -1,0 +1,17 @@
+snippet fn "anonymous function" i
+function ($1) {
+    $0
+}
+endsnippet
+
+snippet defn "full function"
+function $1($2) {
+    $0
+};
+endsnippet
+
+snippet cb "callback function call"
+$1($2function () {
+    $0
+});
+endsnippet
