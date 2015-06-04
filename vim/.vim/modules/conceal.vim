@@ -7,3 +7,4 @@ set concealcursor=nvic
 let g:javascript_conceal_function = "λ"
 let g:javascript_conceal_this = "@"
 let g:javascript_conceal_return = "<"
+let g:javascript_conceal_prototype = "#"
