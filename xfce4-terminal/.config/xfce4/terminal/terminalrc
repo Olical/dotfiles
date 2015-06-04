@@ -17,6 +17,6 @@ MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 TitleMode=TERMINAL_TITLE_HIDE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
-FontName=DejaVu Sans Mono 10
+FontName=DejaVu Sans Mono 9
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 
