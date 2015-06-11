@@ -26,7 +26,14 @@ endfunction
 " Performs a syntax expand, but only if we're at the head of a line.
 " This stops `<` to `return` happening when typing <= for example.
 function! s:syntax_expand_head(from, to)
-  let before = getline(".")[0:col(".")]
+  let column = col(".") - 2
+  let before = ""
+
+  if column >= 0
+    let before = getline(".")[:column]
+  endif
+
+  echom before
 
   if before =~# "\\v^\\s*$"
     return <SID>syntax_expand(a:from, a:to)
