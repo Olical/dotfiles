@@ -23,4 +23,19 @@ function! s:syntax_expand(from, to)
   endif
 endfunction
 
+" Performs a syntax expand, but only if we're at the head of a line.
+" This stops `<` to `return` happening when typing <= for example.
+function! s:syntax_expand_head(from, to)
+  let before = getline(".")[0:col(".")]
+
+  if before =~# "\\v^\\s*$"
+    return <SID>syntax_expand(a:from, a:to)
+  else
+    return a:from
+  endif
+endfunction
+
+" Map the conceal characters to their expanded forms.
 inoremap <silent> @ <C-r>=<SID>syntax_expand("@", "this")<CR>
+inoremap <silent> # <C-r>=<SID>syntax_expand("#", "prototype")<CR>
+inoremap <silent> < <C-r>=<SID>syntax_expand_head("<", "return")<CR>
