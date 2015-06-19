@@ -46,6 +46,9 @@ alias dockernuke='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)
 # Quick git status.
 alias gs='gst -sb'
 
+# LS colours.
+eval $(dircolors ~/.dircolors)
+
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi

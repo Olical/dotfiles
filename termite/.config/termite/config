@@ -1,0 +1,7 @@
+[options]
+font = Monospace 9
+font = DejaVu Sans Mono 9
+
+[colors]
+foreground = #FFFFFF
+background  = #000000

@@ -18,6 +18,7 @@ Here's my current list of tooling and quick descriptions of their jobs. It doesn
  * `tmux`           Terminal multiplexer, main part of my workflow.
  * `vim`            The best text editor. *Highly* customised.
  * `xfce4-terminal` A lightweight terminal from XFCE.
+ * `termite`        Simple, modal and configurable terminal. Replacing my xfce4-terminal usage.
  * `zsh`            My shell of choice, depends upon oh-my-zsh.
 
 ## Author
