@@ -174,7 +174,19 @@ exec --no-startup-id thunar --daemon
 exec --no-startup-id xautolock -time 10 -locker "~/.i3/locker.sh"
 
 # Background image
-exec --no-startup-id ~/.i3/wallpaper.sh
+exec --no-startup-id ~/.i3/cycle-wallpaper.sh
+
+set $mode_wallpaper Wallpaper (r) refresh, (n) next
+mode "$mode_wallpaper" {
+    bindsym r exec --no-startup-id ~/.i3/fetch-wallpapers.sh, mode "default"
+    bindsym n exec --no-startup-id ~/.i3/select-wallpaper.sh, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+o mode "$mode_wallpaper"
 
 # No title bars. Doesn't play well with compton and MOAR SPACE!
 new_window pixel
