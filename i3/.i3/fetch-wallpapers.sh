@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-rm -rf /tmp/wallpapers
-cd /tmp
-subdown wallpapers
+rm -rf ~/.wallpapers
+mkdir ~/.wallpapers
+cd ~/.wallpapers
+subdown -t 10 WQHD_Wallpaper
+notify-send "Wallpapers refreshed!"
