@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-stow $(ls -d */)
+stow --restow $(ls -d */)
