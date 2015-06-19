@@ -4,6 +4,7 @@ ttf-dejavu
 gnome-themes-standard
 git
 i3
+i3lock-wrapper
 compton
 xfce4-terminal
 firefox-developer
