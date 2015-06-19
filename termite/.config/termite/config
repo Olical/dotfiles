@@ -3,5 +3,41 @@ font = Monospace 9
 font = DejaVu Sans Mono 9
 
 [colors]
-foreground = #FFFFFF
-background  = #000000
+
+# special
+foreground      = #d0d0d0
+foreground_bold = #d0d0d0
+cursor          = #d0d0d0
+background      = #151515
+
+# black
+color0  = #151515
+color8  = #505050
+
+# red
+color1  = #ac4142
+color9  = #ac4142
+
+# green
+color2  = #90a959
+color10 = #90a959
+
+# yellow
+color3  = #f4bf75
+color11 = #f4bf75
+
+# blue
+color4  = #6a9fb5
+color12 = #6a9fb5
+
+# magenta
+color5  = #aa759f
+color13 = #aa759f
+
+# cyan
+color6  = #75b5aa
+color14 = #75b5aa
+
+# white
+color7  = #d0d0d0
+color15 = #f5f5f5
