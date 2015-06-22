@@ -1,9 +1,10 @@
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh
 export EDITOR="vim"
 export BROWSER="firefox"
 
 ZSH_THEME="clean"
 DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_UPDATE="true"
 plugins=(
     archlinux
     docker
@@ -15,6 +16,11 @@ plugins=(
     sudo
     systemd
 )
+
+ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
 
 source $ZSH/oh-my-zsh.sh
 

@@ -7,8 +7,8 @@ i3
 i3lock-wrapper
 subdown
 compton
-xfce4-terminal
-firefox-developer
+termite
+firefox
 networkmanager
 gnome-keyring
 redshift
@@ -21,4 +21,5 @@ playerctl
 i3session-git
 tmux
 zsh
+oh-my-zsh-git
 xclip
