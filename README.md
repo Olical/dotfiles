@@ -2,7 +2,7 @@
 
 This repository consists of configuration for any tools I use within my Linux ([Arch][]) and Vim development environment. I use my terminal as my IDE, so there's a lot of tools I depend on. I link all of this configuration into my home directory using [stow][].
 
-You'll need to fetch [oh-my-zsh][] manually (if desired) and I'd highly recommend [yaourt][] to abstract away the [AUR][]. I'd also highly recommend setting up [infinality][] fonts, they look excellent.
+I'd highly recommend [yaourt][] to abstract away the [AUR][] as well as installing [infinality][] fonts, they look excellent.
 
 ## Tooling
 
@@ -40,7 +40,6 @@ Do what you want. Learn as much as you can. Unlicense more software.
 [@OliverCaldwell]: https://twitter.com/OliverCaldwell
 [Arch]: https://www.archlinux.org/
 [stow]: http://www.gnu.org/software/stow/
-[oh-my-zsh]: http://ohmyz.sh/
 [yaourt]: https://aur.archlinux.org/packages/yaourt/
 [AUR]: https://aur.archlinux.org/
 [infinality]: https://wiki.archlinux.org/index.php/Infinality

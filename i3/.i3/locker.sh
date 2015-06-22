@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-i3lock-wrapper && sleep 1
+i3lock -i ~/.i3/backgrounds/dark.png && sleep 1
