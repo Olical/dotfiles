@@ -1,4 +1,5 @@
 compton
+dmenu
 dunst
 feh
 firefox
@@ -6,9 +7,10 @@ git
 gnome-keyring
 gnome-themes-standard
 gvim
-i3
+i3-wm
 i3lock
 i3session-git
+i3status
 networkmanager
 oh-my-zsh-git
 pa-applet-git
