@@ -174,7 +174,7 @@ exec --no-startup-id thunar --daemon
 exec --no-startup-id xautolock -time 10 -locker "~/.i3/locker.sh"
 
 # Background image
-exec --no-startup-id feh --bg-center ~/.i3/backgrounds/light.png
+exec --no-startup-id feh --bg-center ~/.i3/backgrounds/tesla.png
 
 # No title bars. Doesn't play well with compton and MOAR SPACE!
 new_window pixel
