@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-feh --bg-max ~/.i3/backgrounds/tesla.png
+feh --bg-fill ~/.i3/backgrounds/tesla.png
