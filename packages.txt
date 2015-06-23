@@ -26,4 +26,5 @@ tmux
 ttf-dejavu
 xautolock
 xclip
+xcwd-git
 zsh
