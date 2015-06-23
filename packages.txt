@@ -1,3 +1,4 @@
+autorandr-git
 compton
 dmenu
 dunst
