@@ -8,20 +8,18 @@ I'd highly recommend [yaourt][] to abstract away the [AUR][] as well as installi
 
 Here's my current list of tooling and quick descriptions of their jobs. It doesn't include everything I depend on, but it's certainly the majority. `packages.txt` contains a more complete list of the packages I depend upon, such as [compton][], my window compositor.
 
- * `bin`            Simple scripts that are placed in my path.
- * `dunst`          Lightweight notifications.
- * `git`            Kind of obvious. Awesome version control.
- * `gtk`            Theme and font configuration for GTK applications.
- * `i3`             My tiling window manager of choice.
- * `leiningen`      Clojure build system.
- * `ranger`         Lightweight file manager with Vim bindings.
- * `tmux`           Terminal multiplexer, main part of my workflow.
- * `vim`            The best text editor. *Highly* customised.
- * `xfce4-terminal` A lightweight terminal from XFCE.
- * `termite`        Simple, modal and configurable terminal. Replacing my xfce4-terminal usage.
- * `zsh`            My shell of choice, depends upon oh-my-zsh.
+ * `bin`     Simple scripts that are placed in my path.
+ * `dunst`   Lightweight notifications.
+ * `git`     Kind of obvious. Awesome version control.
+ * `gtk`     Theme and font configuration for GTK applications.
+ * `i3`      My tiling window manager of choice.
+ * `tmux`    Terminal multiplexer, main part of my workflow.
+ * `vim`     The best text editor. *Highly* customised.
+ * `termite` Simple, modal and configurable terminal. Replacing my xfce4-terminal usage.
+ * `zsh`     My shell of choice, depends upon oh-my-zsh.
+ * `x`       The X windowing system. I bootstrap autorandr and i3 in there.
 
-You can install everything listed in my `packages.txt` with `yaourt -S --needed --no-confirm $(packages.txt)`. The `--no-confirm` is optional, but it makes the AUR stuff far quicker, there's a lot of questions otherwise.
+You can install everything listed in my `packages.txt` with `yaourt -S --needed --no-confirm $(cat packages.txt)`. The `--no-confirm` is optional, but it makes the AUR stuff far quicker, there's a lot of questions otherwise.
 
 ## Author
 
