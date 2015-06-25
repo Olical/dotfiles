@@ -13,6 +13,8 @@ i3lock
 i3session-git
 i3status
 networkmanager
+nodejs
+npm
 oh-my-zsh-git
 pa-applet-git
 parcellite

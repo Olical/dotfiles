@@ -21,6 +21,10 @@ Here's my current list of tooling and quick descriptions of their jobs. It doesn
 
 You can install everything listed in my `packages.txt` with `yaourt -S --needed --noconfirm $(cat packages.txt)`. The `--noconfirm` is optional, but it makes the AUR stuff far quicker, there's a lot of questions otherwise.
 
+You may have to install `termite` separately first since it asked me a question on install which stopped the process. It wanted to replace a conflicting package which I agreed to.
+
+You can set zsh as your shell with `chsh -s $(which zsh)`.
+
 ## Author
 
 [Oliver Caldwell][] / [@OliverCaldwell][]
