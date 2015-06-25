@@ -1,2 +1,5 @@
 source ~/.vim/bootstrap.vim
-source ~/.vimrc_local
+
+if filereadable("~/.vimrc_local")
+    source ~/.vimrc_local
+endif
