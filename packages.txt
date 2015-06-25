@@ -23,6 +23,7 @@ redshift
 stow
 subdown
 termite
+the_silver_searcher
 thunar
 tmux
 ttf-dejavu
