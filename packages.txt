@@ -19,6 +19,7 @@ oh-my-zsh-git
 pa-applet-git
 parcellite
 playerctl
+python-xdg
 redshift
 stow
 subdown
