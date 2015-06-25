@@ -19,7 +19,7 @@ Here's my current list of tooling and quick descriptions of their jobs. It doesn
  * `zsh`     My shell of choice, depends upon oh-my-zsh.
  * `x`       The X windowing system. I bootstrap autorandr and i3 in there.
 
-You can install everything listed in my `packages.txt` with `yaourt -S --needed --no-confirm $(cat packages.txt)`. The `--no-confirm` is optional, but it makes the AUR stuff far quicker, there's a lot of questions otherwise.
+You can install everything listed in my `packages.txt` with `yaourt -S --needed --noconfirm $(cat packages.txt)`. The `--noconfirm` is optional, but it makes the AUR stuff far quicker, there's a lot of questions otherwise.
 
 ## Author
 
