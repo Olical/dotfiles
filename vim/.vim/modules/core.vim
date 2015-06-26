@@ -2,9 +2,6 @@
 " plugins depend on it during start up.
 set backspace=indent,eol,start
 
-" Enable line numbers.
-set number
-
 " Enable invisible characters.
 set list
 
