@@ -18,6 +18,7 @@ Here's my current list of tooling and quick descriptions of their jobs. It doesn
  * `termite` Simple, modal and configurable terminal. Replacing my xfce4-terminal usage.
  * `zsh`     My shell of choice, depends upon oh-my-zsh.
  * `x`       The X windowing system. I bootstrap autorandr and i3 in there.
+ * `xchat`   An IRC client.
 
 You can install everything listed in my `packages.txt` with `yaourt -S --needed --noconfirm $(cat packages.txt)`. The `--noconfirm` is optional, but it makes the AUR stuff far quicker, there's a lot of questions otherwise.
 
