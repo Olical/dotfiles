@@ -53,7 +53,9 @@ alias dockernuke='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)
 alias gs='gst -sb'
 
 # LS colours.
-eval $(dircolors ~/.dircolors)
+if which programname >/dev/null; then
+  eval $(dircolors ~/.dircolors)
+fi
 
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
