@@ -9,6 +9,11 @@ set list
 set splitbelow
 set splitright
 
+" Set a default indent, but vim-sleuth should adjust it.
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " Enable mouse. Great for resizing windows and keeping co-workers sane.
 set mouse=a
 
