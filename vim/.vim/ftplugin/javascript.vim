@@ -4,6 +4,6 @@
 " Fantastic.
 
 " Map the conceal characters to their expanded forms.
-inoremap <silent> @ <C-r>=syntax_expand#expand("@", "this")<CR>
-inoremap <silent> # <C-r>=syntax_expand#expand("#", "prototype")<CR>
-inoremap <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
+inoremap <buffer> <silent> @ <C-r>=syntax_expand#expand("@", "this")<CR>
+inoremap <buffer> <silent> # <C-r>=syntax_expand#expand("#", "prototype")<CR>
+inoremap <buffer> <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
