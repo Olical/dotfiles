@@ -6,3 +6,4 @@
 .quicksave.vim
 .build.sh
 .nrepl-history
+.env
