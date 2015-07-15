@@ -6,7 +6,12 @@ ZSH_THEME="clean"
 DISABLE_AUTO_TITLE="true"
 DISABLE_AUTO_UPDATE="true"
 plugins=(
+    archlinux
     git
+    lein
+    npm
+    sudo
+    systemd
 )
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
