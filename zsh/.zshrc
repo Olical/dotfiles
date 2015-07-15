@@ -5,17 +5,7 @@ export BROWSER="firefox"
 ZSH_THEME="clean"
 DISABLE_AUTO_TITLE="true"
 DISABLE_AUTO_UPDATE="true"
-plugins=(
-    archlinux
-    docker
-    git
-    git-flow
-    lein
-    mvn
-    npm
-    sudo
-    systemd
-)
+plugins=()
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
