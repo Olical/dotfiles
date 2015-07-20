@@ -50,7 +50,7 @@ alias dockernuke='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)
 alias gs='gst -sb'
 
 # Fixes stuff.
-alias fuck='thefuck'
+alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
 # LS colours.
 if which programname >/dev/null; then
