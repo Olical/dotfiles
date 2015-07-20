@@ -25,6 +25,7 @@ stow
 subdown
 termite
 the_silver_searcher
+thefuck
 thunar
 tmux
 ttf-dejavu

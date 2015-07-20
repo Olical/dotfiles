@@ -49,6 +49,9 @@ alias dockernuke='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)
 # Quick git status.
 alias gs='gst -sb'
 
+# Fixes stuff.
+alias fuck='thefuck'
+
 # LS colours.
 if which programname >/dev/null; then
   eval $(dircolors ~/.dircolors)
