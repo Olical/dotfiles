@@ -4,6 +4,10 @@ font = DejaVu Sans Mono 9
 mouse_autohide = true
 clickable_url = true
 browser = firefox
+allow_bold = true
+dynamic_title = true
+scrollback_lines = 10000
+cursor_blink = system
 
 [colors]
 # special
@@ -43,3 +47,5 @@ color14 = #75b5aa
 # white
 color7  = #d0d0d0
 color15 = #f5f5f5
+
+# vim: ft=dosini cms=#%s
