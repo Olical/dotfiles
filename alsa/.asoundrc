@@ -1,0 +1,4 @@
+pcm.dsp {
+    type plug
+    slave.pcm "dmix"
+}
