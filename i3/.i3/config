@@ -26,6 +26,10 @@ font pango:DejaVu Sans Mono 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Start more windows floating.
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
 # start a terminal
 bindsym $mod+Return exec termite -d $(xcwd)
 
