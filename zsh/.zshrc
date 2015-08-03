@@ -2,7 +2,8 @@ export ZSH=/usr/share/oh-my-zsh
 export EDITOR="vim"
 export BROWSER="firefox"
 
-ZSH_THEME="clean"
+ZSH_CUSTOM="$HOME/.zsh_custom"
+ZSH_THEME="olical"
 DISABLE_AUTO_TITLE="true"
 DISABLE_AUTO_UPDATE="true"
 plugins=(
