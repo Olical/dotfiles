@@ -1,3 +1,4 @@
 ZSH_THEME_GIT_PROMPT_DIRTY="%U"
-local lambda="%(?,%{$fg[green]%},%{$fg[red]%})λ%{$reset_color%}"
-PROMPT='$(parse_git_dirty)${lambda}%{$reset_color%} '
+local lambda="$(parse_git_dirty)%(?,%{$fg[green]%},%{$fg[red]%})λ%{$reset_color%}%u"
+local directory="%{$fg[blue]%}$(basename $(pwd))%{$reset_color%}"
+PROMPT='${directory} ${lambda} '
