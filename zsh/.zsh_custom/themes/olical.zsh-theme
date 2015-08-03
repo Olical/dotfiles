@@ -1,3 +1,4 @@
-ZSH_THEME_GIT_PROMPT_DIRTY="%U"
-local lambda="$(parse_git_dirty)%(?,%{$fg[green]%},%{$fg[red]%})λ%{$reset_color%}%u"
-PROMPT='${lambda} '
+ZSH_THEME_GIT_PROMPT_DIRTY='%Uλ%u'
+ZSH_THEME_GIT_PROMPT_CLEAN='λ'
+local lambda='%(?,%{$fg[green]%},%{$fg[red]%})$(parse_git_dirty)%{$reset_color%} '
+PROMPT="$lambda"
