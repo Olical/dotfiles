@@ -1,10 +1,17 @@
-# A lambda prompt.
+# A lambda (λ) prompt.
 # Green and red depending on exit status.
 # Underlined if git status is dirty.
+# Uppercase (Λ) if ahead of the remote.
 
-ZSH_THEME_GIT_PROMPT_DIRTY='%Uλ%u'
-ZSH_THEME_GIT_PROMPT_CLEAN='λ'
-local lambda='%(?,%{$fg[green]%},%{$fg[red]%})$(parse_git_dirty)%{$reset_color%}'
+function get_lambda_char() {
+	local ahead=$(git_prompt_ahead)
+	echo "$(parse_git_dirty)${ahead:=λ}%u"
+}
+
+ZSH_THEME_GIT_PROMPT_AHEAD='Λ'
+local char='git_prompt_ahead'
+ZSH_THEME_GIT_PROMPT_DIRTY='%U'
+local lambda='%(?,%{$fg[green]%},%{$fg[red]%})$(get_lambda_char)%{$reset_color%}'
 
 # From the clean theme.
 # LS colors, made with http://geoff.greer.fm/lscolors/
