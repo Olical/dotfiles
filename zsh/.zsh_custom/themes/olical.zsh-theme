@@ -10,7 +10,7 @@ function get_lambda_char() {
 
 ZSH_THEME_GIT_PROMPT_AHEAD='Λ'
 ZSH_THEME_GIT_PROMPT_DIRTY='%U'
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%u%{$reset_color%}"
 
 local cwd='%{$fg[blue]%}%1~%{$reset_color%}'
