@@ -4,6 +4,7 @@ dmenu
 dunst
 feh
 firefox
+fish
 git
 gnome-keyring
 gnome-themes-standard
@@ -15,7 +16,6 @@ i3status
 networkmanager
 nodejs
 npm
-oh-my-zsh-git
 pa-applet-git
 parcellite
 playerctl
@@ -32,4 +32,3 @@ ttf-dejavu
 xautolock
 xclip
 xcwd-git
-zsh
