@@ -10,6 +10,7 @@ alias dockernuke='docker rm (docker ps -a -q); docker rmi -f (docker images -q)'
 # Git.
 alias g="git"
 alias gs="git status -sb"
+alias gb="git branch"
 alias gc="git commit"
 alias ga="git add"
 alias gco="git checkout"
