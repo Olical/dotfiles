@@ -11,10 +11,15 @@ function fish_prompt
   end
 
   if is_git_dirty
-    set_color -u
+    set_color --underline
   end
 
-  echo -n  'λ'
+  if is_git_ahead
+    echo -n  'Λ'
+  else
+    echo -n  'λ'
+  end
+
   set_color normal
   echo -n ' '
 end
