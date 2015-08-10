@@ -22,3 +22,8 @@ alias gr="git remote"
 alias gre="git rebase"
 alias glg="git log --stat"
 alias gd="git diff"
+
+# Local config.
+if [ -f ~/.local.fish ]
+  . ~/.local.fish
+end
