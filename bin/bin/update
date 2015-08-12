@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
 set -e
+set -x
 
 cd ~/dotfiles && git pull
 
 yaourt -Syua --noconfirm
-npm update -g
+
+for package in $(npm -g outdated --parseable --depth=0 | cut -d: -f2)
+do
+    npm -g install "$package"
+done
 
 ./vim/.vim/sync.sh
