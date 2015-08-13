@@ -24,6 +24,9 @@ alias gre="git rebase"
 alias glg="git log --stat"
 alias gd="git diff"
 
+# Start an SSH agent if required, if not, connect to it.
+initialise_ssh_agent
+
 # Local config.
 if [ -f ~/.local.fish ]
   . ~/.local.fish
