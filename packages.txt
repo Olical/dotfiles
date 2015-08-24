@@ -22,7 +22,6 @@ playerctl
 python-xdg
 redshift
 stow
-subdown
 termite
 the_silver_searcher
 thunar
