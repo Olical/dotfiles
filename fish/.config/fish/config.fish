@@ -1,4 +1,4 @@
-set PATH ~/bin ~/npm/bin $PATH
+set PATH ~/npm/bin $PATH
 set fish_greeting ""
 
 # Kill all running containers.
