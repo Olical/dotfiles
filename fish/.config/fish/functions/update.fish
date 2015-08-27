@@ -1,5 +1,6 @@
 function update
-  cd ~/dotfiles; and git pull
+  pushd ~/dotfiles
+  git pull
 
   if [ (which yaourt) ]
     yaourt -Syua --noconfirm
@@ -14,4 +15,5 @@ function update
   end
 
   ./vim/.vim/sync.sh
+  popd
 end
