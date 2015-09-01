@@ -9,7 +9,7 @@ alias dockernuke='docker rm (docker ps -a -q); docker rmi -f (docker images -q)'
 
 # Git alias.
 alias g="git"
-alias gs="echo WooOoOooOoOooOo~"
+alias gs="cowsay -f ghostbusters 'gs is ghostscript, not git status!'"
 
 # Start an SSH agent if required, if not, connect to it.
 initialise_ssh_agent

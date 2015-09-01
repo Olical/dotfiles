@@ -1,5 +1,6 @@
 autorandr-git
 compton
+cowsay
 dmenu
 dunst
 feh
