@@ -1,4 +1,5 @@
 set PATH ~/npm/bin $PATH
+set EDITOR vim
 set fish_greeting ""
 
 # Kill all running containers.
