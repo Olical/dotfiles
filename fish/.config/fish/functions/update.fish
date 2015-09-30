@@ -13,9 +13,7 @@ function update
   end
 
   for package in (npm -g outdated --parseable --depth=0 | cut -d: -f2)
-    if [ "$package" != "npm" ]
-      npm -g install "$package"
-    end
+    npm -g install "$package"
   end
 
   ./vim/.vim/sync.sh
