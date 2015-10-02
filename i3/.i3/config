@@ -83,6 +83,9 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
+# make floating window sticky
+bindsym $mod+Shift+s sticky toggle
+
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
