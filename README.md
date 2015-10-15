@@ -6,25 +6,11 @@ I'd highly recommend [yaourt][] to abstract away the [AUR][] as well as installi
 
 ## Tooling
 
-Here's my current list of tooling and quick descriptions of their jobs. It doesn't include everything I depend on, but it's certainly the majority. `packages.txt` contains a more complete list of the packages I depend upon, such as [compton][], my window compositor.
-
- * `bin`     Simple scripts that are placed in my path.
- * `dunst`   Lightweight notifications.
- * `git`     Kind of obvious. Awesome version control.
- * `gtk`     Theme and font configuration for GTK applications.
- * `i3`      My tiling window manager of choice.
- * `tmux`    Terminal multiplexer, main part of my workflow.
- * `vim`     The best text editor. *Highly* customised.
- * `termite` Simple, modal and configurable terminal. Replacing my xfce4-terminal usage.
- * `zsh`     My shell of choice, depends upon oh-my-zsh.
- * `x`       The X windowing system. I bootstrap autorandr and i3 in there.
- * `xchat`   An IRC client.
-
 You can install everything listed in my `packages.txt` with `yaourt -S --needed --noconfirm $(cat packages.txt)`. The `--noconfirm` is optional, but it makes the AUR stuff far quicker, there's a lot of questions otherwise.
 
 You may have to install `termite` separately first since it asked me a question on install which stopped the process. It wanted to replace a conflicting package which I agreed to.
 
-You can set zsh as your shell with `chsh -s $(which zsh)`.
+You can set fish as your shell with `chsh -s $(which fish)`.
 
 ## Author
 
