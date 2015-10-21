@@ -15,7 +15,7 @@ i3session-git
 i3status
 infinality-bundle
 networkmanager
-nodejs-0.12
+nodejs
 npm
 pa-applet-git
 parcellite
