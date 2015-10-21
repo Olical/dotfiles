@@ -6,7 +6,7 @@ install-packages: add-repositories
 	yaourt -S --needed --noconfirm `cat packages.txt`
 
 add-repositories: add-infinality-key
-	sudo cat repositories.txt >> /etc/pacman.conf
+	cat repositories.txt | sudo tee -a /etc/pacman.conf
 
 add-infinality-key:
 	sudo dirmngr &
