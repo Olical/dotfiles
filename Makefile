@@ -11,7 +11,6 @@ add-repositories: add-infinality-key
 add-infinality-key:
 	sudo dirmngr &
 	sleep 1
-	killall dirmngr
 	sudo pacman-key -r 962DDE58
 	sudo pacman-key --lsign-key 962DDE58
 
