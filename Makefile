@@ -1,8 +1,7 @@
-default: install-packages link-config set-shell sync-vim
+default: install-packages link-config set-shell sync-vim cleanup
 
 install-packages: add-repositories
-	yaourt -Sy
-	yaourt -S --needed termite infinality-bundle
+	sudo pacman -Sy yaourt termite infinality-bundle
 	yaourt -S --needed --noconfirm `cat packages.txt`
 
 add-repositories: add-infinality-key
@@ -22,4 +21,8 @@ set-shell:
 
 sync-vim:
 	./vim/.vim/sync.sh
-	./vim/.vim/plugged/YouCompleteMe/install.py
+	python2 ./vim/.vim/plugged/YouCompleteMe/install.py
+
+cleanup:
+	sudo systemctl disable xfce4-notifyd
+	yaourt -Rs xfce4-notifyd
