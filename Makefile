@@ -1,9 +1,7 @@
 default: install-packages link-config set-shell
 
 install-packages: add-repositories
-	yaourt -Sy
-	yaourt -S --needed termite
-	yaourt -S --needed --noconfirm `cat packages.txt`
+	yaourt -Sy --force --needed --noconfirm `cat packages.txt`
 
 add-repositories: add-infinality-key
 	cat repositories.txt | sudo tee -a /etc/pacman.conf
