@@ -22,3 +22,4 @@ set-shell:
 
 sync-vim:
 	./vim/.vim/sync.sh
+	./vim/.vim/plugged/YouCompleteMe/install.py
