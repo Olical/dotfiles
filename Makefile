@@ -2,7 +2,7 @@ default: install-packages link-config set-shell sync-vim
 
 install-packages: add-repositories
 	yaourt -Sy
-	yaourt -S --needed termite infinality-bundle
+	yaourt -S --needed termite infinality-bundle nodejs-0.12
 	yaourt -S --needed --noconfirm `cat packages.txt`
 
 add-repositories: add-infinality-key
