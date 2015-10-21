@@ -1,0 +1,8 @@
+
+[infinality-bundle]
+Server = http://bohoomil.com/repo/$arch
+
+[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/$arch
+

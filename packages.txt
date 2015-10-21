@@ -13,8 +13,9 @@ i3-wm
 i3lock
 i3session-git
 i3status
+infinality-bundle
 networkmanager
-nodejs
+nodejs-0.12
 npm
 pa-applet-git
 parcellite
@@ -30,3 +31,4 @@ ttf-dejavu
 xautolock
 xclip
 xcwd-git
+yaourt
