@@ -1,6 +1,7 @@
 default: install-packages link-config set-shell
 
 install-packages: add-repositories
+	yaourt -Rdd cairo
 	yaourt -Sy --force --needed --noconfirm `cat packages.txt`
 
 add-repositories: add-infinality-key
