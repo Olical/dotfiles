@@ -1,4 +1,4 @@
-default: install-packages link-config set-shell
+default: install-packages link-config set-shell sync-vim
 
 install-packages: add-repositories
 	yaourt -Sy
@@ -19,3 +19,6 @@ link-config:
 
 set-shell:
 	chsh -s `which fish`
+
+sync-vim:
+	./vim/.vim/sync.sh
