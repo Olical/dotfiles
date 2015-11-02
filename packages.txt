@@ -1,4 +1,3 @@
-autorandr-git
 cmake
 compton
 cowsay
