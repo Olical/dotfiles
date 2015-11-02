@@ -1,3 +1,4 @@
+autorandr
 cmake
 compton
 cowsay
