@@ -1,4 +1,4 @@
-default: install-packages link-config set-shell sync-vim disable-xfce-notify enable-lightdm
+default: install-packages link-config set-shell sync-vim disable-xfce-notify enable-lightdm enable-networkmanager
 
 install-packages: add-repositories
 	sudo pacman -Sy yaourt termite infinality-bundle
@@ -29,3 +29,6 @@ disable-xfce-notify:
 
 enable-lightdm:
 	sudo systemctl enable lightdm
+
+enable-networkmanager:
+	sudo systemctl enable NetworkManager

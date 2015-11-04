@@ -16,14 +16,17 @@ i3lock
 i3session-git
 i3status
 infinality-bundle
+librsvg
 lightdm
 lightdm-gtk-greeter
+network-manager-applet
 networkmanager
 nodejs
 npm
 pa-applet-git
 parcellite
 playerctl
+python-gobject
 python-xdg
 redshift
 stow
