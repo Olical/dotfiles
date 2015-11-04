@@ -1,4 +1,4 @@
-default: install-packages link-config set-shell sync-vim disable-xfce-notify enable-lightdm enable-networkmanager
+default: install-packages link-config set-shell sync-vim
 
 install-packages: add-repositories
 	sudo pacman -Sy yaourt termite infinality-bundle
@@ -22,13 +22,3 @@ set-shell:
 sync-vim:
 	./vim/.vim/sync.sh
 	python2 ./vim/.vim/plugged/YouCompleteMe/install.py
-
-disable-xfce-notify:
-	sudo systemctl disable xfce4-notifyd
-	yaourt -Rs xfce4-notifyd
-
-enable-lightdm:
-	sudo systemctl enable lightdm
-
-enable-networkmanager:
-	sudo systemctl enable NetworkManager

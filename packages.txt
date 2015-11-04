@@ -17,8 +17,6 @@ i3session-git
 i3status
 infinality-bundle
 librsvg
-lightdm
-lightdm-gtk-greeter
 network-manager-applet
 networkmanager
 nodejs
@@ -39,5 +37,4 @@ ttf-dejavu
 xautolock
 xclip
 xcwd-git
-xorg-server
 yaourt
