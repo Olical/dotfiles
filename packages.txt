@@ -10,6 +10,7 @@ git
 gnome-keyring
 gnome-themes-standard
 gvim
+htop
 i3-wm
 i3lock
 i3session-git
@@ -34,4 +35,5 @@ ttf-dejavu
 xautolock
 xclip
 xcwd-git
+xorg-server
 yaourt
