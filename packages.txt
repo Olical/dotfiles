@@ -26,6 +26,7 @@ npm
 pa-applet-git
 parcellite
 playerctl
+pulseaudio
 python-gobject
 python-xdg
 redshift
