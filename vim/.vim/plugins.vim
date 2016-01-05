@@ -2,6 +2,12 @@
 " Configuration goes in the appropriate modules/plugins/*.vim file.
 " So configuration for tmux.vim would go in modules/plugins/tmux.vim.vim
 
+function! BuildYCM(info)
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
+
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'Keithbsmiley/tmux.vim'
 Plug 'Lokaltog/vim-distinguished'
@@ -13,7 +19,7 @@ Plug 'Olical/vim-syntax-expand'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'adimit/prolog.vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'andreimaxim/vim-io'
