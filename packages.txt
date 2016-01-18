@@ -27,6 +27,7 @@ playerctl
 pulseaudio
 python-gobject
 python-xdg
+qutebrowser
 redshift
 stow
 termite
