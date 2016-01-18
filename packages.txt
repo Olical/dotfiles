@@ -17,6 +17,7 @@ i3session-git
 i3status
 infinality-bundle
 librsvg
+mpv
 network-manager-applet
 networkmanager
 nodejs
@@ -39,3 +40,4 @@ xautolock
 xclip
 xcwd-git
 yaourt
+youtube-dl
