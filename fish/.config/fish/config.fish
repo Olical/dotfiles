@@ -1,4 +1,5 @@
 set PATH ~/npm/bin $PATH
+set BROWSER firefox
 set EDITOR vim
 set VISUAL vim
 set fish_greeting ""
