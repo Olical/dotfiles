@@ -17,6 +17,7 @@ i3session-git
 i3status
 infinality-bundle
 librsvg
+mpv
 network-manager-applet
 networkmanager
 nodejs
@@ -27,6 +28,7 @@ playerctl
 pulseaudio
 python-gobject
 python-xdg
+qutebrowser
 redshift
 stow
 termite
@@ -38,3 +40,4 @@ xautolock
 xclip
 xcwd-git
 yaourt
+youtube-dl
