@@ -4,7 +4,6 @@ cowsay
 dmenu
 dunst
 feh
-firefox
 fish
 git
 gnome-keyring
@@ -17,7 +16,6 @@ i3session-git
 i3status
 infinality-bundle
 librsvg
-mpv
 network-manager-applet
 networkmanager
 nodejs
@@ -40,4 +38,3 @@ xautolock
 xclip
 xcwd-git
 yaourt
-youtube-dl

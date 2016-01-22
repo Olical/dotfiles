@@ -33,6 +33,9 @@ for_window [window_role="task_dialog"] floating enable
 # start a terminal
 bindsym $mod+Return exec termite -d $(xcwd)
 
+# start a browser
+bindsym $mod+Shift+Return exec qutebrowser
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
