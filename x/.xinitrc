@@ -11,6 +11,6 @@ if [ -s ~/.Xmodmap ]; then
   xmodmap ~/.Xmodmap
 fi
 
-export BROWSER="firefox"
+export BROWSER="qutebrowser"
 
 exec i3
