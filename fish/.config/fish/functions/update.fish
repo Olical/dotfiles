@@ -4,8 +4,10 @@ function update
 
   if [ (which yaourt) ]
     yaourt -Syua --noconfirm
+    yaourt -C
   else if [ (which pacman) ]
     sudo pacman -Syu --noconfirm
+    sudo pacdiff
   else if [ (which apt-get) ]
     sudo apt-get update; and sudo apt-get upgrade
   else if [ (which brew) ]
