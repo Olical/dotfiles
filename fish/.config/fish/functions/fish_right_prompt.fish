@@ -1,5 +1,4 @@
 function fish_right_prompt
-
   if is_git
     set_color yellow
     echo -n (git_branch)
