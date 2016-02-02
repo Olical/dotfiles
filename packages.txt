@@ -8,6 +8,11 @@ fish
 git
 gnome-keyring
 gnome-themes-standard
+gst-libav
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-good
+gst-plugins-ugly
 gvim
 htop
 i3-wm
@@ -16,12 +21,14 @@ i3session-git
 i3status
 infinality-bundle
 librsvg
+mpv
 network-manager-applet
 networkmanager
 nodejs
 npm
 pa-applet-git
 parcellite
+pdfjs
 playerctl
 pulseaudio
 python-gobject
@@ -38,3 +45,4 @@ xautolock
 xclip
 xcwd-git
 yaourt
+youtube-dl
