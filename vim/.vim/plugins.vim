@@ -34,6 +34,7 @@ Plug 'guns/vim-sexp'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/vim-asterisk'
 Plug 'helino/vim-json'
+Plug 'junegunn/vader.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'mhinz/vim-signify'
