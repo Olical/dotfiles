@@ -25,6 +25,11 @@ function altnode
         echo "Command '$cmd' not supported, use no args to print help"
     end
   else
-    echo "Usage: altnode {local,remote,fetch vX.Y.Z,use vX.Y.Z}"
+    echo "Usage: altnode {COMMAND}"
+    echo -e '\tlocal: List local version'
+    echo -e '\tremote: List remote version'
+    echo -e '\tclear: Remove altnode binary, use system binary'
+    echo -e '\tfetch {VERSION}: Download specified version'
+    echo -e '\tuse {VERSION}: Use specified version'
   end
 end
