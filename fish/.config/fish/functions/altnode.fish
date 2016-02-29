@@ -32,6 +32,15 @@ function altnode
         else
           echo "Node version '$ver' not found locally, fetch it first"
         end
+      case rm
+        set -l ver $argv[2]
+        set -l tarball "$HOME/.altnode/cache/$ver.tar.gz"
+
+        if test -e "$tarball"
+          rm "$tarball"
+        else
+          echo "Node version '$ver' not found locally"
+        end
       case '*'
         echo "Command '$cmd' not supported, use no args to print help"
     end
@@ -42,5 +51,6 @@ function altnode
     echo -e '\treset: Remove altnode binary, use system binary'
     echo -e '\tfetch {VERSION}: Download specified version'
     echo -e '\tuse {VERSION}: Use specified version'
+    echo -e '\trm {VERSION}: Remove the specified version from the cache'
   end
 end
