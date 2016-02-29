@@ -41,6 +41,14 @@ function altnode
         else
           echo "Node version '$ver' not found locally"
         end
+      case show
+        node -v
+        which node
+        if [ (which node) = "$HOME/bin/node" ]
+          echo "(from altnode)"
+        else
+          echo "(from system)"
+        end
       case '*'
         echo "Command '$cmd' not supported, use no args to print help"
     end
@@ -52,5 +60,6 @@ function altnode
     echo -e '\tfetch {VERSION}: Download specified version'
     echo -e '\tuse {VERSION}: Use specified version'
     echo -e '\trm {VERSION}: Remove the specified version from the cache'
+    echo -e '\tshow: Display current version and binary location'
   end
 end
