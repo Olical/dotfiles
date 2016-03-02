@@ -36,6 +36,7 @@ Plug 'haya14busa/vim-asterisk'
 Plug 'helino/vim-json'
 Plug 'junegunn/vader.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'lambdatoast/elm.vim'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'mhinz/vim-signify'
 Plug 'mxw/vim-jsx'
