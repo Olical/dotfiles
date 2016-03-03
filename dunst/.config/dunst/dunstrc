@@ -139,7 +139,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/qutebrowser
+    browser = /usr/bin/chromium
 
     # Align icons left/right/off
     icon_position = right
