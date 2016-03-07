@@ -4,7 +4,7 @@
 
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
-    !./install.py
+    !python2 ./install.py
   endif
 endfunction
 
