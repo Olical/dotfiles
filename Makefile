@@ -20,5 +20,4 @@ set-shell:
 	chsh -s `which fish`
 
 sync-vim:
-	./vim/.vim/sync.sh
-	python2 ./vim/.vim/plugged/YouCompleteMe/install.py
+	./neovim/.config/nvim/sync.sh

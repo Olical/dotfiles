@@ -12,7 +12,7 @@ alias dockernuke='docker rm (docker ps -a -q); docker rmi -f (docker images -q)'
 # Git alias.
 alias g="git"
 alias gs="cowsay -f ghostbusters 'gs is ghostscript, not git status!'"
-alias vim="cowsay -f dragon 'vim is dead, long live neovim!'"
+alias vim="cowsay -f tux 'vim is dead, long live neovim!'"
 
 # Start an SSH agent if required, if not, connect to it.
 initialise_ssh_agent
