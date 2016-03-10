@@ -9,3 +9,4 @@ if [ ! -f $CONFIG/autoload/plug.vim ]; then
 fi
 
 nvim +"PlugSnapshot! $CONFIG/snapshot.vim" +PlugUpgrade +PlugClean! +PlugUpdate +qa
+nvim +UpdateRemotePlugins +qa
