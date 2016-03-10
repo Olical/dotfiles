@@ -18,6 +18,6 @@ function update
     npm -g install "$package"
   end
 
-  ./vim/.vim/sync.sh
+  ~/.config/nvim/sync.sh
   popd
 end

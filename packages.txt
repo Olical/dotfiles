@@ -14,7 +14,6 @@ gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
-gvim
 htop
 i3-wm
 i3lock
@@ -22,6 +21,7 @@ i3session-git
 i3status
 infinality-bundle
 librsvg
+neovim
 network-manager-applet
 networkmanager
 nodejs
@@ -31,7 +31,9 @@ parcellite
 playerctl
 pulseaudio
 python-gobject
+python-neovim
 python-xdg
+python2-neovim
 redshift
 stow
 termite

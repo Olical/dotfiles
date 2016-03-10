@@ -2,19 +2,20 @@
     name = Oliver Caldwell
     email = olliec87@gmail.com
 [core]
-    editor = vim
+    editor = nvim
     excludesfile = ~/.gitexcludes
 [color]
     ui = true
 [push]
     default = simple
 [diff]
-    tool = vimdiff
+    tool = vimdiff3
 [merge]
-    tool = vimdiff
+    tool = vimdiff3
     conflictstyle = diff3
 [mergetool]
     keepbackup = false
+    path = nvim
 [include]
     path = ~/.gitconfig_local
 [alias]

@@ -28,6 +28,3 @@ set completeopt-=preview
 
 " Make session files minimal.
 set sessionoptions=blank,curdir,folds,help,tabpages,winsize
-
-" Improve encryption.
-set cryptmethod=blowfish2
