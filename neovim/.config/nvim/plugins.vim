@@ -21,6 +21,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'adimit/prolog.vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'andreimaxim/vim-io'
+Plug 'benekastah/neomake', { 'on': 'Neomake' }
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'dag/vim-fish'
 Plug 'derekwyatt/vim-scala'
@@ -42,7 +43,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
 Plug 'raymond-w-ko/vim-niji', { 'for': 'clojure' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
-Plug 'scrooloose/syntastic'
 Plug 'sevko/vim-nand2tetris-syntax'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 Plug 'tpope/vim-abolish'
