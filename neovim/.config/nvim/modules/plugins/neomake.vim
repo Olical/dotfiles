@@ -1,5 +1,5 @@
-augroup neomake
-    au!
-    autocmd! BufRead,BufWritePost *.js Neomake standard
-    autocmd! BufRead,BufWritePost * Neomake
+augroup neomake_hooks
+    autocmd!
+    autocmd BufRead,BufWritePost * Neomake
+    autocmd BufRead,BufWritePost *.js Neomake standard
 augroup END
