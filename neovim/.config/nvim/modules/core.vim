@@ -1,7 +1,3 @@
-" Backspace is managed by vim-sensible, but I need it here too because some
-" plugins depend on it during start up.
-set backspace=indent,eol,start
-
 " Enable invisible characters.
 set list
 
@@ -13,9 +9,6 @@ set splitright
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
-" Enable mouse. Great for resizing windows and keeping co-workers sane.
-set mouse=a
 
 " Disable swap files.
 set noswapfile

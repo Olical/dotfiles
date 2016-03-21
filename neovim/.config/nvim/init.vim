@@ -1,6 +1,3 @@
-" Make Vim more useful. This should always be your first configuration line.
-set nocompatible
-
 " Wraps paths to make them relative to this directory.
 function! Dot(path)
   return '~/.config/nvim/' . a:path
