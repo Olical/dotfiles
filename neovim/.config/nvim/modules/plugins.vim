@@ -13,5 +13,11 @@ call plug#end()
 
 " Load all plugin configuration files.
 for file in split(glob(Dot('modules/plugins/*.vim')), '\n')
-  exec 'source' file
+  let name = fnamemodify(file, ':t:r')
+
+  if exists('g:plugs["' . name . '"]')
+    exec 'source' file
+  else
+    echom "No plugin found for config file " . file
+  endif
 endfor
