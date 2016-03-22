@@ -31,7 +31,6 @@ Plug 'floobits/floobits-neovim'
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
-Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/vim-asterisk'
 Plug 'helino/vim-json'
 Plug 'junegunn/vader.vim'
