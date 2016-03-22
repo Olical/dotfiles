@@ -16,8 +16,8 @@ Plug 'Olical/vim-expand', { 'on': 'Expand' }
 Plug 'Olical/vim-impl'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Raimondi/delimitMate'
+Plug 'Shougo/deoplete.nvim'
 Plug 'SirVer/ultisnips'
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'adimit/prolog.vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'andreimaxim/vim-io'
@@ -54,8 +54,6 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
@@ -63,7 +61,4 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'venantius/vim-eastwood', { 'for': 'clojure' }
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-scripts/SyntaxComplete'
-Plug 'walm/jshint.vim', { 'for': 'javascript' }
