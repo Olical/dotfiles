@@ -8,16 +8,11 @@
     ui = true
 [push]
     default = simple
-[diff]
-    tool = vimdiff3
-[merge]
-    tool = vimdiff3
-    conflictstyle = diff3
-[mergetool]
-    keepbackup = false
-    path = nvim
 [include]
     path = ~/.gitconfig_local
+[mergetool "nvim"]
+    path = /bin/nvim
+    keepBackup = false
 [alias]
     s = status -sb
     b = branch
