@@ -9,8 +9,11 @@ alias dockerkill='docker kill (docker ps -q)'
 # Delete all docker images and containers.
 alias dockernuke='docker rm (docker ps -a -q); docker rmi -f (docker images -q)'
 
-# Git alias.
+# Other git aliases are in git config
 alias g="git"
+
+# Some software still uses vimdiff
+alias vimdiff="nvim -d"
 
 # Start an SSH agent if required, if not, connect to it.
 initialise_ssh_agent
