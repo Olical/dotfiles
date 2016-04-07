@@ -37,6 +37,7 @@ Plug 'junegunn/vader.vim'
 Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 Plug 'lambdatoast/elm.vim'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+Plug 'mattn/webapi-vim'
 Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
