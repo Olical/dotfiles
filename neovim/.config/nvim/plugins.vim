@@ -42,6 +42,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
 Plug 'raymond-w-ko/vim-niji', { 'for': 'clojure' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
+Plug 'rust-lang/rust.vim'
 Plug 'sevko/vim-nand2tetris-syntax'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 Plug 'tpope/vim-abolish'
