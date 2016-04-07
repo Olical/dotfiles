@@ -42,6 +42,7 @@ Plug 'mattn/webapi-vim'
 Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
+Plug 'phildawes/racer'
 Plug 'raymond-w-ko/vim-niji', { 'for': 'clojure' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'rust-lang/rust.vim'
