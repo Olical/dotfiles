@@ -1,4 +1,4 @@
-set PATH ~/bin ~/npm/bin $PATH
+set PATH ~/bin ~/npm/bin ~/.cargo/bin $PATH
 set EDITOR nvim
 set VISUAL nvim
 set fish_greeting ""
