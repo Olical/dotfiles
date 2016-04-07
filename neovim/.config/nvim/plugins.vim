@@ -46,6 +46,7 @@ Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'rust-lang/rust.vim'
 Plug 'sevko/vim-nand2tetris-syntax'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+Plug 'toml-lang/toml'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
