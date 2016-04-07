@@ -42,10 +42,9 @@ Plug 'mattn/webapi-vim'
 Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
-Plug 'racer-rust/vim-racer'
 Plug 'raymond-w-ko/vim-niji', { 'for': 'clojure' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
-Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim' | Plug 'rust-lang/rust' | Plug 'racer-rust/vim-racer'
 Plug 'sevko/vim-nand2tetris-syntax'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 Plug 'tpope/vim-abolish'
