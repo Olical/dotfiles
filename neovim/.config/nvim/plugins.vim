@@ -41,12 +41,13 @@ Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'mattn/webapi-vim'
 Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'neovim/node-host', { 'do': 'npm install' }
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
 Plug 'raymond-w-ko/vim-niji', { 'for': 'clojure' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
-Plug 'rust-lang/rust.vim' | Plug 'rust-lang/rust' | Plug 'racer-rust/vim-racer'
 Plug 'sevko/vim-nand2tetris-syntax'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+Plug 'snoe/nvim-parinfer.js'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
