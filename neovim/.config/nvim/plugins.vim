@@ -16,6 +16,7 @@ Plug 'Olical/vim-expand', { 'on': 'Expand' }
 Plug 'Olical/vim-impl'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Raimondi/delimitMate'
+Plug 'SevereOverfl0w/async-clj-omni'
 Plug 'Shougo/deoplete.nvim' | Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'SirVer/ultisnips'
 Plug 'adimit/prolog.vim'
