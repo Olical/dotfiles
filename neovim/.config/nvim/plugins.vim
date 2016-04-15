@@ -48,7 +48,6 @@ Plug 'raymond-w-ko/vim-niji', { 'for': 'clojure' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'sevko/vim-nand2tetris-syntax'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
-Plug 'snoe/nvim-parinfer.js'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
