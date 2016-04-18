@@ -34,7 +34,6 @@ python-gobject
 python-neovim
 python-xdg
 python2-neovim
-ranger
 redshift
 smplayer
 stow
@@ -42,6 +41,7 @@ termite
 the_silver_searcher
 tmux
 ttf-dejavu
+udisks2
 xautolock
 xclip
 xcwd-git
