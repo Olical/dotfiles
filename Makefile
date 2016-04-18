@@ -1,4 +1,4 @@
-default: install-packages link-config set-shell sync-vim
+default: install-packages link-config set-shell sync-neovim
 
 install-packages: add-repositories
 	sudo pacman -Sy yaourt termite infinality-bundle
@@ -19,5 +19,5 @@ link-config:
 set-shell:
 	chsh -s `which fish`
 
-sync-vim:
+sync-neovim:
 	./neovim/.config/nvim/sync.sh
