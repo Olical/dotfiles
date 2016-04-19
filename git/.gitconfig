@@ -10,9 +10,12 @@
     default = simple
 [include]
     path = ~/.gitconfig_local
-[mergetool "nvim"]
-    path = /bin/nvim
-    keepBackup = false
+[merge]
+  tool = vimdiff
+[mergetool]
+  prompt = true
+[mergetool "vimdiff"]
+  cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [alias]
     s = status -sb
     b = branch
