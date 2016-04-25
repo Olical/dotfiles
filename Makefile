@@ -1,7 +1,7 @@
-default: install-packages link-config set-shell sync-neovim
+default: add-repositories install-packages link-config set-shell sync-neovim
 
-install-packages: add-repositories
-	sudo pacman -Sy yaourt termite infinality-bundle
+install-packages:
+	sudo pacman -Sy yaourt
 	yaourt -S --needed --noconfirm `cat packages.txt`
 
 add-repositories: add-infinality-key
