@@ -49,5 +49,4 @@ xautolock
 xclip
 xcwd-git
 xorg-server
-xorg-xinit
 yaourt

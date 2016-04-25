@@ -14,8 +14,7 @@ add-infinality-key:
 	sudo pacman-key --lsign-key 962DDE58
 
 enable-services:
-	sudo systemctl enable lightdm
-	sudo systemctl enable NetworkManager
+	sudo systemctl enable lightdm NetworkManager
 
 link-config:
 	stow --restow `ls -d */`
