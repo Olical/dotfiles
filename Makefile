@@ -1,4 +1,4 @@
-default: add-repositories install-packages link-config set-shell sync-neovim
+default: add-repositories install-packages enable-services link-config set-shell sync-neovim
 
 install-packages:
 	sudo pacman -Sy yaourt
@@ -12,6 +12,9 @@ add-infinality-key:
 	sleep 1
 	sudo pacman-key -r 962DDE58
 	sudo pacman-key --lsign-key 962DDE58
+
+enable-services:
+	sudo systemctl enable lightdm
 
 link-config:
 	stow --restow `ls -d */`
