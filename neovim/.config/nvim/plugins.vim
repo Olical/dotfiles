@@ -30,6 +30,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'embear/vim-localvimrc'
 Plug 'floobits/floobits-neovim'
+Plug 'flowtype/vim-flow', { 'do': 'npm install -g flow-bin' }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
