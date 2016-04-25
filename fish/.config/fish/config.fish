@@ -1,3 +1,4 @@
+set LANG en_GB.UTF-8
 set PATH ~/bin ~/npm/bin ~/.cargo/bin $PATH
 set EDITOR nvim
 set VISUAL nvim
