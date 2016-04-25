@@ -15,6 +15,7 @@ add-infinality-key:
 
 enable-services:
 	sudo systemctl enable lightdm
+	sudo systemctl enable NetworkManager
 
 link-config:
 	stow --restow `ls -d */`
