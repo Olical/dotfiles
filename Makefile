@@ -1,4 +1,4 @@
-default: add-repositories install-packages enable-services link-config set-shell sync-neovim
+default: add-repositories install-packages enable-services link-config set-shell sync-neovim show-notes
 
 install-packages:
 	sudo pacman -Sy yaourt
@@ -24,3 +24,6 @@ set-shell:
 
 sync-neovim:
 	./neovim/.config/nvim/sync.sh
+
+show-notes:
+	cat ./post-install.txt
