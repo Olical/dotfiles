@@ -20,7 +20,6 @@ i3lock
 i3session-git
 i3status
 infinality-bundle
-librsvg
 neovim
 network-manager-applet
 networkmanager
