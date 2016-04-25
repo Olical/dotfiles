@@ -45,7 +45,6 @@ udisks2
 xautolock
 xclip
 xcwd-git
-xorg-apps
 xorg-server
-xorg-server-utils
+xorg-xinit
 yaourt
