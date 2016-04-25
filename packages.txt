@@ -5,6 +5,7 @@ compton
 cowsay
 dmenu
 dunst
+feh
 fish
 git
 gnome-keyring
