@@ -22,7 +22,6 @@ i3session-git
 i3status
 infinality-bundle
 lightdm
-lightdm-gtk-greeter
 neovim
 network-manager-applet
 networkmanager
