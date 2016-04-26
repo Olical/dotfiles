@@ -42,6 +42,7 @@ smplayer
 stow
 termite
 the_silver_searcher
+thunar
 tmux
 ttf-dejavu
 udisks2

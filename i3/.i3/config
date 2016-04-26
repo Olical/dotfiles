@@ -180,6 +180,7 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id pa-applet
 exec --no-startup-id parcellite
 exec --no-startup-id compton --config ~/.i3/compton.conf -b
+exec --no-startup-id thunar --daemon
 exec --no-startup-id xautolock -time 10 -locker "~/.i3/locker.sh"
 
 # Background image
