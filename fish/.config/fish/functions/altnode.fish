@@ -5,6 +5,17 @@ function altnode
   if count $argv > /dev/null
     set -l cmd $argv[1]
     set -l source "https://nodejs.org/dist"
+    set -l platform
+
+    switch (uname)
+      case Linux
+        set platform "linux-x86"
+      case Darwin
+        set platform "darwin-x64"
+      case "*"
+        echo "Platform not supported:" (uname)
+        return
+    end
 
     switch $cmd
       case local
@@ -15,7 +26,9 @@ function altnode
         rm ~/bin/node
       case fetch
         set -l ver $argv[2]
-        curl -f "$source/$ver/node-$ver-linux-x86.tar.gz" -o "$HOME/.altnode/cache/$ver.tar.gz"
+        set -l url "$source/$ver/node-$ver-$platform.tar.gz" 
+        echo "Fetching from" $url
+        curl -f $url -o "$HOME/.altnode/cache/$ver.tar.gz"
 
         if [ $status != "0" ]
           echo "Node version '$ver' not found on the remote"
@@ -23,10 +36,10 @@ function altnode
       case use
         set -l ver $argv[2]
         set -l tarball "$HOME/.altnode/cache/$ver.tar.gz"
-        set -l tmpdir "/tmp/altnode/node-$ver-linux-x86"
+        set -l tmpdir "/tmp/altnode/node-$ver-$platform"
 
         if test -e "$tarball"
-          tar -zxvf "$tarball" -C "/tmp/altnode" "node-$ver-linux-x86/bin/node"
+          tar -zxvf "$tarball" -C "/tmp/altnode" "node-$ver-$platform/bin/node"
           mv "$tmpdir/bin/node" "$HOME/bin/node"
           rm -r "$tmpdir"
         else
@@ -49,17 +62,17 @@ function altnode
         else
           echo "(from system)"
         end
-      case '*'
+      case "*"
         echo "Command '$cmd' not supported, use no args to print help"
     end
   else
     echo "Usage: altnode {COMMAND}"
-    echo -e '\tlocal: List local version'
-    echo -e '\tremote: List remote version'
-    echo -e '\treset: Remove altnode binary, use system binary'
-    echo -e '\tfetch {VERSION}: Download specified version'
-    echo -e '\tuse {VERSION}: Use specified version'
-    echo -e '\trm {VERSION}: Remove the specified version from the cache'
-    echo -e '\tshow: Display current version and binary location'
+    echo -e "\tlocal: List local version"
+    echo -e "\tremote: List remote version"
+    echo -e "\treset: Remove altnode binary, use system binary"
+    echo -e "\tfetch {VERSION}: Download specified version"
+    echo -e "\tuse {VERSION}: Use specified version"
+    echo -e "\trm {VERSION}: Remove the specified version from the cache"
+    echo -e "\tshow: Display current version and binary location"
   end
 end
