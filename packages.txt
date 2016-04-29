@@ -28,6 +28,7 @@ network-manager-applet
 networkmanager
 nodejs
 npm
+nvm
 openssh
 pa-applet-git
 parcellite
