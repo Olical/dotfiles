@@ -1,8 +1,8 @@
+set fish_greeting ""
 set LANG en_GB.UTF-8
 set PATH ~/bin $PATH
 set EDITOR nvim
 set VISUAL nvim
-set fish_greeting ""
 
 # Kill all running containers.
 alias dockerkill='docker kill (docker ps -q)'
@@ -18,6 +18,9 @@ alias vimdiff="nvim -d"
 
 # Start an SSH agent if required, if not, connect to it.
 initialise_ssh_agent
+
+# Hook up nvm
+nvm use default --silent
 
 # Local config.
 if [ -f ~/.local.fish ]
