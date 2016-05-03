@@ -3,8 +3,8 @@ function toggle-screen
   set -l EXT "DP1"
 
   if xrandr | grep "$EXT disconnected"
-    xrandr --output $IN --auto --output $EXT --off
+    xrandr --output $IN --primary --auto --output $EXT --off
   else
-    xrandr --output $IN --auto --primary --output $EXT --auto --above $IN
+    xrandr --output $IN --auto --output $EXT --primary --auto --above $IN
   end
 end
