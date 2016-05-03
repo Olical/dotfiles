@@ -5,6 +5,6 @@ function toggle-screen
   if xrandr | grep "$EXT disconnected"
     xrandr --output $IN --auto --output $EXT --off
   else
-    xrandr --output $IN --auto --primary --output $EXT --auto --below $IN
+    xrandr --output $IN --auto --primary --output $EXT --auto --above $IN
   end
 end
