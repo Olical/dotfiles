@@ -15,6 +15,7 @@ gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
+gvfs
 htop
 i3-wm
 i3lock
@@ -43,6 +44,7 @@ stow
 termite
 the_silver_searcher
 thunar
+thunar-volman
 tmux
 ttf-dejavu
 vlc
