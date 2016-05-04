@@ -4,7 +4,7 @@ function branched
     set -l branches (g b)
 
     if [ "$branches" != '* master' ]
-      echo $dir
+      basename $dir
       g b
     end
 
