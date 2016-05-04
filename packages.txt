@@ -39,6 +39,7 @@ python-gobject
 python-neovim
 python-xdg
 python2-neovim
+qt4
 redshift
 stow
 termite
