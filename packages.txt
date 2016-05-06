@@ -5,6 +5,7 @@ cowsay
 dmenu
 dunst
 feh
+file-roller
 fish
 git
 gnome-keyring
@@ -31,6 +32,7 @@ nodejs
 npm
 nvm
 openssh
+p7zip
 pa-applet-git
 parcellite
 playerctl
@@ -45,9 +47,11 @@ stow
 termite
 the_silver_searcher
 thunar
+thunar-archive-plugin
 thunar-volman
 tmux
 ttf-dejavu
+unrar
 vlc
 xautolock
 xclip
