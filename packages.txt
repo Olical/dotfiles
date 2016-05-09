@@ -51,6 +51,7 @@ thunar-archive-plugin
 thunar-volman
 tmux
 ttf-dejavu
+tumbler
 unrar
 vlc
 xautolock
