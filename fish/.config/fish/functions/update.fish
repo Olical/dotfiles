@@ -1,6 +1,5 @@
 function update
-  pushd ~/dotfiles
-  git pull
+  cd ~/dotfiles; git pull; cd -
 
   if [ (which yaourt) ]
     yaourt -Syua --noconfirm
@@ -19,5 +18,4 @@ function update
   end
 
   ~/.config/nvim/sync.sh
-  popd
 end
