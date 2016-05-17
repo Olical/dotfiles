@@ -43,6 +43,7 @@ python-xdg
 python2-neovim
 qt4
 redshift
+reflector
 stow
 termite
 the_silver_searcher
