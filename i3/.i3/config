@@ -198,6 +198,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Screenshot
+bindsym Print exec xfce4-screenshooter
+
 # Power management
 set $Locker ~/.i3/locker.sh
 set $Docker ~/.i3/docker.sh
