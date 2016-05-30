@@ -51,7 +51,6 @@ thunar
 thunar-archive-plugin
 thunar-volman
 tlp
-tlp-sleep
 tmux
 ttf-dejavu
 tumbler
