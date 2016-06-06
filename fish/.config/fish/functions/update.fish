@@ -18,4 +18,6 @@ function update
   end
 
   ~/.config/nvim/sync.sh
+
+  maintenance
 end
