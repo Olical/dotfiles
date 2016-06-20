@@ -1,15 +1,15 @@
 [user]
-    name = Oliver Caldwell
-    email = olliec87@gmail.com
+  name = Oliver Caldwell
+  email = olliec87@gmail.com
 [core]
-    editor = nvim
-    excludesfile = ~/.gitexcludes
+  editor = nvim
+  excludesfile = ~/.gitexcludes
 [color]
-    ui = true
+  ui = true
 [push]
-    default = simple
+  default = simple
 [include]
-    path = ~/.gitconfig_local
+  path = ~/.gitconfig_local
 [merge]
   tool = vimdiff
 [mergetool]
@@ -18,17 +18,19 @@
 [mergetool "vimdiff"]
   cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [alias]
-    s = status -sb
-    b = branch
-    c = commit -v
-    a = add
-    co = checkout
-    l = pull
-    p = push
-    f = fetch
-    mt = mergetool
-    m = merge
-    r = remote
-    re = rebase
-    lg = log --stat
-    d = diff
+  s = status -sb
+  b = branch
+  c = commit -v
+  a = add
+  co = checkout
+  l = pull
+  p = push
+  f = fetch
+  mt = mergetool
+  m = merge
+  r = remote
+  re = rebase
+  lg = log --stat
+  d = diff
+[commit]
+  gpgsign = true
