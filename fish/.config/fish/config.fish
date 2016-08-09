@@ -19,8 +19,14 @@ alias vimdiff="nvim -d"
 # Start an SSH agent if required, if not, connect to it.
 initialise_ssh_agent
 
-# Hook up nvm
-nvm use default --silent
+# Hook up node and ruby version managers.
+if [ -d ~/.nvm ]
+  nvm use default --silent
+end
+
+if [ -d ~/.rvm ]
+  rvm default
+end
 
 # Local config.
 if [ -f ~/.local.fish ]
