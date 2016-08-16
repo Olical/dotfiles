@@ -8,6 +8,9 @@ function! BuildYCM(info)
   endif
 endfunction
 
+" Disabled until the bug with Midje is fixed.
+" Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+
 Plug 'Keithbsmiley/tmux.vim'
 Plug 'Lokaltog/vim-distinguished'
 Plug 'Lokaltog/vim-easymotion'
@@ -33,7 +36,6 @@ Plug 'floobits/floobits-neovim'
 Plug 'flowtype/vim-flow', { 'do': 'npm install -g flow-bin' }
 Plug 'gregspurrier/vim-midje'
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
-Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'haya14busa/vim-asterisk'
 Plug 'helino/vim-json'
