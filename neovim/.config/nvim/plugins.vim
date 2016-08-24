@@ -36,7 +36,7 @@ Plug 'floobits/floobits-neovim'
 Plug 'flowtype/vim-flow', { 'do': 'npm install -g flow-bin' }
 Plug 'gregspurrier/vim-midje'
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
-Plug 'guns/vim-sexp', { 'for': 'clojure' }
+Plug 'guns/vim-sexp', { 'for': ['clojure', 'racket'] }
 Plug 'haya14busa/vim-asterisk'
 Plug 'helino/vim-json'
 Plug 'junegunn/vader.vim'
@@ -48,7 +48,7 @@ Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'neovim/node-host', { 'do': 'npm install' }
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
-Plug 'raymond-w-ko/vim-niji', { 'for': 'clojure' }
+Plug 'raymond-w-ko/vim-niji', { 'for': ['clojure', 'racket'] }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'sevko/vim-nand2tetris-syntax'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
@@ -63,9 +63,10 @@ Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
+Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': ['clojure', 'racket'] }
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'wlangstroth/vim-racket'
