@@ -24,9 +24,9 @@ initialise_ssh_agent
 #   nvm use default --silent
 # end
 
-# if [ -d ~/.rvm ]
-#   rvm default
-# end
+if [ -d ~/.rvm ]
+  rvm default
+end
 
 # Local config.
 if [ -f ~/.local.fish ]
