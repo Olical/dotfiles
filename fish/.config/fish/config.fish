@@ -21,9 +21,9 @@ alias vimdiff="nvim -d"
 initialise_ssh_agent
 
 # Hook up node and ruby version managers.
-# if [ -d ~/.nvm ]
-#   nvm use default --silent
-# end
+if [ -d ~/.nvm ]
+  nvm use default --silent
+end
 
 if [ -d ~/.rvm ]
   rvm default
