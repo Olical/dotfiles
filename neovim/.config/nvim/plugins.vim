@@ -23,6 +23,7 @@ Plug 'SevereOverfl0w/async-clj-omni'
 Plug 'Shougo/deoplete.nvim' | Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'SirVer/ultisnips'
 Plug 'adimit/prolog.vim'
+Plug 'airblade/vim-gitgutter'
 Plug 'aklt/plantuml-syntax'
 Plug 'andreimaxim/vim-io'
 Plug 'benekastah/neomake', { 'on': 'Neomake' }
@@ -44,7 +45,6 @@ Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 Plug 'lambdatoast/elm.vim'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'mattn/webapi-vim'
-Plug 'mhinz/vim-signify'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'neovim/node-host', { 'do': 'npm install' }
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
