@@ -31,5 +31,5 @@ end
 
 # Local config.
 if [ -f ~/.local.fish ]
-  . ~/.local.fish
+  source ~/.local.fish
 end
