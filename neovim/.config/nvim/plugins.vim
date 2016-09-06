@@ -28,7 +28,6 @@ Plug 'aklt/plantuml-syntax'
 Plug 'andreimaxim/vim-io'
 Plug 'benekastah/neomake', { 'on': 'Neomake' }
 Plug 'cespare/vim-toml'
-Plug 'ctrlpvim/ctrlp.vim' | Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'dag/vim-fish'
 Plug 'derekwyatt/vim-scala'
 Plug 'editorconfig/editorconfig-vim'
@@ -40,6 +39,7 @@ Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'guns/vim-sexp', { 'for': ['clojure', 'racket'] }
 Plug 'haya14busa/vim-asterisk'
 Plug 'helino/vim-json'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' } | Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vader.vim'
 Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 Plug 'lambdatoast/elm.vim'
@@ -49,7 +49,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'neovim/node-host', { 'do': 'npm install' }
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
 Plug 'raymond-w-ko/vim-niji', { 'for': ['clojure', 'racket'] }
-Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'sevko/vim-nand2tetris-syntax'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 Plug 'tpope/vim-abolish'
