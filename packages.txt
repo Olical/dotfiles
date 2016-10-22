@@ -4,6 +4,7 @@ compton
 cowsay
 dmenu
 dunst
+emacs
 feh
 file-roller
 fish
