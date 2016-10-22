@@ -1,34 +1,46 @@
-;; https://github.com/lunaryorn/.emacs.d
-;; http://aaronbedra.com/emacs.d/
+;; User information.
+(setq user-full-name "Oliver Caldwell")
+(setq user-mail-address "olliec87@gmail.com")
+
+;; Disable the splash.
+(setq inhibit-splash-screen t
+      initial-scratch-message nil)
+
+;; Remove scroll bar, tool bar and menu bar.
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+
+;; Don't store backups.
+(setq make-backup-files nil)
+
+;; Move custom settings to another file I can gitignore.
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file 'noerror)
 
 ;; Bootstrap package management.
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "https://melpa.org/packages/"))
 
 (package-initialize)
 
-;; Ensure use-package is present.
+;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 
-;; I don't need use-package at runtime.
-(eval-when-compile
-  (require 'use-package))
-
-;; Load packages
-(use-package olical-core
-  :load-path "pkgs/")
-
-(use-package olical-perf
-  :load-path "pkgs/")
-
-(use-package olical-ui
-  :load-path "pkgs/")
-
-(use-package olical-user
-  :load-path "pkgs/")
+;; Packages.
+(use-package helm-config
+  :ensure helm
+  :diminish helm-mode
+  :bind (("M-x" . helm-M-x)
+         ("M-y" . helm-show-kill-ring)
+         ("C-x b" . helm-mini)
+         ("C-x C-f" . helm-find-files))
+  :config
+  (helm-mode 1)
+  (setq helm-M-x-fuzzy-match t
+        helm-buffers-fuzzy-matching t
+        helm-recentf-fuzzy-match t))
