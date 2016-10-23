@@ -14,9 +14,9 @@
 ;; Don't store backups.
 (setq make-backup-files nil)
 
-;; Move custom settings to another file I can gitignore.
+;; I don't like this custom stuff.
+;; Write it all to a file I ignore.
 (setq custom-file "~/.emacs.d/custom.el")
-(load custom-file 'noerror)
 
 ;; Bootstrap package management.
 (require 'package)
@@ -44,3 +44,11 @@
   (setq helm-M-x-fuzzy-match t
         helm-buffers-fuzzy-matching t
         helm-recentf-fuzzy-match t))
+
+(use-package evil
+  :ensure t
+  :diminish evil
+  :config (evil-mode 1))
+
+(use-package magit
+  :ensure t)
