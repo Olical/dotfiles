@@ -1,3 +1,11 @@
+;;; olical-core --- Core configuraion for my Emacs.
+
+;;; Commentary:
+
+;; Sets up basic things.  Bigger changes will be moved to other packages.
+
+;;; Code:
+
 ;; User information.
 (setq user-full-name "Oliver Caldwell")
 (setq user-mail-address "olliec87@gmail.com")
@@ -18,3 +26,4 @@
 (setq custom-file "~/.emacs.d/custom.el")
 
 (provide 'olical-core)
+;;; olical-core ends here
