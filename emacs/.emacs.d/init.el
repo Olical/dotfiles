@@ -54,3 +54,8 @@
 (use-package magit
   :ensure t
   :config (global-set-key (kbd "C-x g") 'magit-status))
+
+(use-package base16-theme
+  :ensure t
+  :init (setq custom-safe-themes t)
+  :config (load-theme 'base16-chalk))
