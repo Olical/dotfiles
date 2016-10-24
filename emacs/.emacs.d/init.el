@@ -27,13 +27,12 @@
   :ensure helm
   :diminish helm-mode
   :bind (("M-x" . helm-M-x)
-         ("M-y" . helm-show-kill-ring)
-         ("C-x b" . helm-mini)
-         ("C-x C-f" . helm-find-files))
-  :init
-  (defvar helm-M-x-fuzzy-match t)
-  (defvar helm-buffers-fuzzy-matching t)
-  (defvar helm-recentf-fuzzy-match t)
+	 ("M-y" . helm-show-kill-ring)
+	 ("C-x b" . helm-mini)
+	 ("C-x C-f" . helm-find-files))
+  :init (setq-default helm-M-x-fuzzy-match t
+		      helm-buffers-fuzzy-matching t
+		      helm-recentf-fuzzy-match t)
   :config
   (helm-mode 1))
 
@@ -52,9 +51,8 @@
 (use-package evil
   :ensure t
   :diminish evil-mode undo-tree-mode
-  :config
-  (setq evil-want-C-u-scroll t)
-  (evil-mode 1))
+  :init (setq-default evil-want-C-u-scroll t)
+  :config (evil-mode 1))
 
 (use-package evil-escape
   :ensure t
