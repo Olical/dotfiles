@@ -1,23 +1,3 @@
-;; User information.
-(setq user-full-name "Oliver Caldwell")
-(setq user-mail-address "olliec87@gmail.com")
-
-;; Disable the splash.
-(setq inhibit-splash-screen t
-      initial-scratch-message nil)
-
-;; Remove scroll bar, tool bar and menu bar.
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-
-;; Don't store backups.
-(setq make-backup-files nil)
-
-;; I don't like this custom stuff.
-;; Write it all to a file I ignore.
-(setq custom-file "~/.emacs.d/custom.el")
-
 ;; Bootstrap package management.
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -32,6 +12,9 @@
   (package-install 'use-package))
 
 ;; Packages.
+(use-package olical-core
+  :load-path "pkgs")
+
 (use-package helm-config
   :ensure helm
   :diminish helm-mode
@@ -47,9 +30,23 @@
 
 (use-package evil
   :ensure t
-  :diminish evil
+  :diminish evil-mode undo-tree-mode
   :init (setq evil-want-C-u-scroll t)
   :config (evil-mode 1))
+
+(use-package evil-escape
+  :ensure t
+  :diminish evil-escape-mode
+  :init (setq-default evil-escape-key-sequence "jk")
+  :config (evil-escape-mode 1))
+
+(use-package evil-easymotion
+  :ensure t
+  :config (evilem-default-keybindings "SPC"))
+
+(use-package evil-surround
+  :ensure t
+  :config (global-evil-surround-mode 1))
 
 (use-package magit
   :ensure t
@@ -59,3 +56,17 @@
   :ensure t
   :init (setq custom-safe-themes t)
   :config (load-theme 'base16-chalk))
+
+(use-package evil-commentary
+  :ensure t
+  :diminish evil-commentary-mode
+  :config (evil-commentary-mode 1))
+
+(use-package evil-numbers
+  :ensure t
+  :config
+  (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
+  (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt))
+
+(use-package dired+
+  :ensure t)
