@@ -121,5 +121,9 @@
   :diminish flycheck-mode
   :config (add-hook 'after-init-hook #'global-flycheck-mode))
 
+(use-package dtrt-indent
+  :ensure t
+  :config (dtrt-indent-mode 1))
+
 (provide 'init)
 ;;; init.el ends here
