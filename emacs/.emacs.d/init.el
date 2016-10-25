@@ -36,6 +36,9 @@
   :config
   (helm-mode 1))
 
+(use-package helm-ag
+  :ensure t)
+
 (use-package magit
   :ensure t
   :config (global-set-key (kbd "C-x g") 'magit-status))
