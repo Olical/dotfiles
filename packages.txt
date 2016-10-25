@@ -1,3 +1,4 @@
+aspell-en
 base-devel
 chromium
 compton
