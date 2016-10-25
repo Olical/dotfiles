@@ -125,5 +125,11 @@
   :ensure t
   :config (dtrt-indent-mode 1))
 
+(use-package flyspell
+  :diminish flyspell-mode flyspell-prog-mode
+  :config
+  (add-hook 'text-mode-hook 'flyspell-mode)
+  (add-hook 'prog-mode-hook 'flyspell-prog-mode))
+
 (provide 'init)
 ;;; init.el ends here
