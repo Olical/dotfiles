@@ -31,5 +31,9 @@
 (defvaralias 'c-basic-offset 'tab-width)
 (setq tab-stop-list '(2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50))
 
+;; Add some places to the path.
+(setenv "PATH" (concat (getenv "PATH") ":~/bin:~/.nvm/versions/node/v4.5.0/bin"))
+(setq exec-path (append exec-path '("~/bin" "~/.nvm/versions/node/v4.5.0/bin")))
+
 (provide 'olical-core)
 ;;; olical-core ends here

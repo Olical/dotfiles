@@ -9,8 +9,10 @@
 ;; Bootstrap package management.
 (require 'package)
 (setq package-enable-at-startup nil)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
 (package-initialize)
 
@@ -27,12 +29,12 @@
   :ensure helm
   :diminish helm-mode
   :bind (("M-x" . helm-M-x)
-	 ("M-y" . helm-show-kill-ring)
-	 ("C-x b" . helm-mini)
-	 ("C-x C-f" . helm-find-files))
+         ("M-y" . helm-show-kill-ring)
+         ("C-x b" . helm-mini)
+         ("C-x C-f" . helm-find-files))
   :init (setq-default helm-M-x-fuzzy-match t
-		      helm-buffers-fuzzy-matching t
-		      helm-recentf-fuzzy-match t)
+                      helm-buffers-fuzzy-matching t
+                      helm-recentf-fuzzy-match t)
   :config
   (helm-mode 1))
 
@@ -51,11 +53,46 @@
 (use-package dired+
   :ensure t)
 
+(use-package paredit
+  :ensure t
+  :config
+  (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
+  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+  (add-hook 'ielm-mode-hook #'enable-paredit-mode)
+  (add-hook 'lisp-mode-hook #'enable-paredit-mode)
+  (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+  (add-hook 'scheme-mode-hook #'enable-paredit-mode)
+  (add-hook 'clojure-mode-hook #'enable-paredit-mode))
+
+(use-package evil-leader
+  :ensure t
+  :config
+  (global-evil-leader-mode 1)
+  (evil-leader/set-key
+    "g" 'magit-status
+    "x" 'helm-M-x
+    "b" 'helm-buffers-list
+    "p" 'projectile-commander))
+
 (use-package evil
   :ensure t
   :diminish evil-mode undo-tree-mode
   :init (setq-default evil-want-C-u-scroll t)
   :config (evil-mode 1))
+
+(use-package olical-evil
+  :load-path "pkgs")
+
+(use-package evil-paredit
+  :ensure t
+  :config
+  (add-hook 'emacs-lisp-mode-hook #'evil-paredit-mode)
+  (add-hook 'eval-expression-minibuffer-setup-hook #'evil-paredit-mode)
+  (add-hook 'ielm-mode-hook #'evil-paredit-mode)
+  (add-hook 'lisp-mode-hook #'evil-paredit-mode)
+  (add-hook 'lisp-interaction-mode-hook #'evil-paredit-mode)
+  (add-hook 'scheme-mode-hook #'evil-paredit-mode)
+  (add-hook 'clojure-mode-hook #'evil-paredit-mode))
 
 (use-package evil-escape
   :ensure t
@@ -109,6 +146,12 @@
   :diminish company-mode
   :config (add-hook 'after-init-hook 'global-company-mode))
 
+(use-package company-tern
+  :ensure t
+  :config
+  (add-hook 'js-mode-hook 'tern-mode)
+  (add-to-list 'company-backends 'company-tern))
+
 (use-package company-quickhelp
   :ensure t
   :diminish company-quickhelp-mode
@@ -133,29 +176,6 @@
   :config
   (add-hook 'text-mode-hook 'flyspell-mode)
   (add-hook 'prog-mode-hook 'flyspell-prog-mode))
-
-(use-package paredit
-  :ensure t
-  :config
-  (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
-  (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
-  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
-  (add-hook 'ielm-mode-hook #'enable-paredit-mode)
-  (add-hook 'lisp-mode-hook #'enable-paredit-mode)
-  (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
-  (add-hook 'scheme-mode-hook #'enable-paredit-mode)
-  (add-hook 'clojure-mode-hook #'enable-paredit-mode))
-
-(use-package evil-paredit
-  :ensure t
-  :config
-  (add-hook 'emacs-lisp-mode-hook #'evil-paredit-mode)
-  (add-hook 'eval-expression-minibuffer-setup-hook #'evil-paredit-mode)
-  (add-hook 'ielm-mode-hook #'evil-paredit-mode)
-  (add-hook 'lisp-mode-hook #'evil-paredit-mode)
-  (add-hook 'lisp-interaction-mode-hook #'evil-paredit-mode)
-  (add-hook 'scheme-mode-hook #'evil-paredit-mode)
-  (add-hook 'clojure-mode-hook #'evil-paredit-mode))
 
 (provide 'init)
 ;;; init.el ends here
