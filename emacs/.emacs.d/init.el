@@ -72,7 +72,9 @@
     "g" 'magit-status
     "x" 'helm-M-x
     "b" 'helm-buffers-list
-    "p" 'projectile-commander))
+    "f" 'helm-find-files
+    "p" 'projectile-commander
+    "s" 'eshell))
 
 (use-package evil
   :ensure t
