@@ -39,12 +39,6 @@
     (transpose-lines 1)
     (evil-previous-line 1)))
 
-(defun olical-evil-pos-dec (n)
-  "Decrement the given number N whilst remaining positive."
-  (if (> n 1)
-      (- n 1)
-    n))
-
 (define-key evil-normal-state-map (kbd "[ SPC") 'olical-evil-new-line-above)
 (define-key evil-normal-state-map (kbd "] SPC") 'olical-evil-new-line-below)
 (define-key evil-normal-state-map (kbd "[ e") 'olical-evil-move-line-up)
