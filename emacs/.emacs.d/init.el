@@ -79,8 +79,9 @@
 (use-package evil
   :ensure t
   :diminish evil-mode undo-tree-mode
-  :init (setq-default evil-want-C-u-scroll t)
-  :config (evil-mode 1))
+  :config
+  (evil-mode 1)
+  (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up))
 
 (use-package olical-evil
   :load-path "pkgs")
