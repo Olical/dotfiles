@@ -9,6 +9,7 @@ function update
   end
 
   ~/.config/nvim/sync.sh
+  ~/.emacs.d/sync.sh
 
   maintenance
 end
