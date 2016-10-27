@@ -6,7 +6,14 @@
 
 ;;; Code:
 
-(load-file "./package-bootstrap.el")
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(load-file "~/.emacs.d/package-bootstrap.el")
 
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
@@ -75,9 +82,6 @@
   (evil-mode 1)
   (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up))
 
-(use-package olical-evil
-  :load-path "pkgs")
-
 (use-package evil-paredit
   :ensure t
   :config
@@ -88,6 +92,9 @@
   (add-hook 'lisp-interaction-mode-hook #'evil-paredit-mode)
   (add-hook 'scheme-mode-hook #'evil-paredit-mode)
   (add-hook 'clojure-mode-hook #'evil-paredit-mode))
+
+(use-package olical-evil
+  :load-path "pkgs")
 
 (use-package evil-escape
   :ensure t

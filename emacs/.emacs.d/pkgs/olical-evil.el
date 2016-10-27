@@ -8,23 +8,47 @@
 ;;; Code:
 
 (require 'evil)
+(require 'evil-paredit)
 
 (defun olical-evil-new-line-above (count)
-  "Create new lines above your current one.  COUNT is the number of new lines."
+  "Create COUNT lines above this one."
   (interactive "p")
   (evil-open-above count)
   (evil-force-normal-state)
   (evil-next-line 1))
 
 (defun olical-evil-new-line-below (count)
-  "Create new lines below your current one.  COUNT is the number of new lines."
+  "Create COUNT lines below this one."
   (interactive "p")
   (evil-open-below count)
   (evil-force-normal-state)
   (evil-previous-line 1))
 
+(defun olical-evil-move-line-up (count)
+  "Move line up COUNT lines."
+  (interactive "p")
+  (dotimes (n count)
+    (transpose-lines 1)
+    (evil-previous-line 2)))
+
+(defun olical-evil-move-line-down (count)
+  "Move line down COUNT lines."
+  (interactive "p")
+  (dotimes (n count)
+    (evil-next-line 1)
+    (transpose-lines 1)
+    (evil-previous-line 1)))
+
+(defun olical-evil-pos-dec (n)
+  "Decrement the given number N whilst remaining positive."
+  (if (> n 1)
+      (- n 1)
+    n))
+
 (define-key evil-normal-state-map (kbd "[ SPC") 'olical-evil-new-line-above)
 (define-key evil-normal-state-map (kbd "] SPC") 'olical-evil-new-line-below)
+(define-key evil-normal-state-map (kbd "[ e") 'olical-evil-move-line-up)
+(define-key evil-normal-state-map (kbd "] e") 'olical-evil-move-line-down)
 
 (provide 'olical-evil)
 ;;; olical-evil.el ends here
