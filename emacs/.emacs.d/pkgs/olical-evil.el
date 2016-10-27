@@ -8,7 +8,6 @@
 ;;; Code:
 
 (require 'evil)
-(require 'evil-paredit)
 
 (defun olical-evil-new-line-above (count)
   "Create COUNT lines above this one."
