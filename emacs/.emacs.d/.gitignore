@@ -5,5 +5,6 @@ elpa/
 network-security.data
 custom.el
 recentf
+projectile.cache
 projectile-bookmarks.eld
 eshell/

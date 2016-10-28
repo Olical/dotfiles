@@ -127,7 +127,9 @@
 
 (use-package projectile
   :ensure t
-  :config (projectile-mode 1))
+  :config
+  (projectile-mode 1)
+  (setq projectile-enable-caching t))
 
 (use-package helm-projectile
   :ensure t
