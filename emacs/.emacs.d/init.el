@@ -182,5 +182,8 @@
 (use-package fish-mode
   :ensure t)
 
+(use-package markdown-mode
+  :ensure t)
+
 (provide 'init)
 ;;; init.el ends here
