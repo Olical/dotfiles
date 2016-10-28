@@ -185,5 +185,8 @@
 (use-package markdown-mode
   :ensure t)
 
+(use-package yaml-mode
+  :ensure t)
+
 (provide 'init)
 ;;; init.el ends here
