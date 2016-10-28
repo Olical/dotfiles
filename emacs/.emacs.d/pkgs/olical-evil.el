@@ -8,6 +8,7 @@
 ;;; Code:
 
 (require 'evil)
+(require 'dired)
 
 (defun olical-evil-new-line-above (count)
   "Create COUNT lines above this one."
@@ -42,6 +43,8 @@
 (define-key evil-normal-state-map (kbd "] SPC") 'olical-evil-new-line-below)
 (define-key evil-normal-state-map (kbd "[ e") 'olical-evil-move-line-up)
 (define-key evil-normal-state-map (kbd "] e") 'olical-evil-move-line-down)
+(define-key evil-normal-state-map (kbd "-") 'dired-jump)
+(define-key dired-mode-map (kbd "-") 'dired-up-directory)
 
 (provide 'olical-evil)
 ;;; olical-evil.el ends here

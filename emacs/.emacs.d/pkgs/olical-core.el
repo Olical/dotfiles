@@ -35,5 +35,8 @@
 (setenv "PATH" (concat (getenv "PATH") ":~/bin:~/.nvm/versions/node/v4.5.0/bin"))
 (setq exec-path (append exec-path '("~/bin" "~/.nvm/versions/node/v4.5.0/bin")))
 
+;; Raise the GC threshold by a LOT.
+(setq gc-cons-threshold 20000000)
+
 (provide 'olical-core)
 ;;; olical-core ends here

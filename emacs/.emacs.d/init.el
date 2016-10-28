@@ -148,7 +148,12 @@
 (use-package company
   :ensure t
   :diminish company-mode
-  :config (add-hook 'after-init-hook 'global-company-mode))
+  :config
+  (add-hook 'after-init-hook 'global-company-mode)
+  (setq company-idle-delay 0.03)
+  (setq company-minimum-prefix-length 1)
+  (setq company-require-match nil)
+  (setq company-show-numbers t))
 
 (use-package company-tern
   :ensure t
