@@ -49,5 +49,11 @@
 (define-key evil-normal-state-map (kbd "-") 'dired-jump)
 (define-key dired-mode-map (kbd "-") 'dired-up-directory)
 
+;; Map paredit like vim-sexp-mappings-for-regular-people.
+(define-key evil-normal-state-map (kbd ") >") 'paredit-forward-slurp-sexp)
+(define-key evil-normal-state-map (kbd ") <") 'paredit-forward-barf-sexp)
+(define-key evil-normal-state-map (kbd "( <") 'paredit-backward-slurp-sexp)
+(define-key evil-normal-state-map (kbd "( >") 'paredit-backward-barf-sexp)
+
 (provide 'olical-evil)
 ;;; olical-evil.el ends here
