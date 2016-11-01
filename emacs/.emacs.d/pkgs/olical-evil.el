@@ -39,10 +39,13 @@
     (transpose-lines 1)
     (evil-previous-line 1)))
 
+;; Some essentials from vim-unimpaired.
 (define-key evil-normal-state-map (kbd "[ SPC") 'olical-evil-new-line-above)
 (define-key evil-normal-state-map (kbd "] SPC") 'olical-evil-new-line-below)
 (define-key evil-normal-state-map (kbd "[ e") 'olical-evil-move-line-up)
 (define-key evil-normal-state-map (kbd "] e") 'olical-evil-move-line-down)
+
+;; vim-vinegar emulation.
 (define-key evil-normal-state-map (kbd "-") 'dired-jump)
 (define-key dired-mode-map (kbd "-") 'dired-up-directory)
 
