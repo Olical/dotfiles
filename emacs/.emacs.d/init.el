@@ -44,6 +44,10 @@
   :ensure t
   :config (global-set-key (kbd "C-x g") 'magit-status))
 
+(use-package powerline
+  :ensure t
+  :config (powerline-center-evil-theme))
+
 (use-package base16-theme
   :ensure t
   :init (setq custom-safe-themes t)
@@ -198,9 +202,13 @@
 (use-package clojure-mode
   :ensure t)
 
-(use-package powerline
+(use-package cider
+  :ensure t)
+
+(use-package which-key
   :ensure t
-  :config (powerline-center-evil-theme))
+  :diminish which-key-mode
+  :config (which-key-mode))
 
 (provide 'init)
 ;;; init.el ends here
