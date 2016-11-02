@@ -181,6 +181,9 @@
 (use-package clojure-mode
   :ensure t)
 
+(use-package json-mode
+  :ensure t)
+
 (use-package cider
   :ensure t)
 
