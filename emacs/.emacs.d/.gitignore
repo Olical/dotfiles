@@ -8,3 +8,5 @@ recentf
 projectile.cache
 projectile-bookmarks.eld
 eshell/
+semanticdb/
+flycheck_init.el
