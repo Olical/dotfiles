@@ -6,14 +6,8 @@
 
 ;;; Code:
 
-
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
-
 (load-file "~/.emacs.d/package-bootstrap.el")
+(package-initialize)
 
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
@@ -22,6 +16,9 @@
 
 ;; Packages.
 (use-package olical-core
+  :load-path "pkgs")
+
+(use-package olical-evil
   :load-path "pkgs")
 
 (use-package helm-config
@@ -56,17 +53,6 @@
 (use-package dired+
   :ensure t)
 
-(use-package paredit
-  :ensure t
-  :config
-  (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
-  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
-  (add-hook 'ielm-mode-hook #'enable-paredit-mode)
-  (add-hook 'lisp-mode-hook #'enable-paredit-mode)
-  (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
-  (add-hook 'scheme-mode-hook #'enable-paredit-mode)
-  (add-hook 'clojure-mode-hook #'enable-paredit-mode))
-
 (use-package evil-leader
   :ensure t
   :config
@@ -85,20 +71,6 @@
   :config
   (evil-mode 1)
   (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up))
-
-(use-package evil-paredit
-  :ensure t
-  :config
-  (add-hook 'emacs-lisp-mode-hook #'evil-paredit-mode)
-  (add-hook 'eval-expression-minibuffer-setup-hook #'evil-paredit-mode)
-  (add-hook 'ielm-mode-hook #'evil-paredit-mode)
-  (add-hook 'lisp-mode-hook #'evil-paredit-mode)
-  (add-hook 'lisp-interaction-mode-hook #'evil-paredit-mode)
-  (add-hook 'scheme-mode-hook #'evil-paredit-mode)
-  (add-hook 'clojure-mode-hook #'evil-paredit-mode))
-
-(use-package olical-evil
-  :load-path "pkgs")
 
 (use-package evil-escape
   :ensure t
@@ -124,6 +96,13 @@
   :config
   (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
   (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt))
+
+(use-package evil-lispy
+  :ensure t
+  :diminish evil-lispy-mode lispy-mode
+  :config
+  (add-hook 'emacs-lisp-mode-hook #'evil-lispy-mode)
+  (add-hook 'clojure-mode-hook #'evil-lispy-mode))
 
 (use-package rainbow-delimiters
   :ensure t

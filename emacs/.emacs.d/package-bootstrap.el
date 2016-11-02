@@ -15,7 +15,5 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
-(package-initialize)
-
 (provide 'package-bootstrap)
 ;;; package-bootstrap.el ends here
