@@ -38,8 +38,5 @@
 ;; Raise the GC threshold by a LOT.
 (setq gc-cons-threshold 20000000)
 
-;; Show matching parens.
-(show-paren-mode 1)
-
 (provide 'olical-core)
 ;;; olical-core ends here
