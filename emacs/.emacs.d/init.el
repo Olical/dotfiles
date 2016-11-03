@@ -185,7 +185,8 @@
   :ensure t)
 
 (use-package cider
-  :ensure t)
+  :ensure t
+  :config (cider-auto-test-mode 1))
 
 (use-package which-key
   :ensure t
