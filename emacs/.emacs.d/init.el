@@ -181,6 +181,15 @@
 (use-package clojure-mode
   :ensure t)
 
+(use-package flycheck-clojure
+  :ensure t
+  :config (eval-after-load 'flycheck '(flycheck-clojure-setup)))
+
+(use-package flycheck-pos-tip
+  :ensure t
+  :config (eval-after-load 'flycheck
+            '(setq flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))
+
 (use-package json-mode
   :ensure t)
 
