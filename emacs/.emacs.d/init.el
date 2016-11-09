@@ -39,6 +39,7 @@
 
 (use-package magit
   :ensure t
+  :diminish auto-revert-mode
   :config (global-set-key (kbd "C-x g") 'magit-status))
 
 (use-package powerline
@@ -186,6 +187,7 @@
 
 (use-package cider
   :ensure t
+  :diminish cider-auto-test-mode
   :config (cider-auto-test-mode 1))
 
 (use-package which-key
