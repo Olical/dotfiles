@@ -15,7 +15,7 @@
       initial-scratch-message nil)
 
 ;; Select a nice font.
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-12"))
 
 ;; Remove scroll bar, tool bar and menu bar.
 (scroll-bar-mode -1)
