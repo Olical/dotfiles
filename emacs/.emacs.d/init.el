@@ -110,7 +110,10 @@
 
 (use-package evil-org
   :ensure t
-  :diminish evil-org-mode)
+  :diminish evil-org-mode
+  :config
+  (find-file "~/notes.org")
+  (evil-org-mode))
 
 (use-package rainbow-delimiters
   :ensure t
