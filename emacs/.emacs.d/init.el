@@ -54,6 +54,9 @@
 (use-package dired+
   :ensure t)
 
+(use-package org
+  :ensure t)
+
 (use-package evil-leader
   :ensure t
   :config
@@ -104,6 +107,10 @@
   :config
   (add-hook 'emacs-lisp-mode-hook #'evil-lispy-mode)
   (add-hook 'clojure-mode-hook #'evil-lispy-mode))
+
+(use-package evil-org-mode
+  :ensure t
+  :diminish evil-org-mode)
 
 (use-package rainbow-delimiters
   :ensure t
