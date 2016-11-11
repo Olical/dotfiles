@@ -108,7 +108,7 @@
   (add-hook 'emacs-lisp-mode-hook #'evil-lispy-mode)
   (add-hook 'clojure-mode-hook #'evil-lispy-mode))
 
-(use-package evil-org-mode
+(use-package evil-org
   :ensure t
   :diminish evil-org-mode)
 
