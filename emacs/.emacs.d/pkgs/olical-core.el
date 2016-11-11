@@ -57,5 +57,8 @@
 ;; Raise the GC threshold by a LOT.
 (setq gc-cons-threshold 20000000)
 
+;; Open my notes file by default.
+(find-file "~/notes.org")
+
 (provide 'olical-core)
 ;;; olical-core ends here
