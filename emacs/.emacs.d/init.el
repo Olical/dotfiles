@@ -42,6 +42,9 @@
   :diminish auto-revert-mode
   :config (global-set-key (kbd "C-x g") 'magit-status))
 
+(use-package ag
+  :ensure t)
+
 (use-package powerline
   :ensure t
   :config (powerline-center-evil-theme))
