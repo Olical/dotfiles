@@ -58,7 +58,9 @@
   :ensure t)
 
 (use-package org
-  :ensure t)
+  :ensure t
+  :config
+  (setq org-log-done t))
 
 (use-package evil-leader
   :ensure t
