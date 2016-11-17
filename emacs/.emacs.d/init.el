@@ -60,7 +60,8 @@
 (use-package org
   :ensure t
   :config
-  (setq org-log-done t))
+  (setq org-log-done t)
+  (setq org-agenda-files (list "~/notes.org")))
 
 (use-package evil-leader
   :ensure t
