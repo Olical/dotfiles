@@ -73,7 +73,8 @@
     "b" 'helm-buffers-list
     "f" 'helm-find-files
     "p" 'projectile-commander
-    "s" 'eshell))
+    "s" 'eshell
+    "l" 'parinfer-toggle-mode))
 
 (use-package evil
   :ensure t
@@ -106,13 +107,6 @@
   :config
   (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
   (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt))
-
-(use-package evil-lispy
-  :ensure t
-  :diminish evil-lispy-mode lispy-mode
-  :config
-  (add-hook 'emacs-lisp-mode-hook #'evil-lispy-mode)
-  (add-hook 'clojure-mode-hook #'evil-lispy-mode))
 
 (use-package evil-org
   :ensure t
@@ -210,6 +204,24 @@
   :ensure t
   :diminish which-key-mode
   :config (which-key-mode))
+
+(use-package lispy
+  :ensure t)
+
+(use-package parinfer
+  :ensure t
+  :init
+  (progn
+    (setq-default parinfer-lighters '(" infer" . " (infer)"))
+    (setq-default parinfer-extensions
+                  '(defaults
+                     pretty-parens
+                     evil
+                     lispy
+                     smart-tab
+                     smart-yank))
+    (add-hook 'clojure-mode-hook #'parinfer-mode)
+    (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)))
 
 (provide 'init)
 ;;; init.el ends here
