@@ -49,6 +49,7 @@
 (define-key evil-normal-state-map (kbd "-") 'dired-jump)
 (define-key dired-mode-map (kbd "-") 'dired-up-directory)
 
+;; Use Emacs mode for the listed modes.
 (defun olical-set-mode-to-default-emacs (mode)
   "Set the default state for the given MODE to Emacs."
   (evil-set-initial-state mode 'emacs))
@@ -61,6 +62,7 @@
         cider-popup-buffer-mode
         cider-stacktrace-mode
         cider-test-report-mode
+        cider--debug-mode
         cljr--change-signature-mode
         magit-branch-manager-mode
         magit-commit-mode
