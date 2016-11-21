@@ -49,5 +49,35 @@
 (define-key evil-normal-state-map (kbd "-") 'dired-jump)
 (define-key dired-mode-map (kbd "-") 'dired-up-directory)
 
+(defun olical-set-mode-to-default-emacs (mode)
+  "Set the default state for the given MODE to Emacs."
+  (evil-set-initial-state mode 'emacs))
+
+(mapc 'olical-set-mode-to-default-emacs
+      '(dired
+        cider-classpath-mode
+        cider-doc-mode
+        cider-docview-mode
+        cider-inspector-mode
+        cider-popup-buffer-mode
+        cider-stacktrace-mode
+        cider-test-report-mode
+        cljr--change-signature-mode
+        deft-mode
+        occur-mode
+        term-mode
+        eshell
+        magit-branch-manager-mode
+        magit-commit-mode
+        magit-log-mode
+        magit-popup-mode
+        magit-popup-sequence-mode
+        git-rebase-mode
+        log-view-mode
+        project-explorer-mode
+        paradox-menu-mode
+        neotree-mode
+        diff-mode))
+
 (provide 'olical-evil)
 ;;; olical-evil.el ends here
