@@ -18,9 +18,6 @@
 (use-package olical-core
   :load-path "pkgs")
 
-(use-package olical-evil
-  :load-path "pkgs")
-
 (use-package helm-config
   :ensure helm
   :diminish helm-mode
@@ -36,6 +33,10 @@
 
 (use-package helm-ag
   :ensure t)
+
+(use-package paradox
+  :ensure t
+  :config  (setq paradox-github-token t))
 
 (use-package magit
   :ensure t
@@ -82,6 +83,9 @@
   :config
   (evil-mode 1)
   (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up))
+
+(use-package olical-evil
+  :load-path "pkgs")
 
 (use-package evil-escape
   :ensure t
