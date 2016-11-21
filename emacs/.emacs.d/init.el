@@ -202,7 +202,9 @@
 (use-package cider
   :ensure t
   :diminish cider-auto-test-mode
-  :config (cider-auto-test-mode 1))
+  :config
+  (cider-auto-test-mode 1)
+  (setq cider-repl-display-help-banner nil))
 
 (use-package which-key
   :ensure t
