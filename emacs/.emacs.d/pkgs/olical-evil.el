@@ -71,5 +71,8 @@
         magit-popup-sequence-mode
         git-rebase-mode))
 
+;; Attempt to set a decent default shift width.
+(setq evil-shift-width 2)
+
 (provide 'olical-evil)
 ;;; olical-evil.el ends here
