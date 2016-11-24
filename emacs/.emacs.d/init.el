@@ -235,7 +235,9 @@
   :ensure t)
 
 (use-package geiser
-  :ensure t)
+  :ensure t
+  :config
+  (setq-default geiser-active-implementations '(mit)))
 
 (provide 'init)
 ;;; init.el ends here
