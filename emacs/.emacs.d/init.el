@@ -229,5 +229,8 @@
     (add-hook 'clojure-mode-hook #'parinfer-mode)
     (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)))
 
+(use-package racket-mode
+  :ensure t)
+
 (provide 'init)
 ;;; init.el ends here
