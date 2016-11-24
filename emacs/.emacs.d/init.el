@@ -227,6 +227,7 @@
                      smart-tab
                      smart-yank))
     (add-hook 'clojure-mode-hook #'parinfer-mode)
+    (add-hook 'racket-mode-hook #'parinfer-mode)
     (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)))
 
 (use-package racket-mode
