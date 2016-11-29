@@ -1,12 +1,12 @@
-# dotfiles [![Join the chat at https://gitter.im/Wolfy87/dotfiles](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Wolfy87/dotfiles?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# dotfiles
 
-This repository consists of configuration for any tools I use within my [Arch Linux][arch] and [Vim][] development environment. I use my terminal as my IDE, so there's a lot of tools I depend on. I link all of this configuration into my home directory using [stow][].
+This repository consists of configuration for any tools I use within my [Arch Linux][arch] and [Emacs][] development environment. I use a *lot* of tools which culminate in a sort of Unix IDE, I use [stow][] to link all of the required configuration into my home directory.
 
 ## Installation
 
 Firstly, clone this repository down to `~/dotfiles`, a few things assume it's kept there, sorry.
 
-> This is what I use when setting up a new machine after installing [Antergos][] (a friendly and quick way to get [Arch][] running). Don't just run this on a whim, this is essentially my custom built desktop environment, it's perfect for me but could ruin your set up. Feel free to take what you want from here, but be careful about installing my entire set up over yours by mistake. Maybe try it in a VM?
+> This is what I use when setting up a new machine after installing [Arch][]. Don't just run this on a whim, this is essentially my custom built desktop environment, it's perfect for me but <del>could</del> *will* ruin your set up. Feel free to take what you want from here, but be careful about installing my entire set up over yours by mistake. Maybe try it in a VM as an experiment.
 
 Presuming you're using Arch Linux, you can just run `make`. This will install everything listed in `packages.txt` (including [yaourt][] and [infinality][]!), link all of the configuration into your home directory then switch the default shell to [fish][].
 
@@ -18,7 +18,7 @@ make
 # Awesome Linux environment.
 ```
 
-To perform a system wide update you can execute `update` from within a [fish][] shell. This includes system, npm and vim packages.
+To perform a system wide update you can execute `yolo` from within a [fish][] shell. This includes system, npm, emacs and vim packages as well as system maintenance. I run this every day, nothing has broken yet, maybe I'm lucky, or maybe all those naysayers were basing their opinions of Linux on hearsay and gossip. How odd. It's certainly more stable than OSX or Windows, that's for sure.
 
 ## Author
 
@@ -46,3 +46,4 @@ Do what you want. Learn as much as you can. Unlicense more software.
 [fish]: http://fishshell.com/
 [antergos]: https://antergos.com/
 [vim]: http://www.vim.org/
+[emacs]: https://www.gnu.org/software/emacs/
