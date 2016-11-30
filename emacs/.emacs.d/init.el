@@ -240,7 +240,8 @@
   (setq-default geiser-active-implementations '(mit)))
 
 (use-package elm-mode
-  :ensure t)
+  :ensure t
+  :config (add-to-list 'company-backends 'company-elm))
 
 (provide 'init)
 ;;; init.el ends here
