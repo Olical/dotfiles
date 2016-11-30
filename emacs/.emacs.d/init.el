@@ -239,5 +239,8 @@
   :config
   (setq-default geiser-active-implementations '(mit)))
 
+(use-package elm-mode
+  :ensure t)
+
 (provide 'init)
 ;;; init.el ends here
