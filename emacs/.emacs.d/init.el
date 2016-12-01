@@ -204,7 +204,11 @@
   :diminish cider-auto-test-mode
   :config
   (cider-auto-test-mode 1)
-  (setq cider-repl-display-help-banner nil))
+  (setq cider-repl-display-help-banner nil)
+  (setq cider-cljs-lein-repl
+        "(do (require 'figwheel-sidecar.repl-api)
+           (figwheel-sidecar.repl-api/start-figwheel!)
+           (figwheel-sidecar.repl-api/cljs-repl))"))
 
 (use-package which-key
   :ensure t
