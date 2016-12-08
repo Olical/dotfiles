@@ -55,6 +55,7 @@ values."
      javascript
      scheme
      olical-lisp
+     olical-javascript
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -296,25 +297,6 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  ;; Add some places to the path.
-  (defun slurp (filePath)
-    "Return FILEPATH's file content."
-    (with-temp-buffer
-      (insert-file-contents filePath)
-      (buffer-string)))
-
-  (defun nvm-path ()
-    "Find the path to the current nvm bin if present."
-    (let ((f "~/.nvm/alias/default"))
-      (if (file-exists-p f)
-          (concat "~/.nvm/versions/node/" (substring (slurp f) 0 -1) "/bin"))))
-
-  (defun join (sep strs)
-    "Join by SEP on STRS."
-    (mapconcat 'identity strs sep))
-
-  (setenv "PATH" (join ":" (list (getenv "PATH") "~/bin" (nvm-path))))
-  (setq exec-path (append exec-path (list "~/bin" (nvm-path))))
   )
 
 (defun dotspacemacs/user-config ()
@@ -324,8 +306,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq-default js2-show-parse-errors nil)
-  (setq-default js2-strict-missing-semi-warning nil))
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
