@@ -1,4 +1,4 @@
-default: add-repositories install-packages enable-services link-config set-shell sync-neovim show-notes
+default: add-repositories install-packages enable-services link-config set-shell spacemacs sync-neovim show-notes
 
 install-packages:
 	sudo pacman -Sy yaourt
@@ -23,6 +23,9 @@ link-config:
 
 set-shell:
 	chsh -s `which fish`
+
+spacemacs:
+	git clone git@github.com:syl20bnr/spacemacs.git ~/.emacs.d
 
 sync-neovim:
 	./neovim/.config/nvim/sync.sh

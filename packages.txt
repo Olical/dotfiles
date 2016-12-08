@@ -1,3 +1,4 @@
+adobe-source-code-pro-fonts
 aspell-en
 base-devel
 chromium
