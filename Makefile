@@ -24,7 +24,7 @@ link-config:
 set-shell:
 	chsh -s `which fish`
 
-spacemacs:
+clone-spacemacs:
 	git clone git@github.com:syl20bnr/spacemacs.git ~/.emacs.d
 
 sync-neovim:
