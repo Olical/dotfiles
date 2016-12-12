@@ -291,6 +291,8 @@ values."
    dotspacemacs-whitespace-cleanup nil
    ;; Disable the PATH check.
    exec-path-from-shell-check-startup-files nil
+   ;; Much easier evil-escape binding.
+   evil-escape-key-sequence "jk"
    ))
 
 (defun dotspacemacs/user-init ()
