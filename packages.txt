@@ -33,7 +33,6 @@ network-manager-applet
 networkmanager
 nodejs
 npm
-nvm
 openssh
 p7zip
 pa-applet-git
