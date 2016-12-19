@@ -291,6 +291,8 @@ values."
    exec-path-from-shell-check-startup-files nil
    ;; Much easier evil-escape binding.
    evil-escape-key-sequence "jk"
+   ;; Enable projectile file caching.
+   projectile-enable-caching t
    ))
 
 (defun dotspacemacs/user-init ()
