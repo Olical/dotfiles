@@ -25,6 +25,11 @@ if [ -d ~/.nvm ]
   nvm use default --silent
 end
 
+# Prevent funky output inside emacs terminals.
+if test "$TERM" = "eterm-color"
+  function fish_title; end
+end
+
 if [ -d ~/.rvm ]
   rvm default
 end
