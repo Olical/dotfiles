@@ -51,6 +51,7 @@ values."
      clojure
      elm
      javascript
+     react
      scheme
      shell-scripts
      yaml
@@ -313,6 +314,16 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
+  (push '("\\.js\\'" . react-mode) auto-mode-alist)
+  (setq-default
+   ;; js2-mode
+   js2-basic-offset 2
+   ;; web-mode
+   css-indent-offset 2
+   web-mode-markup-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-attr-indent-offset 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
