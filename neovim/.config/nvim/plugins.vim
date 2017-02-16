@@ -38,7 +38,7 @@ Plug 'gregspurrier/vim-midje'
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'guns/vim-sexp', { 'for': ['clojure', 'racket'] }
 Plug 'haya14busa/vim-asterisk'
-Plug 'helino/vim-json'
+Plug 'elzr/vim-json'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' } | Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vader.vim'
 Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
