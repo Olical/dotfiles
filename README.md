@@ -8,7 +8,7 @@ Firstly, clone this repository down to `~/dotfiles`, a few things assume it's ke
 
 > This is what I use when setting up a new machine after installing [Arch][]. Don't just run this on a whim, this is essentially my custom built desktop environment, it's perfect for me but <del>could</del> *will* ruin your set up. Feel free to take what you want from here, but be careful about installing my entire set up over yours by mistake. Maybe try it in a VM as an experiment.
 
-Presuming you're using Arch Linux, you can just run `make`. This will install everything listed in `packages.txt` (including [yaourt][] and [infinality][]!), link all of the configuration into your home directory then switch the default shell to [fish][].
+Presuming you're using Arch Linux, you can just run `make`. This will install everything listed in `packages.txt` (including [yaourt][]), link all of the configuration into your home directory then switch the default shell to [fish][].
 
 ```bash
 # Pre-awesome Linux environment.
@@ -41,7 +41,6 @@ Do what you want. Learn as much as you can. Unlicense more software.
 [stow]: http://www.gnu.org/software/stow/
 [yaourt]: https://aur.archlinux.org/packages/yaourt/
 [aur]: https://aur.archlinux.org/
-[infinality]: https://wiki.archlinux.org/index.php/Infinality
 [compton]: https://wiki.archlinux.org/index.php/Compton
 [fish]: http://fishshell.com/
 [antergos]: https://antergos.com/
