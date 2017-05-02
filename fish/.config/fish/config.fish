@@ -1,6 +1,6 @@
 set fish_greeting ""
 set LANG en_GB.UTF-8
-set PATH ~/bin ~/npm/bin $PATH
+set PATH ~/bin ~/npm/bin ~/.cargo/bin $PATH
 set BROWSER chromium
 set EDITOR nvim
 set VISUAL nvim
