@@ -45,6 +45,7 @@ python2-neovim
 qt4
 redshift
 reflector
+rustup
 stow
 termite
 the_silver_searcher
