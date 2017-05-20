@@ -27,13 +27,18 @@ if [ -d ~/.nvm ]
   nvm use default --silent
 end
 
+if [ -d ~/.rvm ]
+  rvm default
+end
+
+# Source in sml
+if [ -f /etc/profile.d/smlnj.sh ]
+  bass source /etc/profile.d/smlnj.sh
+end
+
 # Prevent funky output inside emacs terminals.
 if test "$TERM" = "eterm-color"
   function fish_title; end
-end
-
-if [ -d ~/.rvm ]
-  rvm default
 end
 
 # Local config.
