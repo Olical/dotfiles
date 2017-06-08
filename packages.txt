@@ -13,6 +13,7 @@ fish
 git
 gnome-keyring
 gnome-themes-standard
+gnupg
 gpicview
 gst-libav
 gst-plugins-bad
@@ -25,6 +26,7 @@ i3-wm
 i3lock
 i3session-git
 i3status
+leiningen
 lightdm
 lightdm-gtk-greeter
 neovim
