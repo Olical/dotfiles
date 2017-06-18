@@ -330,7 +330,7 @@ you should place your code here."
    web-mode-css-indent-offset 2
    web-mode-code-indent-offset 2
    web-mode-attr-indent-offset 2)
-  (setq geiser-active-implementations '(mit))
+  (setq geiser-active-implementations '(racket))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
