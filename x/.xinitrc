@@ -17,4 +17,8 @@ fi
 
 export BROWSER="chromium"
 
+if [ -f ~/.xinitrc-local ]; then
+  ~/.xinitrc-local
+fi
+
 exec i3
