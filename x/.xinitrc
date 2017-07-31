@@ -11,6 +11,10 @@ if [ -s ~/.Xmodmap ]; then
   xmodmap ~/.Xmodmap
 fi
 
+if [ -f ~/.Xresources ]; then
+  xrdb -merge ~/.Xresources
+fi
+
 export BROWSER="chromium"
 
 exec i3
