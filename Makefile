@@ -1,4 +1,4 @@
-default: add-repositories install-packages enable-services link-config set-shell install-spacemacs install-nvm sync-neovim show-notes
+default: add-repositories install-packages enable-services link-config set-shell install-spacemacs sync-neovim show-notes
 
 install-packages:
 	sudo pacman -Sy yaourt
@@ -20,9 +20,6 @@ set-shell:
 
 install-spacemacs:
 	git clone git@github.com:syl20bnr/spacemacs.git ~/.emacs.d
-
-install-nvm:
-	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 
 sync-neovim:
 	./neovim/.config/nvim/sync.sh
