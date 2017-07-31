@@ -64,4 +64,6 @@ xautolock
 xclip
 xcwd-git
 xorg-server
+xorg-xbacklight
+xorg-xrandr
 yaourt
