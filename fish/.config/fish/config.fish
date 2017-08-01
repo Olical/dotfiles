@@ -1,4 +1,4 @@
-mkdir -p ~/.cargo/bin
+mkdir -p ~/bin ~/npm/bin ~/.cargo/bin
 
 set fish_greeting ""
 set LANG en_GB.UTF-8
