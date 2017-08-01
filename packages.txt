@@ -63,6 +63,7 @@ vlc
 xautolock
 xclip
 xcwd-git
+xf86-input-synaptics
 xorg-server
 xorg-xbacklight
 xorg-xrandr
