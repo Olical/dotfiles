@@ -11,7 +11,7 @@ if [ $? -eq 0 ]; then
   xmodmap -e "pointer = 1 2 3" 2> /dev/null
   echo "-> Laptop mode"
 else
-  xrandr --output $IN --mode 1920x1080 --output $EXT --primary --auto --right-of $IN
+  xrandr --output $IN --mode 1920x1080 --output $EXT --primary --mode 2560x1440 --right-of $IN
   xmodmap -e "pointer = 3 2 1" 2> /dev/null
   echo "-> Desktop mode"
 fi
