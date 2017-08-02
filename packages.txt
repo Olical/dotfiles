@@ -67,5 +67,6 @@ xf86-input-synaptics
 xfce4-screenshooter
 xorg-server
 xorg-xbacklight
+xorg-xmodmap
 xorg-xrandr
 yaourt
