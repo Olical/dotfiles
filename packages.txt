@@ -64,6 +64,7 @@ xautolock
 xclip
 xcwd-git
 xf86-input-synaptics
+xfce4-screenshooter
 xorg-server
 xorg-xbacklight
 xorg-xrandr
