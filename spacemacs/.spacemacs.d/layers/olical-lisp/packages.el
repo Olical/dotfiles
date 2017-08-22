@@ -20,4 +20,5 @@
       (add-hook 'clojure-mode-hook #'parinfer-mode)
       (add-hook 'racket-mode-hook #'parinfer-mode)
       (add-hook 'scheme-mode-hook #'parinfer-mode)
-      (add-hook 'emacs-lisp-mode-hook #'parinfer-mode))))
+      (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
+      (spacemacs/set-leader-keys-for-minor-mode 'parinfer-mode "," 'parinfer-toggle-mode))))
