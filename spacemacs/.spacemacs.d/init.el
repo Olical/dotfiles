@@ -320,7 +320,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
   (push '("\\.js\\'" . react-mode) auto-mode-alist)
   (setq-default
    ;; js2-mode
@@ -356,8 +355,7 @@ you should place your code here."
            (try+ 0)
            (pdoseq 2))
      (cider-refresh-after-fn . "bounce.core/start!")
-     (cider-refresh-before-fn . "bounce.core/stop!")
-     (cider-cljs-lein-repl . "(user/cljs-repl)")))))
+     (cider-refresh-before-fn . "bounce.core/stop!")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
