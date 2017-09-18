@@ -34,3 +34,5 @@
   d = diff
 [commit]
   gpgsign = true
+[magit]
+	hideCampaign = true
