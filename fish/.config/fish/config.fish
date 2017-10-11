@@ -1,6 +1,6 @@
 set CLJ_SCRIPTS $HOME/clojure-scripts
 
-mkdir -p ~/bin ~/npm/bin ~/.cargo/bin $CLJ_SCRIPTS
+mkdir -p ~/bin ~/npm/bin ~/.cargo/bin $CLJ_SCRIPTS/bin
 
 set fish_greeting ""
 set LANG en_GB.UTF-8
