@@ -356,7 +356,12 @@ you should place your code here."
            (try+ 0)
            (pdoseq 2))
      (cider-refresh-after-fn . "bounce.core/start!")
-     (cider-refresh-before-fn . "bounce.core/stop!")))))
+     (cider-refresh-before-fn . "bounce.core/stop!")
+     (require 'cider)
+     (setq cider-cljs-lein-repl
+           "(do (require '[cljs.repl :as repl] '[cljs.repl.node :as node])
+              (compile 'cljs.repl.node)
+              (cemerick.piggieback/cljs-repl (cljs.repl.node/repl-env)))")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
