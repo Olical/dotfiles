@@ -28,7 +28,7 @@
                               (sql-server "localhost")
                               (sql-port 5436)
                               (sql-database "social")
-                              (sql-user "social"))
+                              (sql-user "social_dev"))
 
                              ("social-live-rr"
                               (sql-product 'postgres)
