@@ -8,9 +8,6 @@ function! BuildYCM(info)
   endif
 endfunction
 
-" Disabled until the bug with Midje is fixed.
-" Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
-
 Plug 'Keithbsmiley/tmux.vim'
 Plug 'Lokaltog/vim-distinguished'
 Plug 'Lokaltog/vim-easymotion'
@@ -31,13 +28,14 @@ Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
 Plug 'derekwyatt/vim-scala'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elzr/vim-json'
 Plug 'embear/vim-localvimrc'
 Plug 'flowtype/vim-flow', { 'do': 'npm install -g flow-bin' }
 Plug 'gregspurrier/vim-midje'
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'guns/vim-sexp', { 'for': ['clojure', 'racket'] }
 Plug 'haya14busa/vim-asterisk'
-Plug 'elzr/vim-json'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' } | Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vader.vim'
 Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
@@ -55,9 +53,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
