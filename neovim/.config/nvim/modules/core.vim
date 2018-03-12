@@ -6,8 +6,8 @@ set splitbelow
 set splitright
 
 " Set a default indent, but vim-sleuth should adjust it.
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 " Disable swap files.
