@@ -341,7 +341,7 @@ you should place your code here."
    web-mode-css-indent-offset 2
    web-mode-code-indent-offset 2
    web-mode-attr-indent-offset 2)
-  (setq geiser-active-implementations '(racket))
+  (setq geiser-active-implementations '(mit))
   (setq cider-cljs-lein-repl
         "(do (require '[cljs.repl :as repl] '[cljs.repl.node :as node])
            (compile 'cljs.repl.node)
