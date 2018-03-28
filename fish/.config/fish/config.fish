@@ -2,7 +2,7 @@ mkdir -p ~/bin ~/npm/bin ~/.cargo/bin
 
 set fish_greeting ""
 set LANG en_GB.UTF-8
-set PATH ~/bin ~/npm/bin ~/.cargo/bin $PATH
+set PATH ~/bin ~/npm/bin ~/.cargo/bin ~/.gem/ruby/2.5.0/bin $PATH
 set BROWSER chromium
 set EDITOR nvim
 set VISUAL nvim
