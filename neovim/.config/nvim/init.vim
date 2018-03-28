@@ -7,5 +7,5 @@ for file in split(glob(Dot('modules/*.vim')), '\n')
 endfor
 
 if filereadable("~/.nvim.local.vim")
-    source ~/.nvim.local.vim
+  source ~/.nvim.local.vim
 endif
