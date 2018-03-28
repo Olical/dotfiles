@@ -31,7 +31,7 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
 # start a terminal
-bindsym $mod+Return exec termite -d $(xcwd)
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -220,16 +220,3 @@ mode "$mode_system" {
 }
 
 bindsym $mod+p mode "$mode_system"
-
-# Session management
-set $mode_session Session (s) save, (r) restore
-mode "$mode_session" {
-    bindsym s exec --no-startup-id i3session save, mode "default"
-    bindsym r exec --no-startup-id i3session restore, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym $mod+i mode "$mode_session"

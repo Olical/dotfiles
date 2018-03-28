@@ -25,7 +25,6 @@ gvfs
 htop
 i3-wm
 i3lock
-i3session-git
 i3status
 leiningen
 lightdm
@@ -63,7 +62,6 @@ unrar
 vlc
 xautolock
 xclip
-xcwd-git
 xf86-input-synaptics
 xfce4-screenshooter
 xorg-server
