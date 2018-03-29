@@ -1,0 +1,2 @@
+ * Enable line wrap
+ * vinegar
