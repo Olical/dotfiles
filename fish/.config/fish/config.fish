@@ -1,4 +1,4 @@
-mkdir -p ~/bin ~/npm/bin ~/.cargo/bin
+mkdir -p ~/bin ~/npm/bin ~/.cargo/bin ~/.gem/ruby/2.5.0/bin
 
 set fish_greeting ""
 set LANG en_GB.UTF-8
