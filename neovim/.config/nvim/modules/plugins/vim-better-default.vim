@@ -5,3 +5,5 @@ runtime! plugin/default.vim
 set nonumber
 set norelativenumber
 set undodir=~/.config/nvim/undo
+set wrap
+set clipboard-=unnamedplus

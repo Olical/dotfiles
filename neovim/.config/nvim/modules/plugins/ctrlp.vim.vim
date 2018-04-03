@@ -1,4 +1,5 @@
 let g:ctrlp_map = '<leader>ff'
+nnoremap <leader>bb :CtrlPBuffer<cr>
 
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
