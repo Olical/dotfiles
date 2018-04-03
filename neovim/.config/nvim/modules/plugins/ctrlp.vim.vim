@@ -1,5 +1,6 @@
-let g:ctrlp_map = '<leader>ff'
-nnoremap <leader>bb :CtrlPBuffer<cr>
+let g:ctrlp_map = '<leader>pf'
+nnoremap <leader>pb :CtrlPBuffer<cr>
+nnoremap <leader>pr :CtrlPMRUFiles<cr>
 
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
