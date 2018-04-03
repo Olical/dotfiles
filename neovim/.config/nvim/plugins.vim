@@ -1,5 +1,6 @@
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'jiangmiao/auto-pairs'
 Plug 'liuchengxu/vim-better-default'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tpope/vim-commentary'
