@@ -1,5 +1,6 @@
 Plug 'Shougo/deoplete.nvim'
 Plug 'airblade/vim-gitgutter'
+Plug 'clojure-vim/async-clj-omni'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'guns/vim-sexp'
