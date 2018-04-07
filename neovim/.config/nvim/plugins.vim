@@ -10,7 +10,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure', 'on': 'FireplaceConnect' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
