@@ -1,8 +1,8 @@
 mkdir -p ~/bin ~/npm/bin ~/.cargo/bin ~/.gem/ruby/2.5.0/bin
+set -gx PATH ~/bin ~/npm/bin ~/.cargo/bin ~/.gem/ruby/2.5.0/bin $PATH
 
 set -gx fish_greeting ""
 set -gx LANG en_GB.UTF-8
-set -gx PATH ~/bin ~/npm/bin ~/.cargo/bin ~/.gem/ruby/2.5.0/bin $PATH
 set -gx BROWSER firefox
 set -gx EDITOR nvim
 set -gx VISUAL nvim
