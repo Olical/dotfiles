@@ -11,6 +11,7 @@ emacs
 feh
 file-roller
 fish
+fzf
 git
 gnome-keyring
 gnome-themes-standard
