@@ -47,6 +47,7 @@ python2-neovim
 qt4
 redshift
 reflector
+ripgrep
 rustup
 stow
 termite
