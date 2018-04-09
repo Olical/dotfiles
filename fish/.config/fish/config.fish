@@ -7,6 +7,9 @@ set -gx BROWSER firefox
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
+set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow -g \"!.git/\" 2> /dev/null"
+set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+
 # Kill all running containers.
 alias dockerkill='docker kill (docker ps -q)'
 

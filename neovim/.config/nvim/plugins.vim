@@ -1,10 +1,10 @@
 Plug 'Shougo/deoplete.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'clojure-vim/async-clj-omni', { 'for': 'clojure' }
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vim-better-default'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tpope/vim-commentary'
