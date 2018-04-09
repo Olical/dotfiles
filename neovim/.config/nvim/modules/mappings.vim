@@ -26,4 +26,3 @@ endfunction
 function! s:trim_trailing_whitespace()
   %s/\s\+$//e
 endfunction
-
