@@ -4,4 +4,5 @@ autocmd FileType clojure nnoremap <buffer> <localleader>fE :%Eval<cr>
 autocmd FileType clojure nnoremap <buffer> <localleader>fr :Require<cr>
 autocmd FileType clojure nnoremap <buffer> <localleader>fR :Require!<cr>
 autocmd FileType clojure nnoremap <buffer> <localleader>ft :RunTests<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>fl :Last<cr>
 nnoremap <localleader>fc :FireplaceConnect<cr>
