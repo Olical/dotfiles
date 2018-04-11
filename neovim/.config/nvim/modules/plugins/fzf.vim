@@ -1,9 +1,9 @@
 nnoremap <leader>ff :Files<cr>
+nnoremap <leader>fg :Rg<cr>
 nnoremap <leader>fb :Buffers<cr>
 nnoremap <leader>fc :Commands<cr>
 nnoremap <leader>fh :Helptags<cr>
 nnoremap <leader>fm :Maps<cr>
-nnoremap <leader>fg :Rg<cr>
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
