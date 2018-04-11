@@ -3,12 +3,10 @@ let mapleader = "\<space>"
 let maplocalleader = ","
 
 nnoremap <leader>wm :tab sp<CR>
-nnoremap <leader>gdl :diffget LOCAL<CR>
-nnoremap <leader>gdr :diffget REMOTE<CR>
 nnoremap <leader>wo :only<cr>
 nnoremap <leader>to :tabonly<cr>
 nnoremap <leader>bo :call <SID>delete_hidden_buffers()<CR>
-nnoremap <leader>z :call <SID>correct_to_first_spelling_suggestion()<CR>
+nnoremap <leader>zz :call <SID>correct_to_first_spelling_suggestion()<CR>
 nnoremap <leader>tw :call <SID>trim_trailing_whitespace()<CR>
 
 function! s:delete_hidden_buffers()
