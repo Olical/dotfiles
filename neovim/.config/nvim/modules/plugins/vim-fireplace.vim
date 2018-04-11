@@ -1,7 +1,7 @@
-autocmd FileType clojure nnoremap <buffer> <localleader>fe :Eval<cr>
-autocmd FileType clojure vnoremap <buffer> <localleader>fe :Eval<cr>
-autocmd FileType clojure nnoremap <buffer> <localleader>fE :%Eval<cr>
-autocmd FileType clojure nnoremap <buffer> <localleader>fr :Require<cr>
-autocmd FileType clojure nnoremap <buffer> <localleader>fR :Require!<cr>
-autocmd FileType clojure nnoremap <buffer> <localleader>ft :RunTests<cr>
-nnoremap <localleader>fc :FireplaceConnect<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>re :Eval<cr>
+autocmd FileType clojure vnoremap <buffer> <localleader>re :Eval<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>rE :%Eval<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>rr :Require<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>rR :Require!<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>rt :RunTests<cr>
+nnoremap <localleader>rc :FireplaceConnect<cr>
