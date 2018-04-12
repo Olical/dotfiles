@@ -1,9 +1,0 @@
-.DS_Store
-.tern-project
-.tern-port
-.lvimrc
-.projections.json
-.quicksave.vim
-.build.sh
-.nrepl-history
-.env
