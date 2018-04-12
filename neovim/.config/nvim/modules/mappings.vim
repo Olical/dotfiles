@@ -8,6 +8,7 @@ nnoremap <leader>to :tabonly<cr>
 nnoremap <leader>bo :call <SID>delete_hidden_buffers()<CR>
 nnoremap <leader>zz :call <SID>correct_to_first_spelling_suggestion()<CR>
 nnoremap <leader>tw :call <SID>trim_trailing_whitespace()<CR>
+tnoremap jk <c-\><c-n>
 
 function! s:delete_hidden_buffers()
   let tpbl=[]
