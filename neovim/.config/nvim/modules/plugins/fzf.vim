@@ -4,6 +4,8 @@ nnoremap <leader>fb :Buffers<cr>
 nnoremap <leader>fc :Commands<cr>
 nnoremap <leader>fh :Helptags<cr>
 nnoremap <leader>fm :Maps<cr>
+nnoremap <leader>f: :History:<cr>
+nnoremap <leader>ft :Filetypes<cr>
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
