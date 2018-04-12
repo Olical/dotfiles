@@ -1,3 +1,4 @@
+Plug 'SevereOverfl0w/vim-fireplace', { 'for': 'clojure', 'on': 'FireplaceConnect', 'branch': 'pprintcpp' }
 Plug 'Shougo/deoplete.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'clojure-vim/async-clj-omni', { 'for': 'clojure' }
@@ -14,7 +15,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fireplace', { 'for': 'clojure', 'on': 'FireplaceConnect' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
