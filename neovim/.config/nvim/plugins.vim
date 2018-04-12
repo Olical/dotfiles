@@ -2,6 +2,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'clojure-vim/async-clj-omni', { 'for': 'clojure' }
 Plug 'easymotion/vim-easymotion'
+Plug 'embear/vim-localvimrc'
 Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
