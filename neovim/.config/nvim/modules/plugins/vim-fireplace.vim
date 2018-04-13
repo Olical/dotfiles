@@ -5,6 +5,6 @@ autocmd FileType clojure nnoremap <buffer> <localleader>fr :Require<cr>
 autocmd FileType clojure nnoremap <buffer> <localleader>fR :Require!<cr>
 autocmd FileType clojure nnoremap <buffer> <localleader>ft :RunTests<cr>
 autocmd FileType clojure nnoremap <buffer> <localleader>fl :Last<cr>
-autocmd FileType clojure nnoremap <buffer> <localleader>fd [<c-d>
-autocmd FileType clojure nnoremap <buffer> <localleader>fD [d
+autocmd FileType clojure nnoremap <buffer> <localleader>fd :normal [<c-d><cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>fD :normal [d<cr>
 nnoremap <localleader>fc :FireplaceConnect<cr>
