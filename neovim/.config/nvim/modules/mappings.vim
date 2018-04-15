@@ -3,6 +3,7 @@ let mapleader = "\<space>"
 let maplocalleader = ","
 
 nnoremap <leader>wm :tab sp<CR>
+nnoremap <leader>bD :bdelete!<CR>
 nnoremap <leader>wo :only<cr>
 nnoremap <leader>to :tabonly<cr>
 nnoremap <leader>bo :call <SID>delete_hidden_buffers()<CR>
