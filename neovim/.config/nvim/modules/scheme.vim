@@ -1,3 +1,5 @@
+" TODO Eval a motion or the innermost form, like cp{motion} and cpp in fireplace.
+
 function! scheme#connect()
   vnew
   let s:repl_term_id = termopen('mit-scheme')
