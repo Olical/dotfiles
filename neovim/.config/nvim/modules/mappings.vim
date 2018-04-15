@@ -20,7 +20,7 @@ function! s:delete_hidden_buffers()
 endfunction
 
 function! s:correct_to_first_spelling_suggestion()
-  normal 1z=
+  normal! 1z=
 endfunction
 
 function! s:trim_trailing_whitespace()
