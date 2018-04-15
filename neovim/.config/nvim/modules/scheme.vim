@@ -30,6 +30,6 @@ command SchemeConnect call scheme#connect()
 command SchemeEvalTopForm call scheme#eval_top_form()
 command SchemeEvalFile call scheme#eval_file()
 
-autocmd FileType scheme nnoremap <buffer> <localleader>sc :SchemeConnect<cr>
-autocmd FileType scheme nnoremap <buffer> <localleader>se :SchemeEvalTopForm<cr>
-autocmd FileType scheme nnoremap <buffer> <localleader>sf :SchemeEvalFile<cr>
+autocmd FileType scheme nnoremap <buffer> <localleader>rc :SchemeConnect<cr>
+autocmd FileType scheme nnoremap <buffer> <localleader>re :SchemeEvalTopForm<cr>
+autocmd FileType scheme nnoremap <buffer> <localleader>rf :SchemeEvalFile<cr>

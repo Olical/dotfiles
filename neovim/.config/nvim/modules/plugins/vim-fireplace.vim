@@ -1,10 +1,10 @@
-autocmd FileType clojure nnoremap <buffer> <localleader>fe :Eval<cr>
-autocmd FileType clojure vnoremap <buffer> <localleader>fe :Eval<cr>
-autocmd FileType clojure nnoremap <buffer> <localleader>fE :%Eval<cr>
-autocmd FileType clojure nnoremap <buffer> <localleader>fr :Require<cr>
-autocmd FileType clojure nnoremap <buffer> <localleader>fR :Require!<cr>
-autocmd FileType clojure nnoremap <buffer> <localleader>ft :RunTests<cr>
-autocmd FileType clojure nnoremap <buffer> <localleader>fl :Last<cr>
-autocmd FileType clojure nnoremap <buffer> <localleader>fd :normal [<c-d><cr>
-autocmd FileType clojure nnoremap <buffer> <localleader>fD :normal [d<cr>
-nnoremap <localleader>fc :FireplaceConnect<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>re :Eval<cr>
+autocmd FileType clojure vnoremap <buffer> <localleader>re :Eval<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>rE :%Eval<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>rr :Require<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>rR :Require!<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>rt :RunTests<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>rl :Last<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>rc :FireplaceConnect<cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>gd :normal [<c-d><cr>
+autocmd FileType clojure nnoremap <buffer> <localleader>gD :normal [d<cr>
