@@ -35,4 +35,4 @@
 [commit]
   gpgsign = true
 [magit]
-	hideCampaign = true
+  hideCampaign = true
