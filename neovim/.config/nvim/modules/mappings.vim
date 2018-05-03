@@ -10,6 +10,8 @@ nnoremap <leader>bo :call <SID>delete_hidden_buffers()<CR>
 nnoremap <leader>zz :call <SID>correct_to_first_spelling_suggestion()<CR>
 nnoremap <leader>tw :call <SID>trim_trailing_whitespace()<CR>
 tnoremap jk <c-\><c-n>
+nnoremap <leader>sw :mksession! .quicksave.vim<CR>:echo "Session saved."<CR>
+nnoremap <leader>sr :source .quicksave.vim<CR>:echo "Session loaded."<CR>
 
 function! s:delete_hidden_buffers()
   let tpbl=[]
