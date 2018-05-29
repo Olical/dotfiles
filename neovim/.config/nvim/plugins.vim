@@ -1,4 +1,4 @@
-Plug 'Olical/vim-scheme', { 'for': 'scheme', 'on': 'SchemeConnect' }
+Plug 'Olical/vim-scheme', { 'on': 'SchemeConnect' }
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim'
 Plug 'airblade/vim-gitgutter'
@@ -17,7 +17,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fireplace', { 'for': 'clojure', 'on': 'FireplaceConnect' }
+Plug 'tpope/vim-fireplace', { 'on': 'FireplaceConnect' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
@@ -26,3 +26,5 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
+
+" Plug '~/repos/olical/vim-fireplace-extras'
