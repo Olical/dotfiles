@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-feh --bg-scale ~/.i3/backgrounds/arch-vintage-greensea.png
+feh --bg-scale ~/.i3/backgrounds/gol.png
