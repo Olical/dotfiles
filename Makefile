@@ -1,10 +1,9 @@
-default: add-repositories install-packages enable-services link-config set-shell install-spacemacs sync-neovim show-notes
+default: install-yaourt install-packages enable-services link-config set-shell install-spacemacs sync-neovim show-notes
 
-add-repositories:
-	cat repositories.txt | sudo tee -a /etc/pacman.conf
+install-yaourt:
+	./install-yaourt.sh
 
 install-packages:
-	sudo pacman -Sy yaourt
 	yaourt -S --needed --noconfirm `cat packages.txt`
 
 enable-services:
