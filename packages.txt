@@ -38,6 +38,7 @@ npm
 openssh
 p7zip
 pa-applet-git
+pacman-contrib
 parcellite
 playerctl
 pulseaudio
