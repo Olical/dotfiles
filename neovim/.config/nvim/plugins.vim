@@ -1,6 +1,6 @@
 Plug 'Olical/vim-scheme'
 Plug 'PeterRincker/vim-argumentative'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim' | Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'airblade/vim-gitgutter'
 Plug 'clojure-vim/async-clj-omni'
 Plug 'easymotion/vim-easymotion'
@@ -9,7 +9,7 @@ Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vim-better-default'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'simnalamburt/vim-mundo'
