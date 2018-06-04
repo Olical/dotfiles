@@ -9,6 +9,7 @@ Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vim-better-default'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'simnalamburt/vim-mundo'
