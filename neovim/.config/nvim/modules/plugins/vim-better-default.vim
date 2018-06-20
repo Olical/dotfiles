@@ -7,3 +7,8 @@ set norelativenumber
 set undodir=~/.config/nvim/undo
 set wrap
 set clipboard-=unnamedplus
+
+tunmap <space>wh
+tunmap <space>wj
+tunmap <space>wk
+tunmap <space>wl
