@@ -1,3 +1,5 @@
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
 nnoremap <leader>ff :Files<cr>
 nnoremap <leader>fg :Rg<cr>
 nnoremap <leader>fb :Buffers<cr>

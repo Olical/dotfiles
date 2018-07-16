@@ -2,6 +2,9 @@ nnoremap <space> <nop>
 let mapleader = "\<space>"
 let maplocalleader = ","
 
+inoremap jk <Esc>
+cnoremap jk <C-c>
+
 nnoremap <leader>wm :tab sp<CR>
 nnoremap <leader>bD :bdelete!<CR>
 nnoremap <leader>wo :only<cr>
