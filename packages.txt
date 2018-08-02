@@ -12,6 +12,7 @@ feh
 file-roller
 fish
 fzf
+geoclue2
 git
 gnome-keyring
 gnome-themes-standard

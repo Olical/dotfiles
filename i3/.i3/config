@@ -176,7 +176,7 @@ bar {
 # Start background processes.
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
-exec --no-startup-id redshift-gtk
+exec --no-startup-id (/usr/lib/geoclue-2.0/demos/agent | redshift-gtk)
 exec --no-startup-id pa-applet
 exec --no-startup-id parcellite
 exec --no-startup-id compton --config ~/.i3/compton.conf -b
