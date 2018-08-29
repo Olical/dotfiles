@@ -7,7 +7,6 @@ compton
 cowsay
 dmenu
 dunst
-emacs
 feh
 file-roller
 fish
@@ -51,7 +50,6 @@ qt4
 redshift
 reflector
 ripgrep
-rustup
 stow
 termite
 the_silver_searcher
@@ -72,4 +70,3 @@ xorg-server
 xorg-xbacklight
 xorg-xmodmap
 xorg-xrandr
-yaourt

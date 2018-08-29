@@ -1,4 +1,4 @@
-default: install-yaourt install-packages enable-services link-config set-shell install-spacemacs sync-neovim show-notes
+default: install-yaourt install-packages enable-services link-config set-shell sync-neovim show-notes
 
 install-yaourt:
 	./install-yaourt.sh
@@ -16,9 +16,6 @@ link-config:
 
 set-shell:
 	chsh -s `which fish`
-
-install-spacemacs:
-	git clone git@github.com:syl20bnr/spacemacs.git ~/.emacs.d
 
 sync-neovim:
 	./neovim/.config/nvim/sync.sh
