@@ -18,6 +18,7 @@ alias dockernuke='docker rm (docker ps -a -q); docker rmi -f (docker images -q)'
 
 # Other git aliases are in git config
 alias g="git"
+alias gg="g a .; and g c -a"
 
 # Some software still uses vimdiff
 alias vimdiff="nvim -d"
