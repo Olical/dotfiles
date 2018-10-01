@@ -1,5 +1,5 @@
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
     \ }
 
 autocmd FileType rust nnoremap <buffer> K :call LanguageClient#textDocument_hover()<cr>
