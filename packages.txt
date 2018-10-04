@@ -1,4 +1,5 @@
 adobe-source-code-pro-fonts
+alacritty
 aspell
 aspell-en
 base-devel
@@ -51,7 +52,6 @@ redshift
 reflector
 ripgrep
 stow
-termite
 the_silver_searcher
 thunar
 thunar-archive-plugin
