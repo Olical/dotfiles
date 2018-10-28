@@ -1,8 +1,10 @@
+Plug 'Olical/neofib', { 'do': 'bash install.sh' }
 Plug 'Olical/vim-fireplace' | Plug 'Olical/vim-scotch'
 Plug 'Olical/vim-scheme'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim' | Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'airblade/vim-gitgutter'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'clojure-vim/async-clj-omni'
 Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
@@ -30,4 +32,3 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
