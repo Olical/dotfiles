@@ -1,4 +1,5 @@
 Plug 'Olical/neofib', { 'do': 'bash install.sh' }
+Plug 'Olical/vim-enmasse'
 Plug 'Olical/vim-fireplace' | Plug 'Olical/vim-scotch'
 Plug 'Olical/vim-scheme'
 Plug 'PeterRincker/vim-argumentative'
