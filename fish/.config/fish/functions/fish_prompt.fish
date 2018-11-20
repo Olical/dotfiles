@@ -21,6 +21,14 @@ function fish_prompt
   end
 
   set_color normal
+
+  set jobs (job_count)
+  if test $jobs -gt 0
+    set_color magenta
+    echo -n " %$jobs"
+  end
+
+  set_color normal
   echo -n ' '
 end
 
