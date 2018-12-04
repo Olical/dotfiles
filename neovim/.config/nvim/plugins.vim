@@ -1,6 +1,6 @@
+Plug 'Olical/conjure', { 'tag': '0.1.0', 'do': 'bash install.sh' }
 Plug 'Olical/neofib', { 'do': 'bash install.sh' }
 Plug 'Olical/vim-enmasse'
-Plug 'Olical/vim-fireplace' | Plug 'Olical/vim-scotch'
 Plug 'Olical/vim-scheme'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim' | Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
