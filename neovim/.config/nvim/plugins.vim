@@ -1,5 +1,4 @@
-" 'tag': '0.1.0'
-Plug 'Olical/conjure', { 'do': 'bash install.sh' }
+Plug 'Olical/conjure', { 'tag': '0.1.0', 'do': 'bash install.sh' }
 Plug 'Olical/neofib', { 'do': 'bash install.sh' }
 Plug 'Olical/vim-enmasse'
 Plug 'Olical/vim-scheme'
