@@ -1,12 +1,10 @@
-Plug 'Olical/conjure', { 'tag': '0.3.0', 'do': 'bash install.sh' }
-Plug 'Olical/neofib', { 'do': 'bash install.sh' }
+Plug 'Olical/conjure', { 'tag': '0.4.0', 'do': 'bash install.sh' }
 Plug 'Olical/vim-enmasse'
 Plug 'Olical/vim-scheme'
 Plug 'PeterRincker/vim-argumentative'
-Plug 'Shougo/deoplete.nvim' | Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'Shougo/deoplete.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-Plug 'clojure-vim/async-clj-omni'
 Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
 Plug 'embear/vim-localvimrc'
