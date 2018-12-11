@@ -30,8 +30,8 @@ window:
     y: 0
 
   # Window decorations
-  # Setting this to false will result in window without borders and title bar.
-  decorations: true
+  # none|full
+  decorations: full
 
 scrolling:
   # How many lines of scrollback to keep,
@@ -123,10 +123,6 @@ font:
 
 # Should display the render timer
 render_timer: false
-
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: true
 
 # Colors (Tomorrow Night Bright)
 colors:
@@ -237,24 +233,24 @@ mouse:
   # or triple click.
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
+  hide_when_typing: false
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
 dynamic_title: true
 
-hide_cursor_when_typing: false
+cursor:
+  # Style of the cursor
+  #
+  # Values for 'cursor_style':
+  # - Block
+  # - Underline
+  # - Beam
+  style: Block
 
-# Style of the cursor
-#
-# Values for 'cursor_style':
-# - Block
-# - Underline
-# - Beam
-cursor_style: Block
-
-# Whether the cursor should be a hollow block on window focus loss
-unfocused_hollow_cursor: true
+  # Whether the cursor should be a hollow block on window focus loss
+  unfocused_hollow: true
 
 # Live config reload (changes require restart)
 live_config_reload: true
