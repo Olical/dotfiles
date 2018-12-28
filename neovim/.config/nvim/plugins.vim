@@ -1,4 +1,4 @@
-Plug 'Olical/conjure', { 'tag': '0.5.0', 'do': 'bash install.sh' }
+Plug 'Olical/conjure', { 'tag': '0.6.0', 'do': 'bash install.sh' }
 Plug 'Olical/vim-enmasse'
 Plug 'Olical/vim-scheme'
 Plug 'PeterRincker/vim-argumentative'
