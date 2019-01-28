@@ -1,4 +1,4 @@
-Plug 'Olical/conjure', { 'commit': '9d8d6c27667a66dd65b16016dccd168a82c0baa3', 'do': 'bash install.sh' }
+Plug 'Olical/conjure', { 'commit': 'f37e82eed1d4094501089a60a00b320d5668898d', 'do': 'bash install.sh' }
 Plug 'Olical/vim-enmasse'
 Plug 'Olical/vim-scheme'
 Plug 'PeterRincker/vim-argumentative'
