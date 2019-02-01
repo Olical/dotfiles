@@ -7,5 +7,5 @@ call deoplete#custom#source('omni', 'functions', {
       \})
 
 call deoplete#custom#var('omni', 'input_patterns', {
-      \ 'clojure': '\w+|/|\.|\-'
+      \ 'clojure': '[\w!$%&*+/:<=>?@\^_~\-\.#]+'
       \})
