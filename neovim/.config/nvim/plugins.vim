@@ -1,22 +1,18 @@
 Plug 'Olical/conjure', { 'commit': '0e9c5a04f8fc9473e35ef092a8f3a3f0f1a633c9', 'do': 'bash install.sh' }
-Plug 'Olical/vim-enmasse'
-Plug 'Olical/vim-scheme'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim'
 Plug 'airblade/vim-gitgutter'
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
 Plug 'embear/vim-localvimrc'
-Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people'
-Plug 'jiangmiao/auto-pairs', { 'tag': 'v1.3.4' }
+Plug 'eraserhd/parinfer-rust', {'do': 'cargo build --release'}
+Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'lambdalisue/suda.vim'
 Plug 'liuchengxu/vim-better-default'
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'rust-lang/rust.vim'
 Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
