@@ -5,7 +5,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
 Plug 'embear/vim-localvimrc'
-Plug 'eraserhd/parinfer-rust', {'do': 'cargo build --release'}
 Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
