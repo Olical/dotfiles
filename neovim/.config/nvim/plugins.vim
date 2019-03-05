@@ -1,4 +1,5 @@
 Plug 'Olical/conjure', { 'commit': '0e9c5a04f8fc9473e35ef092a8f3a3f0f1a633c9', 'do': 'bash install.sh' }
+Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim'
 Plug 'airblade/vim-gitgutter'
