@@ -179,7 +179,7 @@ exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ss
 exec --no-startup-id (/usr/lib/geoclue-2.0/demos/agent | redshift-gtk)
 exec --no-startup-id pa-applet
 exec --no-startup-id parcellite
-# exec --no-startup-id compton --config ~/.i3/compton.conf -b
+exec --no-startup-id compton --config ~/.i3/compton.conf -b
 exec --no-startup-id thunar --daemon
 exec --no-startup-id xautolock -time 10 -locker "~/.i3/locker.sh"
 

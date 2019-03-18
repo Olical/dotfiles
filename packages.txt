@@ -3,13 +3,13 @@ alacritty
 aspell
 aspell-en
 base-devel
-chromium
 compton
 cowsay
 dmenu
 dunst
 feh
 file-roller
+firefox
 fish
 fzf
 geoclue2
@@ -52,7 +52,6 @@ redshift
 reflector
 ripgrep
 stow
-the_silver_searcher
 thunar
 thunar-archive-plugin
 thunar-volman
