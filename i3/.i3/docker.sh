@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-IN="eDP1"
-EXT="DP1"
+IN="eDP-1"
+EXT="DP-1"
 
 xrandr > /dev/null
 xrandr | grep "$EXT disconnected" > /dev/null
