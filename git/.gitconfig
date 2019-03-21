@@ -1,6 +1,6 @@
 [user]
 	name = Oliver Caldwell
-	email = olliec87@gmail.com
+	email = ollie@oli.me.uk
 [core]
 	editor = nvim
 	excludesfile = ~/.gitexcludes
