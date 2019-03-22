@@ -1,5 +1,5 @@
-nnoremap <localleader>rr :ConjureEvalCurrentForm<cr>
-nnoremap <localleader>re :ConjureEvalRootForm<cr>
+nnoremap <localleader>re :ConjureEvalCurrentForm<cr>
+nnoremap <localleader>rr :ConjureEvalRootForm<cr>
 vnoremap <localleader>re :ConjureEvalSelection<cr>
 nnoremap <localleader>rf :ConjureEvalBuffer<cr>
 nnoremap <localleader>rd :ConjureLoadFile <c-r>%<cr>
