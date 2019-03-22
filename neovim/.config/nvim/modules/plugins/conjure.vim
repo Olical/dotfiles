@@ -15,5 +15,6 @@ function! s:close_log()
 endfunction
 
 augroup conjure
+  autocmd!
   autocmd! InsertEnter *.clj\(c\|s\) :call <sid>close_log()
 augroup END
