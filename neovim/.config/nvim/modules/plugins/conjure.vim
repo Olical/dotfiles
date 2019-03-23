@@ -1,4 +1,5 @@
 function! s:close_log()
+  echom "yee"
   if expand("%:p") !~# "/tmp/conjure-log-\\d\\+.cljc"
     ConjureCloseLog
   endif
@@ -6,7 +7,7 @@ endfunction
 
 augroup conjure
   autocmd!
-  autocmd InsertEnter *.clj\(c\|s\) :call <sid>close_log()
+  autocmd InsertEnter *.clj,*.clj[cs] :call <sid>close_log()
   autocmd FileType clojure nnoremap <buffer> <localleader>re :ConjureEvalCurrentForm<cr>
   autocmd FileType clojure nnoremap <buffer> <localleader>rr :ConjureEvalRootForm<cr>
   autocmd FileType clojure vnoremap <buffer> <localleader>re :ConjureEvalSelection<cr>
