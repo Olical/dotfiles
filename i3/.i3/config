@@ -42,6 +42,9 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -l 15 -p 
 # start winmenu (dmenu wrapper for switching windows)
 bindsym $mod+c exec --no-startup-id ~/.i3/python/winmenu.py
 
+# start passmenu (password manager, provided by pass)
+bindsym $mod+p exec --no-startup-id passmenu
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
