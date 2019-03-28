@@ -15,7 +15,7 @@ if [ -f ~/.Xresources ]; then
   xrdb -merge ~/.Xresources
 fi
 
-export BROWSER="chromium"
+export BROWSER="firefox"
 
 if [ -f ~/.xinitrc-local ]; then
   ~/.xinitrc-local

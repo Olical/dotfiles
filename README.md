@@ -11,7 +11,7 @@ Firstly, clone this repository down to `~/dotfiles`, a few things assume it's ke
 Presuming you're using Arch Linux, you can just run `make`. This will install everything listed in `packages.txt` (including [yaourt][]), link all of the configuration into your home directory then switch the default shell to [fish][].
 
 ```bash
-# Pre-awesome Linux environment.
+# Regular Linux environment.
 
 make
 
