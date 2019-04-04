@@ -1,16 +1,17 @@
 Plug 'Olical/conjure', { 'tag': 'v0.8.0', 'do': 'make compile', 'for': 'clojure', 'on': 'ConjureAdd' }
 Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'
-Plug 'Shougo/deoplete.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
 Plug 'embear/vim-localvimrc'
 Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
+Plug 'jlesquembre/coc-conjure'
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'lambdalisue/suda.vim'
 Plug 'liuchengxu/vim-better-default'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'rafi/awesome-vim-colorschemes'
