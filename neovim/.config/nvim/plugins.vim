@@ -1,4 +1,4 @@
-Plug 'Olical/conjure', { 'commit': '68c2dac95e2b82db693b623832371b2b2d935b93', 'do': 'make compile', 'for': 'clojure', 'on': 'ConjureAdd' }
+Plug 'Olical/conjure', { 'commit': 'ecfb1c09e5e8258036dfb30f3927e33488533e98', 'do': 'make compile', 'for': 'clojure', 'on': 'ConjureAdd' }
 Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'airblade/vim-gitgutter'
@@ -10,7 +10,7 @@ Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'lambdalisue/suda.vim'
 Plug 'liuchengxu/vim-better-default'
-Plug 'neoclide/coc.nvim', {'tag': 'v0.0.64', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'tag': 'v0.0.65', 'do': { -> coc#util#install()}}
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'rafi/awesome-vim-colorschemes'
