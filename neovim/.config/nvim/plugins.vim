@@ -1,4 +1,4 @@
-Plug 'Olical/conjure', { 'commit': '4596248b08508a5f7710fe0469ca457aeb06f7e3', 'do': 'make compile', 'for': 'clojure', 'on': 'ConjureAdd' }
+Plug 'Olical/conjure', { 'commit': '314105636f1ae765d1a1d9c0fb4052b39b32bbc6', 'do': 'make compile', 'for': 'clojure', 'on': 'ConjureAdd' }
 Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim'
