@@ -2,8 +2,8 @@ function maintenance
   echo "Failed systemd services..."
   sudo systemctl --failed
 
-  echo "Errors in logfiles..."
-  sudo journalctl -p 3 -xb --no-pager
+  echo "Recent errors in logfiles (journalctl -p 3 -xb)..."
+  sudo journalctl -p 3 -xb --no-pager | tail -15
 
   echo "Removing orphan packages..."
   sudo pacman -Rns (pacman -Qtdq)
