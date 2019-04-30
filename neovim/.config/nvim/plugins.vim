@@ -10,6 +10,7 @@ Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'lambdalisue/suda.vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'liuchengxu/vim-better-default'
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'radenling/vim-dispatch-neovim'
