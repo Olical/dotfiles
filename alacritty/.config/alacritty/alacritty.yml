@@ -121,8 +121,9 @@ font:
   # false.
   use_thin_strokes: true
 
-# Should display the render timer
-render_timer: false
+debug:
+  # Should display the render timer
+  render_timer: false
 
 # Colors (Tomorrow Night Bright)
 colors:
