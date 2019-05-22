@@ -1,9 +1,14 @@
 function! LightlineFilename()
-  return expand('%:t') !=# '' ? expand('%:p:h:t') . '/' . expand('%:t') : '[No Name]'
+  let l:name = winwidth(0) > 70 ? expand('%:p:h:t') . '/' . expand('%:t') : expand('%:t')
+  return expand('%:t') !=# '' ? l:name : 'nil'
 endfunction
 
 function! LightlineReadonly()
   return &readonly && &filetype !=# 'help' ? 'RO' : ''
+endfunction
+
+function! LightlineFiletype()
+  return winwidth(0) > 70 && &filetype !=# '' ? &filetype : ''
 endfunction
 
 let g:lightline = {
@@ -11,6 +16,7 @@ let g:lightline = {
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \   'readonly': 'LightlineReadonly',
+      \   'filetype': 'LightlineFiletype',
       \ },
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
