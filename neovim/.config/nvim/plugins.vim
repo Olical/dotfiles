@@ -1,4 +1,4 @@
-Plug 'Olical/conjure', { 'do': 'bin/compile', 'for': 'clojure', 'on': 'ConjureAdd' }
+Plug 'Olical/conjure', { 'do': 'bin/compile', 'for': 'clojure' }
 Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim'
@@ -7,6 +7,7 @@ Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
 Plug 'embear/vim-localvimrc'
 Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'lambdalisue/suda.vim'
@@ -27,5 +28,4 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'vim-airline/vim-airline', { 'tag': 'v0.10' } | Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
