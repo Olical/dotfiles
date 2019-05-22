@@ -1,4 +1,4 @@
-default: install-yaourt install-packages enable-services link-config set-shell sync-neovim show-notes
+default: install-yaourt install-packages enable-services link-config set-shell install-clojure sync-neovim show-notes
 
 install-yaourt:
 	./install-yaourt.sh
@@ -16,6 +16,9 @@ link-config:
 
 set-shell:
 	chsh -s `which fish`
+
+install-clojure:
+	./install-clojure.sh
 
 sync-neovim:
 	./neovim/.config/nvim/sync.sh
