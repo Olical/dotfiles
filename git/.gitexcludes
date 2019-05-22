@@ -1,3 +1,4 @@
 .quicksave.vim
 .tern-port
 .netrwhist
+.clj-kondo
