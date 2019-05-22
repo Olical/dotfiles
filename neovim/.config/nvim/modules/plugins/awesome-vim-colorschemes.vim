@@ -1,1 +1,1 @@
-colorscheme space-vim-dark
+colorscheme onedark
