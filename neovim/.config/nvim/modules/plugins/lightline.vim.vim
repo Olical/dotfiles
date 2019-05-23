@@ -1,6 +1,6 @@
 function! LightlineFilename()
   let l:name = winwidth(0) > 70 ? expand('%:p:h:t') . '/' . expand('%:t') : expand('%:t')
-  return expand('%:t') !=# '' ? l:name : 'nil'
+  return expand('%:t') !=# '' ? l:name : ''
 endfunction
 
 function! LightlineReadonly()
