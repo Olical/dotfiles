@@ -19,9 +19,13 @@ let g:lightline = {
       \   'filetype': 'LightlineFiletype',
       \ },
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified' ] ],
-      \   'right': [ [ 'lineinfo' ],
-      \              [ 'percent' ] ]
+      \   'left': [['mode', 'paste'],
+      \            ['readonly', 'filename', 'modified']],
+      \   'right': [['lineinfo'],
+      \             ['percent']]
+      \ },
+      \ 'inactive': {
+      \   'left': [['filename']],
+      \   'right': []
       \ },
       \ }
