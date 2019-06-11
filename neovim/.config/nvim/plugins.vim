@@ -1,4 +1,4 @@
-Plug 'Olical/conjure', { 'branch': 'develop', 'do': 'bin/compile', 'for': 'clojure', 'on': 'ConjureUp' }
+Plug 'Olical/conjure', { 'branch': 'develop', 'do': 'bin/compile' }
 Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim'
