@@ -1,4 +1,4 @@
-Plug 'Olical/conjure', { 'branch': 'result-refactor', 'do': 'bin/compile' }
+Plug 'Olical/conjure', { 'branch': 'develop', 'do': 'bin/compile' }
 Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim'
