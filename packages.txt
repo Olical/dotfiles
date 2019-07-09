@@ -1,5 +1,3 @@
-adobe-source-code-pro-fonts
-alacritty
 aspell
 aspell-en
 base-devel
@@ -28,6 +26,7 @@ htop
 i3-wm
 i3lock
 i3status
+kitty
 leiningen
 lightdm
 lightdm-gtk-greeter
@@ -37,6 +36,7 @@ networkmanager
 nodejs
 npm
 openssh
+otf-fira-code
 p7zip
 pa-applet-git
 pacman-contrib
