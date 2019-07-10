@@ -1,6 +1,7 @@
 aspell
 aspell-en
 base-devel
+clj-kondo-bin
 compton
 cowsay
 dmenu
@@ -26,6 +27,7 @@ htop
 i3-wm
 i3lock
 i3status
+joker-bin
 kitty
 leiningen
 lightdm
