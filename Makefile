@@ -1,15 +1,10 @@
-default: install-yay install-packages enable-services link-config set-shell install-clojure sync-neovim show-notes
+default: install-yay install-packages link-config set-shell install-clojure sync-neovim show-notes
 
 install-yay:
 	./install-yay.sh
 
 install-packages:
 	yay -S --needed --noconfirm `cat packages.txt`
-
-enable-services:
-	sudo systemctl enable lightdm NetworkManager tlp tlp-sleep
-	sudo systemctl disable systemd-rfkill
-	sudo tlp start
 
 link-config:
 	stow --restow `ls -d */`

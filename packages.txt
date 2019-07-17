@@ -1,73 +1,35 @@
-aspell
-aspell-en
+aspell aspell-en
 base-devel
-clj-kondo-bin
+clj-kondo-bin joker-bin
 compton
 cowsay
 dmenu
 dunst
 feh
-file-roller
 firefox
 fish
 fzf
-geoclue2
 git
 gnome-keyring
 gnome-themes-standard
 gnupg
-gpicview
-gst-libav
-gst-plugins-bad
-gst-plugins-base
-gst-plugins-good
-gst-plugins-ugly
+gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly
 gvfs
 htop
-i3-wm
-i3lock
-i3status
-joker-bin
-kitty
+i3 ttf-dejavu parcellite xclip xautolock xfce4-screenshooter
+kitty otf-fira-code
 leiningen
-lightdm
-lightdm-gtk-greeter
-neovim
+neovim python-neovim python2-neovim
 network-manager-applet
 networkmanager
-nodejs
-npm
+nodejs npm
 openssh
-otf-fira-code
-p7zip
-pa-applet-git
-pacman-contrib
-parcellite
+pacman-contrib reflector
 playerctl
-pulseaudio
-python-gobject
-python-neovim
-python-xdg
-python2-neovim
-qt4
-redshift
-reflector
+pulseaudio pa-applet-git
+redshift geoclue2
 ripgrep
 stow
-thunar
-thunar-archive-plugin
-thunar-volman
-tlp
-tmux
-ttf-dejavu
-tumbler
-unrar
-vlc
-xautolock
-xclip
+thunar tumbler thunar-volman thunar-archive-plugin file-roller p7zip unrar
 xf86-input-synaptics
-xfce4-screenshooter
-xorg-server
-xorg-xbacklight
-xorg-xmodmap
-xorg-xrandr
+xorg-server xorg-xbacklight xorg-xmodmap xorg-xrandr
