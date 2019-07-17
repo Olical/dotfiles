@@ -5,7 +5,7 @@ function yolo
   cd ~/dotfiles; git pull; cd -
 
   yay -Syu --noconfirm
-  env DIFFPROG="nvim -d suda://" pacdiff
+  sudo env DIFFPROG="nvim -d" pacdiff
 
   ~/.config/nvim/sync.sh
 
