@@ -4,8 +4,8 @@ function yolo
 
   cd ~/dotfiles; git pull; cd -
 
-  yaourt -Syua --noconfirm
-  yaourt -C
+  yay -Syu --noconfirm
+  env DIFFPROG="nvim -d suda://" pacdiff
 
   ~/.config/nvim/sync.sh
 

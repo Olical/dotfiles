@@ -1,10 +1,10 @@
-default: install-yaourt install-packages enable-services link-config set-shell install-clojure sync-neovim show-notes
+default: install-yay install-packages enable-services link-config set-shell install-clojure sync-neovim show-notes
 
-install-yaourt:
-	./install-yaourt.sh
+install-yay:
+	./install-yay.sh
 
 install-packages:
-	yaourt -S --needed --noconfirm `cat packages.txt`
+	yay -S --needed --noconfirm `cat packages.txt`
 
 enable-services:
 	sudo systemctl enable lightdm NetworkManager tlp tlp-sleep
