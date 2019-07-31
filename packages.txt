@@ -11,17 +11,13 @@ fish
 fzf
 git
 gnome-keyring
-gnome-themes-standard
 gnupg
-gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly
-gvfs
 htop
 i3 ttf-dejavu parcellite xclip xautolock xfce4-screenshooter
 kitty otf-fira-code
 leiningen
 neovim python-neovim python2-neovim
-network-manager-applet
-networkmanager
+networkmanager network-manager-applet
 nodejs npm
 openssh
 pacman-contrib reflector
@@ -30,6 +26,5 @@ pulseaudio pa-applet-git
 redshift geoclue2
 ripgrep
 stow
-thunar tumbler thunar-volman thunar-archive-plugin file-roller p7zip unrar
-xf86-input-synaptics
-xorg-server xorg-xbacklight xorg-xmodmap xorg-xrandr
+thunar tumbler thunar-volman thunar-archive-plugin file-roller p7zip unrar gvfs
+xf86-input-synaptics xorg-server xorg-xbacklight xorg-xmodmap xorg-xrandr
