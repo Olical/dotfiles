@@ -19,20 +19,17 @@
 	cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [alias]
 	s = status -sb
-	b = branch
+	sw = switch
 	c = commit -v
 	a = add
-	co = checkout
+	re = restore
 	l = pull
 	p = push
 	f = fetch
 	mt = mergetool
 	m = merge
-	r = remote
-	re = rebase
+	r = rebase
 	lg = log --stat
 	d = diff
 [commit]
 	gpgsign = true
-[magit]
-	hideCampaign = true
