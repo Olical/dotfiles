@@ -20,6 +20,7 @@
 [alias]
 	s = status -sb
 	sw = switch
+	b = branch
 	c = commit -v
 	a = add
 	re = restore
