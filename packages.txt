@@ -1,6 +1,6 @@
 aspell aspell-en
 base-devel
-clj-kondo-bin joker-bin
+clojure clj-kondo-bin joker-bin
 compton
 cowsay
 dmenu
@@ -13,8 +13,8 @@ git
 gnome-keyring
 gnupg
 htop
-i3 ttf-dejavu parcellite xclip xautolock xfce4-screenshooter
-kitty otf-fira-code
+i3 parcellite xclip xautolock xfce4-screenshooter
+kitty
 leiningen
 neovim python-neovim python2-neovim
 networkmanager network-manager-applet
@@ -27,4 +27,7 @@ redshift geoclue2
 ripgrep
 stow
 thunar tumbler thunar-volman thunar-archive-plugin file-roller p7zip unrar gvfs
+tree
+ttf-dejavu otf-fira-code noto-fonts-emoji noto-fonts
 xf86-input-synaptics xorg-server xorg-xbacklight xorg-xmodmap xorg-xrandr
+xorg-xinit
