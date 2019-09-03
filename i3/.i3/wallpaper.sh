@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-feh --bg-scale ~/.i3/backgrounds/sloth.png
+feh --bg-fill ~/.i3/backgrounds/sloth.png
