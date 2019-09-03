@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
+IN="eDP1"
+EXT="DP1"
+EXT_RES=1920x1080
+
 if [ "$hostname" == "ollie-hp" ]; then
-  IN="eDP-1"
-  EXT="DP-2"
+  EXT="DP2"
   EXT_RES=2560x1440
-else
-  IN="eDP1"
-  EXT="DP1"
-  EXT_RES=1920x1080
 fi
 
 xrandr > /dev/null
