@@ -192,9 +192,6 @@ exec --no-startup-id ~/.i3/wallpaper.sh
 # No title bars. Doesn't play well with compton and MOAR SPACE!
 new_window pixel
 
-# Ensure GB keyboard layout.
-exec "setxkbmap -layout gb"
-
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
