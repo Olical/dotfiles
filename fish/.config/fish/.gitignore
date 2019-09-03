@@ -1,3 +1,9 @@
 fish_history
 fish_variables
 fishd.*
+
+# Fisher / fish-nvm
+completions/
+conf.d/
+fishfile
+functions/nvm.fish
