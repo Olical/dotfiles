@@ -4,7 +4,7 @@ IN="eDP1"
 EXT="DP1"
 EXT_RES=1920x1080
 
-if [ "$hostname" == "ollie-hp" ]; then
+if [ $(hostname) == "ollie-hp" ]; then
   EXT="DP2"
   EXT_RES=2560x1440
 fi
