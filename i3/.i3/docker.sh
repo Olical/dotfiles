@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-IN="eDP1"
-EXT="DP1"
+if [ "$hostname" == "ollie-hp" ]; then
+  IN="eDP-1"
+  EXT="DP-2"
+else
+  IN="eDP1"
+  EXT="DP1"
+fi
 
 xrandr > /dev/null
 xrandr | grep "$EXT disconnected" > /dev/null
