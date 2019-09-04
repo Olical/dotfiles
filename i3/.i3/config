@@ -223,4 +223,3 @@ bindsym $mod+shift+p mode "$mode_system"
 
 # Finally, dock and update the wallpaper.
 exec --no-startup-id $Docker
-exec --no-startup-id ~/.i3/wallpaper.sh

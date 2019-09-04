@@ -21,3 +21,5 @@ else
   xmodmap -e "pointer = 3 2 1" 2> /dev/null
   echo "-> Desktop mode"
 fi
+
+~/.i3/wallpaper.sh
