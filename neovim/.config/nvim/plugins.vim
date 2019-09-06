@@ -15,6 +15,7 @@ Plug 'lambdalisue/suda.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'liuchengxu/vim-better-default'
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript'] }
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'simnalamburt/vim-mundo'
