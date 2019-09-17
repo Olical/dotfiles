@@ -1,7 +1,7 @@
 Plug 'Olical/conjure', { 'branch': 'develop', 'do': 'bin/compile' }
 Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim' | Plug 'ncm2/float-preview.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
