@@ -2,3 +2,5 @@
 .tern-port
 .netrwhist
 .clj-kondo
+.lvimrc
+.conjure.edn
