@@ -6,3 +6,4 @@
 .conjure.edn
 .prepl-port
 docker-compose.local.yml
+.rebl
