@@ -22,4 +22,8 @@ else
   echo "-> Desktop mode"
 fi
 
+if [ ! -z "$1" ]; then
+  xrandr --output $@
+fi
+
 ~/.i3/wallpaper.sh
