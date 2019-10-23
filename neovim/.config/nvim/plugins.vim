@@ -1,4 +1,5 @@
 Plug 'Olical/conjure', { 'branch': 'develop', 'do': 'bin/compile' }
+Plug 'Olical/vim-clap', { 'branch': 'opts-for-grep' }
 Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim' | Plug 'ncm2/float-preview.nvim'
@@ -13,7 +14,6 @@ Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
 Plug 'lambdalisue/suda.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'liuchengxu/vim-better-default'
-Plug 'liuchengxu/vim-clap'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript'] }
