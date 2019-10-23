@@ -12,7 +12,7 @@ function! LightlineFiletype()
 endfunction
 
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'default',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \   'readonly': 'LightlineReadonly',

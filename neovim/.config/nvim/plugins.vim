@@ -18,7 +18,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript'] }
 Plug 'radenling/vim-dispatch-neovim'
-Plug 'rafi/awesome-vim-colorschemes'
+Plug 'srcery-colors/srcery-vim'
 Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
