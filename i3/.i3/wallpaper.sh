@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-feh --bg-fill ~/.i3/backgrounds/sloth.png
+feh --image-bg "#282828" --bg-center ~/.i3/backgrounds/i3.png
