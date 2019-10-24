@@ -149,25 +149,33 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-    colors {
-        # Whole color settings
-        background #242424
-        statusline #ffffff
-        separator  #666666
+# Colours from https://thomashunter.name/i3-configurator/
 
-        # Type             border  background font
-        focused_workspace  #008fff #007fff #ffffff
-        active_workspace   #333333 #5f676a #ffffff
-        inactive_workspace #333333 #222222 #888888
-        urgent_workspace   #aa0000 #990000 #ffffff
-    }
-    # i3bar position
-    position top
-    # Using custom i3status.conf
-    status_command i3status -c ~/.i3/i3status.conf
+# class                 border  bground text    indicator child_border
+client.focused          #FF5C8F #E02C6D #FCE8C3 #FF5C8F   #E02C6D
+client.focused_inactive #4E4E4E #444444 #FCE8C3 #484E50   #5F676A
+client.unfocused        #4E4E4E #444444 #888888 #292D2E   #121212
+client.urgent           #2F343A #900000 #FCE8C3 #900000   #900000
+client.placeholder      #000000 #0C0C0C #FCE8C3 #000000   #0C0C0C
+
+client.background       #FCE8C3
+
+bar {
+  colors {
+    background #262626
+    statusline #FCE8C3
+    separator  #918175
+
+    focused_workspace  #FF5C8F #E02C6D #FCE8C3
+    active_workspace   #333333 #121212 #FCE8C3
+    inactive_workspace #333333 #121212 #888888
+    urgent_workspace   #2F343A #EF2F27 #FCE8C3
+    binding_mode       #2F343A #EF2F27 #FCE8C3
+  }
+
+  # Ensure the status is locked to the top and has the correct config.
+  position top
+  status_command i3status -c ~/.i3/i3status.conf
 }
 
 # Start background processes.
