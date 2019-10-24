@@ -15,7 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:Fira Code 8
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -36,14 +36,8 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -l 15 -p 'dmenu'"
-
-# start winmenu (dmenu wrapper for switching windows)
-bindsym $mod+c exec --no-startup-id ~/.i3/python/winmenu.py
-
-# start passmenu (password manager, provided by pass)
-bindsym $mod+p exec --no-startup-id passmenu
+# start rofi
+bindsym $mod+d exec --no-startup-id rofi -show
 
 # change focus
 bindsym $mod+h focus left

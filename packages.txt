@@ -3,7 +3,6 @@ base-devel
 clojure clj-kondo-bin joker-bin
 compton
 cowsay
-dmenu
 dunst
 feh
 firefox
@@ -25,6 +24,7 @@ playerctl
 pulseaudio pa-applet-git
 redshift geoclue2
 ripgrep
+rofi rofi-dmenu
 stow
 thunar tumbler thunar-volman thunar-archive-plugin file-roller p7zip unrar gvfs
 tree
