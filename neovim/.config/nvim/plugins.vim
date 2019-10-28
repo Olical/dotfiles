@@ -13,7 +13,7 @@ Plug 'jiangmiao/auto-pairs', { 'tag': 'v2.0.0' }
 Plug 'lambdalisue/suda.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'liuchengxu/vim-better-default'
-Plug 'liuchengxu/vim-clap', { 'commit': '69d1445f7ce46d7e2a560d626459908fb86b2f61' }
+Plug 'liuchengxu/vim-clap', { 'tag': 'v0.1' }
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript'] }
