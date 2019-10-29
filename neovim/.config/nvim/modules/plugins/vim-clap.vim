@@ -1,5 +1,5 @@
 let g:clap_provider_grep_delay = 50
-let g:clap_provider_grep_opts = '--hidden -g "!.git/"'
+let g:clap_provider_grep_opts = '-H --no-heading --vimgrep --smart-case --hidden -g "!.git/"'
 
 nnoremap <space>* :Clap grep ++query=<cword><cr>
 nnoremap <leader>fg :Clap grep<cr>
