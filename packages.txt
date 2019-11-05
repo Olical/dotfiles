@@ -15,7 +15,7 @@ htop
 i3 parcellite xclip xautolock xfce4-screenshooter
 kitty
 leiningen
-neovim python-neovim python2-neovim
+neovim python-pynvim python2-pynvim
 networkmanager network-manager-applet
 nodejs npm
 openssh
