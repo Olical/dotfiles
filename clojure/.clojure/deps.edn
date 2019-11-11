@@ -4,7 +4,7 @@
 
  :aliases
  {:propel
-  {:extra-deps {olical/propel "1.3.0"}
+  {:extra-deps {olical/propel {:mvn/version "1.3.0"}}
    :main-opts ["-m" "propel.main"]}
 
   :depot
