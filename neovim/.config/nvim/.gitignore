@@ -1,8 +1,7 @@
-.netrwhist
-undo/
-spell/
-plugged/
-autoload/plug.vim
-autoload/plug.vim.old
-snapshot.vim
-.init.vim-rplugin~
+/.netrwhist
+/undo/
+/spell/
+/autoload/plug.vim
+/autoload/plug.vim.old
+/snapshot.vim
+/lua/
