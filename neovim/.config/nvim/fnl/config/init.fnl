@@ -1,9 +1,10 @@
+(local core (require :aniseed.core))
 (local nvim (require :aniseed.nvim))
-(local compile (require :aniseed.compile))
+(local util (require :config.util))
 
-;; Compile and load machine local configuration.
-(let [src (nvim.fn.expand "~/.nvim.fnl")
-      dest (nvim.fn.expand "~/.nvim.lua")]
-  (when (nvim.fn.filereadable src)
-    (compile.file src dest)
-    (nvim.ex.luafile dest)))
+;; Load all config modules in no particular order.
+(->> (util.glob (.. util.config-path "/lua/config/module/*.lua"))
+     (core.run! (fn [path]
+                  (require (string.gsub path ".*/(.-)/(.-)/(.-)%.lua" "%1.%2.%3")))))
+
+{:aniseed/module :config.init}
