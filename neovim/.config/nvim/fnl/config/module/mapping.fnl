@@ -1,6 +1,9 @@
 (local nvim (require :aniseed.nvim))
 (local nu (require :aniseed.nvim.util))
 (local core (require :aniseed.core))
+(local mapping (require :aniseed.mapping))
+
+(mapping.init)
 
 (fn noremap [mode from to]
   "Sets a mapping with {:noremap true}."
