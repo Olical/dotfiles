@@ -20,7 +20,7 @@
 
 ;; This is in init.vim but if it's not here too sync.sh will delete it.
 ; (plug "Olical/aniseed")
-(plug "Olical/aniseed")
+(plug "Olical/aniseed" {:branch :develop})
 
 ;; Define all required plugins.
 (plug "Olical/conjure" {:branch :develop :do :bin/compile})
