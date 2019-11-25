@@ -2,5 +2,6 @@ if not(pcall(require, "aniseed.compile")) then
   vim.api.nvim_command("PlugInstall")
 end
 
-require("aniseed.compile").glob("**/*.fnl", "fnl", "lua")
+local dir = vim.api.nvim_call_function("stdpath", {"config"})
+require("aniseed.compile").glob("**/*.fnl", dir .. "/fnl", dir .. "/lua")
 require("config")
