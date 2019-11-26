@@ -3,6 +3,7 @@
 (set nvim.g.vim_better_default_persistent_undo true)
 (nvim.ex.runtime_ "plugin/default.vim")
 
+;; TODO Find a way to execute this after the plugin is loaded.
 (nvim.ex.set :nonumber)
 (nvim.ex.set :norelativenumber)
 (set nvim.o.undodir (.. (nvim.fn.stdpath "data") "/undo"))
