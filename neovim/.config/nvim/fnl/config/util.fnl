@@ -7,7 +7,7 @@
   (nvim.fn.glob path true true true))
 
 (fn exists? [path]
-  (nvim.fn.filereadable path))
+  (= (nvim.fn.filereadable path) 1))
 
 (fn lua-file [path]
   (nvim.ex.luafile path))
