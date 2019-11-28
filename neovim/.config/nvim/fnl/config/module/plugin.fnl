@@ -39,7 +39,7 @@
 (plug "lambdalisue/suda.vim")
 (plug "leafgarland/typescript-vim")
 (plug "liuchengxu/vim-better-default")
-(plug "liuchengxu/vim-clap" {:commit "6248e65d7044ca17df16bb7ffeb099a2f2d7da97"})
+(plug "liuchengxu/vim-clap")
 (plug "norcalli/nvim-colorizer.lua")
 (plug "pangloss/vim-javascript") (plug "maxmellon/vim-jsx-pretty")
 (plug "prettier/vim-prettier" {:do "yarn install" :for [:javascript]})
