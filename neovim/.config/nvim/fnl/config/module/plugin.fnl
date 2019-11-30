@@ -24,6 +24,7 @@
 
 ;; Define all required plugins.
 (plug "Olical/conjure" {:branch :develop :do :bin/compile})
+(plug "Olical/nvim-local-fennel")
 (plug "Olical/vim-enmasse")
 (plug "PeterRincker/vim-argumentative")
 (plug "Shougo/deoplete.nvim") (plug "ncm2/float-preview.nvim")
