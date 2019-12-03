@@ -67,6 +67,7 @@
   (fn [path]
     (let [name (nvim.fn.fnamemodify path ":t:r")]
       (if (known-plugin? name)
-        (require (.. "config.module.plugin." name))
+        (match (pcall require (.. "config.module.plugin." name))
+          (false err) (print "Error requiring plugin module:" name "-" err))
         (print (.. "Orphan plugin configuration: " name)))))
   (util.glob (.. (nvim.fn.stdpath "config") "/lua/config/module/plugin/*.lua")))
