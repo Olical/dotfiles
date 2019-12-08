@@ -6,17 +6,23 @@
   "Defines a plugin through vim-plug."
   (nvim.fn.plug# coord opts))
 
-(fn known-plugin? [candidate]
-  "Returns true if the given name can be found within any of the required
-  plugin names. So `deoplete` would match `deoplete.nvim`."
-  (or (. nvim.g.plugs candidate)
+(fn find-plugin [candidate]
+  "Returns the matching plugin name if the given plugin can be found within any
+  of the required plugins So `deoplete` would match `deoplete.nvim`."
+  (or (and (. nvim.g.plugs candidate) candidate)
       (->> (core.keys nvim.g.plugs)
            (core.some
              (fn [plug-name]
-               (plug-name:find candidate 1 true))))))
+               (and (plug-name:find candidate 1 true) plug-name))))))
+
+(local data-dir (.. (nvim.fn.stdpath "data") "/plugged"))
+
+(fn plugin-installed? [name]
+  "Checks if the plugin directory can be found in the data directory."
+  (= 1 (nvim.fn.isdirectory (.. data-dir "/" name))))
 
 ;; Set up vim-plug, like in init.vim earlier.
-(nvim.fn.plug#begin (.. (nvim.fn.stdpath "data") "/plugged"))
+(nvim.fn.plug#begin data-dir)
 
 ;; This is in init.vim but if it's not here too sync.sh will delete it.
 ; (plug "Olical/aniseed")
@@ -65,9 +71,12 @@
 ;; Load plugin configuration modules.
 (core.run!
   (fn [path]
-    (let [name (nvim.fn.fnamemodify path ":t:r")]
-      (if (known-plugin? name)
-        (match (pcall require (.. "config.module.plugin." name))
-          (false err) (print "Error requiring plugin module:" name "-" err))
+    (let [name (nvim.fn.fnamemodify path ":t:r")
+          full-name (find-plugin name)]
+      (if full-name
+        (if (plugin-installed? full-name)
+          (match (pcall require (.. "config.module.plugin." name))
+            (false err) (print "Error requiring plugin module:" name "-" err))
+          (print (.. "Not loading plugin module, not installed yet: " name)))
         (print (.. "Orphan plugin configuration: " name)))))
   (util.glob (.. (nvim.fn.stdpath "config") "/lua/config/module/plugin/*.lua")))
