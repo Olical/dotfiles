@@ -1,36 +1,10 @@
 (local nvim (require :aniseed.nvim))
 (local nu (require :aniseed.nvim.util))
 (local core (require :aniseed.core))
-(local mapping (require :aniseed.mapping))
-
-(mapping.init)
 
 (fn noremap [mode from to]
   "Sets a mapping with {:noremap true}."
   (nvim.set_keymap mode from to {:noremap true}))
-
-(fn ft-map [ft mode from to]
-  "Map some keys (prefixed by <localleader>) to a command for a filetype."
-  (nvim.ex.autocmd
-    :FileType ft
-    (.. mode :map) :<buffer>
-    (.. :<localleader> from)
-    to))
-
-(fn plug [cmd]
-  "Wraps the given command in <Plug>(...)"
-  (.. "<Plug>(" cmd ")"))
-
-;; Aniseed evaluation mappings.
-(nvim.ex.augroup :aniseed)
-(nvim.ex.autocmd_)
-(ft-map :fennel :n :E (plug :AniseedEval))
-(ft-map :fennel :n :ee (.. (plug :AniseedEval) :af))
-(ft-map :fennel :n :er (.. (plug :AniseedEval) :aF))
-(ft-map :fennel :n :ef (plug :AniseedEvalCurrentFile))
-(ft-map :fennel :v :ee (plug :AniseedEvalSelection))
-(ft-map :fennel :n :eb ":%AniseedEvalRange<cr>")
-(nvim.ex.augroup :END)
 
 ;; Generic mapping configuration.
 (nvim.set_keymap :n :<space> :<nop> {:noremap true})
