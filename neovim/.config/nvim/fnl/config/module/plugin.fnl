@@ -29,7 +29,7 @@
 
 ;; Define all required plugins.
 (plug "Olical/conjure" {:branch :develop :do :bin/compile})
-(plug "Olical/nvim-local-fennel")
+(plug "Olical/nvim-local-fennel" {:branch :develop})
 (plug "Olical/vim-enmasse")
 (plug "PeterRincker/vim-argumentative")
 (plug "Shougo/deoplete.nvim") (plug "ncm2/float-preview.nvim")
@@ -67,13 +67,19 @@
 
 (nvim.fn.plug#end)
 
+;; Plugin configuration that should be loaded even if the directory doesn't
+;; exist or it isn't installed according to vim-plug.
+(local always-load
+  {:aniseed true})
+
 ;; Load plugin configuration modules.
 (core.run!
   (fn [path]
     (let [name (nvim.fn.fnamemodify path ":t:r")
-          full-name (find-plugin name)]
-      (if full-name
-        (if (plugin-installed? full-name)
+          full-name (find-plugin name)
+          bypass? (. always-load name)]
+      (if (or bypass? full-name)
+        (if (or bypass? (plugin-installed? full-name))
           (match (pcall require (.. "config.module.plugin." name))
             (false err) (print "Error requiring plugin module:" name "-" err))
           (print (.. "Not loading plugin module, not installed yet: " name)))
