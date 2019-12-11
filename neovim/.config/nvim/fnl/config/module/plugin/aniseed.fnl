@@ -23,5 +23,5 @@
 (ft-map :fennel :n :ef (plug :AniseedEvalCurrentFile))
 (ft-map :fennel :v :ee (plug :AniseedEvalSelection))
 (ft-map :fennel :n :eb ":%AniseedEvalRange<cr>")
-(ft-map :fennel :n :ta ":AniseedRunAllTests<cr>")
+(ft-map :fennel :n :t ":AniseedRunAllTests<cr>")
 (nvim.ex.augroup :END)
