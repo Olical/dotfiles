@@ -7,7 +7,11 @@
     (tset auto-pairs "'" nil)
     (set nvim.b.AutoPairs auto-pairs)))
 
-(nu.fn-bridge :ConfigAutoPairsInit :config.module.plugin.auto-pairs :init)
-(nvim.ex.autocmd :FileType "clojure,fennel,scheme" "call ConfigAutoPairsInit()")
+(vim.schedule
+  (fn []
+    (nvim.ex.autocmd
+      :FileType
+      "clojure,fennel,scheme"
+      "lua require('config.module.plugin.auto-pairs').init()")))
 
 {:init init}
