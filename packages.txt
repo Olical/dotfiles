@@ -25,6 +25,7 @@ pulseaudio pa-applet-git
 redshift geoclue2
 ripgrep
 rofi rofi-dmenu
+rustup
 stow
 thunar tumbler thunar-volman thunar-archive-plugin file-roller p7zip unrar gvfs
 tree
