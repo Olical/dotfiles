@@ -1,7 +1,7 @@
 (local nvim (require :aniseed.nvim))
 
 (set nvim.g.clap_provider_grep_delay 50)
-(set nvim.g.clap_provider_grep_opts "-H --no-heading --vimgrep --smart-case --hidden -g '!.git/'")
+(set nvim.g.clap_provider_grep_opts "--hidden -g '!.git/'")
 
 (fn nnoremap [from to]
   (nvim.set_keymap :n (.. "<leader>" from) (.. ":Clap " to "<cr>") {:noremap true}))
