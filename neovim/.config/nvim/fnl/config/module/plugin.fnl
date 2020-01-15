@@ -45,7 +45,7 @@
 (plug "lambdalisue/suda.vim")
 (plug "leafgarland/typescript-vim")
 (plug "liuchengxu/vim-better-default")
-(plug "liuchengxu/vim-clap" {:tag "v0.3" :do (nvim.fn.function "clap#helper#build_all")})
+(plug "liuchengxu/vim-clap" {:tag "v0.5" :do ":Clap install-binary!"})
 (plug "norcalli/nvim-colorizer.lua")
 (plug "pangloss/vim-javascript") (plug "maxmellon/vim-jsx-pretty")
 (plug "prettier/vim-prettier" {:do "yarn install" :for [:javascript]})
