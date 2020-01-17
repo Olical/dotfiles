@@ -5,6 +5,7 @@
 (fn init []
   (let [auto-pairs nvim.g.AutoPairs]
     (tset auto-pairs "'" nil)
+    (tset auto-pairs "`" nil)
     (set nvim.b.AutoPairs auto-pairs)))
 
 (vim.schedule
