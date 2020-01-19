@@ -6,7 +6,7 @@ function maintenance
   sudo journalctl -p 3 -xb --no-pager | tail -15
 
   echo "Removing orphan packages..."
-  sudo pacman -Rns (pacman -Qtdq)
+  sudo pacman -Rns (pacman -Qtdq) --noconfirm
 
   echo "Clear pacman cache..."
   sudo paccache -r
