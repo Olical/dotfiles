@@ -10,6 +10,7 @@
 (nnoremap :* "grep ++query=<cword>")
 (nnoremap :fg "grep")
 (nnoremap :ff "files --hidden")
+(nnoremap :fd "filer")
 (nnoremap :fb "buffers")
 (nnoremap :fw "windows")
 (nnoremap :fh "history")
