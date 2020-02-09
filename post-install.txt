@@ -1,5 +1,0 @@
-All done! You'll need to make sure that Xorg, i3 and NetworkManager are
-all working first of all. You'll need to select a graphics driver too, the Xorg
-wiki page can help with that.
-
-https://wiki.archlinux.org/index.php/xorg
