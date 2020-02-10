@@ -1,5 +1,7 @@
-mkdir -p ~/bin ~/npm/bin ~/.cargo/bin ~/.gem/ruby/2.5.0/bin
-set -gx PATH /home/linuxbrew/.linuxbrew/bin ~/bin ~/npm/bin ~/.cargo/bin ~/.gem/ruby/2.5.0/bin $PATH
+mkdir -p ~/bin ~/npm/bin ~/.cargo/bin
+set -gx PATH /home/linuxbrew/.linuxbrew/bin ~/bin ~/npm/bin ~/.cargo/bin $PATH
+set -gx MANPATH ~/.linuxbrew/share/man $MANPATH
+set -gx INFOPATH ~/.linuxbrew/share/info $INFOPATH
 
 set -gx fish_greeting ""
 set -gx LANG en_GB.UTF-8
