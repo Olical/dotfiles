@@ -39,6 +39,7 @@ stow --restow `ls -d */`
 ./neovim/.config/nvim/sync.sh
 
 # Rust
+rustup-init
 rustup toolchain install nightly
 rustup default nightly
 
