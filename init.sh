@@ -5,12 +5,11 @@ sudo apt -y upgrade
 
 sudo snap install discord
 sudo snap install spotify
-sudo snap install --edge node --classic
 
 sudo apt install -y httpie curl fish kitty stow cowsay fzf htop leiningen xclip
 sudo apt install -y tree fonts-firacode ripgrep build-essential linuxbrew-wrapper python3-pip
 
-brew install rustup-init neovim clojure borkdude/brew/clj-kondo candid82/brew/joker
+brew install neovim node rustup-init clojure borkdude/brew/clj-kondo candid82/brew/joker
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 
 pip2 install pynvim
