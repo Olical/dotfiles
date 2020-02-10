@@ -20,7 +20,7 @@ brew upgrade
 brew install \
     neovim node rustup-init clojure \
     borkdude/brew/clj-kondo candid82/brew/joker \
-    jesseduffield/lazygit/lazygit
+    git jesseduffield/lazygit/lazygit
 
 pip2 install pynvim
 pip3 install pynvim
