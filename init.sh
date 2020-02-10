@@ -10,9 +10,6 @@ sudo apt install -y \
     tree fonts-firacode ripgrep build-essential linuxbrew-wrapper \
     python3-pip
 
-# Ensure brew's bin is on the path
-export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
-
 # Terminal and shell
 chsh -s `which fish`
 sudo update-alternatives --set x-terminal-emulator /usr/bin/kitty
@@ -31,6 +28,9 @@ pip3 install pynvim
 sudo snap refresh
 sudo snap install discord
 sudo snap install spotify
+
+# Ensure brew's bin is on the path
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 
 # Link all configuration
 stow --restow `ls -d */`
