@@ -42,5 +42,3 @@ stow --restow `ls -d */`
 rustup-init
 rustup toolchain install nightly
 rustup default nightly
-
-## TODO update script including brew, snap and apt

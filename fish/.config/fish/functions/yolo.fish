@@ -4,10 +4,13 @@ function yolo
 
   cd ~/dotfiles; git pull; cd -
 
-  yay -Syu --noconfirm
-  sudo env DIFFPROG="nvim -d" pacdiff
+  sudo apt -y update
+  sudo apt -y upgrade
+
+  brew update
+  brew upgrade
+
+  sudo snap refresh
 
   ~/.config/nvim/sync.sh
-
-  maintenance
 end
