@@ -327,6 +327,7 @@ bar {
   status_command i3xrocks -c $i3xrocks_config
   tray_output none
   strip_workspace_numbers yes
+  position top
 
   colors {
       background $i3-wm.bar.background.color
