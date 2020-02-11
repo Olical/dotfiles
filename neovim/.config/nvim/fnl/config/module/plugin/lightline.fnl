@@ -1,10 +1,11 @@
-(local nvim (require :aniseed.nvim))
-(local nu (require :aniseed.nvim.util))
+(module config.module.plugin.lightline
+  {require {nvim aniseed.nvim
+            nu aniseed.nvim.util}})
 
-(fn expand [s]
+(defn- expand [s]
   (nvim.fn.expand s))
 
-(fn filename []
+(defn filename []
   (let [tail (expand "%:t")]
     (if (= "" tail)
       ""
@@ -12,13 +13,13 @@
         (.. (expand "%:p:h:t") "/" tail)
         tail))))
 
-(fn readonly []
+(defn readonly []
   (if (and nvim.bo.readonly
            (not= nvim.bo.filetype "help"))
     "RO"
     ""))
 
-(fn bridge [from to]
+(defn- bridge [from to]
   (nu.fn-bridge from :config.module.plugin.lightline to {:return true}))
 
 (bridge :LightlineFilename :filename)
@@ -34,6 +35,3 @@
                        [:percent]]}
       :inactive {:left [[:filename]]
                  :right []}})
-
-{:filename filename
- :readonly readonly}

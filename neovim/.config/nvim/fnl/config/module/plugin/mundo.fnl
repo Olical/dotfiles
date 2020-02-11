@@ -1,4 +1,5 @@
-(local nvim (require :aniseed.nvim))
+(module config.module.plugin.mundo
+  {require {nvim aniseed.nvim}})
 
 (nvim.set_keymap
   :n

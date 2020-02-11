@@ -1,12 +1,13 @@
-(local nvim (require :aniseed.nvim))
-(local core (require :aniseed.core))
-(local util (require :config.util))
+(module config.module.plugin
+  {require {nvim aniseed.nvim
+            core aniseed.core
+            util config.util}})
 
-(fn plug [coord opts]
+(defn- plug [coord opts]
   "Defines a plugin through vim-plug."
   (nvim.fn.plug# coord opts))
 
-(fn find-plugin [candidate]
+(defn- find-plugin [candidate]
   "Returns the matching plugin name if the given plugin can be found within any
   of the required plugins So `deoplete` would match `deoplete.nvim`."
   (or (and (. nvim.g.plugs candidate) candidate)
@@ -15,9 +16,9 @@
              (fn [plug-name]
                (and (plug-name:find candidate 1 true) plug-name))))))
 
-(local data-dir (.. (nvim.fn.stdpath "data") "/plugged"))
+(def- data-dir (.. (nvim.fn.stdpath "data") "/plugged"))
 
-(fn plugin-installed? [name]
+(defn- plugin-installed? [name]
   "Checks if the plugin directory can be found in the data directory."
   (= 1 (nvim.fn.isdirectory (.. data-dir "/" name))))
 
@@ -37,7 +38,6 @@
 (plug "bakpakin/fennel.vim")
 (plug "dag/vim-fish")
 (plug "easymotion/vim-easymotion")
-(plug "embear/vim-localvimrc")
 (plug "guns/vim-sexp") (plug "tpope/vim-sexp-mappings-for-regular-people")
 (plug "hashivim/vim-terraform")
 (plug "itchyny/lightline.vim")
@@ -69,7 +69,7 @@
 
 ;; Plugin configuration that should be loaded even if the directory doesn't
 ;; exist or it isn't installed according to vim-plug.
-(local always-load
+(def- always-load
   {:aniseed true})
 
 ;; Load plugin configuration modules.

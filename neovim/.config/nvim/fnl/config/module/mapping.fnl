@@ -1,8 +1,9 @@
-(local nvim (require :aniseed.nvim))
-(local nu (require :aniseed.nvim.util))
-(local core (require :aniseed.core))
+(module config.module.mapping
+  {require {nvim aniseed.nvim
+            nu aniseed.nvim.util
+            core aniseed.core}})
 
-(fn noremap [mode from to]
+(defn- noremap [mode from to]
   "Sets a mapping with {:noremap true}."
   (nvim.set_keymap mode from to {:noremap true}))
 
@@ -37,7 +38,7 @@
   :ConfigDeleteHiddenBuffers
   :config.module.mapping :delete-hidden-buffers)
 
-(fn delete-hidden-buffers []
+(defn delete-hidden-buffers []
   (let [visible-bufs (->> (nvim.fn.range 1 (nvim.fn.tabpagenr :$))
                           (core.map nvim.fn.tabpagebuflist)
                           (unpack)
@@ -50,6 +51,3 @@
          (core.run!
 	   (fn [bufnr]
 	     (nvim.ex.bwipeout bufnr))))))
-
-{:aniseed/module :config.module.mapping
- :delete-hidden-buffers delete-hidden-buffers}

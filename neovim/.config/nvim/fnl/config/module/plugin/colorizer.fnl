@@ -1,3 +1,5 @@
+(module config.module.plugin.colorizer)
+
 (vim.schedule
   (fn []
     (local colorizer (require :colorizer))

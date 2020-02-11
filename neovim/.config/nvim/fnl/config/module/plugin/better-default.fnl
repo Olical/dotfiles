@@ -1,4 +1,5 @@
-(local nvim (require :aniseed.nvim))
+(module config.module.plugin.better-default
+  {require {nvim aniseed.nvim}})
 
 (set nvim.g.vim_better_default_persistent_undo true)
 (nvim.ex.runtime_ "plugin/default.vim")

@@ -1,20 +1,16 @@
-(local nvim (require :aniseed.nvim))
+(module config.util
+  {require {nvim aniseed.nvim}})
 
-(fn expand [path]
+(defn expand [path]
   (nvim.fn.expand path))
 
-(fn glob [path]
+(defn glob [path]
   (nvim.fn.glob path true true true))
 
-(fn exists? [path]
+(defn exists? [path]
   (= (nvim.fn.filereadable path) 1))
 
-(fn lua-file [path]
+(defn lua-file [path]
   (nvim.ex.luafile path))
 
-{:aniseed/module :config.util
- :expand expand
- :glob glob
- :exists? exists?
- :lua-file lua-file
- :config-path (nvim.fn.stdpath "config")}
+(def config-path (nvim.fn.stdpath "config"))

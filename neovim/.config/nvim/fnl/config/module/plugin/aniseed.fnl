@@ -1,9 +1,10 @@
-(local nvim (require :aniseed.nvim))
-(local mapping (require :aniseed.mapping))
+(module config.module.plugin.aniseed
+  {require {nvim aniseed.nvim
+            mapping aniseed.mapping}})
 
 (mapping.init)
 
-(fn ft-map [ft mode from to]
+(defn- ft-map [ft mode from to]
   "Map some keys (prefixed by <localleader>) to a command for a filetype."
   (nvim.ex.autocmd
     :FileType ft
@@ -11,7 +12,7 @@
     (.. :<localleader> from)
     to))
 
-(fn plug [cmd]
+(defn- plug [cmd]
   "Wraps the given command in <Plug>(...)"
   (.. "<Plug>(" cmd ")"))
 

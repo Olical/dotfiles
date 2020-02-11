@@ -1,3 +1,4 @@
-(local nvim (require :aniseed.nvim))
+(module config.module.plugin.easymotion
+  {require {nvim aniseed.nvim}})
 
 (nvim.set_keymap "" :<leader>j "<plug>(easymotion-prefix)" {})

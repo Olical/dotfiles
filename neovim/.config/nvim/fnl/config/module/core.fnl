@@ -1,4 +1,5 @@
-(local nvim (require :aniseed.nvim))
+(module config.module.core
+  {require {nvim aniseed.nvim}})
 
 ;; Generic Neovim configuration.
 (set nvim.o.termguicolors true)

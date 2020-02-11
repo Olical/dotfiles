@@ -1,4 +1,5 @@
-(local nvim (require :aniseed.nvim))
+(module config.module.plugin.ale
+  {require {nvim aniseed.nvim}})
 
 (set nvim.g.ale_linters
   {:javascript [:standard]

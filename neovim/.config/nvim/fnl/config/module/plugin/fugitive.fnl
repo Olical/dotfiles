@@ -1,6 +1,7 @@
-(local nvim (require :aniseed.nvim))
+(module config.module.plugin.fugitive
+  {require {nvim aniseed.nvim}})
 
-(fn nnoremap [from to]
+(defn- nnoremap [from to]
   (nvim.set_keymap
     :n
     (.. "<leader>" from)

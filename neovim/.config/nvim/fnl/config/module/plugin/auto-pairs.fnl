@@ -1,8 +1,8 @@
-(local core (require :aniseed.core))
-(local nvim (require :aniseed.nvim))
-(local nu (require :aniseed.nvim.util))
+(module config.module.plugin.auto-pairs
+  {require {core aniseed.core
+            nvim aniseed.nvim}})
 
-(fn init []
+(defn init []
   (let [auto-pairs nvim.g.AutoPairs]
     (tset auto-pairs "'" nil)
     (tset auto-pairs "`" nil)
@@ -14,5 +14,3 @@
       :FileType
       "clojure,fennel,scheme"
       "lua require('config.module.plugin.auto-pairs').init()")))
-
-{:init init}
