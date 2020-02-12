@@ -16,9 +16,9 @@ I mostly write https://clojure.org/[Clojure] thorugh https://neovim.io/[Neovim] 
 
 Feel free to fork and modify this repository to fit your needs!
 
-----
+____
 I think there _might_ be an issue with the brew install that means you need to execute `init.sh` twice, but maybe not. Not a huge deal either way, just bear it in mind.
-----
+____
 
 == Unlicenced
 
