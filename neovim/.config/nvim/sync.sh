@@ -8,9 +8,6 @@ if [ ! -f $CONFIG/autoload/plug.vim ]; then
     curl -fLo $CONFIG/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
-pushd $CONFIG
-make clean
-popd
-
+rm -rf $CONFIG/lua
 nvim +"PlugSnapshot! $CONFIG/snapshot.vim" +PlugUpgrade +PlugClean! +PlugUpdate +qa
 nvim +UpdateRemotePlugins +qa

@@ -1,4 +1,4 @@
-(module config.module.plugin.better-default
+(module dotfiles.module.plugin.better-default
   {require {nvim aniseed.nvim}})
 
 (set nvim.g.vim_better_default_persistent_undo true)

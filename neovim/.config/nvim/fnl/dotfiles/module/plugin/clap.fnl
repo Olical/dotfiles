@@ -1,4 +1,4 @@
-(module config.module.plugin.clap
+(module dotfiles.module.plugin.clap
   {require {nvim aniseed.nvim}})
 
 (set nvim.g.clap_provider_grep_delay 50)

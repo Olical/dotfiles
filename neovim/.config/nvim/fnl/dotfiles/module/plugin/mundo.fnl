@@ -1,4 +1,4 @@
-(module config.module.plugin.mundo
+(module dotfiles.module.plugin.mundo
   {require {nvim aniseed.nvim}})
 
 (nvim.set_keymap

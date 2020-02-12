@@ -1,4 +1,4 @@
-(module config.module.plugin.float-preview
+(module dotfiles.module.plugin.float-preview
   {require {nvim aniseed.nvim}})
 
 (set nvim.g.float_preview#docked false)

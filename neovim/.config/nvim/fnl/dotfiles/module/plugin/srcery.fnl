@@ -1,4 +1,4 @@
-(module config.module.plugin.srcery
+(module dotfiles.module.plugin.srcery
   {require {nvim aniseed.nvim}})
 
 (nvim.ex.colorscheme :srcery)

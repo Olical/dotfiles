@@ -1,4 +1,4 @@
-(module config.module.plugin.fugitive
+(module dotfiles.module.plugin.fugitive
   {require {nvim aniseed.nvim}})
 
 (defn- nnoremap [from to]

@@ -1,4 +1,4 @@
-(module config.module.mapping
+(module dotfiles.module.mapping
   {require {nvim aniseed.nvim
             nu aniseed.nvim.util
             core aniseed.core}})
@@ -26,7 +26,7 @@
 (noremap :n :<leader>sr ":source .quicksave.vim<cr>")
 
 ;; Delete hidden buffers.
-(noremap :n :<leader>bo ":call ConfigDeleteHiddenBuffers()<cr>")
+(noremap :n :<leader>bo ":call DeleteHiddenBuffers()<cr>")
 
 ;; Correct to first spelling suggestion.
 (noremap :n :<leader>zz ":normal! 1z=<cr>")
@@ -35,8 +35,8 @@
 (noremap :n :<leader>tw ":%s/\\s\\+$//e<cr>")
 
 (nu.fn-bridge
-  :ConfigDeleteHiddenBuffers
-  :config.module.mapping :delete-hidden-buffers)
+  :DeleteHiddenBuffers
+  :dotfiles.module.mapping :delete-hidden-buffers)
 
 (defn delete-hidden-buffers []
   (let [visible-bufs (->> (nvim.fn.range 1 (nvim.fn.tabpagenr :$))

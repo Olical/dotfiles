@@ -1,5 +1,6 @@
-call plug#begin(stdpath('data') . '/plugged')
-Plug 'Olical/aniseed', { 'branch': 'develop' }
+call plug#begin(stdpath('data') . '/plugged-init')
+" Plug 'Olical/aniseed', { 'branch': 'develop' }
+Plug '~/repos/olical/aniseed'
 call plug#end()
 
-lua require("config/bootstrap")
+lua require('aniseed.dotfiles')

@@ -1,4 +1,4 @@
-(module config.module.plugin.deoplete
+(module dotfiles.module.plugin.deoplete
   {require {nvim aniseed.nvim}})
 
 (set nvim.g.deoplete#enable_at_startup true)
