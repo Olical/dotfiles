@@ -1,8 +1,6 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-" Plug 'Olical/aniseed', { 'branch': 'develop' }
-Plug '~/repos/olical/aniseed'
-
+Plug 'Olical/aniseed', { 'branch': 'develop' }
 Plug 'Olical/conjure', {'branch': 'develop', 'do': 'bin/compile'}
 Plug 'Olical/nvim-local-fennel', {'branch': 'develop'}
 Plug 'Olical/vim-enmasse'
