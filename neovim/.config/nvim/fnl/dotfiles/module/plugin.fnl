@@ -3,58 +3,13 @@
             core aniseed.core
             util dotfiles.util}})
 
-(defn- plug [coord opts]
-  "Defines a plugin through vim-plug."
-  (nvim.fn.plug# coord opts))
-
 ;; Plugin configuration that should be loaded even if the directory doesn't
 ;; exist or it isn't installed according to vim-plug.
 (def- always-load
-  {:aniseed true})
+  {:aniseed true
+   :conjure true})
 
 (def- data-dir (.. (nvim.fn.stdpath :data) "/plugged"))
-
-;; Set up vim-plug, like in init.vim earlier.
-(nvim.fn.plug#begin data-dir)
-
-;; Define all required plugins.
-(plug "Olical/conjure" {:branch :develop :do :bin/compile})
-(plug "Olical/nvim-local-fennel" {:branch :develop})
-(plug "Olical/vim-enmasse")
-(plug "PeterRincker/vim-argumentative")
-(plug "Shougo/deoplete.nvim") (plug "ncm2/float-preview.nvim")
-(plug "airblade/vim-gitgutter")
-(plug "bakpakin/fennel.vim")
-(plug "dag/vim-fish")
-(plug "easymotion/vim-easymotion")
-(plug "guns/vim-sexp") (plug "tpope/vim-sexp-mappings-for-regular-people")
-(plug "hashivim/vim-terraform")
-(plug "itchyny/lightline.vim")
-(plug "jiangmiao/auto-pairs" {:tag "v2.0.0"})
-(plug "lambdalisue/suda.vim")
-(plug "leafgarland/typescript-vim")
-(plug "liuchengxu/vim-better-default")
-(plug "liuchengxu/vim-clap" {:tag "v0.7" :do ":Clap install-binary!"})
-(plug "norcalli/nvim-colorizer.lua")
-(plug "pangloss/vim-javascript") (plug "maxmellon/vim-jsx-pretty")
-(plug "prettier/vim-prettier" {:do "yarn install" :for [:javascript]})
-(plug "radenling/vim-dispatch-neovim")
-(plug "simnalamburt/vim-mundo")
-(plug "srcery-colors/srcery-vim")
-(plug "tpope/vim-abolish")
-(plug "tpope/vim-commentary")
-(plug "tpope/vim-dadbod")
-(plug "tpope/vim-dispatch")
-(plug "tpope/vim-eunuch")
-(plug "tpope/vim-fugitive")
-(plug "tpope/vim-repeat")
-(plug "tpope/vim-sleuth")
-(plug "tpope/vim-surround")
-(plug "tpope/vim-unimpaired")
-(plug "tpope/vim-vinegar")
-(plug "w0rp/ale")
-
-(nvim.fn.plug#end)
 
 (defn- plugin-installed? [name]
   "Checks if the plugin directory can be found in the data directory."
