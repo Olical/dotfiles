@@ -1,5 +1,5 @@
 mkdir -p ~/bin ~/npm/bin ~/.cargo/bin
-set -gx PATH /home/linuxbrew/.linuxbrew/bin ~/bin ~/npm/bin ~/.cargo/bin $PATH
+set -gx PATH /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/sbin ~/bin ~/npm/bin ~/.cargo/bin $PATH
 set -gx MANPATH ~/.linuxbrew/share/man $MANPATH
 set -gx INFOPATH ~/.linuxbrew/share/info $INFOPATH
 
