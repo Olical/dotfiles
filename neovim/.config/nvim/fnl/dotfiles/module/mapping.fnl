@@ -45,9 +45,9 @@
                           (core.concat))]
     (->> (nvim.fn.range 1 (nvim.fn.bufnr :$))
          (core.filter
-	   (fn [bufnr]
-	     (and (nvim.fn.bufexists bufnr)
-	          (= -1 (nvim.fn.index visible-bufs bufnr)))))
+           (fn [bufnr]
+             (and (nvim.fn.bufexists bufnr)
+                  (= -1 (nvim.fn.index visible-bufs bufnr)))))
          (core.run!
-	   (fn [bufnr]
-	     (nvim.ex.bwipeout bufnr))))))
+           (fn [bufnr]
+             (nvim.ex.bwipeout bufnr))))))

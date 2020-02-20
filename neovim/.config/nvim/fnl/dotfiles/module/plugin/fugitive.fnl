@@ -1,20 +1,13 @@
 (module dotfiles.module.plugin.fugitive
-  {require {nvim aniseed.nvim}})
+  {require {util dotfiles.util}})
 
-(defn- nnoremap [from to]
-  (nvim.set_keymap
-    :n
-    (.. "<leader>" from)
-    (.. ":" to "<cr>")
-    {:noremap true}))
-
-(nnoremap :gs "Gstatus")
-(nnoremap :gb "Gblame")
-(nnoremap :gd "Gdiff")
-(nnoremap :gp "Gpush")
-(nnoremap :gl "Gpull")
-(nnoremap :gf "Gfetch")
-(nnoremap :gcc "Gcommit --verbose")
-(nnoremap :gca "Gcommit --all --verbose")
-(nnoremap :gdl "diffget LOCAL")
-(nnoremap :gdr "diffget REMOTE")
+(util.nnoremap :gs "Gstatus")
+(util.nnoremap :gb "Gblame")
+(util.nnoremap :gd "Gdiff")
+(util.nnoremap :gp "Gpush")
+(util.nnoremap :gl "Gpull")
+(util.nnoremap :gf "Gfetch")
+(util.nnoremap :gcc "Gcommit --verbose")
+(util.nnoremap :gca "Gcommit --all --verbose")
+(util.nnoremap :gdl "diffget LOCAL")
+(util.nnoremap :gdr "diffget REMOTE")
