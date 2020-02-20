@@ -9,7 +9,7 @@
 (defn- clapmap [from to]
   (util.nnoremap
     from
-    (.. ":Clap " to "<cr>")))
+    (.. ":Clap " to)))
 
 (clapmap :* "grep ++query=<cword>")
 (clapmap :fg "grep")
@@ -25,4 +25,4 @@
 (clapmap :ft "filetypes")
 (clapmap :fm "marks")
 (clapmap :fy "yanks")
-(clapmap "f\"" "registers")
+(clapmap :fr "registers")
