@@ -24,5 +24,17 @@
 (clapmap :fL "lines")
 (clapmap :ft "filetypes")
 (clapmap :fm "marks")
+(clapmap :fM "maps")
+(clapmap :f/ "search_history")
 (clapmap :fy "yanks")
 (clapmap :fr "registers")
+
+(defn clap-input []
+  (nvim.buf_set_keymap
+    0 :n
+    "<Esc>"
+    "<Esc>:call clap#handler#exit()<cr>"
+    {:silent true
+     :noremap true}))
+
+(nvim.ex.autocmd :FileType :clap_input "lua require('dotfiles.module.plugin.clap')['clap-input']()")
