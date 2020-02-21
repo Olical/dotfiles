@@ -30,11 +30,14 @@
 (clapmap :fr "registers")
 
 (defn clap-input []
-  (nvim.buf_set_keymap
-    0 :n
-    "<Esc>"
-    "<Esc>:call clap#handler#exit()<cr>"
-    {:silent true
-     :noremap true}))
+  (fn map [mode]
+    (nvim.buf_set_keymap
+      0 mode
+      "<Esc>"
+      "<Esc>:call clap#handler#exit()<cr>"
+      {:silent true
+       :noremap true}))
+  (map :n)
+  (map :i))
 
 (nvim.ex.autocmd :FileType :clap_input "lua require('dotfiles.module.plugin.clap')['clap-input']()")
