@@ -12,12 +12,6 @@ set -gx VISUAL nvim
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow -g \"!.git/\" 2> /dev/null"
 set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
-# Kill all running containers.
-alias dockerkill='docker kill (docker ps -q)'
-
-# Delete all docker images and containers.
-alias dockernuke='docker rm (docker ps -a -q); docker rmi -f (docker images -q)'
-
 # Other git aliases are in git config
 alias g="git"
 alias gg="g a .; and g c -a"
