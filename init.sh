@@ -35,10 +35,10 @@ export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 # Link all configuration
 stow --restow `ls -d */`
 
-# Neovim
-./neovim/.config/nvim/sync.sh
-
 # Rust
 rustup-init
 rustup toolchain install nightly
 rustup default nightly
+
+# Neovim
+./neovim/.config/nvim/sync.sh
