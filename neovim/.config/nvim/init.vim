@@ -17,7 +17,7 @@ Plug 'jiangmiao/auto-pairs', {'tag': 'v2.0.0'}
 Plug 'lambdalisue/suda.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'liuchengxu/vim-better-default'
-Plug 'liuchengxu/vim-clap', {'tag': 'v0.9', 'do': ':Clap install-binary!'}
+Plug 'liuchengxu/vim-clap', {'tag': 'v0.10', 'do': ':Clap install-binary!'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', {'do': 'yarn install', 'for': ['javascript']}
