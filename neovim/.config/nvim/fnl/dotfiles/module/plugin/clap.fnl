@@ -11,8 +11,8 @@
     from
     (.. ":Clap " to)))
 
-(clapmap :* "grep2 ++query=<cword>")
-(clapmap :fg "grep2")
+(clapmap :* "grep ++query=<cword>")
+(clapmap :fg "grep")
 (clapmap :ff "files --hidden")
 (clapmap :fd "filer")
 (clapmap :fb "buffers")
