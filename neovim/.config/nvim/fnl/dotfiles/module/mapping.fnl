@@ -19,8 +19,8 @@
 
 ;; Spacemacs style leader mappings.
 (noremap :n :<leader>wm ":tab sp<cr>")
-(noremap :n :<leader>bd ":bdelete!<cr>")
 (noremap :n :<leader>wc ":only<cr>")
+(noremap :n :<leader>bd ":bdelete!<cr>")
 (noremap :n :<leader>to ":tabonly<cr>")
 (noremap :n :<leader>sw ":mksession! .quicksave.vim<cr>")
 (noremap :n :<leader>sr ":source .quicksave.vim<cr>")
@@ -32,7 +32,7 @@
 (noremap :n :<leader>zz ":normal! 1z=<cr>")
 
 ;; Trim trialing whitespace.
-(noremap :n :<leader>tw ":%s/\\s\\+$//e<cr>")
+(noremap :n :<leader>bt ":%s/\\s\\+$//e<cr>")
 
 (nu.fn-bridge
   :DeleteHiddenBuffers

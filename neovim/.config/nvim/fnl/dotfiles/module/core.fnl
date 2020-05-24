@@ -7,6 +7,7 @@
 (set nvim.o.wildmode "list:longest,full")
 (set nvim.o.mouse "a")
 (set nvim.o.updatetime 500)
+(set nvim.o.timeoutlen 500)
 (set nvim.o.sessionoptions "blank,curdir,folds,help,tabpages,winsize")
 
 (nvim.ex.set :spell)
