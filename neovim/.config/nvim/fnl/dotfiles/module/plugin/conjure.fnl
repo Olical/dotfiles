@@ -1,10 +1,11 @@
 (module dotfiles.module.plugin.conjure
   {require {config conjure.config}})
 
-(config.assoc
-  {:path [:eval :result-register]
-   :val "*"})
+(defn- cfg [path val]
+  (config.assoc
+    {:path path
+     :val val}))
 
-(config.assoc
-  {:path [:which-key :var]
-   :val :which_key_maplocal})
+(cfg [:eval :result-register] "*")
+(cfg [:which-key :var] :which_key_maplocal)
+(cfg [:log :botright?] true)
