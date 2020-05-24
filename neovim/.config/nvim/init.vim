@@ -1,8 +1,9 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'Olical/aniseed', { 'branch': 'develop' }
-Plug 'Olical/conjure', {'branch': 'develop', 'do': 'bin/compile'}
-Plug 'Olical/nvim-local-fennel', {'branch': 'develop'}
+Plug '~/repos/olical/aniseed'
+Plug '~/repos/olical/conjure'
+Plug '~/repos/olical/nvim-local-fennel'
+
 Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim' | Plug 'ncm2/float-preview.nvim'
@@ -19,7 +20,7 @@ Plug 'lambdalisue/suda.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'liuchengxu/vim-better-default'
 Plug 'liuchengxu/vim-clap', {'tag': 'v0.16', 'do': ':Clap install-binary!'}
-Plug 'liuchengxu/vim-which-key', {'on': ['WhichKey', 'WhichKey!']}
+Plug 'liuchengxu/vim-which-key'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', {'do': 'yarn install', 'for': ['javascript']}
