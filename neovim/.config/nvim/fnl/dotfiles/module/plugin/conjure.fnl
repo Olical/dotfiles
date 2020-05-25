@@ -7,5 +7,4 @@
      :val val}))
 
 (cfg [:eval :result-register] "*")
-(cfg [:which-key :var] :which_key_maplocal)
 (cfg [:log :botright?] true)
