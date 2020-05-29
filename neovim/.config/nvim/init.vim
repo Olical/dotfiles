@@ -1,8 +1,8 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug '~/repos/olical/aniseed'
-Plug '~/repos/olical/conjure'
-Plug '~/repos/olical/nvim-local-fennel'
+Plug 'Olical/aniseed'
+Plug 'Olical/conjure'
+Plug 'Olical/nvim-local-fennel'
 
 Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'

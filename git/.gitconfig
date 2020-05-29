@@ -8,8 +8,6 @@
 	ui = true
 [push]
 	default = simple
-[include]
-	path = ~/.gitconfig_local
 [merge]
 	tool = vimdiff
 [mergetool]
@@ -34,3 +32,5 @@
 	d = diff
 [commit]
 	gpgsign = true
+[include]
+	path = ~/.gitconfig_local
