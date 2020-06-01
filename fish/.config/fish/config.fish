@@ -8,10 +8,13 @@ if test -d /home/linuxbrew
 end
 
 set -gx fish_greeting ""
-set -gx LANG en_GB.UTF-8
 set -gx BROWSER firefox
 set -gx EDITOR nvim
 set -gx VISUAL nvim
+
+if locale -a | grep -q en_GB.UTF-8
+  set -gx LANG en_GB.UTF-8
+end
 
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow -g \"!.git/\" 2> /dev/null"
 set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
