@@ -9,8 +9,13 @@ end
 
 set -gx fish_greeting ""
 set -gx BROWSER firefox
-set -gx EDITOR nvim
-set -gx VISUAL nvim
+
+if type -q nvim
+  set -gx EDITOR nvim
+  set -gx VISUAL nvim
+  set -gx MANPAGER "nvim +Man! -c ':set signcolumn='"
+  alias vimdiff="nvim -d"
+end
 
 if locale -a | grep -q en_GB.UTF-8
   set -gx LANG en_GB.UTF-8
@@ -23,9 +28,6 @@ set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 alias g="git"
 alias gg="g a .; and g c -a"
 alias lg="lazygit"
-
-# Some software still uses vimdiff
-alias vimdiff="nvim -d"
 
 # Start an SSH agent if required, if not, connect to it.
 initialise_ssh_agent
