@@ -1,9 +1,13 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'Olical/aniseed'
-Plug 'Olical/conjure'
-Plug 'Olical/nvim-local-fennel'
+" Plug '~/repos/olical/aniseed'
+" Plug '~/repos/olical/conjure'
+" Plug '~/repos/olical/nvim-local-fennel'
 
+Plug 'Olical/AnsiEsc'
+Plug 'Olical/aniseed', {'branch': 'develop'}
+Plug 'Olical/conjure', {'branch': 'develop'}
+Plug 'Olical/nvim-local-fennel', {'branch': 'develop'}
 Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim' | Plug 'ncm2/float-preview.nvim'
