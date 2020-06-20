@@ -1,10 +1,5 @@
 (module dotfiles.module.plugin.conjure
-  {require {config conjure.config}})
+  {require {nvim aniseed.nvim}})
 
-(defn- cfg [path val]
-  (config.assoc
-    {:path path
-     :val val}))
-
-(cfg [:eval :result-register] "*")
-(cfg [:log :botright?] true)
+(set nvim.g.conjure#eval#result_register "*")
+(set nvim.g.conjure#log#botright true)
