@@ -9,11 +9,11 @@ Plug 'Olical/aniseed', {'branch': 'develop'}
 Plug 'Olical/conjure', {'branch': 'develop'}
 Plug 'Olical/nvim-local-fennel', {'branch': 'develop'}
 Plug 'Olical/vim-enmasse'
-Plug 'Olical/vim-jack-in'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/deoplete.nvim' | Plug 'ncm2/float-preview.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'bakpakin/fennel.vim'
+Plug 'clojure-vim/vim-jack-in'
 Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
 Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people'
