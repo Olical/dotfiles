@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CONFIG=$HOME/dotfiles/neovim/.config/nvim
+CONFIG=$HOME/.config/nvim
 
 mkdir -p $CONFIG/undo $CONFIG/spell $CONFIG/autoload
 
