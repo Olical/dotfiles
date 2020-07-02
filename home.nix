@@ -35,6 +35,7 @@ in
     xclip
     ripgrep
     clojure
+    stow
 
     noto-fonts
     noto-fonts-cjk
@@ -44,15 +45,9 @@ in
     fira-code-symbols
   ];
 
-  home.activation.linkAllTheThings = dag.entryAfter [ "writeBoundary" ] ''
-    ln -sf $HOME/.config/nixpkgs/clojure $HOME/.clojure
-    ln -sf $HOME/.config/nixpkgs/fish $HOME/.config/fish
-    ln -sf $HOME/.config/nixpkgs/kitty $HOME/.config/kitty
-    ln -sf $HOME/.config/nixpkgs/neovim $HOME/.config/nvim
-
-    ln -sf $HOME/.config/nixpkgs/git/.gitconfig $HOME/.gitconfig
-    ln -sf $HOME/.config/nixpkgs/git/.gitexcludes $HOME/.gitexcludes
-    ln -sf $HOME/.config/nixpkgs/bash/.bashrc $HOME/.bashrc
+  home.activation.stow = dag.entryAfter [ "writeBoundary" ] ''
+    cd $HOME/.config/nixpkgs
+    stow --target=$HOME `ls -d */`
   '';
 
   services.gpg-agent = {
