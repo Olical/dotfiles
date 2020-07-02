@@ -23,6 +23,7 @@ in
   home.stateVersion = "20.03";
 
   nixpkgs.config.allowUnfree = true;
+
   home.packages = with pkgs; [
     clojure
     cowsay
@@ -31,18 +32,18 @@ in
     firefox
     fish
     fzf
-    git
     gcc
+    git
     htop
     httpie
     kitty
+    lazygit
     leiningen
     neovim
     ripgrep
     stow
     tree
     xclip
-    lazygit
 
     noto-fonts
     noto-fonts-cjk
