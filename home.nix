@@ -22,10 +22,12 @@ in
   # changes in each release.
   home.stateVersion = "20.03";
 
+  nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     clojure
     cowsay
     curl
+    discord
     firefox
     fish
     fzf
