@@ -51,9 +51,16 @@ in
     fira-code-symbols
   ];
 
+  services.redshift = {
+    enable = true;
+    latitude = "51.5074";
+    longitude = "0.1278";
+  };
+
   home.activation.stow = dag.entryAfter [ "writeBoundary" ] ''
     cd $HOME/.config/nixpkgs
     stow --target=$HOME `ls -d */`
+    systemctl --user start redshift
   '';
 
   services.gpg-agent = {
