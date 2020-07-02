@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 
-# TODO discord, spotify, pynvim, node, rust, lazygit, joker, clj-kondo
+# TODO discord, spotify, pynvim, node, rust, joker, clj-kondo
 
 let
   dag = config.lib.dag;
@@ -20,27 +20,28 @@ in
   home.stateVersion = "20.03";
 
   home.packages = with pkgs; [
-    htop
-    firefox
-    kitty
-    neovim
-    git
-    tree
-    httpie
-    curl
-    fish
-    cowsay
-    fzf
-    leiningen
-    xclip
-    ripgrep
     clojure
+    cowsay
+    curl
+    firefox
+    fish
+    fzf
+    git
+    gcc
+    htop
+    httpie
+    kitty
+    leiningen
+    neovim
+    ripgrep
     stow
+    tree
+    xclip
+    lazygit
 
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    liberation_ttf
     fira-code
     fira-code-symbols
   ];
