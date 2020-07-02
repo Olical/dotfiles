@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 # TODO discord, spotify, pynvim, node, rust, joker, clj-kondo
+# TODO clipman or similar
+# TODO Mappings and theme for i3
+# TODO vim-clap binary
 
 let
   dag = config.lib.dag;
