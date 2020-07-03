@@ -10,6 +10,7 @@
 (set nvim.o.timeoutlen 500)
 (set nvim.o.sessionoptions "blank,curdir,folds,help,tabpages,winsize")
 (set nvim.o.inccommand :split)
+(set nvim.o.wildoptions (.. nvim.o.wildoptions ",pum"))
 
 (nvim.ex.set :spell)
 (nvim.ex.set :list)

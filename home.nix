@@ -3,7 +3,6 @@
 # TODO pynvim, node, rust, joker, clj-kondo
 # TODO clipman or similar
 # TODO Mappings and theme for i3
-# TODO vim-clap binary
 
 let
   dag = config.lib.dag;
@@ -26,28 +25,31 @@ in
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    clojure
     cowsay
     curl
-    discord
-    firefox
     fish
     fzf
-    gcc
     git
     htop
-    httpie
-    kitty
     lazygit
-    leiningen
     maple
     neovim
     ripgrep
-    rofi
-    spotify
     stow
     tree
     xclip
+
+    clojure
+    leiningen
+
+    discord
+    spotify
+    firefox
+    kitty
+
+    rofi
+    i3-gaps
+    i3status
 
     noto-fonts
     noto-fonts-cjk
@@ -56,16 +58,9 @@ in
     fira-code-symbols
   ];
 
-  services.redshift = {
-    enable = true;
-    latitude = "51.5074";
-    longitude = "0.1278";
-  };
-
   home.activation.stow = dag.entryAfter [ "writeBoundary" ] ''
     cd $HOME/.config/nixpkgs
     stow --target=$HOME stowed
-    systemctl --user start redshift
   '';
 
   services.gpg-agent = {
