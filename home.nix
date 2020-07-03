@@ -24,6 +24,8 @@ in
 
   nixpkgs.config.allowUnfree = true;
 
+  fonts.fontconfig.enableProfileFonts = true;
+
   home.packages = with pkgs; [
     cowsay
     curl
@@ -48,11 +50,12 @@ in
     kitty
 
     rofi
-    i3blocks
+    i3status
 
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
+    mplus-outline-fonts
     fira-code
     fira-code-symbols
   ];
