@@ -48,8 +48,7 @@ in
     kitty
 
     rofi
-    i3-gaps
-    i3status
+    i3blocks
 
     noto-fonts
     noto-fonts-cjk
