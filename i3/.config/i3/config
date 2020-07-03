@@ -41,18 +41,26 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-# TODO Set TERMINAL in ~/.xsession https://faq.i3wm.org/question/4853/cant-set-i3-sensible-terminal-to-terminology.1.html
-bindsym $mod+Return exec kitty # i3-sensible-terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec "rofi -combi-modi window#drun -show combi -modi combi"
+
+# Disable window titlebars for i3-gaps.
+# You can also use any non-zero value if you'd like to have a border
+for_window [class=".*"] border pixel 1
+
+# Only enable gaps on a workspace when there is at least one container
+smart_gaps on
+
+# Add a gap.
+gaps inner 5
+
+# Hide edge borders only if there is one window with no gaps
+hide_edge_borders smart_no_gaps
 
 # change focus
 bindsym $mod+h focus left

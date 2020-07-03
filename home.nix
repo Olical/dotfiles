@@ -41,6 +41,7 @@ in
     leiningen
     neovim
     ripgrep
+    rofi
     spotify
     stow
     tree
