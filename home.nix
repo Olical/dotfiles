@@ -7,6 +7,7 @@
 
 let
   dag = config.lib.dag;
+  maple = import ./pkgs/maple.nix pkgs;
 in
 {
   # Let Home Manager install and manage itself.
@@ -39,6 +40,7 @@ in
     kitty
     lazygit
     leiningen
+    maple
     neovim
     ripgrep
     rofi
