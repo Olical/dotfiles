@@ -62,7 +62,7 @@ in
 
   home.activation.stow = dag.entryAfter [ "writeBoundary" ] ''
     cd $HOME/.config/nixpkgs
-    stow --target=$HOME `ls -d */`
+    stow --target=$HOME stowed
     systemctl --user start redshift
   '';
 
