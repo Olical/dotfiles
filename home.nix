@@ -55,7 +55,6 @@ in
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    mplus-outline-fonts
     fira-code
     fira-code-symbols
   ];
