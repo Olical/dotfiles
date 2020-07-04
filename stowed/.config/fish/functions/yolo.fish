@@ -2,15 +2,16 @@ function yolo
   # Early sudo because it's needed later.
   sudo echo "Updating the entire bloody universe."
 
-  cd ~/dotfiles; git pull; cd -
+  cd ~/.config/nixpkgs; git pull; cd -
 
-  sudo apt -y update
-  sudo apt -y upgrade
+  sudo nix-channel --update
+  sudo nixos-rebuild switch
 
-  brew update
-  brew upgrade
+  nix-channel --update
+  home-manager switch
 
-  sudo snap refresh
+  sudo nix-env --delete-generations 14d
+  sudo nix-store --gc
 
   ~/.config/nvim/sync.sh
 end
