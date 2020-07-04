@@ -39,6 +39,7 @@ in
     tree
     xclip
 
+    janet
     clojure
     leiningen
 
