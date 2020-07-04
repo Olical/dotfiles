@@ -1,0 +1,213 @@
+/*
+ * Rofi color theme
+ * Based on srcery color scheme for Vim
+ * https://github.com/roosta/vim-srcery
+ *
+ * File: srcery.rasi
+ * Desc: Srcery theme for Rofi
+ * Author: Daniel Berg <mail@roosta.sh>
+ * Modified: 2018-05-11
+ */
+
+* {
+  spacing:       2;
+
+  black:         #1C1B19;
+  brightblack:   #2D2C29;
+
+  red:           #EF2F27;
+  brightred:     #F75341;
+
+  green:         #519F50;
+  brightgreen:   #98BC37;
+
+  yellow:        #FBB829;
+  brightyellow:  #FED06E;
+
+  blue:          #2C78BF;
+  brightblue:    #68A8E4;
+
+  magenta:       #E02C6D;
+  brightmagenta: #FF5C8F;
+
+  cyan:          #0AAEB3;
+  brightcyan:    #53FDE9;
+
+  white:         #918175;
+  brightwhite:   #FCE8C3;
+
+  orange:        #D75F00;
+  brightorange:  #FF8700;
+
+  xgrey1:        #262626;
+  xgrey2:        #303030;
+  xgrey3:        #3A3A3A;
+  xgrey4:        #444444;
+  xgrey5:        #4E4E4E;
+
+  highlight:     bold #E02C6D;
+
+  selected-normal-foreground:  @black;
+  selected-normal-background:  @brightwhite;
+
+  normal-foreground:           @brightwhite;
+  normal-background:           @brightblack;
+
+  alternate-normal-background: @xgrey1;
+  alternate-normal-foreground: @brightwhite;
+
+  urgent-foreground:           @black;
+  urgent-background:           @orange;
+
+  selected-urgent-foreground:  @black;
+  selected-urgent-background:  @brightorange;
+
+  alternate-urgent-background: @urgent-background;
+  alternate-urgent-foreground: @urgent-foreground;
+
+  active-foreground:           @yellow;
+  active-background:           @brightblack;
+
+  selected-active-foreground:  @black;
+  selected-active-background:  @yellow;
+
+  alternate-active-background: @yellow;
+  alternate-active-foreground: @black;
+
+  border-color:                @magenta;
+  separatorcolor:              @white;
+  background-color:            @black;
+}
+
+window {
+  border:     2;
+  foreground: @magenta;
+  padding:    4;
+  background: @black;
+}
+
+mainbox {
+  border:  0;
+  padding: 0;
+}
+
+message {
+  border:  2px 0px 0px ;
+  padding: 2px 0px 0px ;
+}
+
+textbox {
+  text-color: @brightwhite;
+}
+
+listview {
+  fixed-height: 1;
+  border:       2px dash 0px 0px ;
+  border-color: @separatorcolor;
+  spacing:      2px ;
+  scrollbar:    false;
+  padding:      2px 0px 0px ;
+}
+
+element {
+  border:  0;
+  padding: 1px ;
+}
+
+element normal.normal {
+  background-color: @normal-background;
+  text-color:       @normal-foreground;
+}
+
+element normal.urgent {
+  background-color: @urgent-background;
+  text-color:       @urgent-foreground;
+}
+
+element normal.active {
+  background-color: @active-background;
+  text-color:       @active-foreground;
+}
+
+element selected.normal {
+  background-color: @selected-normal-background;
+  text-color:       @selected-normal-foreground;
+}
+
+element selected.urgent {
+  background-color: @selected-urgent-background;
+  text-color:       @selected-urgent-foreground;
+}
+
+element selected.active {
+  background-color: @selected-active-background;
+  text-color:       @selected-active-foreground;
+}
+
+element alternate.normal {
+  background-color: @alternate-normal-background;
+  text-color:       @alternate-normal-foreground;
+}
+
+element alternate.urgent {
+  background-color: @alternate-urgent-background;
+  text-color:       @alternate-urgent-foreground;
+}
+
+element alternate.active {
+  background-color: @alternate-active-background;
+  text-color:       @alternate-active-foreground;
+}
+
+scrollbar {
+  width:        4px ;
+  border:       0;
+  handle-color: @normal-foreground;
+  handle-width: 8px ;
+  padding:      0;
+}
+
+sidebar {
+  border:       2px dash 0px 0px ;
+  border-color: @separatorcolor;
+}
+
+button {
+  text-color: @brightwhite;
+}
+
+button selected {
+  background-color: @magenta;
+  text-color:       @brightwhite;
+}
+
+inputbar {
+  spacing:    0px ;
+  text-color: @normal-foreground;
+  padding:    1px ;
+  children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+case-indicator {
+  spacing:    0;
+  text-color: @normal-foreground;
+}
+
+entry {
+  spacing:    0;
+  text-color: @normal-foreground;
+}
+
+prompt {
+  spacing:    0;
+  text-color: @normal-foreground;
+}
+
+textbox-prompt-colon {
+  expand:     false;
+  str:        ":";
+  margin:     0px 0.3000em 0.0000em 0.0000em ;
+  text-color: inherit;
+}
+
+// vim:ft=css:ts=2:sw=2:fdm=marker

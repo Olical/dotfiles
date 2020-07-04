@@ -2,7 +2,6 @@
 
 # TODO pynvim, node, rust, joker, clj-kondo
 # TODO clipman or similar
-# TODO Mappings and theme for i3
 
 let
   dag = config.lib.dag;
@@ -23,8 +22,7 @@ in
   home.stateVersion = "20.03";
 
   nixpkgs.config.allowUnfree = true;
-
-  fonts.fontconfig.enableProfileFonts = true;
+  fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
     cowsay
@@ -48,6 +46,7 @@ in
     spotify
     firefox
     kitty
+    xfce.xfce4-screenshooter
 
     rofi
     i3status

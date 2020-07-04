@@ -183,9 +183,69 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+set $black #1C1B19
+set $bright_black #918175
+
+set $red #EF2F27
+set $bright_red #F75341
+
+set $green #519F50
+set $bright_green #98BC37
+
+set $yellow #FBB829
+set $bright_yellow #FED06E
+
+set $blue #2C78BF
+set $bright_blue #68A8E4
+
+set $magenta #E02C6D
+set $bright_magenta #FF5C8F
+
+set $cyan #0AAEB3
+set $bright_cyan #53FDE9
+
+set $white #D0BFA1
+set $bright_white #FCE8C3
+
+set $orange #D75F00
+set $bright_orange #FF8700
+
+set $xgray1 #262626
+set $xgray2 #303030
+set $xgray3 #3A3A3A
+set $xgray4 #444444
+set $xgray5 #4E4E4E
+
+set $hard_black #121212
+
+# Colors                border        background  text          indicator child_border
+client.focused          $bright_black $xgray3     $yellow       $yellow   $bright_black
+client.focused_inactive $xgray3       $xgray3     $bright_black $xgray3   $xgray3
+client.unfocused        $xgray1       $xgray1     $bright_black $xgray1   $xgray1
+client.urgent           $red          $xgray1     $red          $red      $red
+client.placeholder      $xgray3       $hard_black $bright_black $xgray3   $xgray3
+client.background       $black
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
   status_command i3status
   position top
+
+  colors {
+    background $black
+    statusline $hard_black
+    separator  $black
+
+    # Colors           border        background   text
+    focused_workspace  $bright_black $xgray3      $yellow
+    active_workspace   $xgray3       $xgray3      $bright_black
+    inactive_workspace $xgray3       $xgray1      $bright_black
+    urgent_workspace   $red          $red         $black
+    binding_mode       $magenta      $magenta     $bright_white
+  }
 }
+
+
+
+

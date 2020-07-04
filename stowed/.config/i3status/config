@@ -1,11 +1,11 @@
 general {
-        output_format = "i3bar"
-        colors = false
-        markup = pango
-        interval = 5
-        color_good = '#2f343f'
-		color_degraded = '#ebcb8b'
-		color_bad = '#ba5e57'
+  output_format = "i3bar"
+  colors = true
+  markup = pango
+  interval = 5
+  color_good = "#519F50"
+  color_degraded = "#FBB829"
+  color_bad = "#EF2F27"
 }
 
 order += "load"
