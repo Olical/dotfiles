@@ -30,6 +30,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/.bac
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Sync background and monitors.
+exec --no-startup-id ~/.config/i3/dock.sh
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -155,6 +158,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# sync background and monitors
+bindsym $mod+Shift+d exec ~/.config/i3/dock.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -245,7 +250,3 @@ bar {
     binding_mode       $magenta      $magenta     $bright_white
   }
 }
-
-
-
-

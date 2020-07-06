@@ -41,6 +41,7 @@ in
     xclip
     lastpass-cli
     asciinema
+    feh
 
     unstable.janet
     clojure

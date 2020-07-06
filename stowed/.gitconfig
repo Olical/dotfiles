@@ -1,6 +1,7 @@
 [user]
 	name = Oliver Caldwell
 	email = ollie@oli.me.uk
+	signingkey = "6DFA695F73832EF9DC0335C5D85B96510F2C8A64"
 [core]
 	editor = nvim
 	excludesfile = ~/.gitexcludes
