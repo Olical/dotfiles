@@ -40,6 +40,7 @@ in
     tree
     xclip
     lastpass-cli
+    asciinema
 
     unstable.janet
     clojure
