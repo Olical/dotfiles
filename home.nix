@@ -39,6 +39,7 @@ in
     stow
     tree
     xclip
+    lastpass-cli
 
     unstable.janet
     clojure
