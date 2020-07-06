@@ -51,6 +51,7 @@ in
     firefox
     kitty
     xfce.xfce4-screenshooter
+    baobab
 
     rofi
     i3status
