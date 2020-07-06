@@ -1,10 +1,11 @@
 { config, pkgs, ... }:
 
-# TODO pynvim, node, rust, joker, clj-kondo
+# TODO node, rust, joker, clj-kondo
 # TODO clipman or similar
 
 let
   dag = config.lib.dag;
+  unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
   maple = import ./pkgs/maple.nix pkgs;
 in
 {
@@ -33,13 +34,13 @@ in
     htop
     lazygit
     maple
-    neovim
+    unstable.neovim
     ripgrep
     stow
     tree
     xclip
 
-    janet
+    unstable.janet
     clojure
     leiningen
 
