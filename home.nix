@@ -7,6 +7,7 @@ let
   dag = config.lib.dag;
   unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
   maple = import ./pkgs/maple.nix pkgs;
+  thunar = pkgs.xfce.thunar.override { thunarPlugins = [pkgs.xfce.thunar-archive-plugin]; };
 in
 {
   # Let Home Manager install and manage itself.
@@ -53,6 +54,7 @@ in
     kitty
     xfce.xfce4-screenshooter
     baobab
+    thunar
 
     rofi
     i3status
