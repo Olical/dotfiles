@@ -25,7 +25,7 @@ Plug 'jiangmiao/auto-pairs', {'tag': 'v2.0.0'}
 Plug 'lambdalisue/suda.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'liuchengxu/vim-better-default'
-Plug 'liuchengxu/vim-clap', {'commit': 'v0.19', 'do': 'ln -fs `which maple` bin/maple'}
+Plug 'liuchengxu/vim-clap', {'tag': 'v0.19', 'do': 'ln -fs `which maple` bin/maple'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', {'do': 'yarn install', 'for': ['javascript']}
