@@ -161,7 +161,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # sync background and monitors
 bindsym $mod+Shift+d exec ~/.config/i3/dock.sh
 # sleep then go to DEEP sleep
-bindsym $mod+Shift+s exec "sudo systemctl suspend-then-hibernate"
+bindsym $mod+Shift+s exec sudo systemctl suspend-then-hibernate
+# lock the machine
+bindsym $mod+Shift+x exec loginctl lock-session
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
