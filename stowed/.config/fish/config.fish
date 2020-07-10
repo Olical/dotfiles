@@ -11,6 +11,8 @@ end
 set -gx fish_greeting ""
 set -gx BROWSER firefox
 
+eval (direnv hook fish)
+
 if type -q nvim
   set -gx EDITOR nvim
   set -gx VISUAL nvim

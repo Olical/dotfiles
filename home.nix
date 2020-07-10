@@ -43,6 +43,7 @@ in
     lastpass-cli
     asciinema
     feh
+    direnv
 
     unstable.janet
     clojure
