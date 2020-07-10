@@ -2,12 +2,6 @@ mkdir -p ~/bin ~/npm/bin ~/.cargo/bin ~/.cache/janet
 set -gx PATH ~/bin ~/npm/bin ~/.cargo/bin $PATH
 set -gx JANET_PATH ~/.cache/janet
 
-if test -d /home/linuxbrew
-  set -gx PATH /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/sbin $PATH
-  set -gx MANPATH ~/.linuxbrew/share/man $MANPATH
-  set -gx INFOPATH ~/.linuxbrew/share/info $INFOPATH
-end
-
 set -gx fish_greeting ""
 set -gx BROWSER firefox
 
