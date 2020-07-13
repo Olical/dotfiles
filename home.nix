@@ -44,6 +44,7 @@ in
     asciinema
     feh
     direnv
+    httpie
 
     unstable.janet
     clojure
