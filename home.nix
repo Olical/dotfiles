@@ -45,6 +45,7 @@ in
     feh
     direnv
     httpie
+    luajit
 
     unstable.janet
     clojure
