@@ -1,8 +1,5 @@
 { config, pkgs, ... }:
 
-# TODO node, rust, joker, clj-kondo
-# TODO clipman or similar
-
 let
   dag = config.lib.dag;
   unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
@@ -58,6 +55,7 @@ in
     xfce.xfce4-screenshooter
     baobab
     thunar
+    unstable.obs-studio
 
     rofi
     i3status
