@@ -228,7 +228,7 @@ set $xgray5 #4E4E4E
 set $hard_black #121212
 
 # Colors                border        background  text          indicator child_border
-client.focused          $bright_black $xgray3     $yellow       $yellow   $bright_black
+client.focused          $bright_green $xgray3     $yellow       $yellow   $bright_green
 client.focused_inactive $xgray3       $xgray3     $bright_black $xgray3   $xgray3
 client.unfocused        $xgray1       $xgray1     $bright_black $xgray1   $xgray1
 client.urgent           $red          $xgray1     $red          $red      $red
