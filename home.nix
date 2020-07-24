@@ -43,6 +43,7 @@ in
     direnv
     httpie
     luajit
+    nodejs
 
     unstable.janet
     clojure
