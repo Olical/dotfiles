@@ -48,6 +48,7 @@ in
     unstable.janet
     clojure
     leiningen
+    joker
 
     discord
     spotify
