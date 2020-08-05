@@ -5,7 +5,9 @@ set -gx JANET_PATH ~/.cache/janet
 set -gx fish_greeting ""
 set -gx BROWSER firefox
 
-eval (direnv hook fish)
+if type -q direnv
+  eval (direnv hook fish)
+end
 
 if type -q nvim
   set -gx EDITOR nvim
@@ -28,11 +30,6 @@ alias lg="lazygit"
 
 # Start an SSH agent if required, if not, connect to it.
 initialise_ssh_agent
-
-# Prevent funky output inside emacs terminals.
-if test "$TERM" = "eterm-color"
-  function fish_title; end
-end
 
 # Local config.
 if [ -f ~/.local.fish ]
