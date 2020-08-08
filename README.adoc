@@ -1,0 +1,19 @@
+= Olical's dotfiles
+
+This is a collection of configuration for things such as https://sw.kovidgoyal.net/kitty/[Kitty] and https://neovim.io/[Neovim] through the Nix package manager and stow for linking the configuration into the right places.
+
+This is a flexible system that can fit into a few different distributions and setups including shared multi-user hosts. Feel free to take whatever you need from here for your own needs!
+
+== Requirements
+
+ * https://nixos.org/[Nix or NixOS]
+ ** Set `DOTFILES_JUST_NIX` if you only have the package manager.
+ ** Set `DOTFILES_GUEST` if you're not the primary user so system wide administration isn't performed.
+ ** These can be set in `~/.local.fish` and will be used by the `yolo` command which updates everything.
+ * https://github.com/rycee/home-manager[home-manager]
+
+Replace `~/.config/nixpkgs` with this repository and run `home-manager switch`.
+
+== Questions?
+
+Feel free to open issues if you're interested in something or tweet me https://twitter.com/OliverCaldwell[@OliverCaldwell].
