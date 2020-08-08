@@ -7,11 +7,8 @@
 
 (nvim.fn.deoplete#custom#option
   :keyword_patterns
-  {:clojure lisp-pattern})
-
-(nvim.fn.deoplete#custom#option
-  :omni_patterns
-  {:fennel lisp-pattern
+  {:clojure lisp-pattern
+   :fennel lisp-pattern
    :janet lisp-pattern})
 
 (nvim.ex.set "completeopt-=preview")
