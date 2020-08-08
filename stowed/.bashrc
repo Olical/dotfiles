@@ -7,6 +7,7 @@ fi
 
 if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]] \
   && [ -z "$BASH_EXECUTION_STRING" ] \
+  && [[ $- == *i* ]] \
   && command -v fish &> /dev/null
 then
    exec fish
