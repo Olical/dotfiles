@@ -23,6 +23,8 @@ function yolo
     if type -q apt-get
       sudo apt-get update
       sudo apt-get upgrade -y
+      sudo apt-get autoclean -y
+      sudo apt-get autoremove -y
     end
   end
 
