@@ -1,5 +1,8 @@
 export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
-export LOCALE_ARCHIVE=$HOME/.nix-profile/lib/locale/locale-archive
+
+if command -v apt-get &> /dev/null; then
+  export LOCALE_ARCHIVE=$HOME/.nix-profile/lib/locale/locale-archive
+fi
 
 if [ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]
 then
