@@ -19,6 +19,11 @@ function yolo
     end
 
     nix-store --gc
+
+    if type -q apt-get
+      sudo apt-get update
+      sudo apt-get upgrade -y
+    end
   end
 
   ~/.config/nvim/sync.sh
