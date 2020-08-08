@@ -2,11 +2,11 @@
 
 stdenv.mkDerivation rec {
   name = "maple";
-  version = "v0.19";
+  version = "v0.20";
 
   src = fetchurl {
-    url = "https://github.com/liuchengxu/vim-clap/releases/download/${version}/maple-x86_64-unknown-linux-gnu";
-    sha256 = "c56843f35b2fbb37ac58a1df2bb8fb094cf7e1ed34432e5619cb658ceece8db3";
+    url = "https://github.com/liuchengxu/vim-clap/releases/download/${version}/maple-x86_64-unknown-linux-musl";
+    sha256 = "84f4d0ceeb0323837d88762e644c475e047a605857d42748b2e514a5dd4945e5";
   };
 
   nativeBuildInputs = with pkgs; [
