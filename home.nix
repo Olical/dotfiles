@@ -44,6 +44,7 @@ in
     httpie
     luajit
     nodejs
+    glibcLocales
 
     unstable.janet
     clojure
