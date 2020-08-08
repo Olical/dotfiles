@@ -2,6 +2,8 @@ mkdir -p ~/bin ~/npm/bin ~/.cargo/bin ~/.cache/janet
 set -gx PATH ~/bin ~/npm/bin ~/.cargo/bin $PATH
 set -gx JANET_PATH ~/.cache/janet
 
+set -gx LOCALE_ARCHIVE (nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive
+
 set -gx fish_greeting ""
 set -gx BROWSER firefox
 
