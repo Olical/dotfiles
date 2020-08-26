@@ -3,8 +3,6 @@
 
 ;; Generic Neovim configuration.
 (set nvim.o.termguicolors true)
-(set nvim.o.wildmenu true)
-(set nvim.o.wildmode "list:longest,full")
 (set nvim.o.mouse "a")
 (set nvim.o.updatetime 500)
 (set nvim.o.timeoutlen 500)

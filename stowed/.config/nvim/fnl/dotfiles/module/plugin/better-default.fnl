@@ -7,6 +7,8 @@
 (nvim.ex.set :nonumber)
 (nvim.ex.set :norelativenumber)
 (nvim.ex.set :wrap)
+(nvim.ex.set "wildmode=full")
+(nvim.ex.set "wildoptions=pum")
 
 (set nvim.o.undodir (.. (nvim.fn.stdpath "data") "/undo"))
 
