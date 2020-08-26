@@ -3,7 +3,6 @@
 let
   dag = config.lib.dag;
   unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
-  maple = import ./pkgs/maple.nix pkgs;
   thunar = pkgs.xfce.thunar.override { thunarPlugins = [pkgs.xfce.thunar-archive-plugin]; };
 in
 {
@@ -24,50 +23,49 @@ in
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
+    asciinema
+    bat
+    clojure
     cowsay
     curl
+    direnv
+    feh
     fish
-    fzf
     git
     htop
+    httpie
+    joker
     lazygit
-    maple
-    unstable.neovim
+    leiningen
+    luajit
+    nodejs
     ripgrep
     stow
     tree
-    xclip
-    lastpass-cli
-    asciinema
-    feh
-    direnv
-    httpie
-    luajit
-    nodejs
-    glibcLocales
-
+    unstable.fzf
     unstable.janet
-    clojure
-    leiningen
-    joker
+    unstable.neovim
 
-    discord
-    spotify
-    firefox
-    kitty
-    xfce.xfce4-screenshooter
+    # Heavy GUI based things.
+    # May want to comment these out in headless environments.
     baobab
-    thunar
-    unstable.obs-studio
-
-    rofi
+    discord
+    fira-code
+    fira-code-symbols
+    firefox
+    glibcLocales
     i3status
-
+    kitty
+    lastpass-cli
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    fira-code
-    fira-code-symbols
+    rofi
+    spotify
+    thunar
+    unstable.obs-studio
+    xclip
+    xfce.xfce4-screenshooter
   ];
 
   home.activation.stow = dag.entryAfter [ "writeBoundary" ] ''

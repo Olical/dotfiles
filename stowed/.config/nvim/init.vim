@@ -22,10 +22,10 @@ Plug 'hashivim/vim-terraform'
 Plug 'itchyny/lightline.vim'
 Plug 'janet-lang/janet.vim'
 Plug 'jiangmiao/auto-pairs', {'tag': 'v2.0.0'}
+Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'lambdalisue/suda.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'liuchengxu/vim-better-default'
-Plug 'liuchengxu/vim-clap', {'tag': 'v0.20', 'do': 'ln -fs `which maple` bin/maple'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', {'do': 'yarn install', 'for': ['javascript']}
