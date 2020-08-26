@@ -29,6 +29,7 @@ in
     cowsay
     curl
     direnv
+    entr
     feh
     fish
     git
@@ -38,6 +39,7 @@ in
     lazygit
     leiningen
     luajit
+    netcat-gnu
     nodejs
     ripgrep
     stow
