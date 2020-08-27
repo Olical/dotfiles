@@ -6,10 +6,7 @@
   (nvim.fn.expand s))
 
 (defn filename []
-  (let [path (expand "%")]
-    (if (= "" path)
-      "[No Name]"
-      path)))
+  (expand "%"))
 
 (defn readonly []
   (if (and nvim.bo.readonly
