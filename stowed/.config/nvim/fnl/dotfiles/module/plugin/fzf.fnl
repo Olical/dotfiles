@@ -14,6 +14,7 @@
     (.. ":" to)))
 
 (map :fg "Rg")
+(map :* "Rg <c-r><c-w>")
 (map :ff "Files")
 (map :fb "Buffers")
 (map :fw "Windows")
