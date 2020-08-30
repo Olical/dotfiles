@@ -6,12 +6,7 @@
   (nvim.fn.expand s))
 
 (defn filename []
-  (let [tail (expand "%:t")]
-    (if (= "" tail)
-      ""
-      (if (> (nvim.fn.winwidth 0) 70)
-        (.. (expand "%:p:h:t") "/" tail)
-        tail))))
+  (expand "%"))
 
 (defn readonly []
   (if (and nvim.bo.readonly
