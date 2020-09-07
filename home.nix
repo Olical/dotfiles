@@ -57,6 +57,7 @@ in
     firefox
     glibcLocales
     i3status
+    unstable.jitsi
     kitty
     lastpass-cli
     noto-fonts
