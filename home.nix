@@ -6,17 +6,7 @@ let
   thunar = pkgs.xfce.thunar.override { thunarPlugins = [pkgs.xfce.thunar-archive-plugin]; };
 in
 {
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
   home.stateVersion = "20.03";
 
   nixpkgs.config.allowUnfree = true;
@@ -56,9 +46,11 @@ in
     fira-code-symbols
     firefox
     glibcLocales
+    i3lock
     i3status
     kitty
     lastpass-cli
+    networkmanagerapplet
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
@@ -68,6 +60,7 @@ in
     unstable.obs-studio
     xclip
     xfce.xfce4-screenshooter
+    xss-lock
   ];
 
   home.activation.stow = dag.entryAfter [ "writeBoundary" ] ''
