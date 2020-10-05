@@ -29,6 +29,7 @@ in
     lazygit
     leiningen
     luajit
+    maven
     netcat-gnu
     nodejs
     ripgrep
