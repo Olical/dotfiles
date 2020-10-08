@@ -28,7 +28,6 @@ in
     joker
     lazygit
     leiningen
-    luajit
     maven
     netcat-gnu
     nodejs
@@ -37,6 +36,7 @@ in
     tree
     unstable.fzf
     unstable.janet
+    unstable.luajit
     unstable.neovim
 
     # Heavy GUI based things.
