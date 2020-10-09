@@ -1,6 +1,9 @@
-mkdir -p ~/bin ~/.npm-packages/bin ~/.cargo/bin ~/.cache/janet
-set -gx PATH ~/bin ~/npm-packages/bin ~/.cargo/bin $PATH
+set -gx NPM_PACKAGES "$HOME/.npm-packages"
 set -gx JANET_PATH ~/.cache/janet
+set -gx NODE_PATH "$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+set -gx PATH ~/bin ~/npm-packages/bin ~/.cargo/bin $PATH
+
+mkdir -p ~/bin $NPM_PACKAGES/bin ~/.cargo/bin $JANET_PATH
 
 set -gx fish_greeting ""
 set -gx BROWSER firefox
