@@ -1,5 +1,6 @@
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'LnL7/vim-nix'
 Plug 'Olical/AnsiEsc'
 Plug 'Olical/aniseed', {'branch': 'develop'}
@@ -24,6 +25,7 @@ Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'lambdalisue/suda.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'liuchengxu/vim-better-default'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pangloss/vim-javascript' | Plug 'maxmellon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', {'do': 'yarn install', 'for': ['javascript']}

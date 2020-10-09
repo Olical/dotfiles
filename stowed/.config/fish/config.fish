@@ -1,5 +1,5 @@
-mkdir -p ~/bin ~/npm/bin ~/.cargo/bin ~/.cache/janet
-set -gx PATH ~/bin ~/npm/bin ~/.cargo/bin $PATH
+mkdir -p ~/bin ~/.npm-packages/bin ~/.cargo/bin ~/.cache/janet
+set -gx PATH ~/bin ~/npm-packages/bin ~/.cargo/bin $PATH
 set -gx JANET_PATH ~/.cache/janet
 
 set -gx fish_greeting ""
