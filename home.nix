@@ -25,6 +25,7 @@ in
     fish
     gcc
     git
+    gnumake
     htop
     httpie
     joker
