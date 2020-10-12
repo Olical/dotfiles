@@ -36,7 +36,7 @@ in
     tree
     unstable.fzf
     unstable.janet
-    unstable.lua5_3
+    unstable.luajit
     unstable.neovim
 
     # Heavy GUI based things.
