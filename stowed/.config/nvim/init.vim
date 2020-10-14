@@ -48,4 +48,4 @@ Plug 'w0rp/ale'
 
 call plug#end()
 
-lua require('aniseed.dotfiles')
+lua require('aniseed.env').init()
