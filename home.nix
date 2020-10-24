@@ -23,6 +23,7 @@ in
     entr
     feh
     fish
+    gcc
     git
     htop
     httpie
