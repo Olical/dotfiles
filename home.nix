@@ -41,6 +41,7 @@ in
     unstable.janet
     unstable.luajit
     unstable.luarocks
+    unstable.racket
 
     # Heavy GUI based things.
     # May want to comment these out in headless environments.
