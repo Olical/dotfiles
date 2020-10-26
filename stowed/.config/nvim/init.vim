@@ -16,6 +16,7 @@ Plug 'clojure-vim/clojure.vim'
 Plug 'clojure-vim/vim-jack-in'
 Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
+Plug 'eraserhd/parinfer-rust', {'do': 'nix-shell --run \"cargo build --release \"'}
 Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'hashivim/vim-terraform'
 Plug 'itchyny/lightline.vim'
