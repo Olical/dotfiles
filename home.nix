@@ -13,7 +13,7 @@ in
   nixpkgs.config.allowUnfree = true;
   fonts.fontconfig.enable = true;
 
-  home.packages = with pkgs; [
+  home.packages = with unstable; [
     asciinema
     bat
     clojure
@@ -37,11 +37,11 @@ in
     ripgrep
     stow
     tree
-    unstable.fzf
-    unstable.janet
-    unstable.luajit
-    unstable.luarocks
-    unstable.racket
+    fzf
+    janet
+    luajit
+    luarocks
+    racket
 
     # Heavy GUI based things.
     # May want to comment these out in headless environments.
@@ -62,8 +62,8 @@ in
     rofi
     spotify
     thunar
-    unstable.dwarf-fortress
-    unstable.obs-studio
+    dwarf-fortress
+    obs-studio
     xclip
     xfce.xfce4-screenshooter
     xss-lock
