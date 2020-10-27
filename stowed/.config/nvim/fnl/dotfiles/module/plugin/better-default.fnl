@@ -9,6 +9,7 @@
 (nvim.ex.set :wrap)
 (nvim.ex.set "wildmode=full")
 (nvim.ex.set "wildoptions=pum")
+(nvim.ex.set "listchars-=eol:↵")
 
 (set nvim.o.undodir (.. (nvim.fn.stdpath "data") "/undo"))
 
