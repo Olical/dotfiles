@@ -22,7 +22,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'itchyny/lightline.vim'
 Plug 'janet-lang/janet.vim'
 Plug 'jiangmiao/auto-pairs', {'tag': 'v2.0.0'}
-Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'commit': 'fc7630a66d8b07ec90603f7919f8aadf891783ac' } | Plug 'junegunn/fzf.vim'
 Plug 'lambdalisue/suda.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'liuchengxu/vim-better-default'
