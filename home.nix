@@ -29,6 +29,7 @@ in
     htop
     httpie
     joker
+    killall
     lazygit
     leiningen
     maven
