@@ -4,7 +4,7 @@ let
   dag = config.lib.dag;
   unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
   thunar = pkgs.xfce.thunar.override { thunarPlugins = [pkgs.xfce.thunar-archive-plugin]; };
-  neovim = unstable.neovim.override { withNodeJs = true; };
+  python = pkgs.python3.withPackages (ps: with ps; [ pynvim ]);
 in
 {
   programs.home-manager.enable = true;
@@ -33,9 +33,9 @@ in
     lazygit
     leiningen
     maven
-    neovim
     netcat-gnu
     nodejs
+    python
     ripgrep
     stow
     tree
@@ -43,6 +43,7 @@ in
     unstable.janet
     unstable.luajit
     unstable.luarocks
+    unstable.neovim # neovim-nightly
     unstable.racket
 
     # Heavy GUI based things.
