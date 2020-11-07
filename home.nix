@@ -52,6 +52,7 @@ in
     fira-code
     fira-code-symbols
     firefox
+    gimp
     glibcLocales
     i3lock
     i3status
