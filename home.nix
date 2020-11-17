@@ -66,7 +66,7 @@ in
     rofi
     spotify
     thunar
-    unstable.dwarf-fortress
+    unstable.dwarf-fortress-packages.dwarf-fortress-full
     unstable.obs-studio
     xclip
     xfce.xfce4-screenshooter
