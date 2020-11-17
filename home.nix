@@ -5,6 +5,12 @@ let
   unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
   thunar = pkgs.xfce.thunar.override { thunarPlugins = [pkgs.xfce.thunar-archive-plugin]; };
   python = pkgs.python3.withPackages (ps: with ps; [ pynvim ]);
+  dwarf-fortress = unstable.dwarf-fortress-packages.dwarf-fortress-full.override {
+    enableIntro = false;
+    enableSound = false;
+    enableSoundSense = false;
+    enableStoneSense = false;
+  };
 in
 {
   programs.home-manager.enable = true;
@@ -50,6 +56,7 @@ in
     # May want to comment these out in headless environments.
     baobab
     discord
+    dwarf-fortress
     fira-code
     fira-code-symbols
     firefox
@@ -66,7 +73,6 @@ in
     rofi
     spotify
     thunar
-    unstable.dwarf-fortress-packages.dwarf-fortress-full
     unstable.obs-studio
     xclip
     xfce.xfce4-screenshooter
