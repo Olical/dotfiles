@@ -45,6 +45,7 @@ in
     ripgrep
     stow
     tree
+    unstable.discord
     unstable.fzf
     unstable.janet
     unstable.luajit
@@ -55,7 +56,6 @@ in
     # Heavy GUI based things.
     # May want to comment these out in headless environments.
     baobab
-    discord
     dwarf-fortress
     fira-code
     fira-code-symbols
