@@ -52,6 +52,7 @@ in
     unstable.luarocks
     unstable.neovim # neovim-nightly
     unstable.racket
+    unzip
 
     # Heavy GUI based things.
     # May want to comment these out in headless environments.
@@ -73,6 +74,7 @@ in
     rofi
     spotify
     thunar
+    unstable.love_11
     unstable.obs-studio
     xclip
     xfce.xfce4-screenshooter
