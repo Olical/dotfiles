@@ -53,6 +53,7 @@ in
     unstable.neovim # neovim-nightly
     unstable.racket
     unzip
+    xmlformat
 
     # Heavy GUI based things.
     # May want to comment these out in headless environments.
