@@ -45,7 +45,6 @@ in
     ripgrep
     stow
     tree
-    unstable.discord
     unstable.fzf
     unstable.janet
     unstable.luajit
@@ -75,6 +74,7 @@ in
     rofi
     spotify
     thunar
+    unstable.discord
     unstable.love_11
     unstable.obs-studio
     xclip
