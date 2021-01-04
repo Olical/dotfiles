@@ -43,7 +43,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'voldikss/vim-floaterm'
 Plug 'w0rp/ale'
 Plug 'wlangstroth/vim-racket'
 
