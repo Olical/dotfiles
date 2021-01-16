@@ -39,6 +39,7 @@ in
     lazygit
     leiningen
     maven
+    mitscheme
     netcat-gnu
     nodejs
     python
