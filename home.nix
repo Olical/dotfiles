@@ -74,6 +74,7 @@ in
     noto-fonts-emoji
     rofi
     spotify
+    steam
     thunar
     unstable.discord
     unstable.love_11
