@@ -4,7 +4,7 @@ let
   dag = config.lib.dag;
   unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
   thunar = pkgs.xfce.thunar.override { thunarPlugins = [pkgs.xfce.thunar-archive-plugin]; };
-  python = pkgs.python3.withPackages (ps: with ps; [ pynvim ]);
+  python = unstable.python3.withPackages (ps: with ps; [ pynvim ]);
   dwarf-fortress = unstable.dwarf-fortress-packages.dwarf-fortress-full.override {
     enableIntro = false;
     enableSound = false;
