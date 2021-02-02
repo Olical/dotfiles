@@ -14,7 +14,9 @@ let
 in
 {
   programs.home-manager.enable = true;
-  home.stateVersion = "20.03";
+  home.stateVersion = "20.09";
+  home.username = "$USER";
+  home.homeDirectory = "/home/$USER";
 
   nixpkgs.config.allowUnfree = true;
   fonts.fontconfig.enable = true;
