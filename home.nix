@@ -69,7 +69,9 @@ in
     i3lock
     i3status
     kitty
+    kubectl
     lastpass-cli
+    minikube
     networkmanagerapplet
     noto-fonts
     noto-fonts-cjk
