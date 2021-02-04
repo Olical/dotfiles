@@ -46,4 +46,4 @@ Plug 'wlangstroth/vim-racket'
 
 call plug#end()
 
-lua require('aniseed.env').init()
+let g:aniseed#env = v:true

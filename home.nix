@@ -70,6 +70,7 @@ in
     i3status
     kitty
     kubectl
+    kubernetes
     lastpass-cli
     minikube
     networkmanagerapplet
