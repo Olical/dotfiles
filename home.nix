@@ -24,7 +24,6 @@ in
   home.packages = with pkgs; [
     asciinema
     bat
-    clojure
     cowsay
     curl
     direnv
@@ -48,6 +47,7 @@ in
     ripgrep
     stow
     tree
+    unstable.clojure
     unstable.fzf
     unstable.janet
     unstable.luajit
