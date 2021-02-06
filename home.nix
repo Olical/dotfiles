@@ -74,6 +74,7 @@ in
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
+    pavucontrol
     rofi
     spotify
     steam
