@@ -48,6 +48,7 @@ in
     stow
     tree
     unstable.clojure
+    unstable.docker-compose
     unstable.fzf
     unstable.janet
     unstable.luajit
