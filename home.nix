@@ -24,6 +24,7 @@ in
   home.packages = with pkgs; [
     asciinema
     bat
+    blackbox
     cowsay
     curl
     direnv
