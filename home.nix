@@ -24,7 +24,6 @@ in
   home.packages = with pkgs; [
     asciinema
     bat
-    blackbox
     cowsay
     curl
     direnv
@@ -33,6 +32,7 @@ in
     fish
     gcc
     git
+    git-secret
     gnumake
     htop
     httpie
