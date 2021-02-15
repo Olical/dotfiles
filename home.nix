@@ -36,6 +36,7 @@ in
     gnumake
     htop
     httpie
+    hy
     joker
     killall
     lazygit

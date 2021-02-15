@@ -18,6 +18,7 @@ Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
 Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'hashivim/vim-terraform'
+Plug 'hylang/vim-hy'
 Plug 'itchyny/lightline.vim'
 Plug 'janet-lang/janet.vim'
 Plug 'jiangmiao/auto-pairs', {'tag': 'v2.0.0'}
