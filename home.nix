@@ -74,6 +74,7 @@ in
     # Heavy GUI based things.
     # May want to comment these out in headless environments.
     baobab
+    bitwarden bitwarden-cli
     dwarf-fortress
     fira-code
     fira-code-symbols
