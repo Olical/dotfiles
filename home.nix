@@ -63,6 +63,7 @@ in
     unstable.clojure
     unstable.docker-compose
     unstable.fzf
+    unstable.guile
     unstable.janet
     unstable.luajit
     unstable.luarocks
