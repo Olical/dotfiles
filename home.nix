@@ -77,6 +77,7 @@ in
     baobab
     bitwarden bitwarden-cli
     dwarf-fortress
+    ffmpeg
     fira-code
     fira-code-symbols
     firefox
