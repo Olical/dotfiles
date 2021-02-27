@@ -98,6 +98,7 @@ in
     unstable.discord
     unstable.love_11
     unstable.obs-studio
+    vlc
     xclip
     xfce.xfce4-screenshooter
     xss-lock
