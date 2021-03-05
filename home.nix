@@ -51,7 +51,6 @@ in
     joker
     killall
     lazygit
-    leiningen
     maven
     mitscheme
     netcat-gnu
