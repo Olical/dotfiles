@@ -76,6 +76,7 @@ in
     baobab
     bitwarden bitwarden-cli
     dwarf-fortress
+    ffmpeg
     fira-code
     fira-code-symbols
     firefox
@@ -97,6 +98,7 @@ in
     unstable.discord
     unstable.love_11
     unstable.obs-studio
+    vlc
     xclip
     xfce.xfce4-screenshooter
     xss-lock
