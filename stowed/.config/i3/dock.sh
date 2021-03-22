@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 
-CMD=xrandr --output
+CMD="xrandr --output"
 
 # Built in
-MAIN=eDP-1
-MAINC=$CMD $MAIN
+MAIN="eDP-1"
+MAINC="$CMD $MAIN"
 
 # BenQ
-DESK=DP-1-3
-DESKC=$CMD $DESK
+DESK="DP-1-3"
+DESKC="$CMD $DESK"
 
 # Samsung
-DESK_ALT=DP-1-1
-DESK_ALTC=$CMD $DESK_ALT
+DESK_ALT="DP-1-1"
+DESK_ALTC="$CMD $DESK_ALT"
 
 if xrandr | grep "$DESK connected"; then
   $DESKC --mode 1920x1080 --primary
