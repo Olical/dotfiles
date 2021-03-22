@@ -1,14 +1,27 @@
 #!/usr/bin/env bash
 
-xrandr --output eDP-1 --off # Built in
-xrandr --output DP-1-3 --off # BenQ
-xrandr --output DP-1-1 --off # Samsung
+CMD=xrandr --output
 
-if xrandr | grep "DP-1-3 connected"; then
-  xrandr --output DP-1-3 --mode 1920x1080 --primary
-  xrandr --output DP-1-1 --mode 1920x1080 --right-of DP-1-3
+# Built in
+MAIN=eDP-1
+MAINC=$CMD $MAIN
+
+# BenQ
+DESK=DP-1-3
+DESKC=$CMD $DESK
+
+# Samsung
+DESK_ALT=DP-1-1
+DESK_ALTC=$CMD $DESK_ALT
+
+if xrandr | grep "$DESK connected"; then
+  $DESKC --mode 1920x1080 --primary
+  $DESK_ALTC --mode 1920x1080 --right-of $DESK
+  $MAINC --off
 else
-  xrandr --output eDP-1 --mode 1920x1080 --primary
+  $MAINC --mode 1920x1080 --primary
+  $DESKC --off
+  $DESK_ALTC --off
 fi
 
 feh --bg-scale ~/.config/i3/background-image
