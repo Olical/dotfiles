@@ -1,60 +1,72 @@
 (module dotfiles.module.plugin
   {require {nvim aniseed.nvim
-            core aniseed.core
+            a aniseed.core
             util dotfiles.util
             packer packer}})
 
-(packer.startup
-  (fn [use]
-    (use {1 :HerringtonDarkholme/yats.vim})
-    (use {1 :LnL7/vim-nix})
-    (use {1 :Olical/AnsiEsc})
-    (use {1 :Olical/aniseed})
-    (use {1 :Olical/conjure})
-    (use {1 :Olical/fennel.vim})
-    (use {1 :Olical/nvim-local-fennel})
-    (use {1 :Olical/vim-enmasse})
-    (use {1 :PeterRincker/vim-argumentative})
-    (use {1 :airblade/vim-gitgutter})
-    (use {1 :clojure-vim/clojure.vim})
-    (use {1 :clojure-vim/vim-jack-in})
-    (use {1 :dag/vim-fish})
-    (use {1 :easymotion/vim-easymotion})
-    (use {1 :guns/vim-sexp})
-    (use {1 :hashivim/vim-terraform})
-    (use {1 :hrsh7th/nvim-compe})
-    (use {1 :hylang/vim-hy})
-    (use {1 :itchyny/lightline.vim})
-    (use {1 :janet-lang/janet.vim})
-    (use {1 :jiangmiao/auto-pairs :tag :v2.0.0})
-    (use {1 :junegunn/fzf :commit :fc7630a66d8b07ec90603f7919f8aadf891783ac})
-    (use {1 :junegunn/fzf.vim})
-    (use {1 :lambdalisue/suda.vim})
-    (use {1 :liuchengxu/vim-better-default})
-    (use {1 :maxmellon/vim-jsx-pretty})
-    (use {1 :norcalli/nvim-colorizer.lua})
-    (use {1 :pangloss/vim-javascript})
-    (use {1 :prettier/vim-prettier :ft :javascript})
-    (use {1 :radenling/vim-dispatch-neovim})
-    (use {1 :simnalamburt/vim-mundo})
-    (use {1 :srcery-colors/srcery-vim})
-    (use {1 :tami5/compe-conjure})
-    (use {1 :tpope/vim-abolish})
-    (use {1 :tpope/vim-commentary})
-    (use {1 :tpope/vim-dadbod})
-    (use {1 :tpope/vim-dispatch})
-    (use {1 :tpope/vim-eunuch})
-    (use {1 :tpope/vim-fugitive})
-    (use {1 :tpope/vim-repeat})
-    (use {1 :tpope/vim-sexp-mappings-for-regular-people})
-    (use {1 :tpope/vim-sleuth})
-    (use {1 :tpope/vim-surround})
-    (use {1 :tpope/vim-unimpaired})
-    (use {1 :tpope/vim-vinegar})
-    (use {1 :w0rp/ale})
-    (use {1 :wbthomason/packer.nvim})
-    (use {1 :wlangstroth/vim-racket})
-    ))
+(defn- use [...]
+  "Iterates through the arguments as pairs and calls packer's use function for
+  each of them. Works around Fennel not liking mixed associative and sequential
+  tables as well."
+  (let [pkgs [...]]
+    (packer.startup
+      (fn [use]
+        (for [i 1 (a.count pkgs) 2]
+          (let [name (. pkgs i)
+                opts (. pkgs (+ i 1))]
+            (use (a.assoc opts 1 name))))))))
+
+;; Plugins to be managed by packer.
+(use
+  :HerringtonDarkholme/yats.vim {}
+  :LnL7/vim-nix {}
+  :Olical/AnsiEsc {}
+  :Olical/aniseed {}
+  :Olical/conjure {}
+  :Olical/fennel.vim {}
+  :Olical/nvim-local-fennel {}
+  :Olical/vim-enmasse {}
+  :PeterRincker/vim-argumentative {}
+  :airblade/vim-gitgutter {}
+  :clojure-vim/clojure.vim {}
+  :clojure-vim/vim-jack-in {}
+  :dag/vim-fish {}
+  :easymotion/vim-easymotion {}
+  :guns/vim-sexp {}
+  :hashivim/vim-terraform {}
+  :hrsh7th/nvim-compe {}
+  :hylang/vim-hy {}
+  :itchyny/lightline.vim {}
+  :janet-lang/janet.vim {}
+  :jiangmiao/auto-pairs {:tag :v2.0.0}
+  :junegunn/fzf {:commit :fc7630a66d8b07ec90603f7919f8aadf891783ac}
+  :junegunn/fzf.vim {}
+  :lambdalisue/suda.vim {}
+  :liuchengxu/vim-better-default {}
+  :maxmellon/vim-jsx-pretty {}
+  :norcalli/nvim-colorizer.lua {}
+  :pangloss/vim-javascript {}
+  :prettier/vim-prettier {:ft :javascript}
+  :radenling/vim-dispatch-neovim {}
+  :simnalamburt/vim-mundo {}
+  :srcery-colors/srcery-vim {}
+  :tami5/compe-conjure {}
+  :tpope/vim-abolish {}
+  :tpope/vim-commentary {}
+  :tpope/vim-dadbod {}
+  :tpope/vim-dispatch {}
+  :tpope/vim-eunuch {}
+  :tpope/vim-fugitive {}
+  :tpope/vim-repeat {}
+  :tpope/vim-sexp-mappings-for-regular-people {}
+  :tpope/vim-sleuth {}
+  :tpope/vim-surround {}
+  :tpope/vim-unimpaired {}
+  :tpope/vim-vinegar {}
+  :w0rp/ale {}
+  :wbthomason/packer.nvim {}
+  :wlangstroth/vim-racket {}
+  )
 
 ;; Plugin configuration that should be loaded even if the directory doesn't
 ;; exist or it isn't installed according to packer.
@@ -72,13 +84,13 @@
   "Returns the matching plugin name if the given plugin can be found within any
   of the required plugins So `deoplete` would match `deoplete.nvim`."
   (or (and (. packer_plugins candidate) candidate)
-      (->> (core.keys packer_plugins)
-           (core.some
+      (->> (a.keys packer_plugins)
+           (a.some
              (fn [plug-name]
                (and (plug-name:find candidate 1 true) plug-name))))))
 
 ;; Load plugin configuration modules.
-(core.run!
+(a.run!
   (fn [path]
     (let [name (nvim.fn.fnamemodify path ":t:r")
           full-name (find-plugin name)
