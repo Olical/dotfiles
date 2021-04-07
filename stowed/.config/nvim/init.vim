@@ -5,12 +5,12 @@ Plug 'LnL7/vim-nix'
 Plug 'Olical/AnsiEsc'
 Plug 'Olical/aniseed', {'branch': 'develop'}
 Plug 'Olical/conjure', {'branch': 'develop'}
+Plug 'Olical/fennel.vim'
 Plug 'Olical/kkslider'
 Plug 'Olical/nvim-local-fennel', {'branch': 'develop'}
 Plug 'Olical/vim-enmasse'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'airblade/vim-gitgutter'
-Plug 'bakpakin/fennel.vim'
 Plug 'clojure-vim/clojure.vim'
 Plug 'clojure-vim/vim-jack-in'
 Plug 'dag/vim-fish'
