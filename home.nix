@@ -4,25 +4,6 @@ let
   dag = config.lib.dag;
   unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
   thunar = pkgs.xfce.thunar.override { thunarPlugins = [pkgs.xfce.thunar-archive-plugin]; };
-  hy = unstable.python3.pkgs.buildPythonPackage rec {
-    pname = "hy";
-    version = "0.20.0";
-    src = unstable.python3.pkgs.fetchPypi {
-      inherit pname version;
-      sha256 = "1b72863754fb57e2dd275a9775bf621cb50a565e76733a2e74e9954e7fbb060e";
-    };
-    doCheck = false;
-    propagatedBuildInputs = with unstable.python3Packages; [
-      astor colorama funcparserlib rply
-    ];
-  };
-  python = unstable.python3.withPackages (ps: with ps; [ pynvim hy ]);
-  dwarf-fortress = unstable.dwarf-fortress-packages.dwarf-fortress-full.override {
-    enableIntro = false;
-    enableSound = false;
-    enableSoundSense = false;
-    enableStoneSense = false;
-  };
 in
 {
   programs.home-manager.enable = true;
@@ -38,7 +19,6 @@ in
     bat
     cowsay
     curl
-    direnv
     entr
     feh
     fish
@@ -52,7 +32,7 @@ in
     killall
     lazygit
     maven
-    mitscheme
+    neovim-nightly
     netcat-gnu
     nodejs
     python
@@ -62,20 +42,16 @@ in
     unstable.clojure
     unstable.docker-compose
     unstable.fzf
-    unstable.guile
-    unstable.janet
     unstable.luajit
     unstable.luarocks
-    unstable.neovim # neovim-nightly
-    unstable.racket
     unzip
     xmlformat
 
     # Heavy GUI based things.
     # May want to comment these out in headless environments.
     baobab
-    bitwarden bitwarden-cli
-    dwarf-fortress
+    bitwarden
+    bitwarden-cli
     ffmpeg
     fira-code
     fira-code-symbols
@@ -96,13 +72,15 @@ in
     steam
     thunar
     unstable.discord
-    unstable.love_11
     unstable.obs-studio
     vlc
     xclip
     xfce.xfce4-screenshooter
     xss-lock
   ];
+
+  programs.direnv.enable = true;
+  programs.direnv.enableNixDirenvIntegration = true;
 
   home.activation.stow = dag.entryAfter [ "writeBoundary" ] ''
     cd $HOME/.config/nixpkgs
