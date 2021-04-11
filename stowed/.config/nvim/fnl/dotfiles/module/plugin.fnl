@@ -74,11 +74,12 @@
   {:aniseed true
    :conjure true})
 
-(def- data-dir (.. (nvim.fn.stdpath :data) "/plugged"))
+(def- packer-dir (.. (nvim.fn.stdpath :data) "/site/pack/packer"))
 
 (defn- plugin-installed? [name]
   "Checks if the plugin directory can be found in the data directory."
-  (= 1 (nvim.fn.isdirectory (.. data-dir "/" name))))
+  (or (= 1 (nvim.fn.isdirectory (.. packer-dir "/start/" name)))
+      (= 1 (nvim.fn.isdirectory (.. packer-dir "/opt/" name)))))
 
 (defn- find-plugin [candidate]
   "Returns the matching plugin name if the given plugin can be found within any
