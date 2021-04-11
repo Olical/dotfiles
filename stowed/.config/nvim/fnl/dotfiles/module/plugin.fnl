@@ -38,8 +38,8 @@
   :hylang/vim-hy {}
   :itchyny/lightline.vim {}
   :janet-lang/janet.vim {}
-  :jiangmiao/auto-pairs {:tag :v2.0.0}
-  :junegunn/fzf {:commit :fc7630a66d8b07ec90603f7919f8aadf891783ac}
+  :jiangmiao/auto-pairs {}
+  :junegunn/fzf {}
   :junegunn/fzf.vim {}
   :lambdalisue/suda.vim {}
   :liuchengxu/vim-better-default {}
