@@ -44,11 +44,11 @@
   :lambdalisue/suda.vim {}
   :liuchengxu/vim-better-default {}
   :maxmellon/vim-jsx-pretty {}
+  :mbbill/undotree {}
   :norcalli/nvim-colorizer.lua {}
   :pangloss/vim-javascript {}
   :prettier/vim-prettier {:ft :javascript}
   :radenling/vim-dispatch-neovim {}
-  :simnalamburt/vim-mundo {}
   :srcery-colors/srcery-vim {}
   :tami5/compe-conjure {}
   :tpope/vim-abolish {}
