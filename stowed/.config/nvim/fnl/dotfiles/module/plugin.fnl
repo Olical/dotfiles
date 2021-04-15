@@ -21,8 +21,8 @@
   :HerringtonDarkholme/yats.vim {}
   :LnL7/vim-nix {}
   :Olical/AnsiEsc {}
-  :Olical/aniseed {}
-  :Olical/conjure {}
+  :Olical/aniseed {:branch :develop}
+  :Olical/conjure {:branch :develop}
   :Olical/fennel.vim {}
   :Olical/nvim-local-fennel {}
   :Olical/vim-enmasse {}
