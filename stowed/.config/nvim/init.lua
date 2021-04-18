@@ -22,4 +22,4 @@ ensure("wbthomason", "packer.nvim")
 ensure("Olical", "aniseed")
 
 -- Enable Aniseed's automatic compilation and loading of Fennel source code.
-vim.g["aniseed#env"] = true
+vim.g["aniseed#env"] = {module = "dotfiles.init"}

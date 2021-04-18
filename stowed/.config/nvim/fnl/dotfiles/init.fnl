@@ -1,4 +1,4 @@
-(module init
+(module dotfiles.init
   {require {core aniseed.core
             nvim aniseed.nvim
             util dotfiles.util}})
