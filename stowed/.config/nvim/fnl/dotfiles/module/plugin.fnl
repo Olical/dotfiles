@@ -21,8 +21,8 @@
   :HerringtonDarkholme/yats.vim {}
   :LnL7/vim-nix {}
   :Olical/AnsiEsc {}
-  :Olical/aniseed {}
-  :Olical/conjure {}
+  :Olical/aniseed {:branch :develop}
+  :Olical/conjure {:branch :develop}
   :Olical/fennel.vim {}
   :Olical/nvim-local-fennel {}
   :Olical/vim-enmasse {}
@@ -44,11 +44,11 @@
   :lambdalisue/suda.vim {}
   :liuchengxu/vim-better-default {}
   :maxmellon/vim-jsx-pretty {}
+  :mbbill/undotree {}
   :norcalli/nvim-colorizer.lua {}
   :pangloss/vim-javascript {}
   :prettier/vim-prettier {:ft :javascript}
   :radenling/vim-dispatch-neovim {}
-  :simnalamburt/vim-mundo {}
   :srcery-colors/srcery-vim {}
   :tami5/compe-conjure {}
   :tpope/vim-abolish {}
@@ -84,11 +84,12 @@
 (defn- find-plugin [candidate]
   "Returns the matching plugin name if the given plugin can be found within any
   of the required plugins So `deoplete` would match `deoplete.nvim`."
-  (or (and (. packer_plugins candidate) candidate)
-      (->> (a.keys packer_plugins)
-           (a.some
-             (fn [plug-name]
-               (and (plug-name:find candidate 1 true) plug-name))))))
+  (let [plugins (a.get _G :packer_plugins)]
+    (or (and (a.get plugins candidate) candidate)
+        (->> (a.keys plugins)
+             (a.some
+               (fn [plug-name]
+                 (and (plug-name:find candidate 1 true) plug-name)))))))
 
 ;; Load plugin configuration modules.
 (a.run!
