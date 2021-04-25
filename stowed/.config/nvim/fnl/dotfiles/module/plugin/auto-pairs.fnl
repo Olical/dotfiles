@@ -1,6 +1,6 @@
 (module dotfiles.module.plugin.auto-pairs
-  {require {core aniseed.core
-            nvim aniseed.nvim}})
+  {autoload {core aniseed.core
+             nvim aniseed.nvim}})
 
 (defn init []
   (let [auto-pairs nvim.g.AutoPairs]

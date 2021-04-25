@@ -1,5 +1,5 @@
 (module dotfiles.module.plugin.fugitive
-  {require {util dotfiles.util}})
+  {autoload {util dotfiles.util}})
 
 (util.nnoremap :gs "Gstatus")
 (util.nnoremap :gb "Gblame")

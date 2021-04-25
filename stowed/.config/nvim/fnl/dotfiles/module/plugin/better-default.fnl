@@ -1,5 +1,5 @@
 (module dotfiles.module.plugin.better-default
-  {require {nvim aniseed.nvim}})
+  {autoload {nvim aniseed.nvim}})
 
 (set nvim.g.vim_better_default_persistent_undo true)
 (nvim.ex.runtime_ "plugin/default.vim")

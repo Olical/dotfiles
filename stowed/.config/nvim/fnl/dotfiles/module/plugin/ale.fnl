@@ -1,5 +1,5 @@
 (module dotfiles.module.plugin.ale
-  {require {nvim aniseed.nvim}})
+  {autoload {nvim aniseed.nvim}})
 
 (set nvim.g.ale_linters
   {:javascript [:standard]

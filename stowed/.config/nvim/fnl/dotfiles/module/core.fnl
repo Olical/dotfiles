@@ -1,5 +1,5 @@
 (module dotfiles.module.core
-  {require {nvim aniseed.nvim}})
+  {autoload {nvim aniseed.nvim}})
 
 ;; Generic Neovim configuration.
 (set nvim.o.termguicolors true)

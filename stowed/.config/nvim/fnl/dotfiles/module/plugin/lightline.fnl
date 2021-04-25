@@ -1,6 +1,6 @@
 (module dotfiles.module.plugin.lightline
-  {require {nvim aniseed.nvim
-            nu aniseed.nvim.util}})
+  {autoload {nvim aniseed.nvim
+             nu aniseed.nvim.util}})
 
 (defn- expand [s]
   (nvim.fn.expand s))

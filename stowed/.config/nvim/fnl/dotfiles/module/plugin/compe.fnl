@@ -1,6 +1,6 @@
 (module dotfiles.module.plugin.compe
-  {require {compe compe
-            nvim aniseed.nvim}})
+  {autoload {compe compe
+             nvim aniseed.nvim}})
 
 (set nvim.o.completeopt "menuone,noselect")
 

@@ -1,5 +1,5 @@
 (module dotfiles.module.plugin.srcery
-  {require {nvim aniseed.nvim}
+  {autoload {nvim aniseed.nvim}
    require-macros [dotfiles.macros]})
 
 (defn colorscheme-fixes []

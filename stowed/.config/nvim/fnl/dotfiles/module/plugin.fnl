@@ -1,8 +1,8 @@
 (module dotfiles.module.plugin
-  {require {nvim aniseed.nvim
-            a aniseed.core
-            util dotfiles.util
-            packer packer}})
+  {autoload {nvim aniseed.nvim
+             a aniseed.core
+             util dotfiles.util
+             packer packer}})
 
 (defn- use [...]
   "Iterates through the arguments as pairs and calls packer's use function for

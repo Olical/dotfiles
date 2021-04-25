@@ -1,4 +1,4 @@
 (module dotfiles.module.plugin.easymotion
-  {require {nvim aniseed.nvim}})
+  {autoload {nvim aniseed.nvim}})
 
 (nvim.set_keymap "" :<leader>j "<plug>(easymotion-prefix)" {})
