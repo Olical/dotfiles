@@ -9,3 +9,6 @@ docker-compose.local.yml
 .rebl
 .lnvim.fnl
 .lnvim.lua
+.direnv/
+.envrc
+shell.nix
