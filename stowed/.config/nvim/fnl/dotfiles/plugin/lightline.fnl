@@ -1,4 +1,4 @@
-(module dotfiles.module.plugin.lightline
+(module dotfiles.plugin.lightline
   {autoload {nvim aniseed.nvim
              nu aniseed.nvim.util}})
 
@@ -15,7 +15,7 @@
     ""))
 
 (defn- bridge [from to]
-  (nu.fn-bridge from :dotfiles.module.plugin.lightline to {:return true}))
+  (nu.fn-bridge from :dotfiles.plugin.lightline to {:return true}))
 
 (bridge :LightlineFilename :filename)
 (bridge :LightlineReadonly :readonly)

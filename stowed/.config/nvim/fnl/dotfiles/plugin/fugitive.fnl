@@ -1,4 +1,4 @@
-(module dotfiles.module.plugin.fugitive
+(module dotfiles.plugin.fugitive
   {autoload {util dotfiles.util}})
 
 (util.nnoremap :gs "Gstatus")

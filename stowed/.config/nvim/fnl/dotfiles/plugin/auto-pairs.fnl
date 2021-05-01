@@ -1,4 +1,4 @@
-(module dotfiles.module.plugin.auto-pairs
+(module dotfiles.plugin.auto-pairs
   {autoload {core aniseed.core
              nvim aniseed.nvim}})
 
@@ -13,4 +13,4 @@
     (nvim.ex.autocmd
       :FileType
       "clojure,fennel,scheme"
-      "lua require('dotfiles.module.plugin.auto-pairs').init()")))
+      "lua require('dotfiles.plugin.auto-pairs').init()")))

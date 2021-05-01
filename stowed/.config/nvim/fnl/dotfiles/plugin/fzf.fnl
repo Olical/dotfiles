@@ -1,4 +1,4 @@
-(module dotfiles.module.plugin.fzf
+(module dotfiles.plugin.fzf
   {autoload {nvim aniseed.nvim
              util dotfiles.util}})
 

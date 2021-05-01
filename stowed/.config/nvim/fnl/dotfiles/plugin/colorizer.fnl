@@ -1,4 +1,4 @@
-(module dotfiles.module.plugin.colorizer)
+(module dotfiles.plugin.colorizer)
 
 (vim.schedule
   (fn []

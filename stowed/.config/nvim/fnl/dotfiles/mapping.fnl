@@ -1,4 +1,4 @@
-(module dotfiles.module.mapping
+(module dotfiles.mapping
   {autoload {nvim aniseed.nvim
              nu aniseed.nvim.util
              core aniseed.core}})
@@ -36,7 +36,7 @@
 
 (nu.fn-bridge
   :DeleteHiddenBuffers
-  :dotfiles.module.mapping :delete-hidden-buffers)
+  :dotfiles.mapping :delete-hidden-buffers)
 
 (defn delete-hidden-buffers []
   (let [visible-bufs (->> (nvim.fn.range 1 (nvim.fn.tabpagenr :$))

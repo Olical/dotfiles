@@ -1,4 +1,4 @@
-(module dotfiles.module.plugin.undotree
+(module dotfiles.plugin.undotree
   {autoload {nvim aniseed.nvim}})
 
 (nvim.set_keymap

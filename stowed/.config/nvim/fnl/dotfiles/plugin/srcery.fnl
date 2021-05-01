@@ -1,4 +1,4 @@
-(module dotfiles.module.plugin.srcery
+(module dotfiles.plugin.srcery
   {autoload {nvim aniseed.nvim}
    require-macros [dotfiles.macros]})
 
