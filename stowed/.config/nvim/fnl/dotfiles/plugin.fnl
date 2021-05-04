@@ -24,18 +24,16 @@
 
 ;; Plugins to be managed by packer.
 (use
+  ; "~/repos/Olical/conjure" {:mod :conjure}
+  ; "~/repos/Olical/aniseed" {}
+  ; "~/repos/Olical/nvim-local-fennel" {}
+
   :HerringtonDarkholme/yats.vim {}
   :LnL7/vim-nix {}
   :Olical/AnsiEsc {}
-
-  "~/repos/Olical/conjure" {:mod :conjure}
-  "~/repos/Olical/aniseed" {}
-  "~/repos/Olical/nvim-local-fennel" {}
-
-  ; :Olical/aniseed {:branch :develop :mod :conjure}
-  ; :Olical/conjure {:branch :develop}
-  ; :Olical/nvim-local-fennel {}
-
+  :Olical/aniseed {:branch :develop :mod :conjure}
+  :Olical/conjure {:branch :develop}
+  :Olical/nvim-local-fennel {}
   :Olical/vim-enmasse {}
   :PeterRincker/vim-argumentative {}
   :airblade/vim-gitgutter {}
