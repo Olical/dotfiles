@@ -72,6 +72,7 @@
   :tpope/vim-surround {}
   :tpope/vim-unimpaired {}
   :tpope/vim-vinegar {}
+  :tweekmonster/startuptime.vim {}
   :w0rp/ale {:mod :ale}
   :wbthomason/packer.nvim {}
   :wlangstroth/vim-racket {}
