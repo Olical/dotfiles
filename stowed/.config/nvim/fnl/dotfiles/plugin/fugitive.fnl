@@ -1,8 +1,8 @@
 (module dotfiles.plugin.fugitive
   {autoload {util dotfiles.util}})
 
-(util.nnoremap :gs "Gstatus")
-(util.nnoremap :gb "Gblame")
+(util.nnoremap :gs "Git")
+(util.nnoremap :gb "Git blame")
 (util.nnoremap :gd "Gdiff")
 (util.nnoremap :gp "Git push")
 (util.nnoremap :gl "Git pull")
