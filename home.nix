@@ -4,6 +4,7 @@ let
   dag = config.lib.dag;
   unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
   thunar = pkgs.xfce.thunar.override { thunarPlugins = [pkgs.xfce.thunar-archive-plugin]; };
+  babashka = import ./pkgs/babashka.nix pkgs;
 in
 {
   programs.home-manager.enable = true;
@@ -22,6 +23,7 @@ in
 
   home.packages = with pkgs; [
     asciinema
+    babashka
     bat
     cowsay
     curl
