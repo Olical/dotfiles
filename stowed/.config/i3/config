@@ -89,6 +89,11 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# move the container between monitors
+# https://www.reddit.com/r/i3wm/comments/2m1knu/struggling_to_move_workspaces_between_monitors/cm0kbb8/
+bindsym $mod+Shift+greater move workspace to output right
+bindsym $mod+Shift+less move workspace to output left
+
 # split in horizontal orientation
 bindsym $mod+Shift+v split h
 
