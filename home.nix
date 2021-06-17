@@ -8,7 +8,7 @@ let
 in
 {
   programs.home-manager.enable = true;
-  home.stateVersion = "20.09";
+  home.stateVersion = "21.05";
   home.username = "$USER";
   home.homeDirectory = "/home/$USER";
 
