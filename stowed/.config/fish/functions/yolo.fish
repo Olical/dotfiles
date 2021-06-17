@@ -6,7 +6,7 @@ function yolo
 
   if ! set -q DOTFILES_GUEST
     sudo nix-channel --update
-    sudo nixos-rebuild switch
+    sudo nixos-rebuild switch --upgrade
   end
 
   nix-channel --update
