@@ -16,6 +16,7 @@ function yolo
   if ! set -q DOTFILES_GUEST
     sudo nix-env --delete-generations 14d
     nix-store --gc
+    nix-collect-garbage --delete-older-than 14d
     sudo journalctl --vacuum-time=10d
   end
 
