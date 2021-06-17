@@ -31,8 +31,8 @@
   :HerringtonDarkholme/yats.vim {}
   :LnL7/vim-nix {}
   :Olical/AnsiEsc {}
-  :Olical/aniseed {:branch :develop :mod :conjure}
-  :Olical/conjure {:branch :develop}
+  :Olical/aniseed {:branch :develop}
+  :Olical/conjure {:branch :develop :mod :conjure}
   :Olical/nvim-local-fennel {}
   :Olical/vim-enmasse {}
   :PeterRincker/vim-argumentative {}
