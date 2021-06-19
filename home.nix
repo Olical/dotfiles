@@ -5,6 +5,15 @@ let
   unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
   thunar = pkgs.xfce.thunar.override { thunarPlugins = [pkgs.xfce.thunar-archive-plugin]; };
   babashka = import ./pkgs/babashka.nix pkgs;
+
+  df-pkg = pkgs.callPackage (import (fetchTarball https://github.com/Olical/dwarf-fortress-nix/archive/main.tar.gz)) {};
+  dwarf-fortress = (df-pkg.dwarf-fortress-full.override {
+    dfVersion = "0.47.05";
+    enableIntro = false;
+    enableSound = false;
+    enableFPS = true;
+  });
+
 in
 {
   programs.home-manager.enable = true;
@@ -16,9 +25,7 @@ in
   fonts.fontconfig.enable = true;
 
   nixpkgs.overlays = [
-    (import (builtins.fetchTarball {
-      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-    }))
+    (import (fetchTarball https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz))
   ];
 
   home.packages = with pkgs; [
@@ -43,6 +50,7 @@ in
     neovim-nightly
     netcat-gnu
     nodejs
+    pinentry-curses
     python
     ripgrep
     stow
@@ -60,6 +68,7 @@ in
     baobab
     bitwarden
     bitwarden-cli
+    dwarf-fortress
     ffmpeg
     fira-code
     fira-code-symbols
@@ -99,5 +108,6 @@ in
     enable = true;
     defaultCacheTtl = 1800;
     enableSshSupport = true;
+    pinentryFlavor = "curses";
   };
 }

@@ -32,7 +32,7 @@
 	lg = log --stat
 	d = diff
 [commit]
-	gpgsign = true
+	gpgsign = false
 [pull]
 	rebase = true
 [filter "lfs"]
