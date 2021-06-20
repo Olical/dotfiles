@@ -2,116 +2,44 @@
 
 let
   dag = config.lib.dag;
-  unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
-  thunar = pkgs.xfce.thunar.override { thunarPlugins = [pkgs.xfce.thunar-archive-plugin]; };
-  babashka = import ./pkgs/babashka.nix pkgs;
-
-  df-pkg = pkgs.callPackage (import (fetchTarball https://github.com/Olical/dwarf-fortress-nix/archive/main.tar.gz)) {};
-  dwarf-fortress = (df-pkg.dwarf-fortress-full.override {
-    dfVersion = "0.47.05";
-    enableIntro = false;
-    enableSound = false;
-    enableFPS = true;
-  });
-
+  pkg-list-opts = {
+    pkgs = pkgs;
+    unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
+  };
+  minimal = import ./pkg-lists/minimal.nix pkg-list-opts;
+  linked = import ./pkg-lists/linked.nix pkg-list-opts;
 in
-{
-  programs.home-manager.enable = true;
-  home.stateVersion = "21.05";
-  home.username = "$USER";
-  home.homeDirectory = "/home/$USER";
+  {
+    programs.home-manager.enable = true;
+    home.stateVersion = "21.05";
+    home.username = "$USER";
+    home.homeDirectory = "/home/$USER";
 
-  nixpkgs.config.allowUnfree = true;
-  fonts.fontconfig.enable = true;
+    nixpkgs.config.allowUnfree = true;
+    fonts.fontconfig.enable = true;
 
-  nixpkgs.overlays = [
-    (import (fetchTarball https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz))
-  ];
+    nixpkgs.overlays = [
+      (import (fetchTarball https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz))
+    ];
 
-  home.packages = with pkgs; [
-    asciinema
-    babashka
-    bat
-    cowsay
-    curl
-    entr
-    feh
-    fish
-    gcc
-    git
-    git-secret
-    gnumake
-    htop
-    httpie
-    joker
-    killall
-    lazygit
-    maven
-    neovim-nightly
-    netcat-gnu
-    nodejs
-    pinentry-curses
-    python
-    ripgrep
-    stow
-    tree
-    unstable.clojure
-    unstable.docker-compose
-    unstable.fzf
-    unstable.luajit
-    unstable.luarocks
-    unzip
-    xmlformat
+    home.packages = minimal ++ linked;
 
-    # Heavy GUI based things.
-    # May want to comment these out in headless environments.
-    baobab
-    bitwarden
-    bitwarden-cli
-    dwarf-fortress
-    ffmpeg
-    fira-code
-    fira-code-symbols
-    firefox
-    gimp
-    glibcLocales
-    i3lock
-    i3status
-    kitty
-    lastpass-cli
-    networkmanagerapplet
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    pavucontrol
-    rofi
-    spotify
-    steam
-    thunar
-    unstable.discord
-    unstable.obs-studio
-    vlc
-    xclip
-    xfce.xfce4-screenshooter
-    xss-lock
-  ];
+    programs.direnv.enable = true;
+    programs.direnv.enableNixDirenvIntegration = true;
 
-  programs.direnv.enable = true;
-  programs.direnv.enableNixDirenvIntegration = true;
+    home.activation.stow = dag.entryAfter [ "writeBoundary" ] ''
+      cd $HOME/.config/nixpkgs
+      stow --target=$HOME stowed
+    '';
 
-  home.activation.stow = dag.entryAfter [ "writeBoundary" ] ''
-    cd $HOME/.config/nixpkgs
-    stow --target=$HOME stowed
-  '';
+    services.gpg-agent = {
+      enable = true;
+      defaultCacheTtl = 1800;
+      enableSshSupport = true;
+      pinentryFlavor = "curses";
+    };
 
-  services.gpg-agent = {
-    enable = true;
-    defaultCacheTtl = 1800;
-    enableSshSupport = true;
-    pinentryFlavor = "curses";
-  };
-
-  services.dropbox = {
-    enable = true;
-  };
-}
+    services.dropbox = {
+      enable = true;
+    };
+  }
