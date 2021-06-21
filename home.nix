@@ -25,7 +25,7 @@ in
     home.packages = minimal ++ active;
 
     programs.direnv.enable = true;
-    programs.direnv.enableNixDirenvIntegration = true;
+    programs.direnv.nix-direnv.enable = true;
 
     home.activation.stow = dag.entryAfter [ "writeBoundary" ] ''
       cd $HOME/.config/nixpkgs
