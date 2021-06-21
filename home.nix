@@ -6,7 +6,7 @@ let
     pkgs = pkgs;
     unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {};
   };
-  minimal = import ./pkg-lists/minimal.nix pkg-list-opts;
+  base = import ./pkg-lists/base.nix pkg-list-opts;
   active = import ./pkg-lists/active.nix pkg-list-opts;
 in
   {
@@ -22,7 +22,7 @@ in
       (import (fetchTarball https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz))
     ];
 
-    home.packages = minimal ++ active;
+    home.packages = base ++ active;
 
     programs.direnv.enable = true;
     programs.direnv.nix-direnv.enable = true;
