@@ -18,10 +18,6 @@ in
     nixpkgs.config.allowUnfree = true;
     fonts.fontconfig.enable = true;
 
-    nixpkgs.overlays = [
-      (import (fetchTarball https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz))
-    ];
-
     home.packages = base ++ active;
 
     programs.direnv.enable = true;

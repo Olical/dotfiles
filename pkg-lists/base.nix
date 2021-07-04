@@ -22,7 +22,6 @@ in
     killall
     lazygit
     maven
-    neovim-nightly
     netcat-gnu
     nodejs
     pinentry-curses
@@ -35,6 +34,7 @@ in
     unstable.fzf
     unstable.luajit
     unstable.luarocks
+    unstable.neovim
     unzip
     xmlformat
   ]
