@@ -34,8 +34,4 @@ in
       enableSshSupport = true;
       pinentryFlavor = "curses";
     };
-
-    services.dropbox = {
-      enable = true;
-    };
   }
