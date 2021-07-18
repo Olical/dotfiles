@@ -3,6 +3,7 @@
    require-macros [dotfiles.macros]})
 
 (defn colorscheme-fixes []
+  (_: hi :FloatBorder :guibg=#303030)
   (_: hi :SpellBad :gui=underline)
   (_: hi :SpellLocal :gui=underline)
   (_: hi :SpellRare :gui=underline))
