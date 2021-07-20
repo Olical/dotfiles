@@ -32,7 +32,6 @@ in
     pavucontrol
     rofi
     spotify
-    steam
     thunar
     unstable.discord
     unstable.obs-studio
