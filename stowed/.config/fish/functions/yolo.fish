@@ -11,7 +11,7 @@ function yolo
 
   nix-channel --update
   home-manager switch
-  nix-collect-garbage --delete-generations 14d
+  nix-collect-garbage --delete-older-than 14d
 
   if ! set -q DOTFILES_GUEST
     sudo nix-collect-garbage --delete-older-than 14d
