@@ -30,6 +30,7 @@ in
     stow
     tree
     unstable.clojure
+    unstable.clojure-lsp
     unstable.docker-compose
     unstable.fzf
     unstable.luajit
