@@ -48,14 +48,13 @@
   :itchyny/lightline.vim {:mod :lightline}
   :janet-lang/janet.vim {}
   :jiangmiao/auto-pairs {:mod :auto-pairs}
-  :junegunn/fzf {:mod :fzf}
-  :junegunn/fzf.vim {}
   :lambdalisue/suda.vim {}
   :liuchengxu/vim-better-default {:mod :better-default}
   :maxmellon/vim-jsx-pretty {}
   :mbbill/undotree {:mod :undotree}
   :neovim/nvim-lspconfig {:mod :lspconfig}
   :norcalli/nvim-colorizer.lua {:mod :colorizer}
+  :nvim-telescope/telescope.nvim {:requires [[:nvim-lua/popup.nvim] [:nvim-lua/plenary.nvim]] :mod :telescope}
   :nvim-treesitter/nvim-treesitter {:run ":TSUpdate" :mod :treesitter}
   :pangloss/vim-javascript {}
   :prettier/vim-prettier {:ft :javascript}
