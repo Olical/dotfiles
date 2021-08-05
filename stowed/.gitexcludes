@@ -11,4 +11,5 @@ docker-compose.local.yml
 .lnvim.lua
 .direnv/
 .envrc
+.lsp
 shell.nix
