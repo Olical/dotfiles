@@ -54,6 +54,7 @@
   :liuchengxu/vim-better-default {:mod :better-default}
   :maxmellon/vim-jsx-pretty {}
   :mbbill/undotree {:mod :undotree}
+  :neovim/nvim-lspconfig {:mod :lspconfig}
   :norcalli/nvim-colorizer.lua {:mod :colorizer}
   :pangloss/vim-javascript {}
   :prettier/vim-prettier {:ft :javascript}
