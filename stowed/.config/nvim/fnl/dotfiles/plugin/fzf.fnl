@@ -8,19 +8,14 @@
   "rg --column --line-number --no-heading --color=always --smart-case --hidden --follow -g '!.git/'"
   "-- \".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)")
 
-(defn- map [from to]
-  (util.nnoremap
-    from
-    (.. ":" to)))
-
-(map :fg "Rg")
-(map :* "Rg <c-r><c-w>")
-(map :ff "Files")
-(map :fb "Buffers")
-(map :fw "Windows")
-(map :fh "History")
-(map :fc "Commands")
-(map :fm "Maps")
-(map :ft "Filetypes")
-(map :fM "Marks")
-(map :fH "Helptags")
+(util.lnnoremap :fg "Rg")
+(util.lnnoremap :* "Rg <c-r><c-w>")
+(util.lnnoremap :ff "Files")
+(util.lnnoremap :fb "Buffers")
+(util.lnnoremap :fw "Windows")
+(util.lnnoremap :fh "History")
+(util.lnnoremap :fc "Commands")
+(util.lnnoremap :fm "Maps")
+(util.lnnoremap :ft "Filetypes")
+(util.lnnoremap :fM "Marks")
+(util.lnnoremap :fH "Helptags")

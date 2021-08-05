@@ -1,5 +1,6 @@
 (module dotfiles.util
-  {autoload {nvim aniseed.nvim}})
+  {autoload {nvim aniseed.nvim
+             a aniseed.core}})
 
 (defn expand [path]
   (nvim.fn.expand path))
@@ -15,9 +16,12 @@
 
 (def config-path (nvim.fn.stdpath "config"))
 
-(defn nnoremap [from to]
-  (nvim.set_keymap
-    :n
-    (.. "<leader>" from)
-    (.. ":" to "<cr>")
-    {:noremap true}))
+(defn nnoremap [from to opts]
+  (let [map-opts {:noremap true}
+        to (.. ":" to "<cr>")]
+    (if (a.get opts :local?)
+      (nvim.buf_set_keymap 0 :n from to map-opts)
+      (nvim.set_keymap :n from to map-opts))))
+
+(defn lnnoremap [from to]
+  (nnoremap (.. "<leader>" from) to))
