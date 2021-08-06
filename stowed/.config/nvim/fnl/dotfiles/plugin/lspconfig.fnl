@@ -1,11 +1,12 @@
 (module dotfiles.plugin.lspconfig
   {autoload {util dotfiles.util
-             nvim aniseed.nvim
-             lsp lspconfig}})
+             nvim aniseed.nvim}})
 
-(lsp.clojure_lsp.setup {})
+(let [lsp (require :lspconfig)]
+  (when lsp
+    (lsp.clojure_lsp.setup {})))
 
-(defn map [from to]
+(defn- map [from to]
   (util.nnoremap from to {:local? true}))
 
 (defn setup []
