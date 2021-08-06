@@ -43,13 +43,14 @@
   :easymotion/vim-easymotion {:mod :easymotion}
   :guns/vim-sexp {:mod :sexp}
   :hashivim/vim-terraform {}
+  :hoob3rt/lualine.nvim {:mod :lualine}
   :hrsh7th/nvim-compe {:mod :compe}
   :hylang/vim-hy {}
-  :itchyny/lightline.vim {:mod :lightline}
   :janet-lang/janet.vim {}
   :jiangmiao/auto-pairs {:mod :auto-pairs}
   :lambdalisue/suda.vim {}
   :liuchengxu/vim-better-default {:mod :better-default}
+  :marko-cerovac/material.nvim {:mod :material}
   :maxmellon/vim-jsx-pretty {}
   :mbbill/undotree {:mod :undotree}
   :neovim/nvim-lspconfig {:mod :lspconfig}
@@ -59,7 +60,6 @@
   :pangloss/vim-javascript {}
   :prettier/vim-prettier {:ft :javascript}
   :radenling/vim-dispatch-neovim {}
-  :srcery-colors/srcery-vim {:mod :srcery}
   :tami5/compe-conjure {}
   :tpope/vim-abolish {}
   :tpope/vim-commentary {}
