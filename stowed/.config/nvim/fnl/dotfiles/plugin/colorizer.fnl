@@ -1,6 +1,5 @@
 (module dotfiles.plugin.colorizer)
 
-(vim.schedule
-  (fn []
-    (local colorizer (require :colorizer))
+(let [colorizer (require :colorizer)]
+  (when colorizer
     (colorizer.setup)))
