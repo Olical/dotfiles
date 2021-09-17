@@ -37,13 +37,13 @@
   :Olical/vim-enmasse {}
   :PeterRincker/vim-argumentative {}
   :airblade/vim-gitgutter {}
+  :beauwilliams/statusline.lua {:mod :statusline}
   :clojure-vim/clojure.vim {}
   :clojure-vim/vim-jack-in {}
   :dag/vim-fish {}
   :easymotion/vim-easymotion {:mod :easymotion}
   :guns/vim-sexp {:mod :sexp}
   :hashivim/vim-terraform {}
-  :hoob3rt/lualine.nvim {:mod :lualine}
   :hrsh7th/nvim-compe {:mod :compe}
   :hylang/vim-hy {}
   :janet-lang/janet.vim {}
@@ -55,7 +55,7 @@
   :mbbill/undotree {:mod :undotree}
   :neovim/nvim-lspconfig {:mod :lspconfig}
   :norcalli/nvim-colorizer.lua {:mod :colorizer}
-  :nvim-telescope/telescope.nvim {:requires [[:nvim-lua/popup.nvim] [:nvim-lua/plenary.nvim]] :mod :telescope}
+  :nvim-telescope/telescope.nvim {:mod :telescope :requires [[:nvim-lua/popup.nvim] [:nvim-lua/plenary.nvim]]}
   :nvim-treesitter/nvim-treesitter {:run ":TSUpdate" :mod :treesitter}
   :pangloss/vim-javascript {}
   :prettier/vim-prettier {:ft :javascript}
