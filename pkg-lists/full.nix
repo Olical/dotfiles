@@ -3,7 +3,7 @@
 let
   thunar = pkgs.xfce.thunar.override { thunarPlugins = [pkgs.xfce.thunar-archive-plugin]; };
   df-pkg = pkgs.callPackage (import (fetchTarball https://github.com/Olical/dwarf-fortress-nix/archive/main.tar.gz)) {};
-  dwarf-fortress = (df-pkg.dwarf-fortress-full.override {
+  dwarf-fortress = (unstable.dwarf-fortress-packages.dwarf-fortress-full.override {
     dfVersion = "0.47.05";
     enableIntro = false;
     enableSound = false;
