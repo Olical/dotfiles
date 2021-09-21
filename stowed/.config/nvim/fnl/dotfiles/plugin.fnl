@@ -56,7 +56,6 @@
   :neovim/nvim-lspconfig {:mod :lspconfig}
   :norcalli/nvim-colorizer.lua {:mod :colorizer}
   :nvim-telescope/telescope.nvim {:mod :telescope :requires [[:nvim-lua/popup.nvim] [:nvim-lua/plenary.nvim]]}
-  :nvim-treesitter/nvim-treesitter {:run ":TSUpdate" :mod :treesitter}
   :pangloss/vim-javascript {}
   :prettier/vim-prettier {:ft :javascript}
   :radenling/vim-dispatch-neovim {}
@@ -77,4 +76,6 @@
   :w0rp/ale {:mod :ale}
   :wbthomason/packer.nvim {}
   :wlangstroth/vim-racket {}
+
+  ; :nvim-treesitter/nvim-treesitter {:run ":TSUpdate" :mod :treesitter}
   )
