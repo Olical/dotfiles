@@ -50,6 +50,7 @@
   :janet-lang/janet.vim {}
   :jiangmiao/auto-pairs {:mod :auto-pairs}
   :lambdalisue/suda.vim {}
+  :lewis6991/impatient.nvim {}
   :liuchengxu/vim-better-default {:mod :better-default}
   :marko-cerovac/material.nvim {:mod :material}
   :maxmellon/vim-jsx-pretty {}

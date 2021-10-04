@@ -20,6 +20,10 @@ end
 -- Bootstrap essential plugins required for installing and loading the rest.
 ensure("wbthomason", "packer.nvim")
 ensure("Olical", "aniseed")
+ensure("lewis6991", "impatient.nvim")
+
+-- Load impatient which pre-compiles and caches Lua modules.
+require("impatient")
 
 -- Enable Aniseed's automatic compilation and loading of Fennel source code.
 vim.g["aniseed#env"] = {
