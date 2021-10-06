@@ -8,6 +8,7 @@
 (let [lsp (require :lspconfig)]
   (when lsp
     (lsp.clojure_lsp.setup {})
+    (lsp.tsserver.setup {})
 
     ;; https://www.chrisatmachine.com/Neovim/27-native-lsp/
     (map :gd "lua vim.lsp.buf.definition()")
