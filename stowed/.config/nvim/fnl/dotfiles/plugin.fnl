@@ -20,7 +20,8 @@
           (let [name (. pkgs i)
                 opts (. pkgs (+ i 1))]
             (-?> (. opts :mod) (safe-require-plugin-config))
-            (use (a.assoc opts 1 name))))))))
+            (use (a.assoc opts 1 name)))))))
+  nil)
 
 ;; Plugins to be managed by packer.
 (use
