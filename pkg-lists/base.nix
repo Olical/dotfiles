@@ -28,6 +28,7 @@ in
     python
     ripgrep
     stow
+    sumneko-lua-language-server
     tree
     unstable.clojure
     unstable.clojure-lsp
