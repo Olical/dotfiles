@@ -14,6 +14,10 @@ This is a flexible system that can fit into a few different distributions and se
 
 Replace `~/.config/nixpkgs` with this repository and run `home-manager switch`. You'll also have to link one of the `pkg-lists` files to `linked.nix`, on my desktop machines I use `full.nix` but I use `empty.nix` on shared headless hosts.
 
+== License
+
+Consider dotfiles unlicensed (https://unlicense.org/), do what you want with anything you want. Feel free to link back if you want, it could help others in the future but I don't mind otherwise.
+
 == Questions?
 
 Feel free to open issues if you're interested in something or tweet me https://twitter.com/OliverCaldwell[@OliverCaldwell].
