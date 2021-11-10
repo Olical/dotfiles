@@ -3,15 +3,15 @@
 CMD="xrandr --output"
 
 # Built in
-MAIN="eDP-1"
+MAIN="eDP1"
 MAINC="$CMD $MAIN"
 
 # BenQ
-DESK="DP-1-3"
+DESK="DP1-3"
 DESKC="$CMD $DESK"
 
 # Samsung
-DESK_ALT="DP-1-1"
+DESK_ALT="DP1-1"
 DESK_ALTC="$CMD $DESK_ALT"
 
 if xrandr | grep "$DESK connected"; then
