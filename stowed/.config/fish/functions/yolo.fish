@@ -18,5 +18,6 @@ function yolo
     sudo journalctl --vacuum-time=10d
   end
 
+  cd ~
   ~/.config/nvim/sync.sh
 end
