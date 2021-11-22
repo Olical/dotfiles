@@ -56,6 +56,10 @@ bindsym $mod+d exec "rofi -combi-modi window#drun -show combi -modi combi"
 # You can also use any non-zero value if you'd like to have a border
 for_window [class=".*"] border pixel 1
 
+# Stop Zoom attacking my windows.
+for_window [title="^zoom$"] floating enable
+for_window [title="^Zoom.*$"] floating disable
+
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
 
