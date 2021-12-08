@@ -45,6 +45,7 @@
   :easymotion/vim-easymotion {:mod :easymotion}
   :folke/which-key.nvim {:mod :which-key}
   :guns/vim-sexp {:mod :sexp}
+  :habamax/vim-asciidoctor {}
   :hashivim/vim-terraform {}
   :hrsh7th/nvim-compe {:mod :compe}
   :hylang/vim-hy {}
