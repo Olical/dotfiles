@@ -7,6 +7,7 @@
 (nvim.ex.set :nonumber)
 (nvim.ex.set :norelativenumber)
 (nvim.ex.set :wrap)
+(nvim.ex.set :nocursorline)
 (nvim.ex.set "wildmode=full")
 (nvim.ex.set "wildoptions=pum")
 (nvim.ex.set "listchars-=eol:↵")
