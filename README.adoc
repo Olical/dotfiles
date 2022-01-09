@@ -1,5 +1,7 @@
 = Olical's dotfiles
 
+> This is now legacy, I'm using tools that _just work_ wherever I can. Check out the `main` branch for the future of my Linux based developer world.
+
 This is a collection of configuration for things such as https://sw.kovidgoyal.net/kitty/[Kitty] and https://neovim.io/[Neovim] through the Nix package manager and stow for linking the configuration into the right places.
 
 This is a flexible system that can fit into a few different distributions and setups including shared multi-user hosts. Feel free to take whatever you need from here for your own needs!
