@@ -2,17 +2,15 @@
 
 This is a collection of configuration for things such as https://sw.kovidgoyal.net/kitty/[Kitty] and https://neovim.io/[Neovim] through the Nix package manager and stow for linking the configuration into the right places.
 
-This is a flexible system that can fit into a few different distributions and setups including shared multi-user hosts. Feel free to take whatever you need from here for your own needs!
+This is designed to be run within an Ubuntu based fistribution, I choose https://regolith-linux.org/[Regolith] as my base since it's minimal and comes with i3 pre-configured.
 
-== Requirements
+== Usage
 
- * https://nixos.org/[Nix or NixOS]
- ** Set `DOTFILES_JUST_NIX` if you only have the package manager.
- ** Set `DOTFILES_GUEST` if you're not the primary user so system wide administration isn't performed.
- ** These can be set in `~/.local.fish` and will be used by the `yolo` command which updates everything.
- * https://github.com/rycee/home-manager[home-manager]
+Clone this repo somewhere neat, such as `~/repos/Olical/dotfiles`, `cd` into the directory and execute `script/bootstrap.sh`. This will install `brew` if it's not found then proceed to install all essential packages (as well as a few non-essential but useful ones) and then switch the terminal and shell over to kitty and fish respectively.
 
-Replace `~/.config/nixpkgs` with this repository and run `home-manager switch`. You'll also have to link one of the `pkg-lists` files to `linked.nix`, on my desktop machines I use `full.nix` but I use `empty.nix` on shared headless hosts.
+It should also run the Neovim first time setup and fetch all of the plugins for you automatically. Once done you can execute the `sync` fish function to update `apt`, `bash` and the Neovim plugins.
+
+Your mileage may vary wildly, this is built for me and may break your entire machine. Be careful, read the code and just take the lines and files you're interested in if you can.
 
 == License
 

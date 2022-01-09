@@ -1,26 +1,19 @@
-set -gx NPM_PACKAGES "$HOME/.npm-packages"
-set -gx JANET_PATH ~/.cache/janet
-set -gx NODE_PATH "$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-set -gx PATH ~/bin $NPM_PACKAGES/bin ~/.cargo/bin ~/.luarocks/bin $PATH
+set -gx NPM_DIR "$HOME/.npm-data"
+set -gx NODE_PATH "$NPM_DIR/lib/node_modules:$NODE_PATH"
+set -gx PATH ~/bin $NPM_DIR/bin $PATH
 
-mkdir -p ~/bin $NPM_PACKAGES/bin ~/.cargo/bin ~/.luarocks/bin $JANET_PATH
+mkdir -p ~/bin $NPM_DIR/bin
 
 set -gx fish_greeting ""
-set -gx BROWSER firefox
 
-if type -q direnv
-  eval (direnv hook fish)
-end
+test -d ~/.linuxbrew && eval (~/.linuxbrew/bin/brew shellenv)
+test -d /home/linuxbrew/.linuxbrew && eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 if type -q nvim
   set -gx EDITOR nvim
   set -gx VISUAL nvim
   set -gx MANPAGER "nvim +Man! -c ':set signcolumn='"
   alias vimdiff="nvim -d"
-end
-
-if locale -a | grep -q en_GB.UTF-8
-  set -gx LANG en_GB.UTF-8
 end
 
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow -g \"!.git/\" 2> /dev/null"
@@ -35,6 +28,6 @@ alias lg="lazygit"
 initialise_ssh_agent
 
 # Local config.
-if [ -f ~/.local.fish ]
-  source ~/.local.fish
+if [ -f ~/.config.fish ]
+  source ~/.config.fish
 end
