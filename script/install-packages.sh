@@ -14,5 +14,5 @@ sudo apt install -y \
 sudo apt install -y build-essential procps curl file git
 brew install \
   neovim clojure clojure-lsp joker lazygit \
-  lua-language-server xmlformat \
+  lua-language-server xmlformat bitwarden-cli \
   borkdude/brew/babashka candid82/brew/joker
