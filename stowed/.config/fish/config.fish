@@ -1,6 +1,6 @@
 set -gx NPM_DIR "$HOME/.npm-data"
 set -gx NODE_PATH "$NPM_DIR/lib/node_modules:$NODE_PATH"
-set -gx PATH ~/bin $NPM_DIR/bin $PATH
+set -gx PATH ~/bin $NPM_DIR/bin $HOME/.local/bin $PATH
 
 mkdir -p ~/bin $NPM_DIR/bin
 
