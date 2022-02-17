@@ -4,6 +4,8 @@ This is a collection of configuration for things such as https://sw.kovidgoyal.n
 
 This is designed to be run within an Ubuntu based fistribution, I choose https://regolith-linux.org/[Regolith] as my base since it's minimal and comes with i3 pre-configured.
 
+You may also be interested in https://github.com/Olical/magic-kit[Magic Kit], a stripped down and simplified version of my Neovim configuration designed for people who want to get into Conjure or Aniseed quickly.
+
 == Usage
 
 Clone this repo somewhere neat, such as `~/repos/Olical/dotfiles`, `cd` into the directory and execute `script/bootstrap.sh`. This will install `brew` if it's not found then proceed to install all essential packages (as well as a few non-essential but useful ones) and then switch the terminal and shell over to kitty and fish respectively.
