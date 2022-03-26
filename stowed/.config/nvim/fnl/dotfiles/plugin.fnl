@@ -42,8 +42,8 @@
   :clojure-vim/clojure.vim {}
   :clojure-vim/vim-jack-in {}
   :dag/vim-fish {}
-  :easymotion/vim-easymotion {:mod :easymotion}
   :folke/which-key.nvim {:mod :which-key}
+  :ggandor/lightspeed.nvim {:mod :lightspeed}
   :guns/vim-sexp {:mod :sexp}
   :habamax/vim-asciidoctor {}
   :hashivim/vim-terraform {}
