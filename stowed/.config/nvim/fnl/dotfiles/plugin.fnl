@@ -38,7 +38,6 @@
   :Olical/vim-enmasse {}
   :PeterRincker/vim-argumentative {}
   :airblade/vim-gitgutter {}
-  :beauwilliams/statusline.lua {:mod :statusline}
   :clojure-vim/clojure.vim {}
   :clojure-vim/vim-jack-in {}
   :dag/vim-fish {}
@@ -59,6 +58,7 @@
   :mbbill/undotree {:mod :undotree}
   :neovim/nvim-lspconfig {:mod :lspconfig}
   :norcalli/nvim-colorizer.lua {:mod :colorizer}
+  :nvim-lualine/lualine.nvim {:mod :lualine}
   :nvim-telescope/telescope.nvim {:mod :telescope :requires [[:nvim-lua/popup.nvim] [:nvim-lua/plenary.nvim]]}
   :pangloss/vim-javascript {}
   :prettier/vim-prettier {:ft :javascript}
