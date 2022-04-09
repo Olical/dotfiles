@@ -60,7 +60,7 @@
   :norcalli/nvim-colorizer.lua {:mod :colorizer}
   :nvim-lualine/lualine.nvim {:mod :lualine}
   :nvim-telescope/telescope.nvim {:mod :telescope :requires [[:nvim-lua/popup.nvim] [:nvim-lua/plenary.nvim]]}
-  :nvim-treesitter/nvim-treesitter {}
+  :nvim-treesitter/nvim-treesitter {:mod :treesitter}
   :pangloss/vim-javascript {}
   :prettier/vim-prettier {:ft :javascript}
   :radenling/vim-dispatch-neovim {}
