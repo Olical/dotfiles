@@ -5,8 +5,8 @@
 (defn- map [from to]
   (util.nnoremap from to))
 
-(let [lsp (require :lspconfig)]
-  (when lsp
+(let [(ok? lsp) (pcall require :lspconfig)]
+  (when ok?
     (lsp.clojure_lsp.setup {})
     (lsp.tsserver.setup {})
     (lsp.sumneko_lua.setup

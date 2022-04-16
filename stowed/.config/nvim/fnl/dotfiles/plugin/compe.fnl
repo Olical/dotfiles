@@ -3,8 +3,8 @@
 
 (set nvim.o.completeopt "menuone,noselect")
 
-(let [compe (require :compe)]
-  (when compe
+(let [(ok? compe) (pcall require :compe)]
+  (when ok?
     (compe.setup
       {:enabled true
        :autocomplete true

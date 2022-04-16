@@ -1,5 +1,5 @@
 (module dotfiles.plugin.colorizer)
 
-(let [colorizer (require :colorizer)]
-  (when colorizer
+(let [(ok? colorizer) (pcall require :colorizer)]
+  (when ok?
     (colorizer.setup)))
