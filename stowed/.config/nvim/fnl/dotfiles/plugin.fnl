@@ -2,7 +2,7 @@
   {autoload {nvim aniseed.nvim
              a aniseed.core
              util dotfiles.util
-             packer packer}})
+             : packer}})
 
 (defn safe-require-plugin-config [name]
   (let [(ok? val-or-err) (pcall require (.. :dotfiles.plugin. name))]
