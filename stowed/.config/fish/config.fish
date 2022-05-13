@@ -12,7 +12,7 @@ test -d /home/linuxbrew/.linuxbrew && eval (/home/linuxbrew/.linuxbrew/bin/brew 
 if type -q nvim
   set -gx EDITOR nvim
   set -gx VISUAL nvim
-  set -gx MANPAGER "nvim +Man! -c ':set signcolumn='"
+  set -gx MANPAGER "nvim +Man!"
   alias vimdiff="nvim -d"
 end
 
