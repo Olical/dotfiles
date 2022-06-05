@@ -7,4 +7,4 @@ yay -S --needed \
   asciinema ripgrep clojure clojure-lsp lazygit tree \
   lua-language-server bitwarden-cli babashka lua xclip \
   ttf-fira-code ttf-dejavu-emojiless noto-fonts-emoji \
-  gnome-keyring feh
+  gnome-keyring feh topgrade
