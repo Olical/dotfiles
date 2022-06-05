@@ -2,7 +2,7 @@ function sync
   # Early sudo because it's needed later.
   sudo echo "Updating everything!"
 
-  yay
+  topgrade --disable git_repos containers vim
 
   cd ~/.config/nvim
   git pull --rebase --autostash
