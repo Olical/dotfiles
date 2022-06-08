@@ -2,7 +2,8 @@
 
 set -xe
 
-./script/install-packages.sh
+./script/install-system-packages.sh
 stow --target=$HOME stowed
+./script/install-user-packages.sh
 chsh -s `which fish`
 ~/.config/nvim/sync.sh
