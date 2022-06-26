@@ -56,6 +56,7 @@
   :marko-cerovac/material.nvim {:mod :material}
   :maxmellon/vim-jsx-pretty {}
   :mbbill/undotree {:mod :undotree}
+  :rcarriga/nvim-dap-ui {:mod :dap :requires [[:mfussenegger/nvim-dap]]}
   :neovim/nvim-lspconfig {:mod :lspconfig}
   :norcalli/nvim-colorizer.lua {:mod :colorizer}
   :nvim-lualine/lualine.nvim {:mod :lualine}
