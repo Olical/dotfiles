@@ -7,6 +7,6 @@ yay -S --needed \
   asciinema ripgrep clojure clojure-lsp lazygit tree \
   lua-language-server bitwarden-cli babashka lua xclip \
   ttf-fira-code ttf-dejavu-emojiless noto-fonts-emoji \
-  gnome-keyring topgrade neovim leiningen
+  gnome-keyring topgrade neovim leiningen difftastic
 
 npm install -g typescript-language-server
