@@ -38,6 +38,7 @@
   :Olical/vim-enmasse {}
   :PeterRincker/vim-argumentative {}
   :airblade/vim-gitgutter {}
+  :PaterJason/cmp-conjure {}
   :clojure-vim/clojure.vim {}
   :clojure-vim/vim-jack-in {}
   :dag/vim-fish {}
@@ -46,7 +47,7 @@
   :guns/vim-sexp {:mod :sexp}
   :habamax/vim-asciidoctor {}
   :hashivim/vim-terraform {}
-  :hrsh7th/nvim-compe {:mod :compe}
+  :hrsh7th/nvim-cmp {:mod :cmp}
   :hylang/vim-hy {}
   :janet-lang/janet.vim {}
   :jiangmiao/auto-pairs {:mod :auto-pairs}
@@ -56,7 +57,6 @@
   :marko-cerovac/material.nvim {:mod :material}
   :maxmellon/vim-jsx-pretty {}
   :mbbill/undotree {:mod :undotree}
-  :rcarriga/nvim-dap-ui {:mod :dap :requires [[:mfussenegger/nvim-dap]]}
   :neovim/nvim-lspconfig {:mod :lspconfig}
   :norcalli/nvim-colorizer.lua {:mod :colorizer}
   :nvim-lualine/lualine.nvim {:mod :lualine}
@@ -65,7 +65,7 @@
   :pangloss/vim-javascript {}
   :prettier/vim-prettier {:ft :javascript}
   :radenling/vim-dispatch-neovim {}
-  :tami5/compe-conjure {}
+  :rcarriga/nvim-dap-ui {:mod :dap :requires [[:mfussenegger/nvim-dap]]}
   :tpope/vim-abolish {}
   :tpope/vim-commentary {}
   :tpope/vim-dadbod {}
