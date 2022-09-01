@@ -36,9 +36,9 @@
   :Olical/conjure {:branch :develop :mod :conjure}
   :Olical/nvim-local-fennel {}
   :Olical/vim-enmasse {}
+  :PaterJason/cmp-conjure {}
   :PeterRincker/vim-argumentative {}
   :airblade/vim-gitgutter {}
-  :PaterJason/cmp-conjure {}
   :clojure-vim/clojure.vim {}
   :clojure-vim/vim-jack-in {}
   :dag/vim-fish {}
@@ -47,6 +47,10 @@
   :guns/vim-sexp {:mod :sexp}
   :habamax/vim-asciidoctor {}
   :hashivim/vim-terraform {}
+  :hrsh7th/cmp-buffer {}
+  :hrsh7th/cmp-cmdline {}
+  :hrsh7th/cmp-nvim-lsp {}
+  :hrsh7th/cmp-path {}
   :hrsh7th/nvim-cmp {:mod :cmp}
   :hylang/vim-hy {}
   :janet-lang/janet.vim {}
