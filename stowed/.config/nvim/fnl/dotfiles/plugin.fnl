@@ -54,7 +54,6 @@
   :hrsh7th/nvim-cmp {:mod :cmp}
   :hylang/vim-hy {}
   :janet-lang/janet.vim {}
-  :jiangmiao/auto-pairs {:mod :auto-pairs}
   :lambdalisue/suda.vim {}
   :lewis6991/impatient.nvim {}
   :liuchengxu/vim-better-default {:mod :better-default}
@@ -85,6 +84,7 @@
   :tweekmonster/startuptime.vim {}
   :w0rp/ale {:mod :ale}
   :wbthomason/packer.nvim {}
+  :windwp/nvim-autopairs {:mod :autopairs}
   :wlangstroth/vim-racket {}
 
   ; :nvim-treesitter/nvim-treesitter {:run ":TSUpdate" :mod :treesitter}
