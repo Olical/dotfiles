@@ -2,4 +2,4 @@
 
 # Trying out KDE Plasma + bismuth
 
-yay -S xorg plasma-meta plasma-wayland-session kwin-bismuth-bin wl-clipboard
+yay -S xorg plasma-meta kwin-bismuth-bin
