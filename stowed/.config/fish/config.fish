@@ -16,6 +16,10 @@ if type -q nvim
   alias vimdiff="nvim -d"
 end
 
+if type -q direnv
+  direnv hook fish | source
+end
+
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow -g \"!.git/\" 2> /dev/null"
 set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
