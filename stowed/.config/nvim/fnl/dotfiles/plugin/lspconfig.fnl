@@ -24,4 +24,4 @@
     (map :<c-p> "lua vim.lsp.diagnostic.goto_next()")
 
     (map :<leader>lr "lua vim.lsp.buf.rename()")
-    (map :<leader>lf "lua vim.lsp.buf.formatting()")))
+    (map :<leader>lf "lua vim.lsp.buf.format({async = true})")))
