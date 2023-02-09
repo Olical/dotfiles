@@ -31,6 +31,7 @@
 	r = rebase
 	lg = log --stat
 	d = diff
+	dt = difftool
 [commit]
 	gpgsign = true
 [pull]
@@ -45,4 +46,10 @@
 [init]
 	defaultBranch = main
 [diff]
-	external = difft
+	tool = difftastic
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+	difftool = true
