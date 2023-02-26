@@ -1,7 +1,6 @@
 .quicksave.vim
 .tern-port
 .netrwhist
-.clj-kondo
 .lvimrc
 .conjure.edn
 .prepl-port
