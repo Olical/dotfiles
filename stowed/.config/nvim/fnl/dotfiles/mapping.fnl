@@ -34,6 +34,10 @@
 ;; Trim trialing whitespace.
 (noremap :n :<leader>bt ":%s/\\s\\+$//e<cr>")
 
+;; Diagnostic navigation.
+(noremap :n :<c-n> ":lua vim.diagnostic.goto_next()<cr>")
+(noremap :n :<c-p> ":lua vim.diagnostic.goto_prev()<cr>")
+
 (nu.fn-bridge
   :DeleteHiddenBuffers
   :dotfiles.mapping :delete-hidden-buffers)
