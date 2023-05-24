@@ -10,6 +10,7 @@
     (lsp.clojure_lsp.setup {})
     (lsp.tsserver.setup {})
     (lsp.pylsp.setup {})
+    (lsp.bashls.setup {})
     (lsp.lua_ls.setup
       {:cmd ["lua-language-server"]
        :settings {:Lua {:telemetry {:enable false}}}})
