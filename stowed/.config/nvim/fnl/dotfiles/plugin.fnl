@@ -86,6 +86,4 @@
   :wbthomason/packer.nvim {}
   :windwp/nvim-autopairs {:mod :autopairs}
   :wlangstroth/vim-racket {}
-
-  ; :nvim-treesitter/nvim-treesitter {:run ":TSUpdate" :mod :treesitter}
   )
