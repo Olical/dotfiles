@@ -43,7 +43,7 @@
   :clojure-vim/vim-jack-in {}
   :dag/vim-fish {}
   :folke/which-key.nvim {:mod :which-key}
-  :ggandor/lightspeed.nvim {}
+  :ggandor/leap.nvim {:mod :leap}
   :guns/vim-sexp {:mod :sexp}
   :habamax/vim-asciidoctor {}
   :hashivim/vim-terraform {}
