@@ -11,6 +11,8 @@
     (lsp.tsserver.setup {})
     (lsp.pylsp.setup {})
     (lsp.bashls.setup {})
+    (lsp.zls.setup {})
+    (lsp.rust_analyzer.setup {:cmd ["rustup" "run" "stable" "rust-analyzer"]})
     (lsp.lua_ls.setup
       {:cmd ["lua-language-server"]
        :settings {:Lua {:telemetry {:enable false}}}})
