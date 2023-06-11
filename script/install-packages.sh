@@ -7,4 +7,4 @@ yay -S --needed \
 	asciinema ripgrep clojure lazygit tree bitwarden-cli \
 	babashka lua xclip ttf-fira-code ttf-dejavu-emojiless \
 	noto-fonts-emoji gnome-keyring topgrade neovim leiningen \
-	difftastic direnv ttf-firacode-nerd neovide
+	difftastic direnv ttf-firacode-nerd neovide luarocks fennel
