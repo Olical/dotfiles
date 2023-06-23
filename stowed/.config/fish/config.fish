@@ -27,6 +27,8 @@ set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 alias g="git"
 alias gg="g a .; and g c -a"
 alias lg="lazygit"
+alias n="neovide"
+alias nt="neovim"
 
 # Start an SSH agent if required, if not, connect to it.
 initialise_ssh_agent
