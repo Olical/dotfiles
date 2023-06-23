@@ -28,7 +28,7 @@ alias g="git"
 alias gg="g a .; and g c -a"
 alias lg="lazygit"
 alias n="neovide"
-alias nt="neovim"
+alias nt="nvim"
 
 # Start an SSH agent if required, if not, connect to it.
 initialise_ssh_agent
