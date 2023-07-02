@@ -2,7 +2,7 @@
 
 set -xe
 
-yay -S --needed \
+yay --overwrite '*' -S --needed \
 	kitty fzf cowsay entr fish httpie htop npm nodejs \
 	asciinema ripgrep clojure lazygit tree bitwarden-cli \
 	babashka lua xclip ttf-fira-code ttf-dejavu-emojiless \

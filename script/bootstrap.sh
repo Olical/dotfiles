@@ -2,8 +2,13 @@
 
 set -xe
 
-yay -S --needed stow
+if ! command -v yay &> /dev/null
+then
+    sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf ./yay
+fi
+
+yay -S --needed stow git
+git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 stow --target=$HOME stowed
 ./script/install-packages.sh
 chsh -s `which fish`
-~/.config/nvim/sync.sh
