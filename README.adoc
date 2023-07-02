@@ -2,15 +2,11 @@
 
 This is a collection of configuration for things such as https://sw.kovidgoyal.net/kitty/[Kitty] and https://neovim.io/[Neovim] Arch's `pacman` package manager manager and stow for linking the configuration into the right places.
 
-This is designed to be run within an Arch based distribution, I choose https://endeavouros.com/[EndeavourOS] as my base since it's minimal and comes with i3 pre-configured.
-
-You may also be interested in https://github.com/Olical/magic-kit[Magic Kit], a stripped down and simplified version of my Neovim configuration designed for people who want to get into Conjure or Aniseed quickly.
+This is designed to be run within Arch Linux, I use `archinstall` to set everything up since it's minimal and comes with KDE pre-configured.
 
 == Usage
 
 Clone this repo somewhere neat, such as `~/repos/Olical/dotfiles`, `cd` into the directory and execute `script/bootstrap.sh`. This will install all essential packages (as well as a few non-essential but useful ones) and then switch the terminal and shell over to kitty and fish respectively.
-
-It should also run the Neovim first time setup and fetch all of the plugins for you automatically. Once done you can execute the `sync` fish function to update all packages and Neovim plugins through https://github.com/r-darwish/topgrade[topgrade].
 
 Your mileage may vary wildly, this is built for me and may break your entire machine. Be careful, read the code and just take the lines and files you're interested in if you can.
 
