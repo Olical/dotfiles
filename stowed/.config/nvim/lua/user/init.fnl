@@ -1,7 +1,8 @@
 {:colorscheme :astrodark
  :diagnostics {:underline true
                :virtual_text true}
- :lazy {:defaults {:lazy false}}
+ :lazy {:defaults {:lazy false}
+        :dev {:path "~/repos/Olical"}}
  :lsp {:formatting {:disabled {}
                     :format_on_save {:enabled true
                                      :ignore_filetypes {}}
