@@ -8,7 +8,11 @@ then
 fi
 
 yay -S --needed stow git
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+
+if [ ! -d "~/.config/nvim" ]; then
+  git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+fi
+
 stow --target=$HOME stowed
 ./script/install-packages.sh
 chsh -s `which fish`
