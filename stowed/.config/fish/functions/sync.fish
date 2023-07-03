@@ -4,8 +4,9 @@ function sync
 
   topgrade --disable git_repos containers vim
 
-  cd ~/.config/nvim
-  git pull --rebase --autostash
-  ./sync.sh
+  cd ~/repos/Olical/dotfiles
+  git pull
   cd -
+
+  nvim +AstroUpdatePackages +qa
 end
