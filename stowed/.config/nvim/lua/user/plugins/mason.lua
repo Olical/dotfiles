@@ -9,7 +9,7 @@ local function _1_(_, opts)
   end
   opts.handlers.lua_ls = _2_
   local function _3_()
-    return lspconfig.fennel_language_server.setup({filetypes = {"fennel"}, root_dir = lspconfig.util.root_pattern("fnl", "lua"), single_file_support = true, settings = {fennel = {diagnostics = {globals = {"vim", "jit"}}, workspace = {library = vim.api.nvim_list_runtime_paths()}}}})
+    return lspconfig.fennel_language_server.setup({filetypes = {"fennel"}, root_dir = lspconfig.util.root_pattern("fnl", "lua"), single_file_support = true, settings = {fennel = {diagnostics = {globals = {"vim", "jit", "comment"}}, workspace = {library = vim.api.nvim_list_runtime_paths()}}}})
   end
   opts.handlers.fennel_language_server = _3_
   return opts

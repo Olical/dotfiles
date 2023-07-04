@@ -7,6 +7,7 @@
    :williamboman/mason-lspconfig.nvim
    {:opts (fn [_ opts]
             (set opts.ensure_installed (utils.list_insert_unique opts.ensure_installed [:fennel_language_server]))
+
             (set opts.handlers.lua_ls
                  (fn []
                    (lspconfig.lua_ls.setup
@@ -18,7 +19,7 @@
                      {:filetypes [:fennel]
                       :root_dir (lspconfig.util.root_pattern :fnl :lua)
                       :single_file_support true
-                      :settings {:fennel {:diagnostics {:globals [:vim :jit]}
+                      :settings {:fennel {:diagnostics {:globals [:vim :jit :comment]}
                                           :workspace {:library (vim.api.nvim_list_runtime_paths)}}}})))
             opts)})
 
