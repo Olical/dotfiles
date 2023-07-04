@@ -3,8 +3,6 @@
 (local lspconfig (uu.autoload :lspconfig))
 (local lspcfgs (uu.autoload :lspconfig.configs))
 
-;; TODO :opts should maybe be :config
-
 [(uu.tx
    :williamboman/mason-lspconfig.nvim
    {:opts (fn [_ opts]
@@ -16,19 +14,22 @@
 
             (set opts.handlers.fennel_language_server
                  (fn []
-                   (set lspcfgs.fennel_language_server
-                        {:default_config {:filetypes [:fennel]
-                                          :root_dir (lspconfig.util.root_pattern :fnl)
-                                          :single_file_support true
-                                          :settings {:fennel {:diagnostics {:globals [:vim]}
-                                                              :workspace {:library (vim.api.nvim_list_runtime_paths)}}}}}))))})
+                   (lspconfig.fennel_language_server.setup
+                     {:filetypes [:fennel]
+                      :root_dir (lspconfig.util.root_pattern :fnl :lua)
+                      :single_file_support true
+                      :settings {:fennel {:diagnostics {:globals [:vim :jit]}
+                                          :workspace {:library (vim.api.nvim_list_runtime_paths)}}}})))
+            opts)})
 
  (uu.tx
    :jay-babu/mason-null-ls.nvim
    {:opts (fn [_ opts]
-            (set opts.ensure_installed (utils.list_insert_unique opts.ensure_installed [])))})
+            (set opts.ensure_installed (utils.list_insert_unique opts.ensure_installed []))
+            opts)})
 
  (uu.tx
    :jay-babu/mason-nvim-dap.nvim
    {:opts (fn [_ opts]
-            (set opts.ensure_installed (utils.list_insert_unique opts.ensure_installed [])))})]
+            (set opts.ensure_installed (utils.list_insert_unique opts.ensure_installed []))
+            opts)})]

@@ -9,18 +9,17 @@ local function _1_(_, opts)
   end
   opts.handlers.lua_ls = _2_
   local function _3_()
-    lspcfgs.fennel_language_server = {default_config = {filetypes = {"fennel"}, root_dir = lspconfig.util.root_pattern("fnl"), single_file_support = true, settings = {fennel = {diagnostics = {globals = {"vim"}}, workspace = {library = vim.api.nvim_list_runtime_paths()}}}}}
-    return nil
+    return lspconfig.fennel_language_server.setup({filetypes = {"fennel"}, root_dir = lspconfig.util.root_pattern("fnl", "lua"), single_file_support = true, settings = {fennel = {diagnostics = {globals = {"vim", "jit"}}, workspace = {library = vim.api.nvim_list_runtime_paths()}}}})
   end
   opts.handlers.fennel_language_server = _3_
-  return nil
+  return opts
 end
 local function _4_(_, opts)
   opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {})
-  return nil
+  return opts
 end
 local function _5_(_, opts)
   opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {})
-  return nil
+  return opts
 end
 return {uu.tx("williamboman/mason-lspconfig.nvim", {opts = _1_}), uu.tx("jay-babu/mason-null-ls.nvim", {opts = _4_}), uu.tx("jay-babu/mason-nvim-dap.nvim", {opts = _5_})}
