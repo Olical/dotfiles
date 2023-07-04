@@ -13,6 +13,7 @@
      :neovide_cursor_animation_length 0.05
      :neovide_cursor_trail_size 0.5}
  :opt {:signcolumn :auto
+       :exrc true
        :number false
        :relativenumber false
        :spell true
