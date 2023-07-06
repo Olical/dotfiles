@@ -1,3 +1,4 @@
+-- [nfnl] Compiled from plugins/clojure.fnl by https://github.com/Olical/nfnl, do not edit.
 local utils = require("astronvim.utils")
 local uu = require("user.util")
 local function _1_(_, opts)

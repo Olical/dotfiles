@@ -1,3 +1,4 @@
+-- [nfnl] Compiled from util.fnl by https://github.com/Olical/nfnl, do not edit.
 local fun = require("user.vendor.fun")
 local function autoload(name)
   local res = {["aniseed/autoload-enabled?"] = true, ["aniseed/autoload-module"] = false}

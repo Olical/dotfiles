@@ -1,3 +1,4 @@
+-- [nfnl] Compiled from plugins/mason.fnl by https://github.com/Olical/nfnl, do not edit.
 local uu = require("user.util")
 local utils = uu.autoload("astronvim.utils")
 local lspconfig = uu.autoload("lspconfig")

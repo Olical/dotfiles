@@ -1,3 +1,4 @@
+-- [nfnl] Compiled from plugins/sexp.fnl by https://github.com/Olical/nfnl, do not edit.
 local uu = require("user.util")
 local function _1_()
   vim.g.sexp_filetypes = "clojure,scheme,lisp,timl,fennel,janet"

@@ -1,3 +1,4 @@
+-- [nfnl] Compiled from plugins/autopairs.fnl by https://github.com/Olical/nfnl, do not edit.
 local uu = require("user.util")
 local fun = require("user.vendor.fun")
 local lisps = {"scheme", "lisp", "clojure", "fennel"}
