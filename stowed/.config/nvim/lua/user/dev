@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# TODO Build this into the editor so it starts when I edit config.
-./nfnl --files | entr ./nfnl --compile --prune "vendor/**.lua" --notify
