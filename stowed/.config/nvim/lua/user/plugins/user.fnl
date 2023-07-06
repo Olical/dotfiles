@@ -2,8 +2,8 @@
 
 [
  (uu.tx :Olical/aniseed)
- (uu.tx :Olical/nfnl {:ft ["fennel"] :config true :dev true})
  (uu.tx :Olical/nvim-local-fennel)
+ (uu.tx :Olical/nfnl {:ft ["fennel"] :config true :dev true})
  (uu.tx :nvim-lua/plenary.nvim)
  (uu.tx :PeterRincker/vim-argumentative)
  (uu.tx :bakpakin/fennel.vim)
