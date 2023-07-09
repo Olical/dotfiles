@@ -1,7 +1,6 @@
 (local uu (require :user.util))
 (local utils (uu.autoload :astronvim.utils))
 (local lspconfig (uu.autoload :lspconfig))
-(local lspcfgs (uu.autoload :lspconfig.configs))
 
 [(uu.tx
    :williamboman/mason-lspconfig.nvim
@@ -19,7 +18,7 @@
                      {:filetypes [:fennel]
                       :root_dir (lspconfig.util.root_pattern :fnl :lua)
                       :single_file_support true
-                      :settings {:fennel {:diagnostics {:globals [:vim :jit :comment :describe :before_each :it]}
+                      :settings {:fennel {:diagnostics {:globals [:vim :jit :comment]}
                                           :workspace {:library (vim.api.nvim_list_runtime_paths)}}}})))
             opts)})
 
