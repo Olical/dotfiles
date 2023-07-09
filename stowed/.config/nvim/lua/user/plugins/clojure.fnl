@@ -19,7 +19,8 @@
 
  (uu.tx
    :Olical/conjure
-   {:init (fn []
+   {:dev true
+    :init (fn []
             (set vim.g.conjure#eval#result_register "*")
             (set vim.g.conjure#log#botright true)
             (set vim.g.conjure#mapping#doc_word "gk")

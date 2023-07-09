@@ -23,4 +23,4 @@ local function _3_()
   end
   return vim.api.nvim_create_autocmd("FileType", {callback = _5_, desc = "Lisp style line comment", group = vim.api.nvim_create_augroup("comment_config", {clear = true}), pattern = {"clojure"}})
 end
-return {uu.tx("clojure-vim/vim-jack-in", {ft = "clojure", cmd = "Clj", lazy = true}), uu.tx("williamboman/mason-lspconfig.nvim", {opts = _1_}), uu.tx("nvim-treesitter/nvim-treesitter", {opts = _2_}), uu.tx("Olical/conjure", {init = _3_}), uu.tx("Olical/AnsiEsc"), uu.tx("PaterJason/cmp-conjure")}
+return {uu.tx("clojure-vim/vim-jack-in", {ft = "clojure", cmd = "Clj", lazy = true}), uu.tx("williamboman/mason-lspconfig.nvim", {opts = _1_}), uu.tx("nvim-treesitter/nvim-treesitter", {opts = _2_}), uu.tx("Olical/conjure", {dev = true, init = _3_}), uu.tx("Olical/AnsiEsc"), uu.tx("PaterJason/cmp-conjure")}
