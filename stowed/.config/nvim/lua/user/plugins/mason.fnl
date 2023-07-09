@@ -19,7 +19,7 @@
                      {:filetypes [:fennel]
                       :root_dir (lspconfig.util.root_pattern :fnl :lua)
                       :single_file_support true
-                      :settings {:fennel {:diagnostics {:globals [:vim :jit :comment]}
+                      :settings {:fennel {:diagnostics {:globals [:vim :jit :comment :describe :before_each :it]}
                                           :workspace {:library (vim.api.nvim_list_runtime_paths)}}}})))
             opts)})
 
