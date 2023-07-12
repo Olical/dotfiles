@@ -2,7 +2,8 @@
  :diagnostics {:underline true
                :virtual_text true}
  :lazy {:defaults {:lazy false}
-        :dev {:path "~/repos/Olical"}}
+        :dev {:path "~/repos/Olical"}
+        :performance {:rtp {:disabled_plugins ["tohtml" "netrwPlugin"]}}}
  :lsp {:formatting {:disabled {}
                     :format_on_save {:enabled true
                                      :ignore_filetypes {}}
