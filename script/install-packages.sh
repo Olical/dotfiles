@@ -8,4 +8,4 @@ yay -S --needed \
 	babashka lua xclip ttf-fira-code ttf-dejavu-emojiless \
 	noto-fonts-emoji gnome-keyring topgrade neovim leiningen \
 	difftastic direnv ttf-firacode-nerd luarocks fennel \
-	fd sd spectacle rsync bat
+	fd sd spectacle rsync bat jq yq
