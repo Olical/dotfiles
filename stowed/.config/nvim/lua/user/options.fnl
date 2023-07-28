@@ -19,7 +19,7 @@
        :spell true
        :wrap true
        :sessionoptions "blank,curdir,folds,help,tabpages,winsize"
-       :clipboard ""
+       :clipboard "unnamedplus"
        :list true
        :listchars "tab:▷ ,trail:·,extends:◣,precedes:◢,nbsp:○"
        :shortmess "atOIc"
