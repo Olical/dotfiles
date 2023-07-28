@@ -3,6 +3,7 @@
 [
  (uu.tx :Olical/aniseed {:dev (uu.dev? :aniseed)})
  (uu.tx :Olical/nfnl {:ft ["fennel"] :config true :dev (uu.dev? :nfnl)})
+ (uu.tx :Olical/nfnl-plugin-example {:dev (uu.dev? :nfnl-plugin-example)})
  (uu.tx :nvim-lua/plenary.nvim)
  (uu.tx :PeterRincker/vim-argumentative)
  (uu.tx :bakpakin/fennel.vim)
