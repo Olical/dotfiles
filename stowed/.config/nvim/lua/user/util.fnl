@@ -1,4 +1,5 @@
 (local fun (require :user.vendor.fun))
+(local user (require :user))
 
 (fn autoload [name]
   "Like autoload from Vim Script! A replacement for require that will load the
@@ -39,9 +40,15 @@
       (fun.tabulate (fn [n]
                       (fun.nth (- len n) xs))))))
 
-;; Slightly nicer syntax for things like defining dependencies.
-;; Anything that relies on the {1 :foo :bar true} syntax can use this.
+(fn dev? [plugin-name]
+  "Do we have a repo cloned at the expected location? If so we can tell lazy to load that rather than install it from GitHub."
+  (= 1 (vim.fn.isdirectory
+         (.. (vim.fn.expand user.lazy.dev.path)
+             "/" plugin-name))))
+
 (fn tx [...]
+  "Slightly nicer syntax for things like defining dependencies.
+  Anything that relies on the {1 :foo :bar true} syntax can use this."
   (let [args [...]
         len (fun.length args)]
     (if (= :table (type (last args)))
@@ -54,6 +61,7 @@
       args)))
 
 {: autoload
+ : dev?
  : tx
  : last
  : reverse}

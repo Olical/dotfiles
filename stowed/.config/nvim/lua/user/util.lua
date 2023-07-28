@@ -1,5 +1,6 @@
 -- [nfnl] Compiled from util.fnl by https://github.com/Olical/nfnl, do not edit.
 local fun = require("user.vendor.fun")
+local user = require("user")
 local function autoload(name)
   local res = {["aniseed/autoload-enabled?"] = true, ["aniseed/autoload-module"] = false}
   local function ensure()
@@ -33,6 +34,9 @@ local function reverse(xs)
   end
   return fun.take(fun.length(xs), fun.tabulate(_5_))
 end
+local function dev_3f(plugin_name)
+  return (1 == vim.fn.isdirectory((vim.fn.expand(user.lazy.dev.path) .. "/" .. plugin_name)))
+end
 local function tx(...)
   local args = {...}
   local len = fun.length(args)
@@ -46,4 +50,4 @@ local function tx(...)
     return args
   end
 end
-return {autoload = autoload, tx = tx, last = last, reverse = reverse}
+return {autoload = autoload, ["dev?"] = dev_3f, tx = tx, last = last, reverse = reverse}

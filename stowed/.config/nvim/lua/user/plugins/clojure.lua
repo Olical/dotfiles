@@ -1,7 +1,6 @@
 -- [nfnl] Compiled from plugins/clojure.fnl by https://github.com/Olical/nfnl, do not edit.
 local utils = require("astronvim.utils")
 local uu = require("user.util")
-local dev_3f = ("olical" == vim.fn.getenv("USER"))
 local function _1_(_, opts)
   opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "clojure_lsp")
   return nil
@@ -24,4 +23,4 @@ local function _3_()
   end
   return vim.api.nvim_create_autocmd("FileType", {callback = _5_, desc = "Lisp style line comment", group = vim.api.nvim_create_augroup("comment_config", {clear = true}), pattern = {"clojure"}})
 end
-return {uu.tx("clojure-vim/vim-jack-in", {ft = "clojure", cmd = "Clj", lazy = true}), uu.tx("williamboman/mason-lspconfig.nvim", {opts = _1_}), uu.tx("nvim-treesitter/nvim-treesitter", {opts = _2_}), uu.tx("Olical/conjure", {dev = dev_3f, init = _3_}), uu.tx("Olical/AnsiEsc"), uu.tx("PaterJason/cmp-conjure")}
+return {uu.tx("clojure-vim/vim-jack-in", {ft = "clojure", cmd = "Clj", lazy = true}), uu.tx("williamboman/mason-lspconfig.nvim", {opts = _1_}), uu.tx("nvim-treesitter/nvim-treesitter", {opts = _2_}), uu.tx("Olical/conjure", {dev = uu["dev?"]("conjure"), init = _3_}), uu.tx("Olical/AnsiEsc", {dev = uu["dev?"]("AnsiEsc")}), uu.tx("PaterJason/cmp-conjure")}

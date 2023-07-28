@@ -1,9 +1,8 @@
 (local uu (require :user.util))
-(local dev? (= :olical (vim.fn.getenv "USER")))
 
 [
- (uu.tx :Olical/aniseed)
- (uu.tx :Olical/nfnl {:ft ["fennel"] :config true :dev dev?})
+ (uu.tx :Olical/aniseed {:dev (uu.dev? :aniseed)})
+ (uu.tx :Olical/nfnl {:ft ["fennel"] :config true :dev (uu.dev? :nfnl)})
  (uu.tx :nvim-lua/plenary.nvim)
  (uu.tx :PeterRincker/vim-argumentative)
  (uu.tx :bakpakin/fennel.vim)

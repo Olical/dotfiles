@@ -1,6 +1,5 @@
 (local utils (require :astronvim.utils))
 (local uu (require :user.util))
-(local dev? (= :olical (vim.fn.getenv "USER")))
 
 [(uu.tx
    :clojure-vim/vim-jack-in
@@ -20,7 +19,7 @@
 
  (uu.tx
    :Olical/conjure
-   {:dev dev?
+   {:dev (uu.dev? :conjure)
     :init (fn []
             (set vim.g.conjure#eval#result_register "*")
             (set vim.g.conjure#log#botright true)
@@ -44,5 +43,5 @@
                                                    {:clear true})
                :pattern [:clojure]}))})
 
- (uu.tx :Olical/AnsiEsc)
+ (uu.tx :Olical/AnsiEsc {:dev (uu.dev? :AnsiEsc)})
  (uu.tx :PaterJason/cmp-conjure)]
