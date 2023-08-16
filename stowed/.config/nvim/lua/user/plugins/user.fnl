@@ -9,7 +9,6 @@
  (uu.tx :bakpakin/fennel.vim)
  (uu.tx :dag/vim-fish)
  (uu.tx :ggandor/leap.nvim {:config (fn [] ((. (require :leap) :add_default_mappings)))})
- (uu.tx :ggandor/flit.nvim {:config true})
  (uu.tx :habamax/vim-asciidoctor)
  (uu.tx :hylang/vim-hy)
  (uu.tx :andymass/vim-matchup)
