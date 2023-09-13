@@ -26,4 +26,9 @@
  (uu.tx :tpope/vim-unimpaired)
  (uu.tx :tpope/vim-vinegar)
  (uu.tx :wlangstroth/vim-racket)
+
+ ;; Disabling some AstroNvim defaults.
+ (uu.tx :kevinhwang91/nvim-ufo {:enabled false})
+ (uu.tx :stevearc/aerial.nvim {:enabled false})
+ (uu.tx :rebelot/heirline.nvim {:opts (fn [_ opts] (set opts.winbar nil) opts)})
 ]

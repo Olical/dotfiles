@@ -24,4 +24,6 @@
        :listchars "tab:▷ ,trail:·,extends:◣,precedes:◢,nbsp:○"
        :shortmess "atOIc"
        :cmdheight 1
+       :foldcolumn "0"
+       :showtabline 1
        :guifont "FiraCode Nerd Font:h10"}}
