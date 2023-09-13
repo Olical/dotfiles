@@ -1,7 +1,6 @@
 (local uu (require :user.util))
 
-[
- (uu.tx :Olical/aniseed {:dev (uu.dev? :aniseed)})
+[(uu.tx :Olical/aniseed {:dev (uu.dev? :aniseed)})
  (uu.tx :Olical/nfnl {:ft ["fennel"] :config true :dev (uu.dev? :nfnl)})
  (uu.tx :Olical/nfnl-plugin-example {:dev (uu.dev? :nfnl-plugin-example)})
  (uu.tx :nvim-lua/plenary.nvim)
@@ -30,5 +29,4 @@
  ;; Disabling some AstroNvim defaults.
  (uu.tx :kevinhwang91/nvim-ufo {:enabled false})
  (uu.tx :stevearc/aerial.nvim {:enabled false})
- (uu.tx :rebelot/heirline.nvim {:opts (fn [_ opts] (set opts.winbar nil) opts)})
-]
+ (uu.tx :rebelot/heirline.nvim {:opts (fn [_ opts] (set opts.winbar nil) opts)})]
