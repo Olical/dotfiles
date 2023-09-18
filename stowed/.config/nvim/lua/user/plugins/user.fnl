@@ -29,4 +29,5 @@
  ;; Disabling some AstroNvim defaults.
  (uu.tx :kevinhwang91/nvim-ufo {:enabled false})
  (uu.tx :stevearc/aerial.nvim {:enabled false})
+ (uu.tx :lukas-reineke/indent-blankline.nvim {:enabled false})
  (uu.tx :rebelot/heirline.nvim {:opts (fn [_ opts] (set opts.winbar nil) opts)})]
