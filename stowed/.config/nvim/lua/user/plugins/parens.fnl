@@ -8,7 +8,8 @@
   {:init (fn []
            (local autopairs (require :nvim-autopairs))
            (tset (fun.head (autopairs.get_rules "'")) :not_filetypes lisps)
-           (tset (fun.head (autopairs.get_rules "`")) :not_filetypes lisps))})
+           (tset (fun.head (autopairs.get_rules "`")) :not_filetypes lisps)
+           (autopairs.setup {:ignored_next_char ""}))})
 
  (uu.tx
    :julienvincent/nvim-paredit

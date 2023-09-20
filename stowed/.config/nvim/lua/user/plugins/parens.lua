@@ -6,7 +6,7 @@ local function _1_()
   local autopairs = require("nvim-autopairs")
   do end (fun.head(autopairs.get_rules("'")))["not_filetypes"] = lisps
   fun.head(autopairs.get_rules("`"))["not_filetypes"] = lisps
-  return nil
+  return autopairs.setup({ignored_next_char = ""})
 end
 local function _2_()
   local paredit = require("nvim-paredit")
