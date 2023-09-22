@@ -10,7 +10,7 @@
             (set opts.handlers.lua_ls
                  (fn []
                    (lspconfig.lua_ls.setup
-                     {:settings {:Lua {:diagnostics {:globals [:vim]}}}})))
+                     {:settings {:Lua {:diagnostics {:globals [:vim :jit]}}}})))
 
             (set opts.handlers.fennel_language_server
                  (fn []

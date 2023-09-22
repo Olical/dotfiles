@@ -5,7 +5,7 @@ local lspconfig = uu.autoload("lspconfig")
 local function _1_(_, opts)
   opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {"fennel_language_server"})
   local function _2_()
-    return lspconfig.lua_ls.setup({settings = {Lua = {diagnostics = {globals = {"vim"}}}}})
+    return lspconfig.lua_ls.setup({settings = {Lua = {diagnostics = {globals = {"vim", "jit"}}}}})
   end
   opts.handlers.lua_ls = _2_
   local function _3_()
