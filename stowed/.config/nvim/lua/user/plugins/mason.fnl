@@ -32,4 +32,28 @@
    :jay-babu/mason-nvim-dap.nvim
    {:opts (fn [_ opts]
             (set opts.ensure_installed (utils.list_insert_unique opts.ensure_installed []))
+
+            (let [dap (require :dap)]
+              (set dap.adapters.clojure
+                   (fn [cb config]
+                     (if
+                       (= :attach config.request)
+                       (error "Attaching to Clojure is not yet supported")
+
+                       (= :launch config.request)
+                       (cb
+                         {:type :executable
+                          :command "/home/olical/repos/Olical/clojure-dap/script/run"
+                          :args []
+                          :options {:source_filetype :clojure}})
+
+                       (error (.. "Unknown request" (or config.request "nil"))))))
+
+              (set dap.configurations.clojure
+                   [{:type :clojure
+                     :request :launch
+                     :name "Launch file"
+
+                     :program "${file}"}]))
+
             opts)})]

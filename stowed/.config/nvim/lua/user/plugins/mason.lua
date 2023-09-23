@@ -20,6 +20,20 @@ local function _4_(_, opts)
 end
 local function _5_(_, opts)
   opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {})
+  do
+    local dap = require("dap")
+    local function _6_(cb, config)
+      if ("attach" == config.request) then
+        return error("Attaching to Clojure is not yet supported")
+      elseif ("launch" == config.request) then
+        return cb({type = "executable", command = "/home/olical/repos/Olical/clojure-dap/script/run", args = {}, options = {source_filetype = "clojure"}})
+      else
+        return error(("Unknown request" .. (config.request or "nil")))
+      end
+    end
+    dap.adapters.clojure = _6_
+    dap.configurations.clojure = {{type = "clojure", request = "launch", name = "Launch file", program = "${file}"}}
+  end
   return opts
 end
 return {uu.tx("williamboman/mason-lspconfig.nvim", {opts = _1_}), uu.tx("jay-babu/mason-null-ls.nvim", {opts = _4_}), uu.tx("jay-babu/mason-nvim-dap.nvim", {opts = _5_})}
