@@ -45,7 +45,8 @@
                          {:type :executable
                           :command "/home/olical/repos/Olical/clojure-dap/script/run"
                           :args []
-                          :options {:source_filetype :clojure}})
+                          :options {:source_filetype :clojure
+                                    :initialize_timeout_sec 10}})
 
                        (error (.. "Unknown request" (or config.request "nil"))))))
 

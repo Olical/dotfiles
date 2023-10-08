@@ -26,7 +26,7 @@ local function _5_(_, opts)
       if ("attach" == config.request) then
         return error("Attaching to Clojure is not yet supported")
       elseif ("launch" == config.request) then
-        return cb({type = "executable", command = "/home/olical/repos/Olical/clojure-dap/script/run", args = {}, options = {source_filetype = "clojure"}})
+        return cb({type = "executable", command = "/home/olical/repos/Olical/clojure-dap/script/run", args = {}, options = {source_filetype = "clojure", initialize_timeout_sec = 10}})
       else
         return error(("Unknown request" .. (config.request or "nil")))
       end
