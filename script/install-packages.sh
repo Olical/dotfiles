@@ -8,4 +8,12 @@ yay -S --needed \
 	babashka lua xclip ttf-fira-code ttf-dejavu-emojiless \
 	noto-fonts-emoji gnome-keyring topgrade neovim leiningen \
 	difftastic direnv ttf-firacode-nerd luarocks fennel \
-	fd sd spectacle rsync bat jq yq
+	fd sd spectacle rsync bat jq yq firefox flatpak docker docker-compose \
+	rustup
+
+flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
+
+sudo systemctl enable docker
+sudo systemctl start docker
+
+rustup default stable
