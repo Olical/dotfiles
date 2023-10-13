@@ -22,6 +22,7 @@ local function _5_(_, opts)
   opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {})
   do
     local dap = require("dap")
+    dap.set_log_level("TRACE")
     local function _6_(cb, config)
       if ("attach" == config.request) then
         return error("Attaching to Clojure is not yet supported")
@@ -32,7 +33,7 @@ local function _5_(_, opts)
       end
     end
     dap.adapters.clojure = _6_
-    dap.configurations.clojure = {{type = "clojure", request = "launch", name = "Launch file", program = "${file}"}}
+    dap.configurations.clojure = {{type = "clojure", request = "launch", name = "Launch Clojure DAP and attach to nREPL"}}
   end
   return opts
 end

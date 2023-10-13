@@ -34,6 +34,7 @@
             (set opts.ensure_installed (utils.list_insert_unique opts.ensure_installed []))
 
             (let [dap (require :dap)]
+              (dap.set_log_level "TRACE")
               (set dap.adapters.clojure
                    (fn [cb config]
                      (if
@@ -53,8 +54,6 @@
               (set dap.configurations.clojure
                    [{:type :clojure
                      :request :launch
-                     :name "Launch file"
-
-                     :program "${file}"}]))
+                     :name "Launch Clojure DAP and attach to nREPL"}]))
 
             opts)})]
