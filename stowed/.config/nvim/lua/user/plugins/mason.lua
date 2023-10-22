@@ -25,7 +25,7 @@ local function _5_(_, opts)
     dap.set_log_level("TRACE")
     local function _6_(cb, config)
       if ("attach" == config.request) then
-        return error("Attaching to Clojure is not yet supported")
+        return error("Attaching to clojure-dap is not yet supported, use launch instead")
       elseif ("launch" == config.request) then
         return cb({type = "executable", command = "/home/olical/repos/Olical/clojure-dap/script/run", args = {}, options = {source_filetype = "clojure", initialize_timeout_sec = 10}})
       else

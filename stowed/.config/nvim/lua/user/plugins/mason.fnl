@@ -39,7 +39,7 @@
                    (fn [cb config]
                      (if
                        (= :attach config.request)
-                       (error "Attaching to Clojure is not yet supported")
+                       (error "Attaching to clojure-dap is not yet supported, use launch instead")
 
                        (= :launch config.request)
                        (cb
