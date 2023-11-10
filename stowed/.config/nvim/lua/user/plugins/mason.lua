@@ -25,15 +25,15 @@ local function _5_(_, opts)
     dap.set_log_level("TRACE")
     local function _6_(cb, config)
       if ("attach" == config.request) then
-        return error("Attaching to clojure-dap is not yet supported, use launch instead")
+        return cb({type = "executable", command = "/home/olical/repos/Olical/clojure-dap/script/run", args = {}, options = {source_filetype = "clojure", initialize_timeout_sec = 20}})
       elseif ("launch" == config.request) then
-        return cb({type = "executable", command = "/home/olical/repos/Olical/clojure-dap/script/run", args = {}, options = {source_filetype = "clojure", initialize_timeout_sec = 10}})
+        return error("Launching the debuggee through clojure-dap is not supported, use attach instead.")
       else
         return error(("Unknown request" .. (config.request or "nil")))
       end
     end
     dap.adapters.clojure = _6_
-    dap.configurations.clojure = {{type = "clojure", request = "launch", name = "Launch Clojure DAP and attach to nREPL"}}
+    dap.configurations.clojure = {{type = "clojure", request = "attach", name = "Start Clojure DAP and attach to a running nREPL", clojure_dap = {type = "fake"}}}
   end
   return opts
 end

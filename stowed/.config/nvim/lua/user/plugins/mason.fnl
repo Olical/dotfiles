@@ -39,21 +39,22 @@
                    (fn [cb config]
                      (if
                        (= :attach config.request)
-                       (error "Attaching to clojure-dap is not yet supported, use launch instead")
-
-                       (= :launch config.request)
                        (cb
                          {:type :executable
                           :command "/home/olical/repos/Olical/clojure-dap/script/run"
                           :args []
                           :options {:source_filetype :clojure
-                                    :initialize_timeout_sec 10}})
+                                    :initialize_timeout_sec 20}})
+
+                       (= :launch config.request)
+                       (error "Launching the debuggee through clojure-dap is not supported, use attach instead.")
 
                        (error (.. "Unknown request" (or config.request "nil"))))))
 
               (set dap.configurations.clojure
                    [{:type :clojure
-                     :request :launch
-                     :name "Launch Clojure DAP and attach to nREPL"}]))
+                     :request :attach
+                     :name "Start Clojure DAP and attach to a running nREPL"
+                     :clojure_dap {:type :fake}}]))
 
             opts)})]
