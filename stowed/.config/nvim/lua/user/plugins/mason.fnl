@@ -54,7 +54,6 @@
               (set dap.configurations.clojure
                    [{:type :clojure
                      :request :attach
-                     :name "Start Clojure DAP and attach to a running nREPL"
-                     :clojure_dap {:type :fake}}]))
+                     :name "Start Clojure DAP and attach to a running nREPL"}]))
 
             opts)})]

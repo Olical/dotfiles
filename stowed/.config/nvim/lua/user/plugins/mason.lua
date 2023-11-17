@@ -33,7 +33,7 @@ local function _5_(_, opts)
       end
     end
     dap.adapters.clojure = _6_
-    dap.configurations.clojure = {{type = "clojure", request = "attach", name = "Start Clojure DAP and attach to a running nREPL", clojure_dap = {type = "fake"}}}
+    dap.configurations.clojure = {{type = "clojure", request = "attach", name = "Start Clojure DAP and attach to a running nREPL"}}
   end
   return opts
 end
