@@ -13,11 +13,6 @@
             (set opts.ensure_installed (utils.list_insert_unique opts.ensure_installed :clojure_lsp)))})
 
  (uu.tx
-   :nvim-treesitter/nvim-treesitter
-   {:opts (fn [_ opts]
-            (set opts.ensure_installed (utils.list_insert_unique opts.ensure_installed :clojure)))})
-
- (uu.tx
    :Olical/conjure
    {:dev (uu.dev? :conjure)
     :init (fn []
