@@ -1,7 +1,7 @@
 (local uu (require :user.util))
 
 [(uu.tx :Olical/aniseed {:dev (uu.dev? :aniseed)})
- (uu.tx :Olical/nfnl {:dev (uu.dev? :nfnl)})
+ (uu.tx :Olical/nfnl {:config true :dev (uu.dev? :nfnl)})
  (uu.tx :Olical/nfnl-plugin-example {:dev (uu.dev? :nfnl-plugin-example)})
  (uu.tx :nvim-lua/plenary.nvim)
  (uu.tx :PeterRincker/vim-argumentative)
