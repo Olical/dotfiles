@@ -37,4 +37,4 @@ if [ -f ~/.config.fish ]
   source ~/.config.fish
 end
 
-zoxide init fish | source
+zoxide init --cmd cd fish | source
