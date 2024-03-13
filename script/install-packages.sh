@@ -9,7 +9,8 @@ yay -S --needed \
 	noto-fonts-emoji gnome-keyring topgrade neovim leiningen \
 	difftastic direnv ttf-firacode-nerd luarocks fennel \
 	fd sd spectacle rsync bat jq yq firefox flatpak docker docker-compose \
-	rustup flameshot adobe-source-han-sans-kr-fonts less man obsidian zoxide
+	rustup flameshot adobe-source-han-sans-kr-fonts less man obsidian zoxide \
+	wl-clipboard
 
 flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
 
