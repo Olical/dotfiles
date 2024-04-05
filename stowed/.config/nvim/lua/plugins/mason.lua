@@ -1,43 +1,40 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- Customize Mason plugins
-
----@type LazySpec
-return {
-  -- use mason-lspconfig to configure LSP installations
-  {
-    "williamboman/mason-lspconfig.nvim",
-    -- overrides `require("mason-lspconfig").setup(...)`
-    opts = function(_, opts)
-      -- add more things to the ensure_installed table protecting against community packs modifying it
-      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
-        "lua_ls",
-        -- add more arguments for adding more language servers
-      })
-    end,
-  },
-  -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
-  {
-    "jay-babu/mason-null-ls.nvim",
-    -- overrides `require("mason-null-ls").setup(...)`
-    opts = function(_, opts)
-      -- add more things to the ensure_installed table protecting against community packs modifying it
-      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
-        "prettier",
-        "stylua",
-        -- add more arguments for adding more null-ls sources
-      })
-    end,
-  },
-  {
-    "jay-babu/mason-nvim-dap.nvim",
-    -- overrides `require("mason-nvim-dap").setup(...)`
-    opts = function(_, opts)
-      -- add more things to the ensure_installed table protecting against community packs modifying it
-      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
-        "python",
-        -- add more arguments for adding more debuggers
-      })
-    end,
-  },
-}
+-- [nfnl] Compiled from fnl/plugins/mason.fnl by https://github.com/Olical/nfnl, do not edit.
+local uu = require("dotfiles.util")
+local utils = uu.autoload("astrocore")
+local lspconfig = uu.autoload("lspconfig")
+local function _1_(_, opts)
+  opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {"fennel_language_server"})
+  local function _2_()
+    return lspconfig.lua_ls.setup({settings = {Lua = {diagnostics = {globals = {"vim", "jit"}}}}})
+  end
+  opts.handlers.lua_ls = _2_
+  local function _3_()
+    return lspconfig.fennel_language_server.setup({filetypes = {"fennel"}, root_dir = lspconfig.util.root_pattern("fnl", "lua"), single_file_support = true, settings = {fennel = {diagnostics = {globals = {"vim", "jit", "comment"}}, workspace = {library = vim.api.nvim_list_runtime_paths()}}}})
+  end
+  opts.handlers.fennel_language_server = _3_
+  return opts
+end
+local function _4_(_, opts)
+  opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {})
+  return opts
+end
+local function _5_(_, opts)
+  opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {})
+  do
+    local dap = require("dap")
+    dap.set_log_level("TRACE")
+    local function _6_(cb, config)
+      if ("attach" == config.request) then
+        return cb({type = "executable", command = "/home/olical/repos/Olical/clojure-dap/script/run", args = {}, options = {source_filetype = "clojure", initialize_timeout_sec = 20}})
+      elseif ("launch" == config.request) then
+        return error("Launching the debuggee through clojure-dap is not supported, use attach instead.")
+      else
+        return error(("Unknown request" .. (config.request or "nil")))
+      end
+    end
+    dap.adapters.clojure = _6_
+    dap.configurations.clojure = {{type = "clojure", request = "attach", name = "Start Clojure DAP and attach to a running nREPL"}}
+  end
+  return opts
+end
+return {uu.tx("williamboman/mason-lspconfig.nvim", {opts = _1_}), uu.tx("jay-babu/mason-null-ls.nvim", {opts = _4_}), uu.tx("jay-babu/mason-nvim-dap.nvim", {opts = _5_})}
