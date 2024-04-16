@@ -2,17 +2,16 @@
 
 set -xe
 
-if ! command -v yay &> /dev/null
-then
-    sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf ./yay
+if ! command -v yay &>/dev/null; then
+	sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf ./yay
 fi
 
 yay -S --needed stow git
 
-if [ ! -d "~/.config/nvim" ]; then
-  git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+if [ ! -d "$HOME/.config/nvim" ]; then
+	git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 fi
 
-stow --target=$HOME stowed
+./script/stow.sh
 ./script/install-packages.sh
-chsh -s `which fish`
+chsh -s "$(which fish)"
