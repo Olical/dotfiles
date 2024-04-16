@@ -28,6 +28,7 @@ alias g="git"
 alias gg="g a .; and g c -a"
 alias lg="lazygit"
 alias n="nvim"
+alias z="zellij"
 
 # Start an SSH agent if required, if not, connect to it.
 initialise_ssh_agent
