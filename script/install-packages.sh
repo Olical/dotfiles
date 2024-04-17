@@ -49,7 +49,12 @@ yay -S --needed \
 	ttf-firacode-nerd \
 	wl-clipboard \
 	sway \
-	foot
+	swaylock \
+	swayidle \
+	waybar \
+	kitty \
+	pavucontrol \
+	wofi
 
 flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
 
