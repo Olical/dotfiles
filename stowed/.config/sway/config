@@ -5,11 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 ## TODO
-# Lock key
 # Shutdown and sleep keys
-# Clean bar
-# Wifi management GUI
-# Sound management GUI (swap output easily)
 # How do I split workspaces across both monitors?
 
 ### Variables
@@ -56,7 +52,8 @@ exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \
          timeout 600 'swaymsg "output * power off"' \
          resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep 'swaylock -f -c 000000' \
+         lock 'swaylock -f -c 000000'
 
 ### Input configuration
 #
@@ -108,6 +105,9 @@ input * {
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    # Lock
+    bindsym $mod+Escape exec loginctl lock-session
 #
 # Moving around:
 #
