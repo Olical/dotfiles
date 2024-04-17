@@ -3,12 +3,13 @@
 set -xe
 
 yay -S --needed \
-	adobe-source-han-sans-kr-fonts \
 	asciinema \
-	babashka \
 	bat \
 	bitwarden-cli \
+	fennel \
 	clojure \
+	leiningen \
+	babashka \
 	cowsay \
 	difftastic \
 	direnv \
@@ -16,38 +17,39 @@ yay -S --needed \
 	docker-compose \
 	entr \
 	fd \
-	fennel \
+	sd \
 	firefox \
 	fish \
+	zoxide \
 	flatpak \
 	fzf \
 	htop \
 	httpie \
 	jq \
+	yq \
 	lazydocker \
 	lazygit \
-	leiningen \
 	less \
 	lua \
 	luarocks \
 	man \
 	neovim \
 	nodejs \
-	noto-fonts-emoji \
 	npm \
 	obsidian \
 	ripgrep \
 	rsync \
 	rustup \
-	sd \
 	topgrade \
 	tree \
+	noto-fonts-emoji \
+	adobe-source-han-sans-kr-fonts \
 	ttf-dejavu-emojiless \
 	ttf-fira-code \
 	ttf-firacode-nerd \
 	wl-clipboard \
-	yq \
-	zoxide
+	sway \
+	foot
 
 flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
 
