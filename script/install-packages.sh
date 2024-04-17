@@ -3,14 +3,51 @@
 set -xe
 
 yay -S --needed \
-	kitty fzf cowsay entr fish httpie htop npm nodejs-lts-hydrogen \
-	asciinema ripgrep clojure lazygit tree bitwarden-cli \
-	babashka lua xclip ttf-fira-code ttf-dejavu-emojiless \
-	noto-fonts-emoji gnome-keyring topgrade neovim leiningen \
-	difftastic direnv ttf-firacode-nerd luarocks fennel \
-	fd sd spectacle rsync bat jq yq firefox flatpak docker docker-compose \
-	rustup flameshot adobe-source-han-sans-kr-fonts less man obsidian zoxide \
-	wl-clipboard
+	adobe-source-han-sans-kr-fonts \
+	asciinema \
+	babashka \
+	bat \
+	bitwarden-cli \
+	clojure \
+	cowsay \
+	difftastic \
+	direnv \
+	docker \
+	docker-compose \
+	entr \
+	fd \
+	fennel \
+	firefox \
+	fish \
+	flatpak \
+	fzf \
+	htop \
+	httpie \
+	jq \
+	lazydocker \
+	lazygit \
+	leiningen \
+	less \
+	lua \
+	luarocks \
+	man \
+	neovim \
+	nodejs \
+	noto-fonts-emoji \
+	npm \
+	obsidian \
+	ripgrep \
+	rsync \
+	rustup \
+	sd \
+	topgrade \
+	tree \
+	ttf-dejavu-emojiless \
+	ttf-fira-code \
+	ttf-firacode-nerd \
+	wl-clipboard \
+	yq \
+	zoxide
 
 flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
 
