@@ -2,12 +2,10 @@
 #   man 5 mako
 # To view all configuration options.
 
-font=Cozette 11
 format=<b>%a ⏵</b> %s\n%b
 sort=-time
-output=DP-2
 layer=overlay
-anchor=bottom-center
+anchor=bottom-right
 background-color=#2e3440
 width=300
 height=110
