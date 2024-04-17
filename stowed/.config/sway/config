@@ -10,7 +10,6 @@
 # Clean bar
 # Wifi management GUI
 # Sound management GUI (swap output easily)
-# Remove window headers
 # How do I split workspaces across both monitors?
 
 ### Variables
@@ -221,6 +220,20 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+#
+# Windows
+#
+gaps inner 4
+smart_gaps on
+default_border pixel 2
+hide_edge_borders --i3 smart_no_gaps
+
+#
+# Background services
+#
+exec mako
+exec_always nm-applet
 
 #
 # Status Bar:

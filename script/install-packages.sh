@@ -43,6 +43,7 @@ yay -S --needed \
 	topgrade \
 	tree \
 	noto-fonts-emoji \
+	otf-font-awesome \
 	adobe-source-han-sans-kr-fonts \
 	ttf-dejavu-emojiless \
 	ttf-fira-code \
@@ -54,7 +55,9 @@ yay -S --needed \
 	waybar \
 	kitty \
 	pavucontrol \
-	wofi
+	wofi \
+	mako \
+	network-manager-applet
 
 flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
 
