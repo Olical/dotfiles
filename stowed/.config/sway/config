@@ -221,23 +221,18 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Windows
-#
+### Windows
 gaps inner 4
 smart_gaps on
 default_border pixel 2
 hide_edge_borders --i3 smart_no_gaps
 
-#
-# Background services
-#
+### Background services
 exec mako
 exec_always nm-applet
 
-#
-# Status Bar:
-#
+
+### Status Bar:
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     swaybar_command waybar
