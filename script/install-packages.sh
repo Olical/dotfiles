@@ -43,7 +43,7 @@ yay -S --needed \
 	topgrade \
 	tree \
 	noto-fonts-emoji \
-	otf-font-awesome \
+	noto-fonts-cjk \
 	adobe-source-han-sans-kr-fonts \
 	ttf-dejavu-emojiless \
 	ttf-fira-code \
