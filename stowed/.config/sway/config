@@ -112,6 +112,12 @@ input * {
     # Brightness
     bindsym XF86MonBrightnessDown exec brightnessctl set '10%-'
     bindsym XF86MonBrightnessUp exec brightnessctl set '+10%'
+
+    # Audio
+    bindsym XF86AudioRaiseVolume exec volumectl up
+    bindsym XF86AudioLowerVolume exec volumectl down
+    bindsym XF86AudioMute exec volumectl toggle
+
 #
 # Moving around:
 #

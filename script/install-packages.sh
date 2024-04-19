@@ -58,7 +58,8 @@ yay -S --needed \
 	wofi \
 	mako \
 	network-manager-applet \
-	brightnessctl
+	brightnessctl \
+	volumectl
 
 flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
 
