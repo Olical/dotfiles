@@ -108,6 +108,10 @@ input * {
 
     # Lock
     bindsym $mod+Escape exec loginctl lock-session
+
+    # Brightness
+    bindsym XF86MonBrightnessDown exec brightnessctl set '10%-'
+    bindsym XF86MonBrightnessUp exec brightnessctl set '+10%'
 #
 # Moving around:
 #

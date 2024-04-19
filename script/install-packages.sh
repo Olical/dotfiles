@@ -57,7 +57,8 @@ yay -S --needed \
 	pavucontrol \
 	wofi \
 	mako \
-	network-manager-applet
+	network-manager-applet \
+	brightnessctl
 
 flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
 
