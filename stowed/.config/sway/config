@@ -118,6 +118,9 @@ input * {
     bindsym XF86AudioLowerVolume exec volumectl down
     bindsym XF86AudioMute exec volumectl toggle
 
+    # Screenshot
+    bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy
+
 #
 # Moving around:
 #

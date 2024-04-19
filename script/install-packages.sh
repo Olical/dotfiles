@@ -59,7 +59,9 @@ yay -S --needed \
 	mako \
 	network-manager-applet \
 	brightnessctl \
-	volumectl
+	volumectl \
+	grim \
+	slurp
 
 flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
 
