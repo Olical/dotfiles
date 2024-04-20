@@ -1,6 +1,6 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: "Noto Sans CJK KR Regular";
+  font-family: "Noto Sans CJK KR", "Font Awesome 6 Free", sans-serif;
   font-size: 13px;
   min-height: 0;
 }
