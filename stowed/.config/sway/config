@@ -4,10 +4,6 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-## TODO
-# Shutdown and sleep keys
-# How do I split workspaces across both monitors?
-
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
