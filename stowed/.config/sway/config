@@ -240,9 +240,7 @@ gaps inner 4
 smart_gaps on
 default_border pixel 2
 hide_edge_borders --i3 smart_no_gaps
-
-# Border, background, text.
-client.focused "#FF0000" "#5db03f" "#FF0000" "#b4ff99"
+client.focused "#0e6b27" "#5db03f" "#ffffff" "#b4ff99"
 
 ### Background services
 exec mako
