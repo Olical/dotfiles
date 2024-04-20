@@ -42,6 +42,7 @@ yay -S --needed \
 	rustup \
 	topgrade \
 	tree \
+	ttf-font-awesome \
 	noto-fonts-emoji \
 	noto-fonts-cjk \
 	adobe-source-han-sans-kr-fonts \
