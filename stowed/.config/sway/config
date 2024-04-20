@@ -22,7 +22,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show run --allow-images | xargs swaymsg exec --
+set $menu wofi -Ima --show drun | xargs swaymsg exec --
 
 ### Output configuration
 #
