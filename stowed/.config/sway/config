@@ -27,7 +27,7 @@ set $menu wofi --show run --allow-images | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/.config/sway/images/trees.png fill
 #
 # Example configuration:
 #
@@ -49,11 +49,11 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300 'swaylock -f -i ~/.config/sway/images/trees.png' \
          timeout 600 'swaymsg "output * power off"' \
          resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000' \
-         lock 'swaylock -f -c 000000'
+         before-sleep 'swaylock -f -i ~/.config/sway/images/trees.png' \
+         lock 'swaylock -f -i ~/.config/sway/images/trees.png'
 
 ### Input configuration
 #
@@ -212,21 +212,22 @@ input * {
 #
 # Resizing containers:
 #
+set $resizepx 50px
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym $left resize shrink width $resizepx
+    bindsym $down resize grow height $resizepx
+    bindsym $up resize shrink height $resizepx
+    bindsym $right resize grow width $resizepx
 
     # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Left resize shrink width $resizepx
+    bindsym Down resize grow height $resizepx
+    bindsym Up resize shrink height $resizepx
+    bindsym Right resize grow width $resizepx
 
     # Return to default mode
     bindsym Return mode "default"
@@ -239,6 +240,9 @@ gaps inner 4
 smart_gaps on
 default_border pixel 2
 hide_edge_borders --i3 smart_no_gaps
+
+# Border, background, text.
+client.focused "#FF0000" "#5db03f" "#FF0000" "#b4ff99"
 
 ### Background services
 exec mako

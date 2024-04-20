@@ -52,6 +52,7 @@ yay -S --needed \
 	sway \
 	swaylock \
 	swayidle \
+	swaybg \
 	waybar \
 	kitty \
 	pavucontrol \
