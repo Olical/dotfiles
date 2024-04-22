@@ -248,7 +248,8 @@ client.focused "#0e6b27" "#5db03f" "#ffffff" "#b4ff99"
 
 ### Background services
 exec mako
-exec_always nm-applet
+exec_always nm-applet --indicator
+exec playerctld daemon
 
 
 ### Status Bar:
