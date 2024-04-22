@@ -73,3 +73,5 @@ sudo systemctl enable docker
 sudo systemctl start docker
 
 rustup default stable
+
+xdg-settings set default-web-browser firefox.desktop
