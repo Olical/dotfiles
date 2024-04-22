@@ -74,7 +74,12 @@ input "1267:12793:ELAN067C:00_04F3:31F9_Touchpad" {
 
 input * {
     xkb_layout "gb"
+    accel_profile "flat"
+    pointer_accel -0.2
 }
+
+output HDMI-A-1 pos 0 0
+output DP-3 pos 1920 0
 
 ### Key bindings
 #
