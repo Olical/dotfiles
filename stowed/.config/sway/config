@@ -122,6 +122,9 @@ output DP-3 pos 1920 0
     # Screenshot
     bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy
 
+    # Media
+    bindsym XF86AudioPlay exec playerctl play-pause
+
 #
 # Moving around:
 #

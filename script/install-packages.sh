@@ -50,6 +50,7 @@ yay -S --needed \
 	ttf-fira-code \
 	ttf-firacode-nerd \
 	wl-clipboard \
+	wev \
 	sway \
 	swaylock \
 	swayidle \
@@ -63,7 +64,8 @@ yay -S --needed \
 	brightnessctl \
 	volumectl \
 	grim \
-	slurp
+	slurp \
+	playerctl
 
 flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
 
