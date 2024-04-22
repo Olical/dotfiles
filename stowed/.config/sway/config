@@ -68,17 +68,19 @@ exec swayidle -w \
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+input * {
+    xkb_layout "gb"
+    accel_profile "flat"
+    pointer_accel -0.2
+}
+
 input "1267:12793:ELAN067C:00_04F3:31F9_Touchpad" {
     dwt enabled
     tap enabled
     natural_scroll disabled
     middle_emulation disabled
-}
-
-input * {
-    xkb_layout "gb"
-    accel_profile "flat"
-    pointer_accel -0.2
+    pointer_accel 0.0
+    accel_profile "adaptive"
 }
 
 output HDMI-A-1 pos 0 0
