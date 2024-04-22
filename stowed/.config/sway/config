@@ -13,8 +13,10 @@ set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulator
-set $term kitty
+set $term kitty --single-instance
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
