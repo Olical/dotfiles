@@ -5,7 +5,7 @@ set -xe
 yay -S --needed \
 	asciinema \
 	bat \
-	bitwarden-cli \
+	rbw \
 	fennel \
 	clojure \
 	leiningen \
