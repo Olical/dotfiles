@@ -8,5 +8,5 @@ function sync
   git pull
   cd -
 
-  nvim +AstroUpdatePackages +qa
+  nvim +AstroUpdate +qa
 end
