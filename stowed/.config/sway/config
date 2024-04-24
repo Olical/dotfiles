@@ -130,6 +130,10 @@ output "Dell Inc. DELL S2721DGF 7T2MY13" pos 1920 0
     # Media
     bindsym XF86AudioPlay exec playerctl play-pause
 
+    # Sleepytime
+    bindsym XF86Sleep exec systemctl suspend
+    bindsym XF86PowerOff exec systemctl suspend
+
 #
 # Moving around:
 #
