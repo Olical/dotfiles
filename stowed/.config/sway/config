@@ -201,6 +201,9 @@ output "Dell Inc. DELL S2721DGF 7T2MY13" pos 1920 0
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
 
+    # Toggle stickyness
+    bindsym $mod+Shift+s sticky toggle
+
     # Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle
 
