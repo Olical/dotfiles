@@ -83,8 +83,8 @@ input "1267:12793:ELAN067C:00_04F3:31F9_Touchpad" {
     accel_profile "adaptive"
 }
 
-output HDMI-A-1 pos 0 0
-output DP-3 pos 1920 0
+output "BNQ BenQ XL2430T VCE03607SL0" pos 0 0
+output "Dell Inc. DELL S2721DGF 7T2MY13" pos 1920 0
 
 ### Key bindings
 #
