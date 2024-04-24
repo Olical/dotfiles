@@ -48,9 +48,9 @@ output * bg ~/.config/sway/images/trees.png fill
 
 exec swayidle -w \
          timeout 300 'swaylock -f -i ~/.config/sway/images/trees.png' \
-         timeout 360 'swaymsg "output * power off"' \
-         timeout 600 'systemctl syspend' \
+         timeout 330 'swaymsg "output * power off"' \
          resume 'swaymsg "output * power on"' \
+         timeout 600 'systemctl syspend' \
          before-sleep 'swaylock -f -i ~/.config/sway/images/trees.png' \
          lock 'swaylock -f -i ~/.config/sway/images/trees.png'
 
