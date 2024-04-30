@@ -258,6 +258,7 @@ client.focused "#0e6b27" "#5db03f" "#ffffff" "#b4ff99"
 exec mako
 exec_always nm-applet --indicator
 exec playerctld daemon
+exec lxpolkit
 
 
 ### Status Bar:

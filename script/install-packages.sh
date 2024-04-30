@@ -66,7 +66,8 @@ yay -S --needed \
 	volumectl \
 	grim \
 	slurp \
-	playerctl
+	playerctl \
+	lxsession
 
 flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
 
