@@ -67,7 +67,8 @@ yay -S --needed \
 	grim \
 	slurp \
 	playerctl \
-	lxsession
+	lxsession \
+	thunar
 
 flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
 
