@@ -130,6 +130,10 @@ output "Dell Inc. DELL S2721DGF 7T2MY13" pos 1920 0
     # Media
     bindsym XF86AudioPlay exec playerctl play-pause
 
+    # Clear Mako notification
+    bindsym $mod+shift+period exec makoctl dismiss
+    bindsym $mod+period exec makoctl dismiss
+
 #
 # Moving around:
 #
