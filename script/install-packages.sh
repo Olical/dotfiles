@@ -27,7 +27,7 @@ yay -S --needed \
 	httpie \
 	jq \
 	yq \
-	lazydocker \
+	lazydocker-bin \
 	lazygit \
 	less \
 	lua \
