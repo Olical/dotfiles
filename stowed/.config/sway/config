@@ -263,6 +263,7 @@ exec mako
 exec_always nm-applet --indicator
 exec playerctld daemon
 exec lxpolkit
+exec /usr/lib/xdg-desktop-portal -r
 
 
 ### Status Bar:
