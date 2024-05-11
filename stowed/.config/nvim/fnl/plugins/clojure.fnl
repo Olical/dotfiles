@@ -19,7 +19,7 @@
             (set vim.g.conjure#eval#result_register "*")
             (set vim.g.conjure#log#botright true)
             (set vim.g.conjure#mapping#doc_word "gk")
-            (set vim.g.conjure#client#clojure#nrepl#refresh#backend "clj-refresh")
+            (set vim.g.conjure#client#clojure#nrepl#refresh#backend "clj-reload")
 
             (vim.api.nvim_create_autocmd
               :BufNewFile

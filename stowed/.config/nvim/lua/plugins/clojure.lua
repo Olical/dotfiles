@@ -9,7 +9,7 @@ local function _2_()
   vim.g["conjure#eval#result_register"] = "*"
   vim.g["conjure#log#botright"] = true
   vim.g["conjure#mapping#doc_word"] = "gk"
-  vim.g["conjure#client#clojure#nrepl#refresh#backend"] = "clj-refresh"
+  vim.g["conjure#client#clojure#nrepl#refresh#backend"] = "clj-reload"
   local function _3_()
     return vim.diagnostic.disable(0)
   end
