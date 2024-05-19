@@ -22,15 +22,6 @@
             (set vim.g.conjure#client#clojure#nrepl#refresh#backend "clj-reload")
 
             (vim.api.nvim_create_autocmd
-              :BufNewFile
-              {:callback (fn []
-                           (vim.diagnostic.disable 0))
-               :desc "Conjure Log disable LSP diagnostics"
-               :group (vim.api.nvim_create_augroup :conjure_log_disable_lsp
-                                                   {:clear true})
-               :pattern [:conjure-log-*]})
-
-            (vim.api.nvim_create_autocmd
               :FileType
               {:callback (fn []
                            (set vim.bo.commentstring ";; %s"))
