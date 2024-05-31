@@ -15,6 +15,9 @@
  (uu.tx
    :Olical/conjure
    {:dev (uu.dev? :conjure)
+    :lazy true
+    :ft [:clojure :fennel :janet :hy :julia :racket :scheme :lua :lisp :python :rust :sql]
+    :dependencies [:Olical/AnsiEsc :PaterJason/cmp-conjure]
     :init (fn []
             (set vim.g.conjure#eval#result_register "*")
             (set vim.g.conjure#log#botright true)
@@ -30,6 +33,14 @@
                                                    {:clear true})
                :pattern [:clojure]}))})
 
- (uu.tx :Olical/AnsiEsc {:dev (uu.dev? :AnsiEsc)})
+ (uu.tx :Olical/AnsiEsc
+        {:dev (uu.dev? :AnsiEsc)
+         :lazy true})
+
  (uu.tx :PaterJason/cmp-conjure
-        {:dependencies [:Olical/conjure]})]
+        {:lazy true
+         :config (fn []
+                   (let [cmp (require :cmp)
+                         config (cmp.get_config)]
+                     (table.insert config.sources {:name :conjure})
+                     (cmp.setup config)))})]
