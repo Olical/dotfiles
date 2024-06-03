@@ -70,7 +70,7 @@ yay -S --needed \
 	lxsession \
 	thunar
 
-flatpak install -y flathub us.zoom.Zoom com.discordapp.Discord
+flatpak install -y flathub com.discordapp.Discord
 
 sudo systemctl enable docker
 sudo systemctl start docker
