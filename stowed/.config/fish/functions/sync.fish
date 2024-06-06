@@ -5,6 +5,7 @@ function sync
   topgrade --disable git_repos containers vim
 
   cd ~/repos/Olical/dotfiles
+  git checkout -- stowed/.config/nvim/lazy-lock.json
   git pull
   cd -
 
