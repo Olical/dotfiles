@@ -9,4 +9,4 @@ end
 local function _2_()
   return integrations.pick(actions.prompt_actions())
 end
-return {uu.tx("zbirenbaum/copilot.lua", {cmd = "Copilot", event = "BufEnter", config = _1_}), uu.tx("CopilotC-Nvim/CopilotChat.nvim", {branch = "canary", event = "BufEnter", dependencies = {"zbirenbaum/copilot.lua"}, opts = {context = "buffers", debug = false}, keys = {{"<leader>cc", "<cmd>CopilotChat<cr>"}, {"<leader>cp", _2_}}})}
+return {uu.tx("zbirenbaum/copilot.lua", {cmd = "Copilot", event = "BufEnter", config = _1_}), uu.tx("CopilotC-Nvim/CopilotChat.nvim", {branch = "canary", event = "BufEnter", dependencies = {"zbirenbaum/copilot.lua"}, opts = {context = "buffers", debug = false}, keys = {{"<leader>c", "<cmd>CopilotChat<cr>", desc = "Open Copilot Chat"}, {"<leader>c", _2_, desc = "Pick Copilot Action", mode = "v"}}})}

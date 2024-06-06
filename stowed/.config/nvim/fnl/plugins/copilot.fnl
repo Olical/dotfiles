@@ -19,8 +19,11 @@
     :dependencies [:zbirenbaum/copilot.lua]
     :opts {:debug false
            :context :buffers}
-    :keys [["<leader>cc" "<cmd>CopilotChat<cr>"]
-           ["<leader>cp"
-            (fn []
-              (integrations.pick (actions.prompt_actions)))]]
-    })]
+    :keys [{1 "<leader>c"
+            2 "<cmd>CopilotChat<cr>"
+            :desc "Open Copilot Chat"}
+
+           {1 "<leader>c"
+            2 #(integrations.pick (actions.prompt_actions))
+            :desc "Pick Copilot Action"
+            :mode :v}]})]
