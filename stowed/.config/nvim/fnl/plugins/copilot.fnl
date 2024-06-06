@@ -1,4 +1,6 @@
 (local uu (require :dotfiles.util))
+(local actions (uu.autoload :CopilotChat.actions))
+(local integrations (uu.autoload :CopilotChat.integrations.telescope))
 
 [(uu.tx
    :zbirenbaum/copilot.lua
@@ -15,4 +17,10 @@
    {:branch "canary"
     :event "BufEnter"
     :dependencies [:zbirenbaum/copilot.lua]
-    :opts {:debug false}})]
+    :opts {:debug false
+           :context :buffers}
+    :keys [["<leader>cc" "<cmd>CopilotChat<cr>"]
+           ["<leader>cp"
+            (fn []
+              (integrations.pick (actions.prompt_actions)))]]
+    })]
