@@ -4,7 +4,7 @@ local fun = require("dotfiles.vendor.fun")
 local lisps = {"scheme", "lisp", "clojure", "fennel"}
 local function _1_()
   local autopairs = require("nvim-autopairs")
-  do end (fun.head(autopairs.get_rules("'")))["not_filetypes"] = lisps
+  fun.head(autopairs.get_rules("'"))["not_filetypes"] = lisps
   fun.head(autopairs.get_rules("`"))["not_filetypes"] = lisps
   return autopairs.setup({ignored_next_char = "", enable_check_bracket_line = false})
 end
@@ -26,4 +26,4 @@ local function _2_()
   paredit.setup({keys = {["<A-H>"] = {paredit.api.slurp_backwards, "Slurp backwards"}, ["<A-J>"] = {paredit.api.barf_backwards, "Barf backwards"}, ["<A-K>"] = {paredit.api.barf_forwards, "Barf forwards"}, ["<A-L>"] = {paredit.api.slurp_forwards, "Slurp forwards"}, ["<localleader>w"] = {_3_, "Wrap element insert head"}, ["<localleader>W"] = {_4_, "Wrap element insert tail"}, ["<localleader>i"] = {_5_, "Wrap form insert head"}, ["<localleader>I"] = {_6_, "Wrap form insert tail"}}})
   return paredit_fennel.setup()
 end
-return {uu.tx("windwp/nvim-autopairs", {init = _1_}), uu.tx("julienvincent/nvim-paredit", {dependencies = {"julienvincent/nvim-paredit-fennel"}, ft = {"clojure", "scheme", "lisp", "timl", "fennel", "janet"}, config = _2_})}
+return {uu.tx("windwp/nvim-autopairs", {init = _1_}), uu.tx("julienvincent/nvim-paredit", {dependencies = {"datwaft/nvim-paredit-fennel"}, ft = {"clojure", "scheme", "lisp", "timl", "fennel", "janet"}, config = _2_})}

@@ -15,7 +15,9 @@
 
  (uu.tx
    :julienvincent/nvim-paredit
-   {:dependencies ["julienvincent/nvim-paredit-fennel"]
+   {;; Using a fork of julienvincent/nvim-paredit-fennel that fixes things.
+    ;; https://github.com/julienvincent/nvim-paredit-fennel/pull/1
+    :dependencies ["datwaft/nvim-paredit-fennel"]
     :ft ["clojure" "scheme" "lisp" "timl" "fennel" "janet"]
     :config (fn []
               (let [paredit (require :nvim-paredit)
