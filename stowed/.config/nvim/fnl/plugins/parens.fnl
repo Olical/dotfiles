@@ -15,11 +15,9 @@
 
  (uu.tx
    :julienvincent/nvim-paredit
-   {:dependencies ["julienvincent/nvim-paredit-fennel"]
-    :ft ["clojure" "scheme" "lisp" "timl" "fennel" "janet"]
+   {:ft ["clojure" "scheme" "lisp" "timl" "fennel" "janet"]
     :config (fn []
-              (let [paredit (require :nvim-paredit)
-                    paredit-fennel (require "nvim-paredit-fennel")]
+              (let [paredit (require :nvim-paredit)]
                 (paredit.setup
                   {:keys
                    {:<A-H> [paredit.api.slurp_backwards "Slurp backwards"]
@@ -57,5 +55,4 @@
                          (paredit.wrap.wrap_enclosing_form_under_cursor "(" ")")
                          {:placement :inner_end
                           :mode :insert}))
-                     "Wrap form insert tail"]}})
-                (paredit-fennel.setup)))})]
+                     "Wrap form insert tail"]}})))})]
