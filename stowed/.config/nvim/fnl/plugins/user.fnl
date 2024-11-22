@@ -1,7 +1,7 @@
 (local uu (require :dotfiles.util))
 
 [(uu.tx :Olical/aniseed {:dev (uu.dev? :aniseed)})
- (uu.tx :Olical/nfnl {:dev (uu.dev? :nfnl) :init (fn [] (set vim.g.nfnl#force_autoload true))})
+ (uu.tx :Olical/nfnl {:dev (uu.dev? :nfnl) :opts {:compile_on_write true :force_autoload true}})
  (uu.tx :Olical/nfnl-plugin-example {:dev (uu.dev? :nfnl-plugin-example)})
  (uu.tx :nvim-lua/plenary.nvim)
  (uu.tx :PeterRincker/vim-argumentative)
