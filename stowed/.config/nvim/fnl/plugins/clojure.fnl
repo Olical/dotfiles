@@ -17,9 +17,8 @@
    {:dev (uu.dev? :conjure)
     :lazy true
     :ft [:clojure :fennel :janet :hy :julia :racket :scheme :lua :lisp :python :rust :sql]
-    :dependencies [:Olical/AnsiEsc :PaterJason/cmp-conjure]
+    :dependencies [:Olical/nfnl :Olical/AnsiEsc :PaterJason/cmp-conjure]
     :init (fn []
-            (set vim.g.conjure#eval#result_register "*")
             (set vim.g.conjure#log#botright true)
             (set vim.g.conjure#mapping#doc_word "gk")
             (set vim.g.conjure#client#clojure#nrepl#refresh#backend "clj-reload")

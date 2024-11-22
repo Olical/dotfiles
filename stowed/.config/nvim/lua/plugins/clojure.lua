@@ -6,7 +6,6 @@ local function _1_(_, opts)
   return nil
 end
 local function _2_()
-  vim.g["conjure#eval#result_register"] = "*"
   vim.g["conjure#log#botright"] = true
   vim.g["conjure#mapping#doc_word"] = "gk"
   vim.g["conjure#client#clojure#nrepl#refresh#backend"] = "clj-reload"
@@ -22,4 +21,4 @@ local function _4_()
   table.insert(config.sources, {name = "conjure"})
   return cmp.setup(config)
 end
-return {uu.tx("clojure-vim/vim-jack-in", {ft = "clojure", cmd = "Clj", lazy = true}), uu.tx("williamboman/mason-lspconfig.nvim", {opts = _1_}), uu.tx("Olical/conjure", {dev = uu["dev?"]("conjure"), lazy = true, ft = {"clojure", "fennel", "janet", "hy", "julia", "racket", "scheme", "lua", "lisp", "python", "rust", "sql"}, dependencies = {"Olical/AnsiEsc", "PaterJason/cmp-conjure"}, init = _2_}), uu.tx("Olical/AnsiEsc", {dev = uu["dev?"]("AnsiEsc"), lazy = true}), uu.tx("PaterJason/cmp-conjure", {lazy = true, config = _4_})}
+return {uu.tx("clojure-vim/vim-jack-in", {ft = "clojure", cmd = "Clj", lazy = true}), uu.tx("williamboman/mason-lspconfig.nvim", {opts = _1_}), uu.tx("Olical/conjure", {dev = uu["dev?"]("conjure"), lazy = true, ft = {"clojure", "fennel", "janet", "hy", "julia", "racket", "scheme", "lua", "lisp", "python", "rust", "sql"}, dependencies = {"Olical/nfnl", "Olical/AnsiEsc", "PaterJason/cmp-conjure"}, init = _2_}), uu.tx("Olical/AnsiEsc", {dev = uu["dev?"]("AnsiEsc"), lazy = true}), uu.tx("PaterJason/cmp-conjure", {lazy = true, config = _4_})}
