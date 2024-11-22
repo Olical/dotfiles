@@ -14,7 +14,8 @@
 
  (uu.tx
    :Olical/conjure
-   {:dev (uu.dev? :conjure)
+   {:enabled true
+    :dev (uu.dev? :conjure)
     :lazy true
     :ft [:clojure :fennel :janet :hy :julia :racket :scheme :lua :lisp :python :rust :sql]
     :dependencies [:Olical/nfnl :Olical/AnsiEsc :PaterJason/cmp-conjure]
