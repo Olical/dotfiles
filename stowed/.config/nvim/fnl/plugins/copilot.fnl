@@ -14,7 +14,7 @@
 
  (uu.tx
    :CopilotC-Nvim/CopilotChat.nvim
-   {:branch "canary"
+   {:branch "main"
     :event "BufEnter"
     :dependencies [:zbirenbaum/copilot.lua]
     :opts {:debug false
