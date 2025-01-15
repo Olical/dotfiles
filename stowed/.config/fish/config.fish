@@ -1,14 +1,3 @@
-set -gx NPM_DIR "$HOME/.npm-data"
-set -gx NODE_PATH "$NPM_DIR/lib/node_modules:$NODE_PATH"
-set -gx PATH ~/bin $NPM_DIR/bin $HOME/.local/bin $PATH
-
-mkdir -p ~/bin $NPM_DIR/bin
-
-set -gx fish_greeting ""
-
-test -d ~/.linuxbrew && eval (~/.linuxbrew/bin/brew shellenv)
-test -d /home/linuxbrew/.linuxbrew && eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-
 if type -q nvim
   set -gx EDITOR nvim
   set -gx VISUAL nvim
@@ -16,12 +5,9 @@ if type -q nvim
   alias vimdiff="nvim -d"
 end
 
-if type -q direnv
-  direnv hook fish | source
-end
-
-set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow -g \"!.git/\" 2> /dev/null"
-set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+# Can maybe delete this, but reinstate if Neovim search is slow.
+# set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow -g \"!.git/\" 2> /dev/null"
+# set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
 # Other git aliases are in git config
 alias g="git"
@@ -37,4 +23,5 @@ if [ -f ~/.config.fish ]
   source ~/.config.fish
 end
 
+eval (mise activate fish)
 zoxide init --cmd cd fish | source

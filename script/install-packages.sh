@@ -5,14 +5,12 @@ set -xe
 yay -S --needed \
 	asciinema \
 	bat \
-	rbw \
 	fennel \
 	clojure \
 	leiningen \
 	babashka \
 	cowsay \
 	difftastic \
-	direnv \
 	docker \
 	docker-compose \
 	entr \
@@ -30,8 +28,6 @@ yay -S --needed \
 	lazydocker-bin \
 	lazygit \
 	less \
-	lua \
-	luarocks \
 	man \
 	neovim \
 	nodejs \
@@ -68,13 +64,13 @@ yay -S --needed \
 	slurp \
 	playerctl \
 	lxsession \
-	thunar
-
-flatpak install -y flathub com.discordapp.Discord
+	thunar \
+	usage \
+	mise
 
 sudo systemctl enable docker
 sudo systemctl start docker
 
-rustup default stable
-
 xdg-settings set default-web-browser firefox.desktop
+
+rustup default stable
