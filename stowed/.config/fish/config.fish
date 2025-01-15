@@ -23,5 +23,5 @@ if [ -f ~/.config.fish ]
   source ~/.config.fish
 end
 
-eval (mise activate fish)
+mise activate fish | source
 zoxide init --cmd cd fish | source
