@@ -1,4 +1,4 @@
--- [nfnl] Compiled from fnl/plugins/notify.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] Compiled from fnl/plugins/mini.notify.fnl by https://github.com/Olical/nfnl, do not edit.
 local function _1_(_, opts)
   local notify = require("mini.notify")
   notify.setup(opts)
