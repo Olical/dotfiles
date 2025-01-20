@@ -9,14 +9,15 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Plugin manager (lazy)
  - [x] Fennel compiler + bootstrap mostly in Fennel (nfnl)
  - [x] Directory browser and editor (oil)
+ - [x] Tree Sitter
+ - [x] Colour scheme
+ - [ ] Notification system
  - [ ] Fuzzy search
- - [ ] Tree Sitter
  - [ ] LSP
  - [ ] Key hints + pneumonic and handy mappings (jk, leader+q)
  - [ ] Spelling
  - [ ] Persistent undo tree + UI
  - [ ] Status line / clean and helpful UI elements
- - [ ] Colour scheme
  - [ ] AI
  - [ ] Git (probably just lazygit)
  - [ ] Sessions
