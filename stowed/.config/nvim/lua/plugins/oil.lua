@@ -2,8 +2,8 @@
 local function _1_(_, opts)
   local oil = require("oil")
   oil.setup(opts)
-  if ("" == vim.fn.expand("%")) then
-    return vim.schedule(oil.open)
+  if (("" == vim.fn.expand("%")) and not vim.api.nvim_win_get_config(0).zindex) then
+    return oil.open()
   else
     return nil
   end

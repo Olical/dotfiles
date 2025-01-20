@@ -2,5 +2,4 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 vim.keymap.set("n", "\\", ",")
-vim.o.shortmess = (vim.o.shortmess .. "at")
 return require("config.lazy")

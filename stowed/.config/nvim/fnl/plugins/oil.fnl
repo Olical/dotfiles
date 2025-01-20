@@ -9,9 +9,11 @@
                (oil.setup opts)
 
                ;; Open Oil by default if we don't specify a file at the CLI.
-               (when (= "" (vim.fn.expand "%"))
+               ;; And when there are no floating windows (i.e. Lazy)
+               (when (and (= "" (vim.fn.expand "%"))
+                          (not (. (vim.api.nvim_win_get_config 0) :zindex)))
                  ;; Schedule it so that it doesn't take over Lazy's floating window.
-                 (vim.schedule oil.open))))
+                 (oil.open))))
    :lazy false
    :keys [(doto ["-" "<CMD>Oil<CR>"]
 	    (tset :desc "Open parent directory"))]
