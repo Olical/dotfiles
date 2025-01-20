@@ -3,7 +3,7 @@ local function _1_(_, opts)
   local oil = require("oil")
   oil.setup(opts)
   if ("" == vim.fn.expand("%")) then
-    return oil.open()
+    return vim.schedule(oil.open)
   else
     return nil
   end

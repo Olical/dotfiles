@@ -11,7 +11,7 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Directory browser and editor (oil)
  - [x] Tree Sitter
  - [x] Colour scheme
- - [ ] Notification system
+ - [x] Notification system
  - [ ] Fuzzy search
  - [ ] LSP
  - [ ] Key hints + pneumonic and handy mappings (jk, leader+q)
