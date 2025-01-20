@@ -30,6 +30,7 @@ yay -S --needed \
 	less \
 	man \
 	neovim \
+	tree-sitter \
 	nodejs \
 	npm \
 	obsidian \
