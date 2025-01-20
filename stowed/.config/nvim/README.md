@@ -10,9 +10,11 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Fennel compiler + bootstrap mostly in Fennel (nfnl)
  - [x] Directory browser and editor (oil)
  - [ ] Fuzzy search
- - [ ] Key hints
  - [ ] Tree Sitter
  - [ ] LSP
+ - [ ] Key hints + pneumonic and handy mappings (jk, leader+q)
+ - [ ] Spelling
+ - [ ] Persistent undo tree + UI
  - [ ] Status line / clean and helpful UI elements
  - [ ] Colour scheme
  - [ ] AI
