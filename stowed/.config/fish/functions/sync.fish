@@ -9,5 +9,5 @@ function sync
   git pull
   cd -
 
-  nvim +AstroUpdate +qa
+  nvim --headless "+Lazy! sync" +qa
 end
