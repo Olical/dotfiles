@@ -1,4 +1,4 @@
-(import-macros {: pack} :config.macros)
+(import-macros {: tx} :config.macros)
 
-(pack "nvim-lualine/lualine.nvim"
+(tx "nvim-lualine/lualine.nvim"
   {:opts {}})

@@ -7,5 +7,6 @@
   "nvim-treesitter": { "branch": "master", "commit": "07bd1b53bf465e42d53253b48b7437892d6c45e8" },
   "oil.nvim": { "branch": "master", "commit": "09fa1d22f5edf0730824d2b222d726c8c81bbdc9" },
   "onedark.nvim": { "branch": "master", "commit": "67a74c275d1116d575ab25485d1bfa6b2a9c38a6" },
-  "vim-fennel": { "branch": "master", "commit": "86a9dc17c312a68234af55d7ee49231c7477d853" }
+  "vim-fennel": { "branch": "master", "commit": "86a9dc17c312a68234af55d7ee49231c7477d853" },
+  "which-key.nvim": { "branch": "main", "commit": "1f8d414f61e0b05958c342df9b6a4c89ce268766" }
 }

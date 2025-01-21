@@ -1,6 +1,6 @@
-(import-macros {: pack} :config.macros)
+(import-macros {: tx} :config.macros)
 
-(pack "stevearc/oil.nvim"
+(tx "stevearc/oil.nvim"
   {:opts {:columns [;; "permissions" "size" "mtime"
                     "icon"]
           :view_options {:show_hidden false}}
@@ -15,6 +15,6 @@
                  ;; Schedule it so that it doesn't take over Lazy's floating window.
                  (oil.open))))
    :lazy false
-   :keys [(doto ["-" "<CMD>Oil<CR>"]
-	    (tset :desc "Open parent directory"))]
-   :dependencies [(pack "echasnovski/mini.icons" {:opts {}})]})
+   :keys [(tx "-" "<CMD>Oil<CR>"
+            {:desc "Open parent directory"})]
+   :dependencies [(tx "echasnovski/mini.icons" {:opts {}})]})

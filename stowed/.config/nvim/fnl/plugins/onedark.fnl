@@ -1,6 +1,6 @@
-(import-macros {: pack} :config.macros)
+(import-macros {: tx} :config.macros)
 
-(pack "navarasu/onedark.nvim"
+(tx "navarasu/onedark.nvim"
   {:opts {:style "darker"}
    :config (fn [_ opts]
 	     (let [onedark (require :onedark)]

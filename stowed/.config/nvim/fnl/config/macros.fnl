@@ -1,23 +1,14 @@
 ;; [nfnl-macro]
 
-(fn str? [x]
-  (= :string (type x)))
+(fn tx [& args]
+  "Mixed sequential and associative tables at compile time. Because the Neovim ecosystem loves them but Fennel has no neat way to express them (which I think is fine, I don't like the idea of them in general)."
+  (let [to-merge (when (table? (. args (length args)))
+                   (table.remove args))]
+    (if to-merge
+      (do
+        (each [key value (pairs to-merge)]
+          (tset args key value))
+        args)
+      args)))
 
-(fn nil? [x]
-  (= nil x))
-
-(fn pack [identifier ?options]
-  "A workaround around the lack of mixed tables in Fennel.
-  Has special `options` keys for enhanced utility.
-  https://github.com/bakpakin/Fennel/issues/353#issuecomment-1875998397"
-  (assert-compile (str? identifier) "expected string for identifier" identifier)
-  (assert-compile (or (nil? ?options) (table? ?options))
-                  "expected table for options" ?options)
-  (let [options (or ?options {})
-        options (collect [k v (pairs options)]
-                  (match k
-                    :require* (values :config `#(require ,v))
-                    _ (values k v)))]
-    (doto options (tset 1 identifier))))
-
-{: pack}
+{: tx}

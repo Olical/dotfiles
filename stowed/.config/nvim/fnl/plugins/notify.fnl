@@ -1,6 +1,6 @@
-(import-macros {: pack} :config.macros)
+(import-macros {: tx} :config.macros)
 
-(pack "rcarriga/nvim-notify"
+(tx "rcarriga/nvim-notify"
   {:opts {}
    :config (fn [_ opts]
              (let [notify (require :notify)]

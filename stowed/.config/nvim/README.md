@@ -13,17 +13,19 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Colour scheme (onedark)
  - [x] Notification system (mini.notify)
  - [x] Status line / clean and helpful UI elements (lualine)
- - [ ] Fuzzy search
- - [ ] LSP
  - [ ] Key hints + pneumonic and handy mappings (jk, leader+q)
+ - [ ] Fuzzy search
+ - [ ] Completion
+ - [ ] Buffer navigation, leap/easymotion etc
+ - [ ] LSP
  - [ ] Spelling
  - [ ] Persistent undo tree + UI
  - [ ] AI
  - [ ] Git (probably just lazygit)
  - [ ] Sessions
  - [ ] REPL (Conjure!)
- - [ ] Buffer navigation, leap/easymotion etc
- - [ ] Completion
+ - [ ] Sexpression editing
+ - [ ] Brace and quote matching
 
 [nfnl]: https://github.com/Olical/nfnl
 [awesome-neovim]: https://github.com/rockerBOO/awesome-neovim

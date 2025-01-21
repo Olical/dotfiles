@@ -1,5 +1,5 @@
-(import-macros {: pack} :config.macros)
+(import-macros {: tx} :config.macros)
 
-(pack "nvim-treesitter/nvim-treesitter"
+(tx "nvim-treesitter/nvim-treesitter"
   {:main :nvim-treesitter.configs
    :opts {:auto_install true}})

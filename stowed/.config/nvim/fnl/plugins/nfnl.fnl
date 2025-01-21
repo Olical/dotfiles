@@ -1,3 +1,3 @@
-(import-macros {: pack} :config.macros)
+(import-macros {: tx} :config.macros)
 
-(pack "Olical/nfnl" {:ft "fennel"})
+(tx "Olical/nfnl" {:ft "fennel"})
