@@ -1,2 +1,2 @@
 -- [nfnl] Compiled from fnl/plugins/telescope.fnl by https://github.com/Olical/nfnl, do not edit.
-return {"nvim-telescope/telescope.nvim", dependencies = {"nvim-lua/plenary.nvim"}, opts = {}, tag = "0.1.8"}
+return {"nvim-telescope/telescope.nvim", cmd = "Telescope", dependencies = {"nvim-lua/plenary.nvim"}, keys = {{"<leader>ff", "<CMD>Telescope find_files<cr>", desc = "Find files"}, {"<leader>fg", "<CMD>Telescope live_grep<cr>", desc = "Find grep"}, {"<leader>fb", "<CMD>Telescope buffers<cr>", desc = "Find buffers"}, {"<leader>fh", "<CMD>Telescope help_tags<cr>", desc = "Find help tags"}, {"<leader>fc", "<CMD>Telescope commands<cr>", desc = "Find commands"}}, opts = {}, tag = "0.1.8"}
