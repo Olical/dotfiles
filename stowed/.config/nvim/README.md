@@ -14,9 +14,9 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Notification system (mini.notify)
  - [x] Status line / clean and helpful UI elements (lualine)
  - [x] Key hints + pneumonic and handy mappings (jk, leader+q)
- - [ ] Fuzzy search
- - [ ] Completion
+ - [x] Fuzzy search
  - [ ] Buffer navigation, leap/easymotion etc
+ - [ ] Completion
  - [ ] LSP
  - [ ] Spelling
  - [ ] Persistent undo tree + UI
