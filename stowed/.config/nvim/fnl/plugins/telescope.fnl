@@ -14,4 +14,6 @@
           (tx "<leader>fh" "<CMD>Telescope help_tags<cr>"
             {:desc "Find help tags"})
           (tx "<leader>fc" "<CMD>Telescope commands<cr>"
-            {:desc "Find commands"})]})
+            {:desc "Find commands"})
+          (tx "<leader>fo" "<CMD>Telescope oldfiles<cr>"
+            {:desc "Find recent files"})]})

@@ -15,7 +15,9 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Status line / clean and helpful UI elements (lualine)
  - [x] Key hints + pneumonic and handy mappings (jk, leader+q)
  - [x] Fuzzy search
- - [ ] Buffer navigation, leap/easymotion etc
+ - [x] Brace and quote matching (nvim-autopairs)
+ - [ ] Sexpression editing (paredit, need to check keys)
+ - [ ] Buffer navigation (flash, needs some tweaking and reading)
  - [ ] Completion
  - [ ] LSP
  - [ ] Spelling
@@ -24,8 +26,6 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [ ] Git (probably just lazygit)
  - [ ] Sessions
  - [ ] REPL (Conjure!)
- - [ ] Sexpression editing
- - [ ] Brace and quote matching
 
  ## Quirks
 
