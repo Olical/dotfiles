@@ -6,8 +6,6 @@ local function _1_(_, opts)
   return nil
 end
 local function _2_()
-  local tmp_9_auto = require("notify")
-  tmp_9_auto:dismiss()
-  return tmp_9_auto
+  return require("notify").dismiss({silent = true})
 end
-return {"rcarriga/nvim-notify", config = _1_, event = "VeryLazy", keys = {{"<leader>nd", _2_}, {"<leader>fn", "<CMD>Telescope notify<CR>"}}, opts = {}}
+return {"rcarriga/nvim-notify", config = _1_, event = "VeryLazy", keys = {{"<leader>nd", _2_, desc = "Dismiss notifications"}, {"<leader>nc", "<CMD>NotificationsClear<CR>", desc = "Clear notifications"}, {"<leader>fn", "<CMD>Telescope notify<CR>", desc = "Find notifications"}}, opts = {}}
