@@ -27,5 +27,9 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [ ] Sexpression editing
  - [ ] Brace and quote matching
 
+ ## Quirks
+
+ - [ ] Why does statusline flash on every oil buffer?
+
 [nfnl]: https://github.com/Olical/nfnl
 [awesome-neovim]: https://github.com/rockerBOO/awesome-neovim
