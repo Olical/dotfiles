@@ -13,7 +13,7 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Colour scheme (onedark)
  - [x] Notification system (mini.notify)
  - [x] Status line / clean and helpful UI elements (lualine)
- - [ ] Key hints + pneumonic and handy mappings (jk, leader+q)
+ - [x] Key hints + pneumonic and handy mappings (jk, leader+q)
  - [ ] Fuzzy search
  - [ ] Completion
  - [ ] Buffer navigation, leap/easymotion etc
