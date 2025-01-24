@@ -66,6 +66,7 @@ yay -S --needed \
 	playerctl \
 	lxsession \
 	thunar \
+	thunar-volman \
 	usage \
 	mise
 
