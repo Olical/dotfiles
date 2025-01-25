@@ -16,7 +16,7 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Key hints + pneumonic and handy mappings (jk, leader+q)
  - [x] Fuzzy search
  - [x] Brace and quote matching (nvim-autopairs)
- - [ ] Sexpression editing (paredit, need to check keys)
+ - [x] Sexpression editing (paredit, need to check keys)
  - [ ] Buffer navigation (flash, needs some tweaking and reading)
  - [ ] Completion
  - [ ] LSP
