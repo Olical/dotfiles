@@ -1,7 +1,9 @@
 (import-macros {: tx} :config.macros)
 
 (tx "rcarriga/nvim-notify"
-  {:opts {}
+  {:opts {:stages "static"
+          :render "compact"
+          :fps 1}
    :event "VeryLazy"
    :config (fn [_ opts]
              (let [notify (require :notify)]
