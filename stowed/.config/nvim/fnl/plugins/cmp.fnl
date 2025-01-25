@@ -6,7 +6,9 @@
    :dependencies ["hrsh7th/cmp-nvim-lsp"
                   "hrsh7th/cmp-buffer" 
                   "hrsh7th/cmp-path"
-                  "hrsh7th/cmp-cmdline"]
+                  "hrsh7th/cmp-cmdline"
+                  "petertriho/cmp-git"
+                  "PaterJason/cmp-conjure"]
 
    :config
    (fn [_ opts]
@@ -14,7 +16,9 @@
        (cmp.setup
          {:sources (cmp.config.sources
                      [{:name "nvim_lsp"}
-                      {:name "buffer"}])
+                      {:name "buffer"}
+                      ;; {:name "conjure"}
+                      ])
 ; window = {
 ;       -- completion = cmp.config.window.bordered(),
 ;       -- documentation = cmp.config.window.bordered(),
