@@ -17,7 +17,7 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Fuzzy search
  - [x] Brace and quote matching (nvim-autopairs)
  - [x] Sexpression editing (paredit, need to check keys)
- - [ ] Buffer navigation (flash, needs some tweaking and reading)
+ - [x] Buffer navigation (flash, needs some tweaking and reading)
  - [ ] Completion
  - [ ] LSP
  - [ ] Spelling
