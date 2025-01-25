@@ -19,9 +19,4 @@ local function _4_()
   tmp_9_auto:treesitter_search()
   return tmp_9_auto
 end
-local function _5_()
-  local tmp_9_auto = require("flash")
-  tmp_9_auto:toggle()
-  return tmp_9_auto
-end
-return {"folke/flash.nvim", event = "VeryLazy", keys = {{"s", _1_, desc = "Flash", mode = {"n", "x", "o"}}, {"S", _2_, desc = "Flash Treesitter", mode = {"n", "x", "o"}}, {"r", _3_, desc = "Remote Flash", mode = "o"}, {"R", _4_, desc = "Treesitter Search", mode = {"o", "x"}}, {"<c-s>", _5_, desc = "Toggle Flash Search", mode = {"c"}}}, opts = {}}
+return {"folke/flash.nvim", event = "VeryLazy", keys = {{"s", _1_, desc = "Flash", mode = {"n", "x", "o"}}, {"gs", _2_, desc = "Flash Treesitter", mode = {"n", "x", "o"}}, {"r", _3_, desc = "Remote Flash", mode = "o"}, {"R", _4_, desc = "Treesitter Search", mode = {"o", "x"}}}, opts = {modes = {search = {enabled = true}}}}
