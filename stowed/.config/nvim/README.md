@@ -9,7 +9,6 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Plugin manager (lazy)
  - [x] Fennel compiler + bootstrap mostly in Fennel (nfnl)
  - [x] Directory browser and editor (oil)
- - [x] Tree Sitter
  - [x] Colour scheme (onedark)
  - [x] Notification system (mini.notify)
  - [x] Status line / clean and helpful UI elements (lualine)
@@ -18,8 +17,10 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Brace and quote matching (nvim-autopairs)
  - [x] Sexpression editing (paredit, need to check keys)
  - [x] Buffer navigation (flash, needs some tweaking and reading)
+ - [x] Tree Sitter
  - [ ] Completion
  - [ ] LSP
+ - [ ] Linting / warning tool if LSP isn't always good enough
  - [ ] Spelling
  - [ ] Persistent undo tree + UI
  - [ ] AI
