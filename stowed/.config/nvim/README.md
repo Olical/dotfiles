@@ -18,7 +18,8 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Sexpression editing (paredit, need to check keys)
  - [x] Buffer navigation (flash, needs some tweaking and reading)
  - [x] Tree Sitter
- - [ ] Completion
+ - [x] REPL (Conjure!)
+ - [ ] Completion (cmp, needs more config)
  - [ ] LSP
  - [ ] Linting / warning tool if LSP isn't always good enough
  - [ ] Spelling
@@ -26,7 +27,6 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [ ] AI
  - [ ] Git (probably just lazygit)
  - [ ] Sessions
- - [ ] REPL (Conjure!)
 
  ## Quirks
 
