@@ -27,6 +27,10 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [ ] AI
  - [ ] Git (probably just lazygit)
  - [ ] Sessions
+ - [ ] Trailing whitespace trimming
+ - [ ] Make autopairs more aggressive, it misses some closing ones if there's already one on the line
+ - [ ] Show whitespace
+ - [ ] Disable folding by default (fold level 0 or something?)
 
  ## Quirks
 
