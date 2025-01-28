@@ -54,7 +54,7 @@ yay -S --needed \
 	swaybg \
 	waybar \
 	xdg-desktop-portal-wlr \
-	kitty \
+	ghostty \
 	pavucontrol \
 	wofi \
 	mako \

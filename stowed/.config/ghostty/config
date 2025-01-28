@@ -1,0 +1,9 @@
+theme = carbonfox
+font-family = Fira Code Nerd Font
+font-size = 10
+
+window-padding-color = extend
+window-decoration = false
+
+keybind = f11=toggle_window_decorations
+keybind = ctrl+shift+h=write_screen_file:paste
