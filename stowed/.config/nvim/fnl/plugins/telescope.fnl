@@ -1,14 +1,22 @@
 (import-macros {: tx} :config.macros)
 
 (tx "nvim-telescope/telescope.nvim"
-  {:opts {}
+  {:opts {:defaults
+           {:vimgrep_arguments
+            ["rg" "--color=never" "--no-heading"
+             "--with-filename" "--line-number" "--column"
+             "--smart-case" "--hidden" "--glob=!.git/"]}}
    :tag "0.1.8"
    :dependencies ["nvim-lua/plenary.nvim"]
    :cmd "Telescope"
-   :keys [(tx "<leader>ff" "<CMD>Telescope find_files<CR>"
+   :keys [(tx "<leader>ff" "<CMD>Telescope git_files<CR>"
             {:desc "Find files"})
+          (tx "<leader>fF" "<CMD>Telescope find_files hidden=true<CR>"
+            {:desc "Find all files"})
           (tx "<leader>fg" "<CMD>Telescope live_grep<CR>"
             {:desc "Find grep"})
+          (tx "<leader>fw" "<CMD>Telescope grep_string<CR>"
+            {:desc "Grep string under cursor"})
           (tx "<leader>fb" "<CMD>Telescope buffers<CR>"
             {:desc "Find buffers"})
           (tx "<leader>fh" "<CMD>Telescope help_tags<CR>"
