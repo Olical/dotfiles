@@ -5,6 +5,8 @@ if type -q nvim
   alias vimdiff="nvim -d"
 end
 
+set -gx PAGER less
+
 set -U fish_greeting
 
 # Can maybe delete this, but reinstate if Neovim search is slow.
