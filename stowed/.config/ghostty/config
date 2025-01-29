@@ -1,6 +1,10 @@
+# https://ghostty.org/docs/config/reference
+
 theme = carbonfox
 font-family = Fira Code Nerd Font
 font-size = 10
+
+mouse-hide-while-typing = true
 
 window-padding-color = extend
 window-decoration = false
