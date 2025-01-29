@@ -7,7 +7,6 @@
                   "hrsh7th/cmp-buffer" 
                   "hrsh7th/cmp-path"
                   "hrsh7th/cmp-cmdline"
-                  "petertriho/cmp-git"
                   "PaterJason/cmp-conjure"
                   "Olical/conjure"]
 
@@ -38,17 +37,6 @@
          {:mapping (cmp.mapping.preset.cmdline)
           :sources (cmp.config.sources [{:name "path"} {:name "cmdline"}])
           :matching {:disallow_symbol_nonprefix_matching false}})))})
-
- ;  -- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
- ;  -- Set configuration for specific filetype.
- ;  --[[ cmp.setup.filetype('gitcommit', {
- ;    sources = cmp.config.sources({
- ;      { name = 'git' },
- ;    }, {
- ;      { name = 'buffer' },
- ;    })
- ; })
- ; require("cmp_git").setup() ]]-- 
 
   ; -- Set up lspconfig.
   ; local capabilities = require('cmp_nvim_lsp').default_capabilities()
