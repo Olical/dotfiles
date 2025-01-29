@@ -1,13 +1,18 @@
 (import-macros {: tx} :config.macros)
 
 (tx "nvim-telescope/telescope.nvim"
-  {:opts {:defaults
+  {:tag "0.1.8"
+   :dependencies ["nvim-lua/plenary.nvim"
+                  (tx "nvim-telescope/telescope-fzf-native.nvim" {:build "make"})]
+   :opts {:defaults
            {:vimgrep_arguments
             ["rg" "--color=never" "--no-heading"
              "--with-filename" "--line-number" "--column"
              "--smart-case" "--hidden" "--glob=!.git/"]}}
-   :tag "0.1.8"
-   :dependencies ["nvim-lua/plenary.nvim"]
+   :config (fn [_ opts]
+             (let [telescope (require :telescope)]
+               (telescope.setup opts)
+               (telescope.load_extension :fzf)))
    :cmd "Telescope"
    :keys [(tx "<leader>ff" "<CMD>Telescope git_files<CR>"
             {:desc "Find files"})
