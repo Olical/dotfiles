@@ -31,6 +31,7 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [ ] Make autopairs more aggressive, it misses some closing ones if there's already one on the line
  - [ ] Show whitespace
  - [ ] Disable folding by default (fold level 0 or something?)
+ - [ ] Highlight matching word on hover?
 
  ## Quirks
 
