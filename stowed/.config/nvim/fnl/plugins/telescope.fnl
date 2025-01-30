@@ -36,4 +36,6 @@
           (tx "<leader>fk" "<CMD>Telescope keymaps<CR>"
             {:desc "Find keymaps"})
           (tx "<leader>fu" "<CMD>Telescope undo<CR>"
-            {:desc "Find undo"})]})
+            {:desc "Find undo"})
+          (tx "<leader>fs" "<CMD>Telescope spell_suggest<CR>"
+            {:desc "Find spelling"})]})

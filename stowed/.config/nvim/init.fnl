@@ -7,10 +7,11 @@
 (set vim.o.splitbelow true)
 (set vim.o.foldenable false)
 (set vim.o.undofile true)
+(set vim.o.spell true)
 
 ;;; Mappings
 
-;; Renammed <localleader> to ,
+;; Renamed <localleader> to ,
 ;; This allows us to keep the , behaviour with a \ instead
 (vim.keymap.set "n" "\\" ",")
 

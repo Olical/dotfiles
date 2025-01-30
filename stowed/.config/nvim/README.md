@@ -27,9 +27,9 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Undo tree UI
  - [x] Completion (cmp)
  - [x] AI
+ - [x] Spelling
  - [ ] LSP (and integrate cmp)
  - [ ] Linting / warning tool if LSP isn't always good enough
- - [ ] Spelling
  - [ ] Git (probably just lazygit)
  - [ ] Sessions
  - [ ] Highlight matching word on hover?

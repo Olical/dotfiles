@@ -7,6 +7,7 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.foldenable = false
 vim.o.undofile = true
+vim.o.spell = true
 vim.keymap.set("n", "\\", ",")
 vim.keymap.set("i", "jk", "<esc>")
 vim.keymap.set("n", "<leader>q", "<CMD>quit<CR>", {desc = ":quit"})
