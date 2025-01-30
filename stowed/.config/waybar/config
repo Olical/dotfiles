@@ -21,6 +21,7 @@
         "temperature",
         "cpu",
         "memory",
+	"disk",
         // "network",
         "pulseaudio",
         "backlight",
@@ -122,6 +123,9 @@
     },
     "memory": {
         "format": " {}%"
+    },
+    "disk": {
+        "format": "🖴 {}%"
     },
     "temperature": {
         "thermal-zone": 2,
