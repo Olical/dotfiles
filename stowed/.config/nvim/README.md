@@ -10,7 +10,7 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Fennel compiler + bootstrap mostly in Fennel (nfnl)
  - [x] Directory browser and editor (oil)
  - [x] Colour scheme (onedark)
- - [x] Notification system (mini.notify)
+ - [x] Notification system (nvim-notify)
  - [x] Status line / clean and helpful UI elements (lualine)
  - [x] Key hints + pneumonic and handy mappings (jk, leader+q)
  - [x] Fuzzy search
