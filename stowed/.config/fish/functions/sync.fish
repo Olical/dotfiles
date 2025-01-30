@@ -9,5 +9,5 @@ function sync
   git pull
   cd -
 
-  nvim --headless "+Lazy! sync" +TSUpdateSync +qa
+  nvim --headless "+Lazy! sync" +TSUpdateSync -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
 end
