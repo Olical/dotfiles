@@ -22,7 +22,7 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Make autopairs more aggressive, it misses some closing ones if there's already one on the line
  - [x] Show whitespace (whitespace.nvim)
  - [x] Trailing whitespace trimming (whitespace.nvim)
- - [ ] Disable folding by default (fold level 0 or something?)
+ - [x] Disable folding by default (fold level 0 or something?)
  - [ ] Persistent undo
  - [ ] Undo tree UI
  - [ ] Completion (cmp, needs more config)
