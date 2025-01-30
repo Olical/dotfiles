@@ -23,8 +23,8 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Show whitespace (whitespace.nvim)
  - [x] Trailing whitespace trimming (whitespace.nvim)
  - [x] Disable folding by default (fold level 0 or something?)
- - [ ] Persistent undo
- - [ ] Undo tree UI
+ - [x] Persistent undo
+ - [x] Undo tree UI
  - [ ] Completion (cmp, needs more config)
  - [ ] LSP
  - [ ] Linting / warning tool if LSP isn't always good enough
@@ -33,6 +33,7 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [ ] Git (probably just lazygit)
  - [ ] Sessions
  - [ ] Highlight matching word on hover?
+ - [ ] Fennel indentation is never right, can it be improved?
 
  ## Quirks
 

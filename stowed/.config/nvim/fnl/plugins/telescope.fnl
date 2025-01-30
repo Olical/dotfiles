@@ -3,8 +3,10 @@
 (tx "nvim-telescope/telescope.nvim"
   {:tag "0.1.8"
    :dependencies ["nvim-lua/plenary.nvim"
+                  "debugloop/telescope-undo.nvim"
                   (tx "nvim-telescope/telescope-fzf-native.nvim" {:build "make"})]
-   :opts {:defaults
+   :opts {:extensions {:undo {}}
+          :defaults
            {:vimgrep_arguments
             ["rg" "--color=never" "--no-heading"
              "--with-filename" "--line-number" "--column"
@@ -12,7 +14,8 @@
    :config (fn [_ opts]
              (let [telescope (require :telescope)]
                (telescope.setup opts)
-               (telescope.load_extension :fzf)))
+               (telescope.load_extension :fzf)
+               (telescope.load_extension :undo)))
    :cmd "Telescope"
    :keys [(tx "<leader>ff" "<CMD>Telescope git_files<CR>"
             {:desc "Find files"})
@@ -31,4 +34,6 @@
           (tx "<leader>fo" "<CMD>Telescope oldfiles<CR>"
             {:desc "Find recent files"})
           (tx "<leader>fk" "<CMD>Telescope keymaps<CR>"
-            {:desc "Find keymaps"})]})
+            {:desc "Find keymaps"})
+          (tx "<leader>fu" "<CMD>Telescope undo<CR>"
+            {:desc "Find undo"})]})

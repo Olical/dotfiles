@@ -6,6 +6,7 @@
 (set vim.o.splitright true)
 (set vim.o.splitbelow true)
 (set vim.o.foldenable false)
+(set vim.o.undofile true)
 
 ;;; Mappings
 
