@@ -2,4 +2,4 @@
 
 (tx "windwp/nvim-autopairs"
   {:event "InsertEnter"
-   :opts {}})
+   :opts {:enable_check_bracket_line false}})

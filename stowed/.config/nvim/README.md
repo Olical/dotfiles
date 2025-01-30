@@ -19,6 +19,7 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Buffer navigation (flash, needs some tweaking and reading)
  - [x] Tree Sitter
  - [x] REPL (Conjure!)
+ - [x] Make autopairs more aggressive, it misses some closing ones if there's already one on the line
  - [ ] Completion (cmp, needs more config)
  - [ ] LSP
  - [ ] Linting / warning tool if LSP isn't always good enough
@@ -28,7 +29,6 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [ ] Git (probably just lazygit)
  - [ ] Sessions
  - [ ] Trailing whitespace trimming
- - [ ] Make autopairs more aggressive, it misses some closing ones if there's already one on the line
  - [ ] Show whitespace
  - [ ] Disable folding by default (fold level 0 or something?)
  - [ ] Highlight matching word on hover?
