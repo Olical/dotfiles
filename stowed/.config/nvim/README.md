@@ -20,17 +20,18 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Tree Sitter
  - [x] REPL (Conjure!)
  - [x] Make autopairs more aggressive, it misses some closing ones if there's already one on the line
+ - [x] Show whitespace (whitespace.nvim)
+ - [x] Trailing whitespace trimming (whitespace.nvim)
+ - [ ] Disable folding by default (fold level 0 or something?)
+ - [ ] Persistent undo
+ - [ ] Undo tree UI
  - [ ] Completion (cmp, needs more config)
  - [ ] LSP
  - [ ] Linting / warning tool if LSP isn't always good enough
  - [ ] Spelling
- - [ ] Persistent undo tree + UI
  - [ ] AI
  - [ ] Git (probably just lazygit)
  - [ ] Sessions
- - [ ] Trailing whitespace trimming
- - [ ] Show whitespace
- - [ ] Disable folding by default (fold level 0 or something?)
  - [ ] Highlight matching word on hover?
 
  ## Quirks
