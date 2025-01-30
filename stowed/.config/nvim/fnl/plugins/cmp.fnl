@@ -8,7 +8,9 @@
                   "hrsh7th/cmp-path"
                   "hrsh7th/cmp-cmdline"
                   "PaterJason/cmp-conjure"
-                  "Olical/conjure"]
+                  "Olical/conjure"
+                  "zbirenbaum/copilot-cmp"
+                  "olimorris/codecompanion.nvim"]
 
    :config
    (fn [_ opts]
@@ -17,7 +19,8 @@
          {:sources (cmp.config.sources
                      [{:name "nvim_lsp"}
                       {:name "buffer"}
-                      {:name "conjure"}])
+                      {:name "conjure"}
+                      {:name "copilot"}])
           :window {;; :completion (cmp.config.window.bordered)
                    ;; :documentation (cmp.config.window.bordered)
                    }
@@ -38,10 +41,3 @@
          {:mapping (cmp.mapping.preset.cmdline)
           :sources (cmp.config.sources [{:name "path"} {:name "cmdline"}])
           :matching {:disallow_symbol_nonprefix_matching false}})))})
-
-  ; -- Set up lspconfig.
-  ; local capabilities = require('cmp_nvim_lsp').default_capabilities()
-  ; -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  ; require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
-  ;   capabilities = capabilities
-  ; }

@@ -25,11 +25,11 @@ I'm skimming [awesome-neovim][] to find all the things I need.
  - [x] Disable folding by default (fold level 0 or something?)
  - [x] Persistent undo
  - [x] Undo tree UI
- - [ ] Completion (cmp, needs more config)
- - [ ] LSP
+ - [x] Completion (cmp)
+ - [x] AI
+ - [ ] LSP (and integrate cmp)
  - [ ] Linting / warning tool if LSP isn't always good enough
  - [ ] Spelling
- - [ ] AI
  - [ ] Git (probably just lazygit)
  - [ ] Sessions
  - [ ] Highlight matching word on hover?
