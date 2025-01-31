@@ -67,7 +67,7 @@ yay -S --needed \
 	lxsession \
 	thunar \
 	thunar-volman \
-	usage \
+	usage-bin \
 	mise-bin
 
 sudo systemctl enable docker
