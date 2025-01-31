@@ -37,7 +37,7 @@ yay -S --needed \
 	ripgrep \
 	rsync \
 	rustup \
-	topgrade \
+	topgrade-bin \
 	tree \
 	ttf-font-awesome \
 	noto-fonts-emoji \
