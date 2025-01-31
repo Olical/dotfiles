@@ -68,7 +68,7 @@ yay -S --needed \
 	thunar \
 	thunar-volman \
 	usage \
-	mise
+	mise-bin
 
 sudo systemctl enable docker
 sudo systemctl start docker
