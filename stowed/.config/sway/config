@@ -83,6 +83,15 @@ input "1267:12793:ELAN067C:00_04F3:31F9_Touchpad" {
     accel_profile "adaptive"
 }
 
+input "1739:30382:DLL0704:01_06CB:76AE_Touchpad" {
+    dwt enabled
+    tap enabled
+    natural_scroll disabled
+    middle_emulation disabled
+    accel_profile "flat"
+    pointer_accel 0.7
+}
+
 output "BNQ BenQ XL2430T VCE03607SL0" pos 0 0
 output "Dell Inc. DELL S2721DGF 7T2MY13" pos 1920 0
 
