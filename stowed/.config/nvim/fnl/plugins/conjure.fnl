@@ -4,4 +4,5 @@
 (set vim.g.conjure#mapping#doc_word "K")
 
 (tx "Olical/conjure"
-  {:event "VeryLazy"})
+  {:event "VeryLazy"
+   :dev true})
