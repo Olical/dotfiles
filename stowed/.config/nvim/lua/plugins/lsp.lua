@@ -1,6 +1,6 @@
 -- [nfnl] Compiled from fnl/plugins/lsp.fnl by https://github.com/Olical/nfnl, do not edit.
 local lsps = {"clojure_lsp", "fennel_language_server", "lua_ls", "jsonls", "yamlls", "marksman", "html", "basedpyright", "ts_ls", "terraformls", "tailwindcss", "dockerls", "docker_compose_language_service", "bashls", "taplo", "sqlls"}
-local formatters = {lua = {"stylua"}, sh = {"shfmt"}, python = {"isort", "black"}, rust = {"rustfmt"}, clojure = {"cljfmt"}, javascript = {"prettierd"}, html = {"prettierd"}, css = {"prettierd"}, yaml = {"prettierd"}, fennel = {"fnlfmt"}}
+local formatters = {lua = {"stylua"}, sh = {"shfmt"}, python = {"isort", "black"}, rust = {"rustfmt"}, clojure = {"cljfmt"}, javascript = {"prettierd"}, html = {"prettierd"}, css = {"prettierd"}, yaml = {"prettierd"}, markdown = {"prettierd"}, fennel = {"fnlfmt"}}
 local disable_formatter_on_save = {fennel = true}
 local disable_formatter_auto_install = {fnlfmt = true, rustfmt = true}
 local function _1_(_, opts)
@@ -45,7 +45,7 @@ local function _7_()
   return vim.notify(("Set vim.g.dotfiles_format_on_save to " .. tostring(vim.g.dotfiles_format_on_save)))
 end
 local function _8_(_buf)
-  if (vim.g.dotfiles_format_on_save and ((nil == vim.b.dotfiles_format_on_save) or vim.b.dotfiles_format_on_save) and disable_formatter_on_save[vim.bo.filetype]) then
+  if (vim.g.dotfiles_format_on_save and ((nil == vim.b.dotfiles_format_on_save) or vim.b.dotfiles_format_on_save) and not disable_formatter_on_save[vim.bo.filetype]) then
     return {timeout_ms = 500, lsp_format = "fallback"}
   else
     return nil

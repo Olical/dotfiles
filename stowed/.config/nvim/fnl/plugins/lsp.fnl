@@ -28,6 +28,7 @@
    :html ["prettierd"]
    :css ["prettierd"]
    :yaml ["prettierd"]
+   :markdown ["prettierd"]
    :fennel ["fnlfmt"]})
 
 (local disable_formatter_on_save
@@ -48,7 +49,7 @@
            :format_on_save
            (fn [_buf]
              (when (and vim.g.dotfiles_format_on_save (or (= nil vim.b.dotfiles_format_on_save) vim.b.dotfiles_format_on_save)
-                        (. disable_formatter_on_save vim.bo.filetype))
+                        (not (. disable_formatter_on_save vim.bo.filetype)))
                {:timeout_ms 500
                 :lsp_format "fallback"}))}
 
