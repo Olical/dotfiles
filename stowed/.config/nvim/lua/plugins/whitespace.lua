@@ -2,4 +2,4 @@
 local function _1_()
   return require("whitespace-nvim").trim()
 end
-return {"johnfrankmorgan/whitespace.nvim", event = "VeryLazy", keys = {{"<leader>t", _1_, desc = "Trim whitespace"}}, main = "whitespace-nvim", opts = {}}
+return {"johnfrankmorgan/whitespace.nvim", event = "VeryLazy", keys = {{"<leader>bt", _1_, desc = "Trim whitespace"}}, main = "whitespace-nvim", opts = {}}
