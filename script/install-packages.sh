@@ -68,7 +68,8 @@ yay -S --needed \
 	thunar \
 	thunar-volman \
 	usage-bin \
-	mise-bin
+	mise-bin \
+	lxqt-openssh-askpass
 
 sudo systemctl enable docker
 sudo systemctl start docker

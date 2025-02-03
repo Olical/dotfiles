@@ -6,6 +6,7 @@ if type -q nvim
 end
 
 set -gx PAGER less
+set -gx SUDO_ASKPASS '/usr/bin/lxqt-openssh-askpass'
 
 set -U fish_greeting
 
