@@ -9,6 +9,7 @@ yay -S --needed \
 	clojure \
 	leiningen \
 	babashka \
+	rlwrap \
 	cowsay \
 	difftastic \
 	docker \
