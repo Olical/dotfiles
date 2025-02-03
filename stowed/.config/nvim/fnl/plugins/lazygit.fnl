@@ -4,4 +4,4 @@
   {:dependencies ["nvim-lua/plenary.nvim"]
    :lazy true
    :cmd ["LazyGit" "LazyGitConfig" "LazyGitCurrentFile" "LazyGitFilter" "LazyGitFilterCurrentFile"]
-   :keys [(tx "<leader>g" "<CMD>LazyGit<CR>" {:desc "LazyGit"})]})
+   :keys [(tx "<leader>gg" "<CMD>LazyGit<CR>" {:desc "LazyGit"})]})
