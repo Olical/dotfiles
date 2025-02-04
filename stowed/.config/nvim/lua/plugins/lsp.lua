@@ -1,17 +1,18 @@
 -- [nfnl] Compiled from fnl/plugins/lsp.fnl by https://github.com/Olical/nfnl, do not edit.
 local lsps = {"clojure_lsp", "fennel_language_server", "lua_ls", "jsonls", "yamlls", "marksman", "html", "basedpyright", "ts_ls", "terraformls", "tailwindcss", "dockerls", "docker_compose_language_service", "bashls", "taplo", "sqlls"}
-local formatters = {lua = {"stylua"}, sh = {"shfmt"}, python = {"isort", "black"}, rust = {"rustfmt"}, clojure = {"cljfmt"}, javascript = {"prettierd"}, html = {"prettierd"}, css = {"prettierd"}, yaml = {"prettierd"}, markdown = {"prettierd"}, fennel = {"fnlfmt"}}
-local disable_formatter_on_save = {fennel = true}
+local filetype__3eformatters = {lua = {"stylua"}, sh = {"shfmt"}, python = {"ruff_organize_imports", "ruff_format"}, rust = {"rustfmt"}, clojure = {"cljfmt"}, javascript = {"prettierd"}, html = {"prettierd"}, css = {"prettierd"}, yaml = {"prettierd"}, markdown = {"prettierd"}, fennel = {"fnlfmt"}, sql = {"sqlfmt"}}
+local formatter__3epackage = {ruff_organize_imports = "ruff", ruff_format = "ruff"}
+local disable_formatter_on_save = {fennel = true, sql = true}
 local disable_formatter_auto_install = {fnlfmt = true, rustfmt = true}
 local function _1_(_, opts)
   local conform = require("conform")
   local registry = require("mason-registry")
   local formatters_for_mason = {}
   local function _2_()
-    for _ft, formatters0 in pairs(formatters) do
-      for _idx, formatter in ipairs(formatters0) do
+    for _ft, formatters in pairs(filetype__3eformatters) do
+      for _idx, formatter in ipairs(formatters) do
         if not disable_formatter_auto_install[formatter] then
-          formatters_for_mason[formatter] = true
+          formatters_for_mason[(formatter__3epackage[formatter] or formatter)] = true
         else
         end
       end
@@ -66,4 +67,4 @@ end
 local function _13_()
   return require("conform").format()
 end
-return {{"williamboman/mason.nvim", opts = {}}, {"stevearc/conform.nvim", config = _1_, dependencies = {"rcarriga/nvim-notify"}, keys = {{"<leader>tf", _5_, desc = "Toggle buffer formatting"}, {"<leader>tF", _7_, desc = "Toggle global formatting"}}, opts = {formatters_by_ft = formatters, format_on_save = _8_}}, {"williamboman/mason-lspconfig.nvim", dependencies = {"williamboman/mason.nvim"}, opts = {ensure_installed = lsps, automatic_installation = true}}, {"neovim/nvim-lspconfig", config = _10_, dependencies = {"williamboman/mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp", "stevearc/conform.nvim"}, keys = {{"<leader>ld", "<CMD>Telescope lsp_definitions<CR>", desc = "LSP definition"}, {"<leader>lu", "<CMD>Telescope lsp_implementations<CR>", desc = "LSP implementations"}, {"<leader>lt", "<CMD>Telescope lsp_type_definitions<CR>", desc = "LSP type definitions"}, {"<leader>lr", "<CMD>Telescope lsp_references<CR>", desc = "LSP references"}, {"<leader>li", "<CMD>Telescope lsp_incoming_calls<CR>", desc = "LSP incoming calls"}, {"<leader>lo", "<CMD>Telescope lsp_outgoing_calls<CR>", desc = "LSP outgoing calls"}, {"<leader>ls", "<CMD>Telescope lsp_document_symbols<CR>", desc = "LSP document symbols"}, {"<leader>lS", "<CMD>Telescope lsp_workspace_symbols<CR>", desc = "LSP workspace symbols"}, {"<leader>lx", "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>", desc = "LSP dynamic workspace symbols (all workspaces)"}, {"<leader>laf", _13_, desc = "LSP format"}, {"<leader>lar", vim.lsp.buf.rename, desc = "LSP rename"}}, lazy = false}, {"RubixDev/mason-update-all", cmd = "MasonUpdateAll", dependencies = {"williamboman/mason.nvim"}, main = "mason-update-all", opts = {}}}
+return {{"williamboman/mason.nvim", opts = {}}, {"stevearc/conform.nvim", config = _1_, dependencies = {"rcarriga/nvim-notify"}, keys = {{"<leader>tf", _5_, desc = "Toggle buffer formatting"}, {"<leader>tF", _7_, desc = "Toggle global formatting"}}, opts = {formatters_by_ft = filetype__3eformatters, format_on_save = _8_}}, {"williamboman/mason-lspconfig.nvim", dependencies = {"williamboman/mason.nvim"}, opts = {ensure_installed = lsps, automatic_installation = true}}, {"neovim/nvim-lspconfig", config = _10_, dependencies = {"williamboman/mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp", "stevearc/conform.nvim"}, keys = {{"<leader>ld", "<CMD>Telescope lsp_definitions<CR>", desc = "LSP definition"}, {"<leader>lu", "<CMD>Telescope lsp_implementations<CR>", desc = "LSP implementations"}, {"<leader>lt", "<CMD>Telescope lsp_type_definitions<CR>", desc = "LSP type definitions"}, {"<leader>lr", "<CMD>Telescope lsp_references<CR>", desc = "LSP references"}, {"<leader>li", "<CMD>Telescope lsp_incoming_calls<CR>", desc = "LSP incoming calls"}, {"<leader>lo", "<CMD>Telescope lsp_outgoing_calls<CR>", desc = "LSP outgoing calls"}, {"<leader>ls", "<CMD>Telescope lsp_document_symbols<CR>", desc = "LSP document symbols"}, {"<leader>lS", "<CMD>Telescope lsp_workspace_symbols<CR>", desc = "LSP workspace symbols"}, {"<leader>lx", "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>", desc = "LSP dynamic workspace symbols (all workspaces)"}, {"<leader>laf", _13_, desc = "LSP format"}, {"<leader>lar", vim.lsp.buf.rename, desc = "LSP rename"}}, lazy = false}, {"RubixDev/mason-update-all", cmd = "MasonUpdateAll", dependencies = {"williamboman/mason.nvim"}, main = "mason-update-all", opts = {}}}

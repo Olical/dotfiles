@@ -18,10 +18,10 @@
    "taplo"
    "sqlls"])
 
-(local formatters
+(local filetype->formatters
   {:lua ["stylua"]
    :sh ["shfmt"]
-   :python ["isort" "black"]
+   :python ["ruff_organize_imports" "ruff_format"]
    :rust ["rustfmt"]
    :clojure ["cljfmt"]
    :javascript ["prettierd"]
@@ -29,13 +29,19 @@
    :css ["prettierd"]
    :yaml ["prettierd"]
    :markdown ["prettierd"]
-   :fennel ["fnlfmt"]})
+   :fennel ["fnlfmt"]
+   :sql ["sqlfmt"]})
 
-(local disable_formatter_on_save
+(local formatter->package
+  {"ruff_organize_imports" "ruff"
+   "ruff_format" "ruff"})
+
+(local disable-formatter-on-save
   ;; These mess with the buffer, so we keep them available for manual invocation but never automatic.
-  {:fennel true})
+  {:fennel true
+   :sql true})
 
-(local disable_formatter_auto_install
+(local disable-formatter-auto-install
   ;; These need to be installed outside of Mason.
   {:fnlfmt true
    :rustfmt true})
@@ -45,11 +51,11 @@
 
  (tx "stevearc/conform.nvim"
    {:dependencies ["rcarriga/nvim-notify"]
-    :opts {:formatters_by_ft formatters
+    :opts {:formatters_by_ft filetype->formatters
            :format_on_save
            (fn [_buf]
              (when (and vim.g.dotfiles_format_on_save (or (= nil vim.b.dotfiles_format_on_save) vim.b.dotfiles_format_on_save)
-                        (not (. disable_formatter_on_save vim.bo.filetype)))
+                        (not (. disable-formatter-on-save vim.bo.filetype)))
                {:timeout_ms 500
                 :lsp_format "fallback"}))}
 
@@ -60,10 +66,10 @@
 
                 (vim.schedule
                   (fn []
-                    (each [_ft formatters (pairs formatters)]
+                    (each [_ft formatters (pairs filetype->formatters)]
                       (each [_idx formatter (ipairs formatters)]
-                        (when (not (. disable_formatter_auto_install formatter))
-                          (tset formatters-for-mason formatter true))))
+                        (when (not (. disable-formatter-auto-install formatter))
+                          (tset formatters-for-mason (or (. formatter->package formatter) formatter) true))))
 
                     (each [formatter _true (pairs formatters-for-mason)]
                       (let [pkg (registry.get_package formatter)]
