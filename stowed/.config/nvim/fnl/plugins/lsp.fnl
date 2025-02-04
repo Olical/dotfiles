@@ -25,6 +25,8 @@
    :rust ["rustfmt"]
    :clojure ["cljfmt"]
    :javascript ["prettierd"]
+   :typescript ["prettierd"]
+   :jsx ["prettierd"]
    :html ["prettierd"]
    :css ["prettierd"]
    :yaml ["prettierd"]
