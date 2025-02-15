@@ -19,6 +19,7 @@
 (vim.keymap.set "n" "<leader>q" "<CMD>quit<CR>" {:desc ":quit"})
 (vim.keymap.set "n" "\\" "<CMD>split<CR>" {:desc ":split"})
 (vim.keymap.set "n" "|" "<CMD>vsplit<CR>" {:desc ":vsplit"})
+(vim.keymap.set "n" "<leader>bw" "<CMD>w<CR>" {:desc "Write the buffer"})
 
 (vim.keymap.set "n" "<leader>sc" "<CMD>nohlsearch<CR>"
   {:desc "Clear search highlight"})
