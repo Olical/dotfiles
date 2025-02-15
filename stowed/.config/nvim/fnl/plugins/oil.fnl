@@ -12,7 +12,6 @@
                ;; And when there are no floating windows (i.e. Lazy)
                (when (and (= "" (vim.fn.expand "%"))
                           (not (. (vim.api.nvim_win_get_config 0) :zindex)))
-                 ;; Schedule it so that it doesn't take over Lazy's floating window.
                  (oil.open))))
    :lazy false
    :keys [(tx "-" "<CMD>Oil<CR>"
