@@ -1,0 +1,2 @@
+{:lib com.github.bhauman/rebel-readline,
+ :coord {:deps/root "rebel-readline-nrepl", :git/tag "v0.1.5", :git/sha "762b8b4"}}
