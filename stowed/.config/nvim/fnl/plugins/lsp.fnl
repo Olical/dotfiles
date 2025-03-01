@@ -32,7 +32,8 @@
    :yaml ["prettierd"]
    :markdown ["prettierd"]
    :fennel ["fnlfmt"]
-   :sql ["sqlfmt"]})
+   :sql ["sqlfmt"]
+   :* ["trim_whitespace" "trim_newlines"]})
 
 (local formatter->package
   {"ruff_organize_imports" "ruff"
@@ -46,7 +47,9 @@
 (local disable-formatter-auto-install
   ;; These need to be installed outside of Mason.
   {:fnlfmt true
-   :rustfmt true})
+   :rustfmt true
+   :trim_whitespace true
+   :trim_newlines true})
 
 [(tx "williamboman/mason.nvim"
    {:opts {}})
