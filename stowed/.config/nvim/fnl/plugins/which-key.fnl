@@ -13,4 +13,5 @@
                   (tx "<leader>g" {:group "Git"})
                   (tx "<leader>s" {:group "Search"})
                   (tx "<leader>n" {:group "Notifications"})
-                  (tx "<leader>t" {:group "Toggle"})])))})
+                  (tx "<leader>t" {:group "Toggle"})
+                  (tx "<leader>d" {:group "Diffview"})])))})
