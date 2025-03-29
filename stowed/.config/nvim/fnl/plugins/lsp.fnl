@@ -2,7 +2,7 @@
 
 (local lsps
   ["clojure_lsp"
-   "fennel_language_server"
+   "fennel_ls"
    "lua_ls"
    "jsonls"
    "yamlls"
@@ -119,22 +119,14 @@
            (tx "<leader>lar" vim.lsp.buf.rename {:desc "LSP rename"})]
     :config
     (fn []
-      (let [lspconfig (require :lspconfig)
+      (let [;; lspconfig (require :lspconfig)
             caps ((. (require :cmp_nvim_lsp) :default_capabilities))
             mlsp (require :mason-lspconfig)]
         (mlsp.setup_handlers
           (tx (fn [server-name]
                 ((. (require :lspconfig) server-name :setup)
                  {:capabilities caps}))
-
-              {:fennel_language_server
-               (fn []
-                 ((. lspconfig :fennel_language_server :setup)
-                  {:capabilities caps
-                   :root_dir (lspconfig.util.root_pattern "fnl")
-                   :single_file_support true
-                   :settings {:fennel {:workspace {:library (vim.api.nvim_list_runtime_paths)}
-                   :diagnostics {:globals [:vim]}}}}))}))))})
+              {}))))})
 
  (tx "RubixDev/mason-update-all"
    {:cmd "MasonUpdateAll"
