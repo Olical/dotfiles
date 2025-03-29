@@ -1,3 +1,3 @@
 (import-macros {: tx} :config.macros)
 
-(tx "atweiden/vim-fennel")
+(tx "micampe/fennel.vim")
