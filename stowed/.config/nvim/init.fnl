@@ -9,6 +9,15 @@
 (set vim.o.undofile true)
 (set vim.o.spell true)
 
+;;; Diagnostics
+(fn toggle-diagnostic-lines []
+  (vim.diagnostic.config
+    {:virtual_text true
+     :virtual_lines (if (. (vim.diagnostic.config) :virtual_lines)
+                      false
+                      {:current_line true})}))
+(toggle-diagnostic-lines)
+
 ;;; Mappings
 
 ;; Renamed <localleader> to ,
@@ -20,6 +29,7 @@
 (vim.keymap.set "n" "\\" "<CMD>split<CR>" {:desc ":split"})
 (vim.keymap.set "n" "|" "<CMD>vsplit<CR>" {:desc ":vsplit"})
 (vim.keymap.set "n" "<leader>bw" "<CMD>w<CR>" {:desc "Write the buffer"})
+(vim.keymap.set "n" "<leader>td" toggle-diagnostic-lines {:desc "Toggle diagnostic virtual lines."})
 
 (vim.keymap.set "n" "<leader>sc" "<CMD>nohlsearch<CR>"
   {:desc "Clear search highlight"})

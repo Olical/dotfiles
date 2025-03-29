@@ -8,11 +8,22 @@ vim.o.splitbelow = true
 vim.o.foldenable = false
 vim.o.undofile = true
 vim.o.spell = true
+local function toggle_diagnostic_lines()
+  local _1_
+  if vim.diagnostic.config().virtual_lines then
+    _1_ = false
+  else
+    _1_ = {current_line = true}
+  end
+  return vim.diagnostic.config({virtual_text = true, virtual_lines = _1_})
+end
+toggle_diagnostic_lines()
 vim.keymap.set("n", "\\", ",")
 vim.keymap.set("i", "jk", "<esc>")
 vim.keymap.set("n", "<leader>q", "<CMD>quit<CR>", {desc = ":quit"})
 vim.keymap.set("n", "\\", "<CMD>split<CR>", {desc = ":split"})
 vim.keymap.set("n", "|", "<CMD>vsplit<CR>", {desc = ":vsplit"})
 vim.keymap.set("n", "<leader>bw", "<CMD>w<CR>", {desc = "Write the buffer"})
+vim.keymap.set("n", "<leader>td", toggle_diagnostic_lines, {desc = "Toggle diagnostic virtual lines."})
 vim.keymap.set("n", "<leader>sc", "<CMD>nohlsearch<CR>", {desc = "Clear search highlight"})
 return require("config.lazy")
