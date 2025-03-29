@@ -4,7 +4,8 @@
    {:event "VeryLazy"
     :version false
     :build "make"
-    :opts {:provider "copilot"}
+    :opts {:provider "copilot"
+           :hints {:enabled false}}
            ; :provider "openai"
            ; :openai {:endpoint "https://api.openai.com/v1"
            ;          :model "gpt-4o"
