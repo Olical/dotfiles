@@ -11,6 +11,8 @@ window-decoration = false
 
 keybind = f11=toggle_window_decorations
 keybind = ctrl+shift+h=write_screen_file:paste
+keybind = ctrl+page_up=scroll_page_up
+keybind = ctrl+page_down=scroll_page_down
 
 # Toggle fullscreen by default, we want to use this in Neovim though.
 keybind = ctrl+enter=unbind
