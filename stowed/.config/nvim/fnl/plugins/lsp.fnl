@@ -2,7 +2,7 @@
 
 (local lsps
   ["clojure_lsp"
-   "fennel_ls"
+   ; "fennel_ls"
    "lua_ls"
    "jsonls"
    "yamlls"
@@ -51,6 +51,8 @@
    :trim_whitespace true
    :trim_newlines true})
 
+(vim.lsp.enable "fennel-ls")
+
 [(tx "williamboman/mason.nvim"
    {:opts {}})
 
@@ -68,6 +70,8 @@
               (let [conform (require :conform)
                     registry (require :mason-registry)
                     formatters-for-mason {}]
+
+                (set conform.formatters.shfmt {:prepend_args ["-i" "2" "-ci"]})
 
                 (vim.schedule
                   (fn []

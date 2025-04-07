@@ -1,13 +1,15 @@
 -- [nfnl] Compiled from fnl/plugins/lsp.fnl by https://github.com/Olical/nfnl, do not edit.
-local lsps = {"clojure_lsp", "fennel_ls", "lua_ls", "jsonls", "yamlls", "marksman", "html", "basedpyright", "ts_ls", "terraformls", "tailwindcss", "dockerls", "docker_compose_language_service", "bashls", "taplo", "sqlls"}
+local lsps = {"clojure_lsp", "lua_ls", "jsonls", "yamlls", "marksman", "html", "basedpyright", "ts_ls", "terraformls", "tailwindcss", "dockerls", "docker_compose_language_service", "bashls", "taplo", "sqlls"}
 local filetype__3eformatters = {lua = {"stylua"}, sh = {"shfmt"}, python = {"ruff_organize_imports", "ruff_format"}, rust = {"rustfmt"}, clojure = {"cljfmt"}, javascript = {"prettierd"}, typescript = {"prettierd"}, jsx = {"prettierd"}, html = {"prettierd"}, css = {"prettierd"}, yaml = {"prettierd"}, markdown = {"prettierd"}, fennel = {"fnlfmt"}, sql = {"sqlfmt"}, ["*"] = {"trim_whitespace", "trim_newlines"}}
 local formatter__3epackage = {ruff_organize_imports = "ruff", ruff_format = "ruff"}
 local disable_formatter_on_save = {fennel = true, sql = true}
 local disable_formatter_auto_install = {fnlfmt = true, rustfmt = true, trim_whitespace = true, trim_newlines = true}
+vim.lsp.enable("fennel-ls")
 local function _1_(_, opts)
   local conform = require("conform")
   local registry = require("mason-registry")
   local formatters_for_mason = {}
+  conform.formatters.shfmt = {prepend_args = {"-i", "2", "-ci"}}
   local function _2_()
     for _ft, formatters in pairs(filetype__3eformatters) do
       for _idx, formatter in ipairs(formatters) do
