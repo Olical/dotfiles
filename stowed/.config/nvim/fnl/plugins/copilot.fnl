@@ -10,5 +10,5 @@
 
  (tx "zbirenbaum/copilot-cmp"
    {:main "copilot_cmp"
-    :opts {}
+    :opts {:fix_pairs false}
     :dependencies ["zbirenbaum/copilot.lua"]})]
