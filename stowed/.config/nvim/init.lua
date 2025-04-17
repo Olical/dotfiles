@@ -15,10 +15,14 @@ local function toggle_diagnostic_lines()
   else
     _1_ = {current_line = true}
   end
-  return vim.diagnostic.config({virtual_text = true, virtual_lines = _1_})
+  return vim.diagnostic.config({virtual_lines = _1_})
+end
+local function toggle_diagnostic_text()
+  return vim.diagnostic.config({virtual_text = not vim.diagnostic.config().virtual_text})
 end
 vim.diagnostic.config({virtual_text = true, virtual_lines = false})
-vim.keymap.set("n", "<leader>td", toggle_diagnostic_lines, {desc = "Toggle diagnostic virtual lines."})
+vim.keymap.set("n", "<leader>tdl", toggle_diagnostic_lines, {desc = "Toggle diagnostic virtual lines."})
+vim.keymap.set("n", "<leader>tdt", toggle_diagnostic_text, {desc = "Toggle diagnostic virtual text."})
 vim.keymap.set("n", "\\", ",")
 vim.keymap.set("i", "jk", "<esc>")
 vim.keymap.set("n", "<leader>q", "<CMD>quit<CR>", {desc = ":quit"})
