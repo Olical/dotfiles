@@ -14,4 +14,5 @@
                   (tx "<leader>s" {:group "Search"})
                   (tx "<leader>n" {:group "Notifications"})
                   (tx "<leader>t" {:group "Toggle"})
+                  (tx "<leader>td" {:group "Toggle diagnostics"})
                   (tx "<leader>d" {:group "Diffview"})])))})
