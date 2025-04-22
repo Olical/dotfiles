@@ -1,4 +1,4 @@
--- [nfnl] Compiled from init.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] init.fnl
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 vim.o.ignorecase = true

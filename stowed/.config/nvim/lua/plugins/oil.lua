@@ -1,4 +1,4 @@
--- [nfnl] Compiled from fnl/plugins/oil.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] fnl/plugins/oil.fnl
 local function _1_(_, opts)
   local oil = require("oil")
   oil.setup(opts)

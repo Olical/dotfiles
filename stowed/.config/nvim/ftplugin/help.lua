@@ -1,3 +1,3 @@
--- [nfnl] Compiled from ftplugin/help.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] ftplugin/help.fnl
 vim.bo.formatexpr = ""
 return nil

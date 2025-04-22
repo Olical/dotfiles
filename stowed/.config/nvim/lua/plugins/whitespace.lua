@@ -1,4 +1,4 @@
--- [nfnl] Compiled from fnl/plugins/whitespace.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] fnl/plugins/whitespace.fnl
 local function _1_()
   return require("whitespace-nvim").trim()
 end
