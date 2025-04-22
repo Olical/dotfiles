@@ -1,4 +1,4 @@
--- [nfnl] Compiled from fnl/plugins/lsp.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] fnl/plugins/lsp.fnl
 local lsps = {"clojure_lsp", "lua_ls", "jsonls", "yamlls", "marksman", "html", "basedpyright", "ts_ls", "terraformls", "tailwindcss", "dockerls", "docker_compose_language_service", "bashls", "taplo", "sqlls"}
 local filetype__3eformatters = {lua = {"stylua"}, sh = {"shfmt"}, python = {"ruff_organize_imports", "ruff_format"}, rust = {"rustfmt"}, clojure = {"cljfmt"}, javascript = {"prettierd"}, typescript = {"prettierd"}, jsx = {"prettierd"}, html = {"prettierd"}, css = {"prettierd"}, yaml = {"prettierd"}, markdown = {"prettierd"}, fennel = {"fnlfmt"}, sql = {"sqlfmt"}, ["*"] = {"trim_whitespace", "trim_newlines"}}
 local formatter__3epackage = {ruff_organize_imports = "ruff", ruff_format = "ruff"}
@@ -55,8 +55,10 @@ local function _8_(_buf)
   end
 end
 local function _10_()
+  local lspconfig = require("lspconfig")
   local caps = require("cmp_nvim_lsp").default_capabilities()
   local mlsp = require("mason-lspconfig")
+  lspconfig.gleam.setup({})
   local function _11_(server_name)
     return require("lspconfig")[server_name].setup({capabilities = caps})
   end

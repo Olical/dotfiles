@@ -123,9 +123,10 @@
            (tx "<leader>lar" vim.lsp.buf.rename {:desc "LSP rename"})]
     :config
     (fn []
-      (let [;; lspconfig (require :lspconfig)
+      (let [lspconfig (require :lspconfig)
             caps ((. (require :cmp_nvim_lsp) :default_capabilities))
             mlsp (require :mason-lspconfig)]
+        (lspconfig.gleam.setup {})
         (mlsp.setup_handlers
           (tx (fn [server-name]
                 ((. (require :lspconfig) server-name :setup)
