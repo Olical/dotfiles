@@ -119,6 +119,7 @@
            (tx "<leader>ls" "<CMD>Telescope lsp_document_symbols<CR>" {:desc "LSP document symbols"})
            (tx "<leader>lS" "<CMD>Telescope lsp_workspace_symbols<CR>" {:desc "LSP workspace symbols"})
            (tx "<leader>lx" "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>" {:desc "LSP dynamic workspace symbols (all workspaces)"})
+           (tx "<leader>lA" #(vim.lsp.buf.code_action) {:desc "Invoke code_action, prompting for an action to take at the cursor"})
            (tx "<leader>laf" (fn [] ((. (require :conform) :format))) {:desc "LSP format"})
            (tx "<leader>lar" vim.lsp.buf.rename {:desc "LSP rename"})]
     :config
