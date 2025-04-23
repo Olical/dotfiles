@@ -33,6 +33,7 @@
    :markdown ["prettierd"]
    :fennel ["fnlfmt"]
    :sql ["sqlfmt"]
+   :gleam ["gleam"]
    :* ["trim_whitespace" "trim_newlines"]})
 
 (local formatter->package
@@ -49,7 +50,8 @@
   {:fnlfmt true
    :rustfmt true
    :trim_whitespace true
-   :trim_newlines true})
+   :trim_newlines true
+   :gleam true})
 
 (vim.lsp.enable "fennel-ls")
 
