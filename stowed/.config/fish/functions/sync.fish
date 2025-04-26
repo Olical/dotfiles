@@ -1,8 +1,10 @@
 function sync
+  cd ~/repos/Olical/dotfiles
+
   # Early sudo because it's needed later.
   sudo echo "Updating everything!"
 
-  (cd ~/repos/Olical/dotfiles; and git pull)
+  git pull
 
   topgrade --disable containers vim guix uv
 
