@@ -23,6 +23,7 @@
    :sh ["shfmt"]
    :python ["ruff_organize_imports" "ruff_format"]
    :rust ["rustfmt"]
+   :toml ["taplo"]
    :clojure ["cljfmt"]
    :javascript ["prettierd"]
    :typescript ["prettierd"]
