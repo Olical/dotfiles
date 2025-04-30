@@ -135,7 +135,16 @@
           (tx (fn [server-name]
                 ((. (require :lspconfig) server-name :setup)
                  {:capabilities caps}))
-              {}))))})
+              {:tailwindcss
+               (fn []
+                 (lspconfig.tailwindcss.setup
+                   {:settings
+                    {:tailwindCSS
+                     {:experimental
+                      {:classRegex [":[\\w-.#>]+\\.([\\w-]*)"
+                                    "class\\s+\"([^\"]*)\""
+                                    "class\\s+\\[([^\\]]*)\\]"]}
+                      :includeLanguages {:clojure "html"}}}}))}))))})
 
  (tx "RubixDev/mason-update-all"
    {:cmd "MasonUpdateAll"
