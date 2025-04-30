@@ -137,14 +137,21 @@
                  {:capabilities caps}))
               {:tailwindcss
                (fn []
+                 ;; https://github.com/tailwindlabs/tailwindcss/discussions/7554#discussioncomment-12991596
+                 ;; https://github.com/tailwindlabs/tailwindcss-intellisense/issues/400#issuecomment-2336568169
+                 ;; https://github.com/tailwindlabs/tailwindcss-intellisense/issues/400#issuecomment-2664427180
                  (lspconfig.tailwindcss.setup
                    {:settings
                     {:tailwindCSS
                      {:experimental
-                      {:classRegex [":[\\w-.#>]+\\.([\\w-]*)"
-                                    "class\\s+\"([^\"]*)\""
-                                    "class\\s+\\[([^\\]]*)\\]"]}
-                      :includeLanguages {:clojure "html"}}}}))}))))})
+                      {:classRegex [["\\[:[^.\\s]*((?:\\.[^.\\s\\]]*)+)[\\s\\]]" "\\.([^.]*)"]
+                                    ["\\:(\\.[^\\s#]+(?:\\.[^\\s#]+)*)" "\\.([^\\.\\s#]+)"]
+                                    ["class\\s+(\\:[^\\s\\}]*)[\\s\\}]" "[\\:.]([^.]*)"]
+                                    ["class\\s+(\"[^\\}\"]*)\"" "[\"\\s]([^\\s\"]*)"]
+                                    ["class\\s+\\[([\\s\\S]*)\\]" "[\"\\:]([^\\s\"]*)[\"]?"]
+                                    ["class\\s+'\\[([\\s\\S]*)\\]" "([^\\s]*)?"]]}
+                      :includeLanguages {:clojure "html"
+                                         :clojurescript "html"}}}}))}))))})
 
  (tx "RubixDev/mason-update-all"
    {:cmd "MasonUpdateAll"

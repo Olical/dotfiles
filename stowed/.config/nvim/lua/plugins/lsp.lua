@@ -63,7 +63,7 @@ local function _10_()
     return require("lspconfig")[server_name].setup({capabilities = caps})
   end
   local function _12_()
-    return lspconfig.tailwindcss.setup({settings = {tailwindCSS = {experimental = {classRegex = {":[\\w-.#>]+\\.([\\w-]*)", "class\\s+\"([^\"]*)\"", "class\\s+\\[([^\\]]*)\\]"}}, includeLanguages = {clojure = "html"}}}})
+    return lspconfig.tailwindcss.setup({settings = {tailwindCSS = {experimental = {classRegex = {{"\\[:[^.\\s]*((?:\\.[^.\\s\\]]*)+)[\\s\\]]", "\\.([^.]*)"}, {"\\:(\\.[^\\s#]+(?:\\.[^\\s#]+)*)", "\\.([^\\.\\s#]+)"}, {"class\\s+(\\:[^\\s\\}]*)[\\s\\}]", "[\\:.]([^.]*)"}, {"class\\s+(\"[^\\}\"]*)\"", "[\"\\s]([^\\s\"]*)"}, {"class\\s+\\[([\\s\\S]*)\\]", "[\"\\:]([^\\s\"]*)[\"]?"}, {"class\\s+'\\[([\\s\\S]*)\\]", "([^\\s]*)?"}}}, includeLanguages = {clojure = "html", clojurescript = "html"}}}})
   end
   return mlsp.setup_handlers({_11_, tailwindcss = _12_})
 end
