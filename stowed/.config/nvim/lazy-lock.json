@@ -1,5 +1,5 @@
 {
-  "avante.nvim": { "branch": "main", "commit": "0b78b58760a5fd257797936e74e0bf5ddb445de1" },
+  "avante.nvim": { "branch": "main", "commit": "93aa961fc4fe45f69c68f1e336fbefbe4112be77" },
   "blame.nvim": { "branch": "main", "commit": "b87b8c820e4cec06fbbd2f946b7b35c45906ee0c" },
   "cmp-buffer": { "branch": "main", "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657" },
   "cmp-cmdline": { "branch": "main", "commit": "d250c63aa13ead745e3a40f61fdd3470efde3923" },
