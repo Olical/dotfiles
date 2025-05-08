@@ -57,7 +57,8 @@
 (vim.lsp.enable "fennel-ls")
 
 [(tx "williamboman/mason.nvim"
-   {:opts {}})
+   {:tag "v1.11.0"
+    :opts {}})
 
  (tx "stevearc/conform.nvim"
    {:dependencies ["rcarriga/nvim-notify"]
@@ -106,7 +107,8 @@
                {:desc "Toggle global formatting"})]})
 
  (tx "williamboman/mason-lspconfig.nvim"
-   {:dependencies ["williamboman/mason.nvim"]
+   {:tag "v1.32.0"
+    :dependencies ["williamboman/mason.nvim"]
     :opts {:ensure_installed lsps
            :automatic_installation true}})
 
