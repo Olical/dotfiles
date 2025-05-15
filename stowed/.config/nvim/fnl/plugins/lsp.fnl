@@ -25,6 +25,7 @@
    :rust ["rustfmt"]
    :toml ["taplo"]
    :clojure ["cljfmt"]
+   :json ["prettierd"]
    :javascript ["prettierd"]
    :typescript ["prettierd"]
    :jsx ["prettierd"]
