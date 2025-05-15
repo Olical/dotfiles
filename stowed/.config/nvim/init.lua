@@ -8,6 +8,7 @@ vim.o.splitbelow = true
 vim.o.foldenable = false
 vim.o.undofile = true
 vim.o.spell = true
+vim.o.termguicolors = true
 local function toggle_diagnostic_lines()
   local _1_
   if vim.diagnostic.config().virtual_lines then

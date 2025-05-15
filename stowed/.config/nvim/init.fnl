@@ -8,6 +8,7 @@
 (set vim.o.foldenable false)
 (set vim.o.undofile true)
 (set vim.o.spell true)
+(set vim.o.termguicolors true)
 
 ;;; Diagnostics
 (fn toggle-diagnostic-lines []
