@@ -9,6 +9,7 @@
 (set vim.o.undofile true)
 (set vim.o.spell true)
 (set vim.o.termguicolors true)
+(set vim.o.exrc true)
 
 ;;; Diagnostics
 (fn toggle-diagnostic-lines []
