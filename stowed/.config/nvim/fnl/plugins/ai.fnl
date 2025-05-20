@@ -1,20 +1,26 @@
 (import-macros {: tx} :config.macros)
 
-[(tx "yetone/avante.nvim"
+[(tx "ravitemer/mcphub.nvim"
+   {:dependencies ["nvim-lua/plenary.nvim"]
+    :opts {:cmd "npx"
+           :cmdArgs ["mcp-hub"]}})
+ (tx "yetone/avante.nvim"
    {:event "VeryLazy"
     :version false
     :build "make"
     :opts {:provider "copilot"
            :hints {:enabled false}}
-           ; :provider "openai"
-           ; :openai {:endpoint "https://api.openai.com/v1"
-           ;          :model "gpt-4o"
-           ;          :timeout 30000
-           ;          :temperature 0
-           ;          :max_tokens 8192
-           ;          ; :reasoning_effort "medium"
+           :system_prompt (fn []
+                            (let [mcphub (require :mcphub)
+                                  hub (mcphub.get_hub_instance)]
+                              (or (and hub (hub:get_active_servers_prompt))
+                                  "")))
+           :custom_tools (fn []
+                           (let [avente-ext (require "mcphub.extensions.avante")]
+                             [(avente-ext.mcp_tool)]))
 
-    :dependencies ["zbirenbaum/copilot.lua"
+    :dependencies ["nvim-treesitter/nvim-treesitter"
+                   "zbirenbaum/copilot.lua"
                    "stevearc/dressing.nvim"
                    "nvim-lua/plenary.nvim"
                    "MunifTanjim/nui.nvim"
