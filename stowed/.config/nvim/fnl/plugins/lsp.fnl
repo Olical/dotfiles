@@ -16,8 +16,7 @@
    "docker_compose_language_service"
    "bashls"
    "taplo"
-   "sqlls"
-   "efm"])
+   "sqlls"])
 
 (local filetype->formatters
   {:lua ["stylua"]
@@ -139,20 +138,7 @@
           (tx (fn [server-name]
                 ((. (require :lspconfig) server-name :setup)
                  {:capabilities caps}))
-              {:efm
-               (fn []
-                 (lspconfig.efm.setup
-                   {:filetypes ["clojure"]
-                    :settings
-                    {:rootMarkers [".git/"]
-                     :languages {:clojure [{:rootMarkers ["deps.edn" "project.clj"]
-                                            :lintSource "efm/background-check"
-                                            :lintCommand "cat .background-check/errors.txt"
-                                            :lintIgnoreExitCode true
-                                            :lintStdin false
-                                            :lintFormats ["%f:%l:%c %m"]}]}}}))
-
-               :tailwindcss
+              {:tailwindcss
                (fn []
                  ;; https://github.com/tailwindlabs/tailwindcss/discussions/7554#discussioncomment-12991596
                  ;; https://github.com/tailwindlabs/tailwindcss-intellisense/issues/400#issuecomment-2336568169
