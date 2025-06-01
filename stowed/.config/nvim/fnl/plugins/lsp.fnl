@@ -55,7 +55,7 @@
    :trim_newlines true
    :gleam true})
 
-(vim.lsp.enable "fennel-ls")
+(vim.lsp.enable ["fennel-ls" "typedclojure"])
 
 [(tx "williamboman/mason.nvim"
    {:tag "v1.11.0"

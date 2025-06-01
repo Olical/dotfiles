@@ -4,7 +4,7 @@ local filetype__3eformatters = {lua = {"stylua"}, sh = {"shfmt"}, python = {"ruf
 local formatter__3epackage = {ruff_organize_imports = "ruff", ruff_format = "ruff"}
 local disable_formatter_on_save = {fennel = true, sql = true}
 local disable_formatter_auto_install = {fnlfmt = true, rustfmt = true, trim_whitespace = true, trim_newlines = true, gleam = true}
-vim.lsp.enable("fennel-ls")
+vim.lsp.enable({"fennel-ls", "typedclojure"})
 local function _1_(_, opts)
   local conform = require("conform")
   local registry = require("mason-registry")
