@@ -1,2 +1,2 @@
 -- [nfnl] lsp/typedclojure.fnl
-return {cmd = vim.lsp.rpc.connect("localhost", 9999), filetypes = {"clojure"}, root_markers = {"deps.edn", "project.clj", ".git"}}
+return {cmd = {"clojure", "-X:test:dev", "typedclojure-lsp.dev/start!"}, filetypes = {"clojure"}, root_markers = {"deps.edn", "project.clj", ".git"}}
