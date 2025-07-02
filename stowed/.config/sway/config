@@ -93,7 +93,7 @@ input "1739:30382:DLL0704:01_06CB:76AE_Touchpad" {
 }
 
 output "BNQ BenQ XL2430T VCE03607SL0" pos 0 0
-output "Dell Inc. DELL S2721DGF 7T2MY13" pos 1920 0
+output "Dell Inc. DELL S2721DGF 7T2MY13" pos 1920 0 mode 2560x1440@165Hz
 
 ### Key bindings
 #
