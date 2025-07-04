@@ -1,0 +1,63 @@
+# lastsync<dd.mm.yyyy> 04.07.2025
+# https://github.com/vbextreme/ghostmirror
+# country outofdate uptodate morerecent total speed stability
+#* 'Germany' 0 14646 0 14646 13.989818 0.996509
+Server=https://files.hadiko.de/pub/dists/arch/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 12.919176 0.999676
+Server=http://gb.mirrors.cicku.me/archlinux/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 12.778637 0.999208
+Server=https://de.arch.niranjan.co/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 12.249847 0.995622
+Server=https://mirror.selfnet.de/archlinux/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 12.166933 0.994798
+Server=https://repo.c48.uk/arch/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 11.743311 0.989500
+Server=https://mirrors.xtom.de/archlinux/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 11.493012 0.985519
+Server=http://mirrors.melbourne.co.uk/archlinux/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 11.347002 0.982909
+Server=http://de.mirrors.cicku.me/archlinux/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 11.215644 0.980381
+Server=http://mirrors.n-ix.net/archlinux/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 11.196704 0.980002
+Server=https://de-nue.soulharsh007.dev/archlinux/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 11.161199 0.979283
+Server=https://arch.kurdy.org/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 10.831457 0.972025
+Server=https://mirror.23m.com/archlinux/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 10.692058 0.968643
+Server=http://mirrors.xtom.de/archlinux/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 10.567321 0.965462
+Server=http://ftp.gwdg.de/pub/linux/archlinux/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 10.087283 0.951882
+Server=https://mirror.netcologne.de/archlinux/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 9.912982 0.946437
+Server=https://mirrors.n-ix.net/archlinux/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 9.861085 0.944765
+Server=https://ftp.halifax.rwth-aachen.de/archlinux/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 18.812812 0.847576
+Server=https://www.mirrorservice.org/sites/ftp.archlinux.org/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 18.723720 0.851978
+Server=https://mirror.server.net/archlinux/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 18.479867 0.863780
+Server=https://archlinux.uk.mirror.allworldit.com/archlinux/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 18.115821 0.880690
+Server=https://mirrors.melbourne.co.uk/archlinux/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 17.708555 0.898534
+Server=https://de.mirrors.cicku.me/archlinux/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 17.404627 0.911063
+Server=http://mirror.server.net/archlinux/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 17.243189 0.917431
+Server=http://archlinux.uk.mirror.allworldit.com/archlinux/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 9.332074 0.926404
+Server=http://www.mirrorservice.org/sites/ftp.archlinux.org/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 9.037447 0.915179
+Server=https://gb.mirrors.cicku.me/archlinux/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 7.864551 0.864071
+Server=https://mirror.fra10.de.leaseweb.net/archlinux/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 20.863815 0.735345
+Server=https://london.mirror.pkgbuild.com/$repo/os/$arch
+#* 'United Kingdom' 0 14646 0 14646 20.711340 0.744269
+Server=https://repo.slithery.uk/$repo/os/$arch
+#* 'Germany' 0 14646 0 14646 6.563306 0.797263
+Server=http://mirror.fra10.de.leaseweb.net/archlinux/$repo/os/$arch
