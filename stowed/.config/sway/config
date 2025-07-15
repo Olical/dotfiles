@@ -71,7 +71,7 @@ exec swayidle -w \
 input * {
     xkb_layout "gb"
     accel_profile "flat"
-    pointer_accel -0.2
+    pointer_accel -0.35
 }
 
 input "1267:12793:ELAN067C:00_04F3:31F9_Touchpad" {
