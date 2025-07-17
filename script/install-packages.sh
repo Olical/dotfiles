@@ -19,6 +19,7 @@ yay -S --needed \
   sd \
   firefox \
   fish \
+  fisher \
   zoxide \
   flatpak \
   fzf \
