@@ -74,6 +74,7 @@ input * {
     pointer_accel -0.35
 }
 
+# Thinkpad
 input "1267:12793:ELAN067C:00_04F3:31F9_Touchpad" {
     dwt enabled
     tap enabled
@@ -81,15 +82,7 @@ input "1267:12793:ELAN067C:00_04F3:31F9_Touchpad" {
     middle_emulation disabled
     pointer_accel 0.0
     accel_profile "adaptive"
-}
-
-input "1739:30382:DLL0704:01_06CB:76AE_Touchpad" {
-    dwt enabled
-    tap enabled
-    natural_scroll disabled
-    middle_emulation disabled
-    accel_profile "flat"
-    pointer_accel 0.7
+    drag_lock disabled
 }
 
 output "BNQ BenQ XL2430T VCE03607SL0" pos 0 0 adaptive_sync on
