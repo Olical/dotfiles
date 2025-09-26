@@ -23,8 +23,4 @@
           (tx "<leader>dl" "<CMD>DiffviewLog<CR>" {:desc "Diffview log"})]})
  (tx "lewis6991/gitsigns.nvim"
    {:event "VeryLazy"
-    :opts {}})
- (tx "kdheepak/lazygit.nvim"
-   {:dependencies ["nvim-lua/plenary.nvim"]
-    :cmd ["LazyGit" "LazyGitConfig" "LazyGitCurrentFile" "LazyGitFilter" "LazyGitFilterCurrentFile"]
-    :keys [(tx "<leader>gg" "<CMD>LazyGit<CR>" {:desc "LazyGit"})]})]
+    :opts {}})]

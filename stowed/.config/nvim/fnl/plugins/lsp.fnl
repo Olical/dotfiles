@@ -116,16 +116,7 @@
  (tx "neovim/nvim-lspconfig"
    {:lazy false
     :dependencies ["williamboman/mason-lspconfig.nvim" "hrsh7th/cmp-nvim-lsp" "stevearc/conform.nvim"]
-    :keys [(tx "<leader>ld" "<CMD>Telescope lsp_definitions<CR>" {:desc "LSP definition"})
-           (tx "<leader>lu" "<CMD>Telescope lsp_implementations<CR>" {:desc "LSP implementations"})
-           (tx "<leader>lt" "<CMD>Telescope lsp_type_definitions<CR>" {:desc "LSP type definitions"})
-           (tx "<leader>lr" "<CMD>Telescope lsp_references<CR>" {:desc "LSP references"})
-           (tx "<leader>li" "<CMD>Telescope lsp_incoming_calls<CR>" {:desc "LSP incoming calls"})
-           (tx "<leader>lo" "<CMD>Telescope lsp_outgoing_calls<CR>" {:desc "LSP outgoing calls"})
-           (tx "<leader>ls" "<CMD>Telescope lsp_document_symbols<CR>" {:desc "LSP document symbols"})
-           (tx "<leader>lS" "<CMD>Telescope lsp_workspace_symbols<CR>" {:desc "LSP workspace symbols"})
-           (tx "<leader>lx" "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>" {:desc "LSP dynamic workspace symbols (all workspaces)"})
-           (tx "<leader>lA" #(vim.lsp.buf.code_action) {:desc "Invoke code_action, prompting for an action to take at the cursor"})
+    :keys [(tx "<leader>lA" #(vim.lsp.buf.code_action) {:desc "Invoke code_action, prompting for an action to take at the cursor"})
            (tx "<leader>laf" (fn [] ((. (require :conform) :format))) {:desc "LSP format"})
            (tx "<leader>lar" vim.lsp.buf.rename {:desc "LSP rename"})]
     :config
