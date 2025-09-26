@@ -1,5 +1,16 @@
 (import-macros {: tx} :config.macros)
 
-(tx "nvim-treesitter/nvim-treesitter"
+(vim.api.nvim_create_autocmd
+  "FileType"
+  {:pattern ["*"]
+   :callback (fn []
+               (pcall
+                 (fn []
+                   (vim.treesitter.start)
+                   (set vim.bo.indentexpr "v:lua.require'nvim-treesitter'.indentexpr()"))))})
+
+(tx
+  "nvim-treesitter/nvim-treesitter"
   {:main :nvim-treesitter.configs
-   :branch "main"})
+   :branch "main"
+   :build ":TSUpdate"})
