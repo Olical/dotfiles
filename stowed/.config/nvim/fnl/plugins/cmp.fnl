@@ -10,7 +10,8 @@
                   "PaterJason/cmp-conjure"
                   "Olical/conjure"
                   "zbirenbaum/copilot-cmp"
-                  "olimorris/codecompanion.nvim"]
+                  "olimorris/codecompanion.nvim"
+                  "nvim-lua/plenary.nvim"]
 
    :config
    (fn []
