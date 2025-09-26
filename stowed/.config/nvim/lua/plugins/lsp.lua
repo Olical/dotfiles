@@ -57,12 +57,14 @@ end
 local function _10_()
   local caps = require("cmp_nvim_lsp").default_capabilities()
   local mlsp = require("mason-lspconfig")
-  vim.lsp.config("gleam", {})
+  vim.lsp.enable("gleam")
   local function _11_(server_name)
-    return vim.lsp.config(server_name, {capabilities = caps})
+    vim.lsp.config(server_name, {capabilities = caps})
+    return vim.lsp.enable(server_name)
   end
   local function _12_()
-    return vim.lsp.config("tailwindcss", {settings = {tailwindCSS = {experimental = {classRegex = {{"\\[:[^.\\s]*((?:\\.[^.\\s\\]]*)+)[\\s\\]]", "\\.([^.]*)"}, {"\\:(\\.[^\\s#]+(?:\\.[^\\s#]+)*)", "\\.([^\\.\\s#]+)"}, {"class\\s+(\\:[^\\s\\}]*)[\\s\\}]", "[\\:.]([^.]*)"}, {"class\\s+(\"[^\\}\"]*)\"", "[\"\\s]([^\\s\"]*)"}, {"class\\s+\\[([\\s\\S]*)\\]", "[\"\\:]([^\\s\"]*)[\"]?"}, {"class\\s+'\\[([\\s\\S]*)\\]", "([^\\s]*)?"}}}, includeLanguages = {clojure = "html", clojurescript = "html"}}}})
+    vim.lsp.config("tailwindcss", {settings = {tailwindCSS = {experimental = {classRegex = {{"\\[:[^.\\s]*((?:\\.[^.\\s\\]]*)+)[\\s\\]]", "\\.([^.]*)"}, {"\\:(\\.[^\\s#]+(?:\\.[^\\s#]+)*)", "\\.([^\\.\\s#]+)"}, {"class\\s+(\\:[^\\s\\}]*)[\\s\\}]", "[\\:.]([^.]*)"}, {"class\\s+(\"[^\\}\"]*)\"", "[\"\\s]([^\\s\"]*)"}, {"class\\s+\\[([\\s\\S]*)\\]", "[\"\\:]([^\\s\"]*)[\"]?"}, {"class\\s+'\\[([\\s\\S]*)\\]", "([^\\s]*)?"}}}, includeLanguages = {clojure = "html", clojurescript = "html"}}}})
+    return vim.lsp.enable("tailwindcss")
   end
   return mlsp.setup_handlers({_11_, tailwindcss = _12_})
 end

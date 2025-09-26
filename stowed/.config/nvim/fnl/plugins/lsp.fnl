@@ -123,10 +123,11 @@
     (fn []
       (let [caps ((. (require :cmp_nvim_lsp) :default_capabilities))
             mlsp (require :mason-lspconfig)]
-        (vim.lsp.config "gleam" {})
+        (vim.lsp.enable "gleam")
         (mlsp.setup_handlers
           (tx (fn [server-name]
-                (vim.lsp.config server-name {:capabilities caps}))
+                (vim.lsp.config server-name {:capabilities caps})
+                (vim.lsp.enable server-name))
               {:tailwindcss
                (fn []
                  ;; https://github.com/tailwindlabs/tailwindcss/discussions/7554#discussioncomment-12991596
@@ -143,7 +144,8 @@
                                     ["class\\s+\\[([\\s\\S]*)\\]" "[\"\\:]([^\\s\"]*)[\"]?"]
                                     ["class\\s+'\\[([\\s\\S]*)\\]" "([^\\s]*)?"]]}
                       :includeLanguages {:clojure "html"
-                                         :clojurescript "html"}}}}))}))))})
+                                         :clojurescript "html"}}}})
+                 (vim.lsp.enable "tailwindcss"))}))))})
 
  (tx "RubixDev/mason-update-all"
    {:cmd "MasonUpdateAll"
