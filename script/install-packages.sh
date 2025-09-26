@@ -33,6 +33,8 @@ yay -S --needed \
   man \
   neovim \
   tree-sitter \
+  tree-sitter-cli \
+  imagemagick \
   nodejs \
   npm \
   obsidian \
