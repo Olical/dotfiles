@@ -130,20 +130,18 @@
            (tx "<leader>lar" vim.lsp.buf.rename {:desc "LSP rename"})]
     :config
     (fn []
-      (let [lspconfig (require :lspconfig)
-            caps ((. (require :cmp_nvim_lsp) :default_capabilities))
+      (let [caps ((. (require :cmp_nvim_lsp) :default_capabilities))
             mlsp (require :mason-lspconfig)]
-        (lspconfig.gleam.setup {})
+        (vim.lsp.config "gleam" {})
         (mlsp.setup_handlers
           (tx (fn [server-name]
-                ((. (require :lspconfig) server-name :setup)
-                 {:capabilities caps}))
+                (vim.lsp.config server-name {:capabilities caps}))
               {:tailwindcss
                (fn []
                  ;; https://github.com/tailwindlabs/tailwindcss/discussions/7554#discussioncomment-12991596
                  ;; https://github.com/tailwindlabs/tailwindcss-intellisense/issues/400#issuecomment-2336568169
                  ;; https://github.com/tailwindlabs/tailwindcss-intellisense/issues/400#issuecomment-2664427180
-                 (lspconfig.tailwindcss.setup
+                 (vim.lsp.config "tailwindcss"
                    {:settings
                     {:tailwindCSS
                      {:experimental
