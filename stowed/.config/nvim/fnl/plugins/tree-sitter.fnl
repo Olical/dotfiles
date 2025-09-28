@@ -4,10 +4,12 @@
   "FileType"
   {:pattern ["*"]
    :callback (fn []
-               (pcall
+               (vim.schedule
                  (fn []
-                   (vim.treesitter.start)
-                   (set vim.bo.indentexpr "v:lua.require'nvim-treesitter'.indentexpr()"))))})
+                   (pcall
+                     (fn []
+                       (vim.treesitter.start)
+                       (set vim.bo.indentexpr "v:lua.require'nvim-treesitter'.indentexpr()"))))))})
 
 (tx
   "nvim-treesitter/nvim-treesitter"
