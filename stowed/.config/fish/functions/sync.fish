@@ -8,5 +8,5 @@ function sync
 
   topgrade --disable containers vim guix uv
 
-  nvim --headless "+Lazy! sync" +TSUpdateSync -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
+  nvim --headless "+Lazy! sync" +TSUpdate -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
 end
