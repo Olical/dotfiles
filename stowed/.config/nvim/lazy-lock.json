@@ -35,6 +35,7 @@
   "snacks.nvim": { "branch": "main", "commit": "3893cca2b290946d7fff8f0f98855060df06297d" },
   "vim-abolish": { "branch": "master", "commit": "dcbfe065297d31823561ba787f51056c147aa682" },
   "vim-eunuch": { "branch": "master", "commit": "e86bb794a1c10a2edac130feb0ea590a00d03f1e" },
+  "vim-hy": { "branch": "master", "commit": "ab1699bfa636e7355ac0030189331251c49c7d61" },
   "vim-repeat": { "branch": "master", "commit": "65846025c15494983dafe5e3b46c8f88ab2e9635" },
   "vim-unimpaired": { "branch": "master", "commit": "db65482581a28e4ccf355be297f1864a4e66985c" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
