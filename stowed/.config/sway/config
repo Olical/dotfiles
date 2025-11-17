@@ -71,7 +71,7 @@ exec swayidle -w \
 input * {
     xkb_layout "gb"
     accel_profile "flat"
-    pointer_accel -0.35
+    pointer_accel 0
 }
 
 # Thinkpad
