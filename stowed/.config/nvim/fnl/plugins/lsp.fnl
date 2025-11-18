@@ -1,4 +1,5 @@
 (import-macros {: tx} :config.macros)
+(local vim _G.vim)
 
 (local lsps
   ["clojure_lsp"
@@ -11,7 +12,7 @@
    "basedpyright"
    "ts_ls"
    "terraformls"
-   "tailwindcss"
+   ; "tailwindcss"
    "dockerls"
    "docker_compose_language_service"
    "bashls"
@@ -128,24 +129,25 @@
           (tx (fn [server-name]
                 (vim.lsp.config server-name {:capabilities caps})
                 (vim.lsp.enable server-name))
-              {:tailwindcss
-               (fn []
-                 ;; https://github.com/tailwindlabs/tailwindcss/discussions/7554#discussioncomment-12991596
-                 ;; https://github.com/tailwindlabs/tailwindcss-intellisense/issues/400#issuecomment-2336568169
-                 ;; https://github.com/tailwindlabs/tailwindcss-intellisense/issues/400#issuecomment-2664427180
-                 (vim.lsp.config "tailwindcss"
-                   {:settings
-                    {:tailwindCSS
-                     {:experimental
-                      {:classRegex [["\\[:[^.\\s]*((?:\\.[^.\\s\\]]*)+)[\\s\\]]" "\\.([^.]*)"]
-                                    ["\\:(\\.[^\\s#]+(?:\\.[^\\s#]+)*)" "\\.([^\\.\\s#]+)"]
-                                    ["class\\s+(\\:[^\\s\\}]*)[\\s\\}]" "[\\:.]([^.]*)"]
-                                    ["class\\s+(\"[^\\}\"]*)\"" "[\"\\s]([^\\s\"]*)"]
-                                    ["class\\s+\\[([\\s\\S]*)\\]" "[\"\\:]([^\\s\"]*)[\"]?"]
-                                    ["class\\s+'\\[([\\s\\S]*)\\]" "([^\\s]*)?"]]}
-                      :includeLanguages {:clojure "html"
-                                         :clojurescript "html"}}}})
-                 (vim.lsp.enable "tailwindcss"))}))))})
+              {; :tailwindcss
+               ; (fn []
+               ;   ;; https://github.com/tailwindlabs/tailwindcss/discussions/7554#discussioncomment-12991596
+               ;   ;; https://github.com/tailwindlabs/tailwindcss-intellisense/issues/400#issuecomment-2336568169
+               ;   ;; https://github.com/tailwindlabs/tailwindcss-intellisense/issues/400#issuecomment-2664427180
+               ;   (vim.lsp.config "tailwindcss"
+               ;     {:settings
+               ;      {:tailwindCSS
+               ;       {:experimental
+               ;        {:classRegex [["\\[:[^.\\s]*((?:\\.[^.\\s\\]]*)+)[\\s\\]]" "\\.([^.]*)"]
+               ;                      ["\\:(\\.[^\\s#]+(?:\\.[^\\s#]+)*)" "\\.([^\\.\\s#]+)"]
+               ;                      ["class\\s+(\\:[^\\s\\}]*)[\\s\\}]" "[\\:.]([^.]*)"]
+               ;                      ["class\\s+(\"[^\\}\"]*)\"" "[\"\\s]([^\\s\"]*)"]
+               ;                      ["class\\s+\\[([\\s\\S]*)\\]" "[\"\\:]([^\\s\"]*)[\"]?"]
+               ;                      ["class\\s+'\\[([\\s\\S]*)\\]" "([^\\s]*)?"]]}
+               ;        :includeLanguages {:clojure "html"
+               ;                           :clojurescript "html"}}}})
+               ;   (vim.lsp.enable "tailwindcss"))
+               }))))})
 
  (tx "RubixDev/mason-update-all"
    {:cmd "MasonUpdateAll"
