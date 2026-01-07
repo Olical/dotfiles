@@ -78,6 +78,6 @@ yay -S --needed \
 sudo systemctl enable docker
 sudo systemctl start docker
 
-xdg-settings set default-web-browser firefox.desktop
+xdg-settings set default-web-browser zen.desktop
 
 rustup default stable
