@@ -1,0 +1,14 @@
+.quicksave.vim
+.tern-port
+.netrwhist
+.lvimrc
+.conjure.edn
+.prepl-port
+docker-compose.local.yml
+.rebl
+.lnvim.fnl
+.lnvim.lua
+.direnv/
+.envrc
+.lsp
+shell.nix

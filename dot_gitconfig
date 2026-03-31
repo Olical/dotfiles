@@ -1,0 +1,56 @@
+[user]
+	name = Oliver Caldwell
+	email = ollie@oli.me.uk
+	signingkey = "6DFA695F73832EF9DC0335C5D85B96510F2C8A64"
+[core]
+	editor = nvim
+	excludesfile = ~/.gitexcludes
+[color]
+	ui = true
+[push]
+	default = simple
+	autoSetupRemote = true
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = true
+	keepBackup = false
+[mergetool "vimdiff"]
+	cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[alias]
+	s = status -sb
+	sw = switch
+	b = branch
+	c = commit -v
+	a = add
+	re = restore
+	l = pull
+	p = push
+	f = fetch
+	mt = mergetool
+	m = merge
+	r = rebase
+	lg = log --stat
+	d = diff
+	dt = difftool
+[commit]
+	gpgsign = true
+[pull]
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[include]
+	path = ~/.gitconfig_local
+[init]
+	defaultBranch = main
+[diff]
+	tool = difftastic
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+	difftool = true
