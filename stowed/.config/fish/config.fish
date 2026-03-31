@@ -9,10 +9,6 @@ set -gx SUDO_ASKPASS '/usr/bin/lxqt-openssh-askpass'
 
 set -U fish_greeting
 
-# Can maybe delete this, but reinstate if Neovim search is slow.
-# set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow -g \"!.git/\" 2> /dev/null"
-# set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
-
 # Other git aliases are in git config
 alias g="git"
 alias gg="g a .; and g c -a"
@@ -29,3 +25,9 @@ end
 
 mise activate fish | source
 zoxide init --cmd cd fish | source
+
+if status is-interactive
+    set ZELLIJ_AUTO_ATTACH false
+    set ZELLIJ_AUTO_EXIT true
+    eval (zellij setup --generate-auto-start fish | string collect)
+end
