@@ -26,8 +26,11 @@ end
 mise activate fish | source
 zoxide init --cmd cd fish | source
 
-if status is-interactive
-    set ZELLIJ_AUTO_ATTACH false
-    set ZELLIJ_AUTO_EXIT true
-    eval (zellij setup --generate-auto-start fish | string collect)
+if status is-interactive; and not set -q ZELLIJ
+    zellij
+    # Only exit fish if zellij exited cleanly.
+    # If it crashed (e.g. bad config), we keep the shell so we can fix things.
+    if test $status -eq 0
+        kill $fish_pid
+    end
 end
