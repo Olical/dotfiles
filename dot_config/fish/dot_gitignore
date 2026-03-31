@@ -1,0 +1,15 @@
+fish_history
+fish_variables
+fishd.*
+
+# Fisher / fish-nvm
+conf.d/
+fishfile
+functions/nvm.fish
+
+completions/tide.fish
+functions/tide/
+functions/_tide_*
+functions/tide.fish
+functions/fish_prompt.fish
+functions/fish_mode_prompt.fish
