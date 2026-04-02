@@ -4,7 +4,7 @@ function sync
 
   topgrade --disable containers vim guix uv
 
-  nvim --headless "+Lazy! sync" +TSUpdate -c 'lua require("mason-update-all").update_all(function() vim.cmd("quitall") end)'
+  nvim --headless -c 'lua require("config.sync")'
 
   # Pick up any changes (e.g. lazy-lock.json) and auto-commit/push.
   chezmoi re-add
