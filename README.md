@@ -23,3 +23,12 @@ chezmoi cd
 # Update system packages and neovim plugins
 sync
 ```
+
+## Packages
+
+```
+neovim
+chezmoi
+ghostty
+fish
+```
