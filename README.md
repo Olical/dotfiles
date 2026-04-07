@@ -31,6 +31,7 @@ sync
 sudo dnf copr enable dejan/lazygit
 sudo dnf copr enable scottames/ghostty
 sudo dnf copr enable jdxcode/mise
+sudo dnf copr enable lilay/topgrade
 
 sudo dnf install \
   neovim \
@@ -38,7 +39,8 @@ sudo dnf install \
   ghostty \
   fish \
   lazygit \
-  difftastic
+  difftastic \
+  topgrade
 
 chsh -s /usr/bin/fish
 
