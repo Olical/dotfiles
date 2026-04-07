@@ -5,7 +5,8 @@ Managed with [chezmoi](https://www.chezmoi.io/).
 ## New machine setup
 
 ```
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply --branch chezmoi Olical
+sudo dnf install chezmoi
+chezmoi init --apply --branch chezmoi Olical
 ```
 
 ## Daily usage
@@ -27,8 +28,13 @@ sync
 ## Packages
 
 ```
-neovim
-chezmoi
-ghostty
-fish
+sudo dnf copr enable dejan/lazygit
+sudo dnf copr enable scottames/ghostty
+sudo dnf install \
+  neovim \
+  helix \
+  ghostty \
+  fish \
+  lazygit \
+  difftastic
 ```
