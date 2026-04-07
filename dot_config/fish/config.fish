@@ -15,6 +15,7 @@ alias gg="g a .; and g c -a"
 alias lg="lazygit"
 alias zj="zellij -l welcome"
 alias cm="chezmoi"
+alias hx="helix"
 alias n="nvim"
 
 # Start an SSH agent if required, if not, connect to it.
