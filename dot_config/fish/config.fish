@@ -5,6 +5,8 @@ if type -q nvim
     alias vimdiff="nvim -d"
 end
 
+fish_add_path ~/.local/bin
+
 set -gx PAGER less
 set -g fish_greeting
 
