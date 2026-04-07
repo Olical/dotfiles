@@ -2,12 +2,11 @@ fish_history
 fish_variables
 fishd.*
 
-# Fisher / fish-nvm
+# Fisher managed (installed via fish_plugins)
 conf.d/
+completions/
 fishfile
 functions/nvm.fish
-
-completions/tide.fish
 functions/tide/
 functions/_tide_*
 functions/tide.fish

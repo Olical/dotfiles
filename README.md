@@ -46,4 +46,10 @@ curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-
 cargo binstall zellij
 
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+
+# Install fish plugins (tide prompt etc) from fish_plugins
+fisher update
+
+# Generate mise completions
+mise completions fish > ~/.config/fish/completions/mise.fish
 ```
