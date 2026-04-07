@@ -13,7 +13,7 @@ set -U fish_greeting
 alias g="git"
 alias gg="g a .; and g c -a"
 alias lg="lazygit"
-alias zj="zellij"
+alias zj="zellij -l welcome"
 alias cm="chezmoi"
 alias n="nvim"
 
@@ -29,7 +29,7 @@ mise activate fish | source
 zoxide init --cmd cd fish | source
 
 if status is-interactive; and not set -q ZELLIJ
-    zellij
+    zj
     # Only exit fish if zellij exited cleanly.
     # If it crashed (e.g. bad config), we keep the shell so we can fix things.
     if test $status -eq 0
