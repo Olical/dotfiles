@@ -51,5 +51,6 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 fisher update
 
 # Generate mise completions
+mise use -g usage
 mise completions fish > ~/.config/fish/completions/mise.fish
 ```
