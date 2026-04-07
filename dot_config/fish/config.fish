@@ -30,7 +30,7 @@ end
 mise activate fish | source
 zoxide init --cmd cd fish | source
 
-if status is-interactive; and not set -q ZELLIJ
+if status is-interactive; and not set -q ZELLIJ; and command -q zellij
     zj
     # Only exit fish if zellij exited cleanly.
     # If it crashed (e.g. bad config), we keep the shell so we can fix things.

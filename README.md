@@ -38,8 +38,7 @@ sudo dnf install \
   ghostty \
   fish \
   lazygit \
-  difftastic \
-  mise
+  difftastic
 
 chsh -s /usr/bin/fish
 ```
