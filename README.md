@@ -25,11 +25,12 @@ chezmoi cd
 sync
 ```
 
-## Packages
+## First time
 
 ```
 sudo dnf copr enable dejan/lazygit
 sudo dnf copr enable scottames/ghostty
+
 sudo dnf install \
   neovim \
   helix \
@@ -37,4 +38,6 @@ sudo dnf install \
   fish \
   lazygit \
   difftastic
+
+chsh -s /usr/bin/fish
 ```
