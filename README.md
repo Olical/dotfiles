@@ -30,6 +30,7 @@ sync
 ```
 sudo dnf copr enable dejan/lazygit
 sudo dnf copr enable scottames/ghostty
+sudo dnf copr enable jdxcode/mise
 
 sudo dnf install \
   neovim \
