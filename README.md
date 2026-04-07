@@ -39,7 +39,17 @@ sudo dnf install \
   fish \
   lazygit \
   difftastic \
-  zoxide
+  zoxide \
+  rustup
 
 chsh -s /usr/bin/fish
+
+rustup-init
+curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+cargo binstall zellij
+
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher install IlanCosman/tide@v6
+
+curl -fsSL https://claude.ai/install.sh | bash
 ```
