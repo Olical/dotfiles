@@ -27,7 +27,7 @@ sync
 
 ## First time
 
-```
+```fish
 sudo dnf copr enable dejan/lazygit
 sudo dnf copr enable scottames/ghostty
 sudo dnf copr enable jdxcode/mise
@@ -40,9 +40,18 @@ sudo dnf install \
   fish \
   lazygit \
   difftastic \
-  topgrade
+  topgrade \
+  syncthing \
+  tailscale
 
 chsh -s /usr/bin/fish
+
+sudo systemctl enable --now "syncthing@olical.service
+sudo systemctl enable --now tailscaled
+
+sudo tailscale login
+
+curl -fsSL https://claude.ai/install.sh | bash
 
 curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
 cargo binstall zellij
