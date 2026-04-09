@@ -148,7 +148,6 @@ keybinds clear-defaults=true {
             LaunchOrFocusPlugin "session-manager" {
                 floating true
                 move_to_focused_tab true
-                default_layout "default"
             }
             SwitchToMode "normal"
         }
@@ -276,15 +275,12 @@ plugins {
         cwd "/"
     }
     plugin-manager location="zellij:plugin-manager"
-    session-manager location="zellij:session-manager" {
-        default_layout "default"
-    }
+    session-manager location="zellij:session-manager"
     status-bar location="zellij:status-bar"
     strider location="zellij:strider"
     tab-bar location="zellij:tab-bar"
     welcome-screen location="zellij:session-manager" {
         welcome_screen true
-        default_layout "default"
     }
 }
 
