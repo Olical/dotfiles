@@ -12,8 +12,8 @@ alias lg="lazygit"
 alias zj="zellij -l welcome"
 alias cm="chezmoi"
 alias n="nvim"
-alias y="yazi"
 
+# Some messy stuff that's Arch specific. Not needed on Fedora.
 if string match -q arch (cat /etc/os-release | string match -r 'ID=(.*)' | tail -1)
     alias hx="helix"
     set -gx SUDO_ASKPASS /usr/bin/lxqt-openssh-askpass
@@ -27,6 +27,15 @@ end
 
 mise activate fish | source
 zoxide init --cmd cd fish | source
+
+function y
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    command yazi $argv --cwd-file="$tmp"
+    if read -z cwd <"$tmp"; and [ "$cwd" != "$PWD" ]; and test -d "$cwd"
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
+end
 
 if status is-interactive; and not set -q ZELLIJ; and command -q zellij
     zj
