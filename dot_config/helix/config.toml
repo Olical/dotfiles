@@ -6,13 +6,33 @@ true-color = true
 cursorline = true
 color-modes = true
 bufferline = "multiple"
-auto-save = true
 scrolloff = 5
+
+[editor.auto-save]
+focus-lost = true
+after-delay.enable = true
+after-delay.timeout = 5000
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
 
-# [editor.indent-guides]
-# render = true
+[editor.indent-guides]
+render = true
+character = "│"
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[editor.soft-wrap]
+enable = true
+
+[keys.insert]
+j = { k = "normal_mode" }
+
+[keys.normal]
+[keys.normal.space]
+z = ":write"
+q = ":quit"
