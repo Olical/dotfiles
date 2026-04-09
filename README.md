@@ -45,7 +45,8 @@ sudo dnf install \
   syncthing \
   tailscale \
   yazi \
-  gh
+  gh \
+  bat
 
 chsh -s /usr/bin/fish
 
