@@ -44,7 +44,8 @@ sudo dnf install \
   topgrade \
   syncthing \
   tailscale \
-  yazi
+  yazi \
+  gh
 
 chsh -s /usr/bin/fish
 
