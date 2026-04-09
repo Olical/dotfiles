@@ -9,7 +9,7 @@ set -g fish_greeting
 alias g="git"
 alias gg="g a .; and g c -a"
 alias lg="lazygit"
-alias zj="zellij -l welcome"
+alias zj="zellij"
 alias cm="chezmoi"
 alias n="nvim"
 
