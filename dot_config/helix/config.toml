@@ -5,7 +5,7 @@ line-number = "relative"
 true-color = true
 cursorline = true
 color-modes = true
-bufferline = "multiple"
+# bufferline = "multiple"
 scrolloff = 5
 
 [editor.auto-save]
@@ -18,9 +18,9 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
-[editor.indent-guides]
-render = true
-character = "│"
+# [editor.indent-guides]
+# render = true
+# character = "│"
 
 [editor.lsp]
 display-inlay-hints = true
