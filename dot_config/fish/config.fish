@@ -1,12 +1,7 @@
-if type -q nvim
-    # Helix?
-    set -gx EDITOR nvim
-    set -gx VISUAL nvim
-    alias vimdiff="nvim -d"
-end
-
 fish_add_path ~/.local/bin
 
+set -gx EDITOR hx
+set -gx VISUAL hx
 set -gx PAGER less
 set -g fish_greeting
 
@@ -17,6 +12,7 @@ alias lg="lazygit"
 alias zj="zellij -l welcome"
 alias cm="chezmoi"
 alias n="nvim"
+alias y="yazi"
 
 if string match -q arch (cat /etc/os-release | string match -r 'ID=(.*)' | tail -1)
     alias hx="helix"
