@@ -1,4 +1,4 @@
 theme = "Monokai Pro"
 font-family = "FiraCode Nerd Font"
 font-size = 10
-window-start-mode = maximized
+maximize = true
