@@ -32,6 +32,7 @@ sudo dnf copr enable dejan/lazygit
 sudo dnf copr enable scottames/ghostty
 sudo dnf copr enable jdxcode/mise
 sudo dnf copr enable lilay/topgrade
+sudo dnf copr enable lihaohong/yazi
 
 sudo dnf install \
   neovim \
@@ -42,7 +43,8 @@ sudo dnf install \
   difftastic \
   topgrade \
   syncthing \
-  tailscale
+  tailscale \
+  yazi
 
 chsh -s /usr/bin/fish
 
