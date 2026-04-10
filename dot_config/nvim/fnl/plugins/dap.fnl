@@ -1,0 +1,28 @@
+(import-macros {: tx} :config.macros)
+
+(local clojure-dap-path "/home/olical/repos/Olical/clojure-dap")
+
+[(tx "mfussenegger/nvim-dap"
+   {:config
+    (fn []
+      (let [dap (require :dap)]
+        (set dap.adapters.clojure
+             {:type "executable"
+              :command "clojure"
+              :args ["-Sdeps"
+                     (.. "{:deps {clojure-dap/clojure-dap {:local/root \"" clojure-dap-path "\"}}}")
+                     "-X" "clojure-dap.main/run"]})
+
+        (set dap.configurations.clojure
+             [(tx "Attach to nREPL"
+                {:type "clojure"
+                 :request "attach"})])))
+
+    :keys [(tx "<leader>db" (fn [] ((. (require :dap) :toggle_breakpoint))) {:desc "Toggle breakpoint"})
+           (tx "<leader>dc" (fn [] ((. (require :dap) :continue))) {:desc "Continue / Start debug"})
+           (tx "<leader>dn" (fn [] ((. (require :dap) :step_over))) {:desc "Step over"})
+           (tx "<leader>di" (fn [] ((. (require :dap) :step_into))) {:desc "Step into"})
+           (tx "<leader>do" (fn [] ((. (require :dap) :step_out))) {:desc "Step out"})
+           (tx "<leader>dr" (fn [] ((. (require :dap) :repl :open))) {:desc "Open REPL"})
+           (tx "<leader>dl" (fn [] ((. (require :dap) :run_last))) {:desc "Run last"})
+           (tx "<leader>dx" (fn [] ((. (require :dap) :terminate))) {:desc "Terminate"})]})]
