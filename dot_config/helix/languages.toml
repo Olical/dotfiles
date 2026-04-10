@@ -1,0 +1,13 @@
+[[language]]
+name = "clojure"
+
+[language.debugger]
+name = "clojure-dap"
+transport = "stdio"
+command = "clojure"
+args = ["-Sdeps", "{:deps {clojure-dap {:local/root \"/home/olical/repos/Olical/clojure-dap\"}}}", "-X", "clojure-dap.main/run"]
+
+[[language.debugger.templates]]
+name = "Attach to nREPL"
+request = "attach"
+args = {}
