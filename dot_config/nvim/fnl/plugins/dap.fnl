@@ -1,7 +1,5 @@
 (import-macros {: tx} :config.macros)
 
-(local clojure-dap-path "/home/olical/repos/Olical/clojure-dap")
-
 [(tx "mfussenegger/nvim-dap"
    {:config
     (fn []
@@ -10,7 +8,7 @@
              {:type "executable"
               :command "clojure"
               :args ["-Sdeps"
-                     (.. "{:deps {clojure-dap/clojure-dap {:local/root \"" clojure-dap-path "\"}}}")
+                     "{:deps {uk.me.oli/clojure-dap {:mvn/version \"RELEASE\"}}}"
                      "-X" "clojure-dap.main/run"]})
 
         (set dap.configurations.clojure

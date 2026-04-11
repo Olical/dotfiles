@@ -1,8 +1,7 @@
 -- [nfnl] fnl/plugins/dap.fnl
-local clojure_dap_path = "/home/olical/repos/Olical/clojure-dap"
 local function _1_()
   local dap = require("dap")
-  dap.adapters.clojure = {type = "executable", command = "clojure", args = {"-Sdeps", ("{:deps {clojure-dap/clojure-dap {:local/root \"" .. clojure_dap_path .. "\"}}}"), "-X", "clojure-dap.main/run"}}
+  dap.adapters.clojure = {type = "executable", command = "clojure", args = {"-Sdeps", "{:deps {uk.me.oli/clojure-dap {:mvn/version \"RELEASE\"}}}", "-X", "clojure-dap.main/run"}}
   dap.configurations.clojure = {{name = "Attach to nREPL", type = "clojure", request = "attach"}}
   return nil
 end
