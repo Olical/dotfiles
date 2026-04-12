@@ -50,6 +50,10 @@ sudo dnf install \
 
 chsh -s /usr/bin/fish
 
+sudo dnf group install development-tools
+sudo dnf install procps-ng curl file
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 sudo systemctl enable --now "syncthing@olical.service
 sudo systemctl enable --now tailscaled
 
