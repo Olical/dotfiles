@@ -45,3 +45,4 @@ if status is-interactive; and not set -q ZELLIJ; and command -q zellij
         kill $fish_pid
     end
 end
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
