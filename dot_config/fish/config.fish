@@ -1,4 +1,5 @@
 fish_add_path ~/.local/bin
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
 
 set -gx EDITOR hx
 set -gx VISUAL hx
@@ -45,4 +46,3 @@ if status is-interactive; and not set -q ZELLIJ; and command -q zellij
         kill $fish_pid
     end
 end
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
