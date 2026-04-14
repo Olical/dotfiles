@@ -28,6 +28,12 @@ sync
 ## First time
 
 ```fish
+sudo dnf group install development-tools
+sudo dnf install procps-ng curl file
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+
 sudo dnf copr enable dejan/lazygit
 sudo dnf copr enable scottames/ghostty
 sudo dnf copr enable jdxcode/mise
@@ -48,11 +54,9 @@ sudo dnf install \
   gh \
   bat
 
-chsh -s /usr/bin/fish
+brew install chojs23/tap/ec
 
-sudo dnf group install development-tools
-sudo dnf install procps-ng curl file
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+cargo binstall zellij
 
 sudo systemctl enable --now "syncthing@olical.service
 sudo systemctl enable --now tailscaled
@@ -63,8 +67,7 @@ curl -fsSL https://claude.ai/install.sh | bash
 
 curl https://install.duckdb.org | sh
 
-curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
-cargo binstall zellij
+chsh -s /usr/bin/fish
 
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
