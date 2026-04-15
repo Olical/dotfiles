@@ -32,7 +32,7 @@ chezmoi cd
 sync
 ```
 
-## First time
+## First time (desktop)
 
 ```fish
 sudo dnf group install development-tools
@@ -83,50 +83,26 @@ mise use -g usage
 mise completions fish > ~/.config/fish/completions/mise.fish
 ```
 
-## Migrating from COPR / scripts / cargo-binstall
+## First time (headless server)
 
-If a machine was set up with the old method (COPR repos, curl scripts, cargo-binstall), run these steps to migrate to brew.
-
-### Remove COPR packages and repos
+Skip ghostty, syncthing, and other desktop packages.
 
 ```fish
-# Remove the COPR-installed packages (keep ghostty on COPR, no brew Linux bottle)
-sudo dnf remove lazygit mise topgrade yazi
+sudo dnf group install development-tools
+sudo dnf install procps-ng curl file
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Remove the COPR repos (keep scottames/ghostty)
-sudo dnf copr remove dejan/lazygit
-sudo dnf copr remove jdxcode/mise
-sudo dnf copr remove lilay/topgrade
-sudo dnf copr remove lihaohong/yazi
-```
+# Main Fedora repos
+sudo dnf install \
+  neovim \
+  helix \
+  fish \
+  difftastic \
+  tailscale \
+  gh \
+  bat
 
-### Remove cargo-binstall installed zellij
-
-```fish
-# Remove zellij installed via cargo-binstall
-rm -f ~/.cargo/bin/zellij
-
-# Remove cargo-binstall itself if no longer needed
-rm -f ~/.cargo/bin/cargo-binstall
-```
-
-### Remove curl-script installed tools
-
-```fish
-# Remove duckdb (default install location)
-rm -f ~/.duckdb/duckdb
-rm -rf ~/.duckdb
-
-# Remove fisher (will be reinstalled via brew)
-# fisher is a fish function, removing it cleanly:
-fisher remove jorgebucaran/fisher 2>/dev/null
-rm -f ~/.config/fish/functions/fisher.fish
-rm -f ~/.config/fish/completions/fisher.fish
-```
-
-### Install everything via brew
-
-```fish
+# Homebrew (not in main Fedora repos)
 brew install \
   lazygit \
   mise \
@@ -137,6 +113,19 @@ brew install \
   fisher \
   chojs23/tap/ec
 
-# Reinstall fish plugins now that fisher is from brew
+sudo systemctl enable --now tailscaled
+
+sudo tailscale login
+
+# No brew formula available yet
+curl -fsSL https://claude.ai/install.sh | bash
+
+chsh -s /usr/bin/fish
+
+# Install fish plugins (tide prompt etc) from fish_plugins
 fisher update
+
+# Generate mise completions
+mise use -g usage
+mise completions fish > ~/.config/fish/completions/mise.fish
 ```
