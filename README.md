@@ -34,6 +34,7 @@ sudo dnf install procps-ng curl file
 
 curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
 
+# TODO Maybe some of these should be brew too?
 sudo dnf copr enable dejan/lazygit
 sudo dnf copr enable scottames/ghostty
 sudo dnf copr enable jdxcode/mise
@@ -63,12 +64,15 @@ sudo systemctl enable --now tailscaled
 
 sudo tailscale login
 
+# TODO: Brew?
 curl -fsSL https://claude.ai/install.sh | bash
 
+# TODO: Brew?
 curl https://install.duckdb.org | sh
 
 chsh -s /usr/bin/fish
 
+# TODO: Brew?
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
 # Install fish plugins (tide prompt etc) from fish_plugins
