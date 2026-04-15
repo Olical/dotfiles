@@ -6,7 +6,7 @@ Managed with [chezmoi](https://www.chezmoi.io/).
 
 ```
 sudo dnf install chezmoi
-chezmoi init --apply --branch chezmoi Olical
+chezmoi init --apply Olical
 ```
 
 ## Daily usage
