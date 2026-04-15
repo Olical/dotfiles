@@ -6,6 +6,7 @@ Managed with [chezmoi](https://www.chezmoi.io/).
 
 - **Main Fedora dnf** is the default for everything available there.
 - **Homebrew** for anything not in the main Fedora repos (preferred over COPR).
+- **COPR** only when brew doesn't have a Linux package (e.g. ghostty).
 - **Curl scripts** only as a last resort when neither dnf nor brew has the package.
 
 ## New machine setup
@@ -49,10 +50,13 @@ sudo dnf install \
   gh \
   bat
 
+# COPR (brew only has ghostty as a macOS cask, no Linux bottle)
+sudo dnf copr enable scottames/ghostty
+sudo dnf install ghostty
+
 # Homebrew (not in main Fedora repos)
 brew install \
   lazygit \
-  ghostty \
   mise \
   topgrade \
   yazi \
@@ -86,12 +90,11 @@ If a machine was set up with the old method (COPR repos, curl scripts, cargo-bin
 ### Remove COPR packages and repos
 
 ```fish
-# Remove the COPR-installed packages
-sudo dnf remove lazygit ghostty mise topgrade yazi
+# Remove the COPR-installed packages (keep ghostty on COPR, no brew Linux bottle)
+sudo dnf remove lazygit mise topgrade yazi
 
-# Remove the COPR repos
+# Remove the COPR repos (keep scottames/ghostty)
 sudo dnf copr remove dejan/lazygit
-sudo dnf copr remove scottames/ghostty
 sudo dnf copr remove jdxcode/mise
 sudo dnf copr remove lilay/topgrade
 sudo dnf copr remove lihaohong/yazi
@@ -126,7 +129,6 @@ rm -f ~/.config/fish/completions/fisher.fish
 ```fish
 brew install \
   lazygit \
-  ghostty \
   mise \
   topgrade \
   yazi \
