@@ -53,7 +53,8 @@ sudo dnf install \
   gh \
   bat \
   fzf \
-  zoxide
+  zoxide \
+  htop
 
 # Ghostty — desktop only, not for headless hosts
 sudo dnf copr enable scottames/ghostty
