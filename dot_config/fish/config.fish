@@ -13,22 +13,23 @@ set -gx VISUAL hx
 set -gx PAGER less
 set -g fish_greeting
 
-# Syntax highlighting colours (not stored in fish_variables, which is gitignored)
-set -g fish_color_normal normal
-set -g fish_color_command green
-set -g fish_color_keyword blue
-set -g fish_color_quote yellow
-set -g fish_color_redirection cyan
-set -g fish_color_end green
-set -g fish_color_error red --bold
-set -g fish_color_param cyan
-set -g fish_color_comment brblack
-set -g fish_color_selection --background=brblack
-set -g fish_color_operator cyan
-set -g fish_color_escape yellow
-set -g fish_color_autosuggestion brblack
-set -g fish_color_cancel red
-set -g fish_color_search_match --background=brblack
+# Syntax highlighting colours matching Monokai Pro palette.
+# Not stored in fish_variables since that file is gitignored.
+set -g fish_color_normal fcfcfa
+set -g fish_color_command a9dc76
+set -g fish_color_keyword ff6188
+set -g fish_color_quote ffd866
+set -g fish_color_redirection 78dce8
+set -g fish_color_end ff6188
+set -g fish_color_error ff6188 --bold
+set -g fish_color_param fc9867
+set -g fish_color_comment 727072
+set -g fish_color_selection --background=5b595c
+set -g fish_color_operator ff6188
+set -g fish_color_escape ab9df2
+set -g fish_color_autosuggestion 727072
+set -g fish_color_cancel 727072
+set -g fish_color_search_match --background=5b595c
 set -g fish_color_valid_path --underline
 
 # Other git aliases are in git config
