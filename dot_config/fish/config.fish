@@ -19,7 +19,7 @@ alias gg="g a .; and g c -a"
 alias lg="lazygit"
 alias zj="zellij"
 alias cm="chezmoi"
-alias cr="claude -c"
+alias cl="claude -c"
 alias n="nvim"
 
 # Some messy stuff that's Arch specific. Not needed on Fedora.
