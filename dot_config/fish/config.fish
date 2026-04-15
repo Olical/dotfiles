@@ -38,15 +38,6 @@ alias gg="g a .; and g c -a"
 alias lg="lazygit"
 alias zj="zellij"
 alias cm="chezmoi"
-function cl
-    if set -q ZELLIJ
-        set -l sid (uuidgen --sha1 --namespace @url --name "zellij:$ZELLIJ_SESSION_NAME:$ZELLIJ_PANE_ID")
-        claude --resume $sid $argv; or claude --session-id $sid $argv
-    else
-        claude -c $argv
-    end
-end
-alias n="nvim"
 
 # Some messy stuff that's Arch specific. Not needed on Fedora.
 if string match -q arch (cat /etc/os-release | string match -r 'ID=(.*)' | tail -1)
