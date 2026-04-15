@@ -2,6 +2,12 @@
 
 Managed with [chezmoi](https://www.chezmoi.io/).
 
+## Package philosophy
+
+- **Main Fedora dnf** is the default for everything available there.
+- **Homebrew** for anything not in the main Fedora repos (preferred over COPR).
+- **Curl scripts** only as a last resort when neither dnf nor brew has the package.
+
 ## New machine setup
 
 ```
@@ -32,48 +38,38 @@ sudo dnf group install development-tools
 sudo dnf install procps-ng curl file
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
-
-# TODO Maybe some of these should be brew too?
-sudo dnf copr enable dejan/lazygit
-sudo dnf copr enable scottames/ghostty
-sudo dnf copr enable jdxcode/mise
-sudo dnf copr enable lilay/topgrade
-sudo dnf copr enable lihaohong/yazi
-
+# Main Fedora repos
 sudo dnf install \
   neovim \
   helix \
-  ghostty \
   fish \
-  lazygit \
   difftastic \
-  topgrade \
   syncthing \
   tailscale \
-  yazi \
   gh \
   bat
 
-brew install chojs23/tap/ec
+# Homebrew (not in main Fedora repos)
+brew install \
+  lazygit \
+  ghostty \
+  mise \
+  topgrade \
+  yazi \
+  zellij \
+  duckdb \
+  fisher \
+  chojs23/tap/ec
 
-cargo binstall zellij
-
-sudo systemctl enable --now "syncthing@olical.service
+sudo systemctl enable --now "syncthing@olical.service"
 sudo systemctl enable --now tailscaled
 
 sudo tailscale login
 
-# TODO: Brew?
+# No brew formula available yet
 curl -fsSL https://claude.ai/install.sh | bash
 
-# TODO: Brew?
-curl https://install.duckdb.org | sh
-
 chsh -s /usr/bin/fish
-
-# TODO: Brew?
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
 # Install fish plugins (tide prompt etc) from fish_plugins
 fisher update
@@ -81,4 +77,64 @@ fisher update
 # Generate mise completions
 mise use -g usage
 mise completions fish > ~/.config/fish/completions/mise.fish
+```
+
+## Migrating from COPR / scripts / cargo-binstall
+
+If a machine was set up with the old method (COPR repos, curl scripts, cargo-binstall), run these steps to migrate to brew.
+
+### Remove COPR packages and repos
+
+```fish
+# Remove the COPR-installed packages
+sudo dnf remove lazygit ghostty mise topgrade yazi
+
+# Remove the COPR repos
+sudo dnf copr remove dejan/lazygit
+sudo dnf copr remove scottames/ghostty
+sudo dnf copr remove jdxcode/mise
+sudo dnf copr remove lilay/topgrade
+sudo dnf copr remove lihaohong/yazi
+```
+
+### Remove cargo-binstall installed zellij
+
+```fish
+# Remove zellij installed via cargo-binstall
+rm -f ~/.cargo/bin/zellij
+
+# Remove cargo-binstall itself if no longer needed
+rm -f ~/.cargo/bin/cargo-binstall
+```
+
+### Remove curl-script installed tools
+
+```fish
+# Remove duckdb (default install location)
+rm -f ~/.duckdb/duckdb
+rm -rf ~/.duckdb
+
+# Remove fisher (will be reinstalled via brew)
+# fisher is a fish function, removing it cleanly:
+fisher remove jorgebucaran/fisher 2>/dev/null
+rm -f ~/.config/fish/functions/fisher.fish
+rm -f ~/.config/fish/completions/fisher.fish
+```
+
+### Install everything via brew
+
+```fish
+brew install \
+  lazygit \
+  ghostty \
+  mise \
+  topgrade \
+  yazi \
+  zellij \
+  duckdb \
+  fisher \
+  chojs23/tap/ec
+
+# Reinstall fish plugins now that fisher is from brew
+fisher update
 ```
