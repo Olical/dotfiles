@@ -38,7 +38,15 @@ alias gg="g a .; and g c -a"
 alias lg="lazygit"
 alias zj="zellij"
 alias cm="chezmoi"
-alias cl="claude -c"
+function cl
+    if set -q ZELLIJ
+        set -l sid (uuidgen --sha1 --namespace @url --name "zellij:$ZELLIJ_SESSION_NAME:$ZELLIJ_PANE_ID")
+        claude --resume $sid $argv 2>/dev/null
+        or claude --session-id $sid $argv
+    else
+        claude -c $argv
+    end
+end
 alias n="nvim"
 
 # Some messy stuff that's Arch specific. Not needed on Fedora.
