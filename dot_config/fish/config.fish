@@ -13,6 +13,24 @@ set -gx VISUAL hx
 set -gx PAGER less
 set -g fish_greeting
 
+# Syntax highlighting colours (not stored in fish_variables, which is gitignored)
+set -g fish_color_normal normal
+set -g fish_color_command green
+set -g fish_color_keyword blue
+set -g fish_color_quote yellow
+set -g fish_color_redirection cyan
+set -g fish_color_end green
+set -g fish_color_error red --bold
+set -g fish_color_param cyan
+set -g fish_color_comment brblack
+set -g fish_color_selection --background=brblack
+set -g fish_color_operator cyan
+set -g fish_color_escape yellow
+set -g fish_color_autosuggestion brblack
+set -g fish_color_cancel red
+set -g fish_color_search_match --background=brblack
+set -g fish_color_valid_path --underline
+
 # Other git aliases are in git config
 alias g="git"
 alias gg="g a .; and g c -a"
