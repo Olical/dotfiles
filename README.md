@@ -32,12 +32,15 @@ chezmoi cd
 sync
 ```
 
-## First time (desktop)
+## First time setup
 
-```fish
+```bash
 sudo dnf group install development-tools
 sudo dnf install procps-ng curl file
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Get brew on PATH for the rest of this bash session
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Main Fedora repos
 sudo dnf install \
@@ -48,9 +51,11 @@ sudo dnf install \
   syncthing \
   tailscale \
   gh \
-  bat
+  bat \
+  fzf \
+  zoxide
 
-# COPR (brew only has ghostty as a macOS cask, no Linux bottle)
+# Ghostty — desktop only, not for headless hosts
 sudo dnf copr enable scottames/ghostty
 sudo dnf install ghostty
 
@@ -58,6 +63,8 @@ sudo dnf install ghostty
 brew install \
   lazygit \
   mise \
+  sops \
+  age \
   topgrade \
   yazi \
   zellij \
@@ -74,53 +81,12 @@ sudo tailscale login
 curl -fsSL https://claude.ai/install.sh | bash
 
 chsh -s /usr/bin/fish
-
-# Install fish plugins (tide prompt etc) from fish_plugins
-fisher update
-
-# Generate mise completions
-mise use -g usage
-mise completions fish > ~/.config/fish/completions/mise.fish
 ```
 
-## First time (headless server)
-
-Skip ghostty, syncthing, and other desktop packages.
+Now drop into fish to finish setup:
 
 ```fish
-sudo dnf group install development-tools
-sudo dnf install procps-ng curl file
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Main Fedora repos
-sudo dnf install \
-  neovim \
-  helix \
-  fish \
-  difftastic \
-  tailscale \
-  gh \
-  bat
-
-# Homebrew (not in main Fedora repos)
-brew install \
-  lazygit \
-  mise \
-  topgrade \
-  yazi \
-  zellij \
-  duckdb \
-  fisher \
-  chojs23/tap/ec
-
-sudo systemctl enable --now tailscaled
-
-sudo tailscale login
-
-# No brew formula available yet
-curl -fsSL https://claude.ai/install.sh | bash
-
-chsh -s /usr/bin/fish
+exec fish
 
 # Install fish plugins (tide prompt etc) from fish_plugins
 fisher update

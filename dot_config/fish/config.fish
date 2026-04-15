@@ -1,6 +1,13 @@
 fish_add_path ~/.local/bin
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
 
+# Ensure brew-installed fish packages (fisher, etc.) are found even when
+# fish itself was installed via dnf rather than brew.
+if set -q HOMEBREW_PREFIX
+    set -p fish_function_path $HOMEBREW_PREFIX/share/fish/vendor_functions.d
+    set -p fish_complete_path $HOMEBREW_PREFIX/share/fish/vendor_completions.d
+end
+
 set -gx EDITOR hx
 set -gx VISUAL hx
 set -gx PAGER less
