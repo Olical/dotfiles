@@ -64,10 +64,17 @@ function y
 end
 
 if status is-interactive; and not set -q ZELLIJ; and command -q zellij
+    # Remove exited sessions whose serialized layout has no recoverable panes —
+    # attaching to one of those would instant-exit and close this terminal.
+    zellij_gc_empty
+    set -l __zj_start (date +%s)
     zj
-    # Only exit fish if zellij exited cleanly.
-    # If it crashed (e.g. bad config), we keep the shell so we can fix things.
-    if test $status -eq 0
+    set -l __zj_rc $status
+    set -l __zj_elapsed (math (date +%s) - $__zj_start)
+    # Only exit fish if zellij ran cleanly AND for long enough to be a real session.
+    # A sub-2s clean exit usually means a broken resurrect slipped past the GC;
+    # keep the shell so we can fix things instead of taking the terminal down.
+    if test $__zj_rc -eq 0; and test $__zj_elapsed -gt 2
         kill $fish_pid
     end
 end
