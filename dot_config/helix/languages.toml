@@ -1,5 +1,6 @@
 [[language]]
 name = "clojure"
+language-servers = ["clojure-lsp", "typedclojure-lsp"]
 
 [language.debugger]
 name = "clojure-dap"
@@ -11,3 +12,6 @@ args = ["-Sdeps", "{:deps {uk.me.oli/clojure-dap {:mvn/version \"RELEASE\"}}}", 
 name = "Attach to nREPL"
 request = "attach"
 args = {}
+
+[language-server.typedclojure-lsp]
+command = ".typedclojure-lsp/start"
