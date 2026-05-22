@@ -3,3 +3,5 @@ font-family = "FiraCode Nerd Font"
 font-size = 10
 maximize = true
 gtk-titlebar = true
+confirm-close-surface = true
+keybind = ctrl+q=ignore
