@@ -3,7 +3,7 @@
 	email = ollie@oli.me.uk
 	signingkey = "6DFA695F73832EF9DC0335C5D85B96510F2C8A64"
 [core]
-	editor = nvim
+	editor = hx
 	excludesfile = ~/.gitexcludes
 [color]
 	ui = true
@@ -11,7 +11,7 @@
 	default = simple
 	autoSetupRemote = true
 [merge]
-	tool = vimdiff
+	tool = helix
 [mergetool]
 	prompt = true
 	keepBackup = false
@@ -54,3 +54,6 @@
 	cmd = difft "$LOCAL" "$REMOTE"
 [pager]
 	difftool = true
+[mergetool "helix"]
+	cmd = hx \"$MERGED\"
+	trustExitCode = false
