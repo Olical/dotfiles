@@ -12,3 +12,4 @@ docker-compose.local.yml
 .envrc
 .lsp
 shell.nix
+.serena/
