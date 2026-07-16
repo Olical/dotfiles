@@ -13,3 +13,5 @@ docker-compose.local.yml
 .lsp
 shell.nix
 .serena/
+
+**/.claude/settings.local.json
